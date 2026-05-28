@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kotibhaskar Industries – Material Handling Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1C3F6E;
+    --navy-dark: #132d50;
+    --navy-light: #2a5490;
+    --steel: #8A9BA8;
+    --steel-light: #b0c0cc;
+    --charcoal: #1a1e24;
+    --charcoal2: #232830;
+    --white: #ffffff;
+    --off-white: #f4f6f8;
+    --text-muted: #8a95a0;
+    --accent: #e8f0f8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--charcoal);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(19, 28, 38, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(28,63,110,0.4);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+  }
+
+  .nav-logo img {
+    height: 44px;
+    width: auto;
+  }
+
+  .nav-links {
+    display: flex; gap: 36px; list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--steel-light);
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--white); }
+
+  .nav-cta {
+    background: var(--navy);
+    color: var(--white) !important;
+    padding: 10px 22px;
+    border: 1px solid var(--navy-light);
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--navy-light) !important; }
+
+  .hamburger {
+    display: none;
+    flex-direction: column; gap: 5px; cursor: pointer; padding: 4px;
+  }
+  .hamburger span {
+    width: 24px; height: 2px;
+    background: var(--steel-light);
+    transition: all 0.3s;
+  }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--charcoal) 0%, #0f1924 50%, #0d1e33 100%);
+    display: flex; align-items: center;
+    position: relative; overflow: hidden;
+    padding: 120px 5% 80px;
+  }
+
+  .hero-grid-bg {
+    position: absolute; inset: 0; opacity: 0.04;
+    background-image:
+      linear-gradient(var(--navy) 1px, transparent 1px),
+      linear-gradient(90deg, var(--navy) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .hero-accent-line {
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, transparent, var(--navy), var(--steel), transparent);
+  }
+
+  .hero-content { position: relative; z-index: 2; max-width: 700px; }
+
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px; font-weight: 600; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--steel);
+    margin-bottom: 28px;
+  }
+  .hero-tag::before {
+    content: '';
+    display: block; width: 32px; height: 1px;
+    background: var(--navy-light);
+  }
+
+  .hero-headline {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(52px, 7vw, 88px);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+
+  .hero-headline .hl-blue { color: var(--navy-light); }
+  .hero-headline .hl-steel { color: var(--steel); }
+
+  .hero-sub {
+    font-size: 18px; font-weight: 300; line-height: 1.7;
+    color: var(--steel-light); max-width: 520px;
+    margin-bottom: 48px;
+  }
+
+  .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  .btn-primary {
+    background: var(--navy);
+    color: var(--white);
+    padding: 16px 36px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none; cursor: pointer;
+    transition: all 0.25s;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+  }
+  .btn-primary:hover { background: var(--navy-light); transform: translateY(-2px); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--steel-light);
+    padding: 16px 36px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid rgba(138,155,168,0.4);
+    cursor: pointer;
+    transition: all 0.25s;
+  }
+  .btn-outline:hover { border-color: var(--steel); color: var(--white); }
+
+  .hero-stats {
+    position: absolute; bottom: 60px; right: 5%;
+    display: flex; gap: 48px;
+  }
+
+  .stat { text-align: right; }
+  .stat-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 42px; font-weight: 800; color: var(--white);
+    line-height: 1;
+  }
+  .stat-num span { color: var(--navy-light); }
+  .stat-label {
+    font-size: 11px; font-weight: 600; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  /* ── SECTION COMMON ── */
+  section { padding: 100px 5%; }
+
+  .section-tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 4px;
+    text-transform: uppercase; color: var(--navy-light);
+    margin-bottom: 16px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .section-tag::after {
+    content: ''; flex: 1; max-width: 40px; height: 1px;
+    background: var(--navy);
+  }
+
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 800; text-transform: uppercase;
+    line-height: 1; margin-bottom: 60px;
+    letter-spacing: -0.5px;
+  }
+
+  /* ── PRODUCTS ── */
+  #products {
+    background: var(--charcoal2);
+  }
+
+  .product-categories {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    margin-bottom: 2px;
+  }
+
+  .cat-card {
+    background: var(--charcoal);
+    padding: 48px 36px;
+    cursor: pointer;
+    position: relative; overflow: hidden;
+    transition: all 0.3s;
+    border-bottom: 3px solid transparent;
+  }
+  .cat-card.active, .cat-card:hover {
+    background: #1a2030;
+    border-bottom-color: var(--navy);
+  }
+
+  .cat-number {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 72px; font-weight: 800;
+    color: rgba(28,63,110,0.15);
+    position: absolute; top: 16px; right: 24px;
+    line-height: 1;
+  }
+
+  .cat-icon {
+    width: 48px; height: 48px; margin-bottom: 20px;
+    color: var(--navy-light);
+  }
+
+  .cat-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.5px; margin-bottom: 8px;
+  }
+
+  .cat-count {
+    font-size: 13px; color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  /* Product grid */
+  .product-grid-container {
+    background: var(--charcoal);
+    padding: 48px 36px;
+    display: none;
+  }
+  .product-grid-container.active { display: block; }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .product-item {
+    background: var(--charcoal2);
+    border: 1px solid rgba(28,63,110,0.2);
+    padding: 20px;
+    transition: all 0.2s;
+    position: relative;
+  }
+  .product-item:hover {
+    border-color: var(--navy);
+    transform: translateY(-3px);
+  }
+
+  .product-item-img {
+    width: 100%; aspect-ratio: 1;
+    background: rgba(28,63,110,0.08);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+
+  .product-item-img img {
+    width: 100%; height: 100%; object-fit: contain;
+    opacity: 0.85;
+  }
+
+  .product-placeholder-svg {
+    width: 60px; height: 60px; opacity: 0.2;
+    color: var(--steel);
+  }
+
+  .product-item-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    line-height: 1.3;
+  }
+
+  .enquire-tag {
+    display: inline-block; margin-top: 8px;
+    font-size: 10px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--navy-light);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .product-item:hover .enquire-tag { opacity: 1; }
+
+  /* ── ABOUT ── */
+  #about {
+    background: linear-gradient(135deg, #0f1924 0%, var(--charcoal) 100%);
+  }
+
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+    align-items: center;
+  }
+
+  .about-text p {
+    font-size: 16px; line-height: 1.9;
+    color: var(--steel-light); margin-bottom: 24px;
+  }
+
+  .about-pillars {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    margin-top: 40px;
+  }
+
+  .pillar {
+    border-left: 2px solid var(--navy);
+    padding: 4px 0 4px 20px;
+  }
+  .pillar-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; margin-bottom: 6px;
+    color: var(--white);
+  }
+  .pillar-text {
+    font-size: 13px; color: var(--text-muted); line-height: 1.6;
+  }
+
+  .about-stats-panel {
+    background: var(--charcoal2);
+    padding: 48px;
+    position: relative;
+    border: 1px solid rgba(28,63,110,0.3);
+  }
+
+  .about-stats-panel::before {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--navy), var(--steel));
+  }
+
+  .big-stat {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .big-stat:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+
+  .big-stat-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 64px; font-weight: 800;
+    color: var(--white); line-height: 1;
+  }
+  .big-stat-num sup { font-size: 28px; color: var(--navy-light); }
+
+  .big-stat-desc {
+    font-size: 14px; color: var(--steel); margin-top: 8px;
+    font-weight: 400; line-height: 1.5;
+  }
+
+  /* ── WHY US ── */
+  #why {
+    background: var(--navy-dark);
+    padding: 80px 5%;
+  }
+
+  .why-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+  }
+
+  .why-item {
+    padding: 40px 32px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+  }
+  .why-item:last-child { border-right: none; }
+  .why-item::before {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: rgba(255,255,255,0.05);
+    transition: background 0.3s;
+  }
+  .why-item:hover::before { background: var(--steel); }
+
+  .why-icon { font-size: 32px; margin-bottom: 20px; }
+
+  .why-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; margin-bottom: 12px;
+  }
+
+  .why-text { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.7; }
+
+  /* ── INDUSTRIES ── */
+  #industries {
+    background: var(--charcoal);
+  }
+
+  .industries-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px;
+  }
+
+  .industry-chip {
+    background: var(--charcoal2);
+    border: 1px solid rgba(28,63,110,0.25);
+    padding: 20px 16px;
+    text-align: center;
+    transition: all 0.2s;
+  }
+  .industry-chip:hover {
+    border-color: var(--navy-light);
+    background: rgba(28,63,110,0.12);
+  }
+
+  .industry-chip-icon { font-size: 28px; margin-bottom: 10px; display: block; }
+
+  .industry-chip-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--steel-light);
+  }
+
+  /* ── CONTACT ── */
+  #contact {
+    background: var(--charcoal2);
+  }
+
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px;
+    align-items: start;
+  }
+
+  .contact-info h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px; font-weight: 700; text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  .contact-detail {
+    display: flex; gap: 16px; margin-bottom: 24px;
+    align-items: flex-start;
+  }
+
+  .contact-detail-icon {
+    width: 40px; height: 40px; flex-shrink: 0;
+    background: rgba(28,63,110,0.2);
+    border: 1px solid rgba(28,63,110,0.4);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+
+  .contact-detail-text { font-size: 14px; color: var(--steel-light); line-height: 1.7; }
+  .contact-detail-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+
+  /* Enquiry form */
+  .enquiry-form {
+    background: var(--charcoal);
+    padding: 40px;
+    border: 1px solid rgba(28,63,110,0.3);
+    position: relative;
+  }
+  .enquiry-form::before {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 2px;
+    background: linear-gradient(90deg, var(--navy), transparent);
+  }
+
+  .form-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; margin-bottom: 28px;
+    color: var(--white);
+  }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .form-group { margin-bottom: 16px; }
+
+  .form-group label {
+    display: block;
+    font-size: 11px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: var(--charcoal2);
+    border: 1px solid rgba(28,63,110,0.3);
+    color: var(--white);
+    padding: 12px 16px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--navy-light);
+  }
+  .form-group select { cursor: pointer; }
+  .form-group select option { background: var(--charcoal2); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+
+  .form-submit {
+    width: 100%; padding: 16px;
+    background: var(--navy);
+    color: var(--white);
+    border: none; cursor: pointer;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: background 0.2s;
+    margin-top: 8px;
+  }
+  .form-submit:hover { background: var(--navy-light); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0d1117;
+    padding: 60px 5% 32px;
+    border-top: 1px solid rgba(28,63,110,0.3);
+  }
+
+  .footer-top {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
+    margin-bottom: 48px;
+  }
+
+  .footer-brand img { height: 40px; margin-bottom: 20px; }
+
+  .footer-brand p {
+    font-size: 13px; color: var(--text-muted); line-height: 1.8; max-width: 260px;
+  }
+
+  .footer-col h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px; font-weight: 700; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--white);
+    margin-bottom: 20px;
+  }
+
+  .footer-col a {
+    display: block; color: var(--text-muted);
+    text-decoration: none; font-size: 13px;
+    margin-bottom: 12px; transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--steel-light); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 28px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+
+  .footer-copy {
+    font-size: 12px; color: var(--text-muted);
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+
+    .mobile-menu {
+      display: none;
+      position: fixed; inset: 72px 0 0 0;
+      background: var(--charcoal);
+      z-index: 999; padding: 32px 5%;
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a {
+      display: block; padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      color: var(--white); text-decoration: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 18px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero-stats { position: static; margin-top: 48px; gap: 28px; justify-content: flex-start; }
+    .stat { text-align: left; }
+
+    .product-categories { grid-template-columns: 1fr; }
+
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+
+    .why-grid { grid-template-columns: 1fr 1fr; }
+
+    .contact-grid { grid-template-columns: 1fr; }
+
+    .footer-top { grid-template-columns: 1fr 1fr; }
+
+    .form-row { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    section { padding: 64px 5%; }
+    .why-grid { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; }
+    .about-pillars { grid-template-columns: 1fr; }
+    .hero-buttons { flex-direction: column; }
+    .hero-buttons .btn-primary, .hero-buttons .btn-outline { text-align: center; }
+  }
+
+  /* Animate on scroll */
+  .fade-up {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <img src="https://kotibhaskar.in/images/common/newlogo_w.png"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"
+         alt="Kotibhaskar Industries">
+    <span style="display:none; font-family:'Barlow Condensed',sans-serif; font-size:20px; font-weight:800; color:var(--white); letter-spacing:1px;">KOTIBHASKAR <span style="color:var(--steel)">INDUSTRIES</span></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#industries">Industries</a></li>
+    <li><a href="#contact" class="nav-cta">Get Quote</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#hero" onclick="toggleMenu()">Home</a>
+  <a href="#products" onclick="toggleMenu()">Products</a>
+  <a href="#about" onclick="toggleMenu()">About Us</a>
+  <a href="#industries" onclick="toggleMenu()">Industries</a>
+  <a href="#contact" onclick="toggleMenu()">Contact & Quote</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-accent-line"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Satara, Maharashtra · Est. 2000</div>
+    <h1 class="hero-headline">
+      Revolution<br>
+      <span class="hl-blue">In Material</span><br>
+      <span class="hl-steel">Handling</span>
+    </h1>
+    <p class="hero-sub">Manufacturer &amp; exporter of industrial material handling equipment, trolleys, wheels and castors. Trusted by leading OEMs across India for over 25 years.</p>
+    <div class="hero-buttons">
+      <a href="#products" class="btn-primary">Explore Products</a>
+      <a href="#contact" class="btn-outline">Request a Quote</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">25<span>+</span></div>
+      <div class="stat-label">Years in Business</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">80<span>+</span></div>
+      <div class="stat-label">Products</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">40<span>%</span></div>
+      <div class="stat-label">Repeat Orders</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="section-tag">What We Make</div>
+  <h2 class="section-title">Our Products</h2>
+
+  <div class="product-categories">
+    <div class="cat-card active" onclick="showCategory('mhe', this)">
+      <div class="cat-number">01</div>
+      <svg class="cat-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="4" y="28" width="30" height="12" rx="2"/>
+        <path d="M10 28V18h20v10"/>
+        <circle cx="10" cy="42" r="4"/>
+        <circle cx="30" cy="42" r="4"/>
+        <path d="M34 34h10l-2-8H34"/>
+        <circle cx="40" cy="42" r="4"/>
+      </svg>
+      <div class="cat-name">Material Handling Equipment</div>
+      <div class="cat-count">30+ products — Pallet trucks, stackers, cranes, lifts &amp; more</div>
+    </div>
+    <div class="cat-card" onclick="showCategory('trolleys', this)">
+      <div class="cat-number">02</div>
+      <svg class="cat-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="8" y="8" width="32" height="24" rx="2"/>
+        <path d="M8 20h32M20 8v24"/>
+        <circle cx="14" cy="42" r="4"/>
+        <circle cx="34" cy="42" r="4"/>
+        <path d="M14 38v-6M34 38v-6"/>
+      </svg>
+      <div class="cat-name">Material Handling Trolleys</div>
+      <div class="cat-count">25+ products — Platform, shelf, drum, tool &amp; specialty trolleys</div>
+    </div>
+    <div class="cat-card" onclick="showCategory('castors', this)">
+      <div class="cat-number">03</div>
+      <svg class="cat-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="24" cy="24" r="14"/>
+        <circle cx="24" cy="24" r="6"/>
+        <path d="M24 10v4M24 34v4M10 24h4M34 24h4"/>
+        <path d="M14 14l3 3M31 31l3 3M14 34l3-3M31 17l3-3"/>
+      </svg>
+      <div class="cat-name">Wheels &amp; Castors</div>
+      <div class="cat-count">8+ types — UHMW, PU-CI, Cast Iron, MS, HD Castors &amp; more</div>
+    </div>
+  </div>
+
+  <!-- Category: MHE -->
+  <div class="product-grid-container active" id="grid-mhe">
+    <div class="product-grid">
+      <!-- Each item links to original site until new images available -->
+      <div class="product-item">
+        <div class="product-item-img">
+          <img src="https://kotibhaskar.in/images/slideshow/02.png" alt="Hydraulic Pallet Truck" onerror="this.parentElement.innerHTML='<svg class=\'product-placeholder-svg\' viewBox=\'0 0 60 60\' fill=\'currentColor\'><rect x=\'5\' y=\'30\' width=\'50\' height=\'8\'/><rect x=\'10\' y=\'15\' width=\'8\' height=\'15\'/><circle cx=\'15\' cy=\'50\' r=\'6\'/><circle cx=\'45\' cy=\'50\' r=\'6\'/></svg>'">
+        </div>
+        <div class="product-item-name">Hydraulic Pallet Truck</div>
+        <span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img">
+          <img src="https://kotibhaskar.in/images/slideshow/01.png" alt="Electric Pallet Truck" onerror="this.parentElement.innerHTML='<svg class=\'product-placeholder-svg\' viewBox=\'0 0 60 60\' fill=\'currentColor\'><rect x=\'5\' y=\'30\' width=\'50\' height=\'8\'/><rect x=\'10\' y=\'15\' width=\'8\' height=\'15\'/><circle cx=\'15\' cy=\'50\' r=\'6\'/><circle cx=\'45\' cy=\'50\' r=\'6\'/></svg>'">
+        </div>
+        <div class="product-item-name">Electric Pallet Truck</div>
+        <span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img">
+          <img src="https://kotibhaskar.in/images/slideshow/04.png" alt="Manual Stacker" onerror="this.parentElement.innerHTML=''">
+        </div>
+        <div class="product-item-name">Manual Stacker</div>
+        <span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img">
+          <img src="https://kotibhaskar.in/images/slideshow/03.png" alt="Electric Stacker" onerror="this.parentElement.innerHTML=''">
+        </div>
+        <div class="product-item-name">Electric Stacker</div>
+        <span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img">
+          <img src="https://kotibhaskar.in/images/slideshow/06.png" alt="Hydraulic Floor Crane" onerror="this.parentElement.innerHTML=''">
+        </div>
+        <div class="product-item-name">Hydraulic Floor Crane</div>
+        <span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img">
+          <img src="https://kotibhaskar.in/images/slideshow/05.png" alt="Electric Floor Crane" onerror="this.parentElement.innerHTML=''">
+        </div>
+        <div class="product-item-name">Electric Floor Crane</div>
+        <span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img">
+          <img src="https://kotibhaskar.in/images/slideshow/08.png" alt="Hydraulic Drum Tilter" onerror="this.parentElement.innerHTML=''">
+        </div>
+        <div class="product-item-name">Hydraulic Drum Tilter</div>
+        <span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img">
+          <img src="https://kotibhaskar.in/images/slideshow/07.png" alt="Electric Drum Tilter" onerror="this.parentElement.innerHTML=''">
+        </div>
+        <div class="product-item-name">Electric Drum Tilter</div>
+        <span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img">
+          <img src="https://kotibhaskar.in/images/slideshow/10.png" alt="Manual Drum Gripper" onerror="this.parentElement.innerHTML=''">
+        </div>
+        <div class="product-item-name">Manual Drum Gripper</div>
+        <span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img">
+          <img src="https://kotibhaskar.in/images/slideshow/09.png" alt="Electric Drum Gripper" onerror="this.parentElement.innerHTML=''">
+        </div>
+        <div class="product-item-name">Electric Drum Gripper</div>
+        <span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img">
+          <img src="https://kotibhaskar.in/images/slideshow/11.png" alt="Jib Crane" onerror="this.parentElement.innerHTML=''">
+        </div>
+        <div class="product-item-name">Jib Crane</div>
+        <span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img">
+          <img src="https://kotibhaskar.in/images/slideshow/12.png" alt="Gantry" onerror="this.parentElement.innerHTML=''">
+        </div>
+        <div class="product-item-name">Gantry</div>
+        <span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img">
+          <img src="https://kotibhaskar.in/images/slideshow/13.png" alt="Scissor Lift" onerror="this.parentElement.innerHTML=''">
+        </div>
+        <div class="product-item-name">Scissor Lift</div>
+        <span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img">
+          <img src="https://kotibhaskar.in/images/slideshow/14.png" alt="Dock Leveller" onerror="this.parentElement.innerHTML=''">
+        </div>
+        <div class="product-item-name">Dock Leveller</div>
+        <span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img">
+          <img src="https://kotibhaskar.in/images/slideshow/15.png" alt="Goods Lift 4 Channel" onerror="this.parentElement.innerHTML=''">
+        </div>
+        <div class="product-item-name">Goods Lift 4 Channel</div>
+        <span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img">
+          <img src="https://kotibhaskar.in/images/slideshow/17.png" alt="Mezzanine" onerror="this.parentElement.innerHTML=''">
+        </div>
+        <div class="product-item-name">Mezzanine</div>
+        <span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img">
+          <img src="https://kotibhaskar.in/images/slideshow/19.png" alt="Gravity Roller Conveyor" onerror="this.parentElement.innerHTML=''">
+        </div>
+        <div class="product-item-name">Gravity Roller Conveyor</div>
+        <span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img">
+          <img src="https://kotibhaskar.in/images/slideshow/20.png" alt="Belt Conveyor" onerror="this.parentElement.innerHTML=''">
+        </div>
+        <div class="product-item-name">Belt Conveyor</div>
+        <span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img">
+          <img src="https://kotibhaskar.in/images/slideshow/21.png" alt="Electric Platform Truck" onerror="this.parentElement.innerHTML=''">
+        </div>
+        <div class="product-item-name">Electric Platform Truck</div>
+        <span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img">
+          <img src="https://kotibhaskar.in/images/slideshow/22.png" alt="Industrial Shelf Heavy" onerror="this.parentElement.innerHTML=''">
+        </div>
+        <div class="product-item-name">Industrial Shelf – Heavy</div>
+        <span class="enquire-tag">→ Enquire</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category: Trolleys -->
+  <div class="product-grid-container" id="grid-trolleys">
+    <div class="product-grid">
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/slideshow/25.png" alt="Platform Trolley" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">Platform Trolley</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/slideshow/26.png" alt="Workshop Trolley" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">Workshop Trolley</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/slideshow/27.png" alt="Shelf Trolley" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">Shelf Trolley</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/slideshow/28.png" alt="Sack Trolley" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">Sack Trolley</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/slideshow/29.png" alt="Multi Utility Trolley" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">Multi Utility Trolley</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/slideshow/30.png" alt="Drum Trolley" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">Drum Trolley</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/slideshow/31.png" alt="Gas Cylinder Trolley" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">Gas Cylinder Trolley</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/slideshow/32.png" alt="Double Wheel Barrow" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">Double Wheel Barrow</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/slideshow/33.png" alt="Chip Trolley" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">Chip Trolley</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/slideshow/34.png" alt="CNC Tool Trolley" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">CNC Tool Trolley</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/slideshow/35.png" alt="Steel Pallet" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">Steel Pallet</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/slideshow/36.png" alt="Work Table" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">Work Table</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/slideshow/37.png" alt="Tool Panel" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">Tool Panel</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/slideshow/38.png" alt="Mobile Step" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">Mobile Step</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/slideshow/39.png" alt="Stand Trolley" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">Stand Trolley</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/slideshow/40.png" alt="Bin Trolley" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">Bin Trolley</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/slideshow/41.png" alt="Coolant Trolley" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">Coolant Trolley</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/slideshow/42.png" alt="Five Shelf Trolley" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">Five Shelf Trolley</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/slideshow/18.png" alt="Furnace Trolley" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">Furnace Trolley</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/slideshow/24.png" alt="Compartment Shelf" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">Compartment Shelf</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category: Castors -->
+  <div class="product-grid-container" id="grid-castors">
+    <div class="product-grid">
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/castors/index/1.jpg" alt="UHMW PE Wheels" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">UHMW – PE Wheels</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/castors/index/2.jpg" alt="PU-CI Wheels" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">PU – CI Wheels</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/castors/index/3.jpg" alt="Cast Iron Wheels" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">Cast Iron Wheels</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/castors/index/4.jpg" alt="MS Solid Track Wheels" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">MS Solid Track Wheels</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/castors/index/5.jpg" alt="MD Steel Castors" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">MD Steel Castors</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/castors/index/6.jpg" alt="MHD Castors" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">MHD Castors</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/castors/index/7.jpg" alt="Heavy Duty Castors" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">Heavy Duty Castors</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+      <div class="product-item">
+        <div class="product-item-img"><img src="https://kotibhaskar.in/images/castors/index/8.jpg" alt="HD Twin Castors" onerror="this.parentElement.innerHTML=''"></div>
+        <div class="product-item-name">HD Twin Castors</div><span class="enquire-tag">→ Enquire</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="why-icon">🏭</div>
+      <div class="why-title">25 Years Manufacturing</div>
+      <div class="why-text">Founded in 2000, we have two and a half decades of hands-on manufacturing expertise from our MIDC Satara facility.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">📐</div>
+      <div class="why-title">80+ Innovative Products</div>
+      <div class="why-text">Our R&amp;D team has developed more than 80 products. We continuously add new designs to serve evolving industrial needs.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">🔁</div>
+      <div class="why-title">40% Repeat Orders</div>
+      <div class="why-text">40% of all orders come from returning customers — a testament to consistent quality and after-sales reliability.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">🌍</div>
+      <div class="why-title">Manufacturer &amp; Exporter</div>
+      <div class="why-text">We supply to large-scale industries, OEMs, and SPM manufacturers across India and international markets.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-tag">Our Story</div>
+  <div class="about-grid">
+    <div class="about-text fade-up">
+      <h2 class="section-title" style="margin-bottom:32px">25 Years of<br>Engineering Trust</h2>
+      <p>Kotibhaskar Industries was founded in 2000 with a singular focus: building material handling equipment that genuinely works in Indian industrial conditions. From a factory floor in Satara's MIDC, we have grown into one of Maharashtra's most trusted manufacturers.</p>
+      <p>Our team has developed over 80 innovative products across material handling equipment, trolleys, and wheels. We recently added a state-of-the-art manufacturing line for wheels and castors. Growing at 30–35% annually, we are proud to count leading OEMs, large-scale industries, and SPM manufacturers among our customers.</p>
+      <p>Every product leaves our facility having been critically tested against our quality parameters — because we know that equipment failure on a factory floor isn't just inconvenient, it's costly.</p>
+      <div class="about-pillars">
+        <div class="pillar">
+          <div class="pillar-title">Quality</div>
+          <div class="pillar-text">World-class production to satisfy customer requirements.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-title">Safety</div>
+          <div class="pillar-text">All equipment designed under strict safety parameters.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-title">Reliability</div>
+          <div class="pillar-text">Rigid technical base backed by prompt service.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-title">Innovation</div>
+          <div class="pillar-text">Continuous R&amp;D to bring new products to market.</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-stats-panel fade-up">
+      <div class="big-stat">
+        <div class="big-stat-num">25<sup>+</sup></div>
+        <div class="big-stat-desc">Years in business, founded in Satara, Maharashtra in 2000</div>
+      </div>
+      <div class="big-stat">
+        <div class="big-stat-num">80<sup>+</sup></div>
+        <div class="big-stat-desc">Products developed by our in-house R&amp;D team</div>
+      </div>
+      <div class="big-stat">
+        <div class="big-stat-num">30<sup>%</sup></div>
+        <div class="big-stat-desc">Annual growth rate, year on year</div>
+      </div>
+      <div class="big-stat">
+        <div class="big-stat-num">40<sup>%</sup></div>
+        <div class="big-stat-desc">Of orders are repeat — from satisfied customers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES SERVED -->
+<section id="industries">
+  <div class="section-tag">Who We Serve</div>
+  <h2 class="section-title">Industries Served</h2>
+  <div class="industries-grid">
+    <div class="industry-chip"><span class="industry-chip-icon">🔩</span><div class="industry-chip-name">Automotive & OEM</div></div>
+    <div class="industry-chip"><span class="industry-chip-icon">⚙️</span><div class="industry-chip-name">Engineering & SPM</div></div>
+    <div class="industry-chip"><span class="industry-chip-icon">🏗️</span><div class="industry-chip-name">Construction</div></div>
+    <div class="industry-chip"><span class="industry-chip-icon">🧪</span><div class="industry-chip-name">Pharmaceuticals</div></div>
+    <div class="industry-chip"><span class="industry-chip-icon">🛢️</span><div class="industry-chip-name">Petrochemicals</div></div>
+    <div class="industry-chip"><span class="industry-chip-icon">📦</span><div class="industry-chip-name">Warehousing & Logistics</div></div>
+    <div class="industry-chip"><span class="industry-chip-icon">🍽️</span><div class="industry-chip-name">Food Processing</div></div>
+    <div class="industry-chip"><span class="industry-chip-icon">⚡</span><div class="industry-chip-name">Power & Energy</div></div>
+    <div class="industry-chip"><span class="industry-chip-icon">🏭</span><div class="industry-chip-name">Heavy Manufacturing</div></div>
+    <div class="industry-chip"><span class="industry-chip-icon">🚢</span><div class="industry-chip-name">Export & Shipping</div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-tag">Get In Touch</div>
+  <h2 class="section-title">Contact &amp; Enquiry</h2>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Reach Us</h3>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📍</div>
+        <div>
+          <div class="contact-detail-label">Address</div>
+          <div class="contact-detail-text">Plot No. K-3/2/1, Addl. MIDC<br>Satara, Maharashtra, India</div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📞</div>
+        <div>
+          <div class="contact-detail-label">Phone</div>
+          <div class="contact-detail-text">
+            +91 98224 13252<br>
+            +91 83800 95804<br>
+            +91 83800 95805
+          </div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">✉️</div>
+        <div>
+          <div class="contact-detail-label">Email</div>
+          <div class="contact-detail-text">
+            amodsales@gmail.com<br>
+            amodsatara@gmail.com
+          </div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">🌐</div>
+        <div>
+          <div class="contact-detail-label">Website</div>
+          <div class="contact-detail-text">kotibhaskarindustries.com</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="enquiry-form">
+      <div class="form-title">Send an Enquiry</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="Full Name">
+        </div>
+        <div class="form-group">
+          <label>Company</label>
+          <input type="text" placeholder="Company / Organisation">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" placeholder="+91 XXXXX XXXXX">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="email@company.com">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Product Category</label>
+        <select>
+          <option value="">Select a category</option>
+          <option>Material Handling Equipment</option>
+          <option>Material Handling Trolleys</option>
+          <option>Wheels & Castors</option>
+          <option>Multiple / Custom</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Your Requirement</label>
+        <textarea placeholder="Describe the product(s) you need, quantity, specifications or any custom requirements..."></textarea>
+      </div>
+      <button class="form-submit" onclick="handleSubmit()">Send Enquiry →</button>
+      <div id="form-success" style="display:none; margin-top:16px; padding:14px; background:rgba(28,63,110,0.2); border:1px solid var(--navy); font-size:14px; color:var(--steel-light);">
+        ✓ Thank you! Your enquiry has been sent. We'll respond within 1 business day.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="https://kotibhaskar.in/images/common/newlogo_w.png"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"
+           alt="Kotibhaskar Industries">
+      <span style="display:none; font-family:'Barlow Condensed',sans-serif; font-size:18px; font-weight:800; color:var(--white);">KOTIBHASKAR <span style="color:var(--steel)">INDUSTRIES</span></span>
+      <p style="margin-top:16px">Manufacturer &amp; exporter of material handling equipment. Serving Indian industry since 2000.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <a href="#products" onclick="showCategory('mhe', document.querySelector('.cat-card'))">MHE Equipment</a>
+      <a href="#products" onclick="showCategory('trolleys', document.querySelectorAll('.cat-card')[1])">Trolleys</a>
+      <a href="#products" onclick="showCategory('castors', document.querySelectorAll('.cat-card')[2])">Wheels & Castors</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#about">About Us</a>
+      <a href="#industries">Industries Served</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:+919822413252">+91 98224 13252</a>
+      <a href="mailto:amodsales@gmail.com">amodsales@gmail.com</a>
+      <a href="#">Satara, Maharashtra</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Kotibhaskar Industries. All rights reserved.</div>
+    <div class="footer-copy">kotibhaskarindustries.com</div>
+  </div>
+</footer>
+
+<script>
+  // Category switcher
+  function showCategory(cat, el) {
+    document.querySelectorAll('.cat-card').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.product-grid-container').forEach(g => g.classList.remove('active'));
+    el.classList.add('active');
+    document.getElementById('grid-' + cat).classList.add('active');
+  }
+
+  // Mobile menu
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  // Form submit
+  function handleSubmit() {
+    document.getElementById('form-success').style.display = 'block';
+  }
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Nav shadow on scroll
+  window.addEventListener('scroll', () => {
+    document.querySelector('nav').style.boxShadow =
+      window.scrollY > 40 ? '0 4px 24px rgba(0,0,0,0.4)' : 'none';
+  });
+</script>
+</body>
+</html>
