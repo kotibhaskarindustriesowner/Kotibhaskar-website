@@ -1049,7 +1049,7 @@ function printModal(){
   win.document.write(tbl);
   win.document.write('<div class="footer"><span>Kotibhaskar Industries, Plot No. K-3/2/1, Addl. MIDC, Satara, Maharashtra</span><span>kotibhaskarindustries.com &nbsp;|&nbsp; +91 98224 13252</span></div>');
   win.document.write('<div class="no-print"><button onclick="window.print()" style="padding:10px 28px;background:#C85A00;color:#fff;border:none;cursor:pointer;font-size:13px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;">PRINT / SAVE AS PDF</button></div>');
-  win.document.write('</body></html>');
+  win.document.write('<script src="kotibhaskar-patch.js"></script></body></html>');
   win.document.close();
   setTimeout(function(){win.print();},500);
 }
