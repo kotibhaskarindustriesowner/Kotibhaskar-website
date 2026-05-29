@@ -168,8 +168,16 @@ footer{background:#0d1117;padding:60px 5% 32px;border-top:1px solid rgba(28,63,1
 <body>
 <nav>
   <div class="nav-logo">
-    <img src="logo.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" alt="Kotibhaskar Industries">
-    <span style="display:none;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:var(--white);">KOTIBHASKAR <span style="color:var(--steel)">INDUSTRIES</span></span>
+    <a href="#hero" style="text-decoration:none;display:flex;align-items:center;gap:10px;">
+      <div style="display:flex;gap:3px;align-items:center;">
+        <div style="width:6px;height:32px;background:var(--navy-light);transform:skewX(-8deg);"></div>
+        <div style="width:6px;height:32px;background:var(--steel);transform:skewX(-8deg);"></div>
+      </div>
+      <div style="line-height:1.1;">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--white);letter-spacing:2px;">KOTIBHASKAR</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;color:var(--steel);letter-spacing:5px;">INDUSTRIES</div>
+      </div>
+    </a>
   </div>
   <ul class="nav-links">
     <li><a href="#hero">Home</a></li>
@@ -385,7 +393,16 @@ footer{background:#0d1117;padding:60px 5% 32px;border-top:1px solid rgba(28,63,1
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
-      <img src="logo.png" onerror="this.style.display='none'" alt="Kotibhaskar Industries">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+        <div style="display:flex;gap:3px;align-items:center;">
+          <div style="width:5px;height:28px;background:var(--navy-light);transform:skewX(-8deg);"></div>
+          <div style="width:5px;height:28px;background:var(--steel);transform:skewX(-8deg);"></div>
+        </div>
+        <div style="line-height:1.1;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:800;color:var(--white);letter-spacing:2px;">KOTIBHASKAR</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:600;color:var(--steel);letter-spacing:5px;">INDUSTRIES</div>
+        </div>
+      </div>
       <p>Manufacturer of material handling equipment. Serving Indian industry since 2000.</p>
     </div>
     <div class="footer-col"><h4>Products</h4><a href="#products" onclick="showCat('mhe',document.querySelector('.cat-card'))">MHE Equipment</a><a href="#products" onclick="showCat('trolleys',document.querySelectorAll('.cat-card')[1])">Trolleys</a><a href="#products" onclick="showCat('castors',document.querySelectorAll('.cat-card')[2])">Wheels &amp; Castors</a></div>
