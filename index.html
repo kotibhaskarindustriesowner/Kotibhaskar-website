@@ -181,10 +181,11 @@ footer{background:#0d1117;padding:60px 5% 32px;border-top:1px solid rgba(28,63,1
   </div>
   <ul class="nav-links">
     <li><a href="#hero">Home</a></li>
-    <li><a href="#finder">Product Finder</a></li>
     <li><a href="#products">Products</a></li>
+    <li><a href="#facility">Facility</a></li>
+    <li><a href="#customers">Customers</a></li>
+    <li><a href="#network">Sales Network</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#industries">Industries</a></li>
     <li><a href="#contact" class="nav-cta">Get Quote</a></li>
   </ul>
   <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
@@ -424,7 +425,10 @@ footer{background:#0d1117;padding:60px 5% 32px;border-top:1px solid rgba(28,63,1
       <div class="modal-images" id="modal-imgs"></div>
       <div class="modal-features" id="modal-feats"></div>
       <div class="modal-table-wrap" id="modal-tbl"></div>
-      <button class="modal-enquire" onclick="closeModal();document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Enquire About This Product &rarr;</button>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <button class="modal-enquire" onclick="closeModal();document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Enquire About This Product &rarr;</button>
+        <button class="modal-enquire" style="background:var(--charcoal2);border:1px solid rgba(28,63,110,0.4);" onclick="printModal()">&#128438; Print / Save PDF</button>
+      </div>
     </div>
   </div>
 </div>
@@ -651,19 +655,28 @@ uhmw:{t:'UHMW – PE Wheels (Ultra High Molecular Weight Polyethylene)',c:'Load 
 i:['https://kotibhaskar.in/images/pageimages/castors/pg04/top.jpg','https://kotibhaskar.in/images/pageimages/castors/pg04/bottom.jpg'],
 f:['Manufactured from virgin UHMW-PE powder, white in colour, by high pressure compression moulding','Pushing and pulling effort with ball bearings (BB) is 50% less than plain bore (PLB) — about 70% of industries use ball bearings','High load carrying capacity / High impact strength / Low rolling and starting friction / Avoids floor damage','Hardness: 75 Shore D / Excellent wear resistance / High cut-to-tear ratio','High resistance to oil, grease and chemicals / Max Working Temperature: 70 degrees C','Does NOT crack under heavy loads or impact loads (unlike polypropylene or nylon wheels)','ROLLER SIZES (for conveyor use): 80x70, 80x85, 80x90, 80x96, 80x100 — Bore 20mm, Bearing 6204, Load 500-600kg','PLB = Plain Bore / BB = Ball Bearing / Bore dimensions in mm'],
 th:['No.','Description','Wheel Size DxW (mm)','Boss Width B (mm)','Bore ID d (mm)','Bearing No.','Load Cap (kg)'],
-tr:[['1','UHMW-WHEEL-50x25x12-PLB','50x25','30','12','---','60'],['2','UHMW-WHEEL-50x25x12-BB','50x25','30','12','6001','60'],['3','UHMW-WHEEL-63x25x12-PLB','63x25','30','12','---','80'],['4','UHMW-WHEEL-63x25x12-BB','63x25','30','12','6001','80'],['5','UHMW-WHEEL-75x25x12-PLB','75x25','30','12','---','100'],['6','UHMW-WHEEL-75x25x12-BB','75x25','30','12','6001','100'],['7','UHMW-WHEEL-75x32x15-PLB','75x32','40','15','---','150'],['8','UHMW-WHEEL-75x32x15-BB','75x32','40','15','6202','150'],['9','UHMW-WHEEL-100x32x15-PLB','100x32','40','15','---','200'],['10','UHMW-WHEEL-100x32x15-BB','100x32','40','15','6202','200'],['11','UHMW-WHEEL-125x32x15-PLB','125x32','40','15','---','250'],['12','UHMW-WHEEL-125x32x15-BB','125x32','40','15','6202','250'],['13','UHMW-WHEEL-100x40x20-PLB','100x40','50','20','---','250'],['14','UHMW-WHEEL-100x40x20-BB','100x40','50','20','6004','250'],['15','UHMW-WHEEL-125x40x20-PLB','125x40','50','20','---','300'],['16','UHMW-WHEEL-125x40x20-BB','125x40','50','20','6004','300'],['17','UHMW-WHEEL-150x40x20-PLB','150x40','50','20','---','350'],['18','UHMW-WHEEL-150x40x20-BB','150x40','50','20','6004','350'],['19','UHMW-WHEEL-200x40x20-PLB','200x40','50','20','---','400'],['20','UHMW-WHEEL-200x40x20-BB','200x40','50','20','6004','400'],['21','UHMW-WHEEL-100x50x25-PLB','100x50','60','25','---','300'],['22','UHMW-WHEEL-100x50x20-BB','100x50','60','20','6004','300'],['23','UHMW-WHEEL-100x50x25-BB','100x50','60','25','6205','300'],['24','UHMW-WHEEL-125x50x25-PLB','125x50','60','25','---','400'],['25','UHMW-WHEEL-125x50x20-BB','125x50','60','20','6004','400'],['26','UHMW-WHEEL-125x50x25-BB','125x50','60','25','6205','400'],['27','UHMW-WHEEL-150x50x25-PLB','150x50','60','25','---','500'],['28','UHMW-WHEEL-150x50x20-BB','150x50','60','20','6004','500'],['29','UHMW-WHEEL-150x50x25-BB','150x50','60','25','6205','500'],['30','UHMW-WHEEL-200x50x25-PLB','200x50','60','25','---','600'],['31','UHMW-WHEEL-200x50x20-BB','200x50','60','20','6004','600'],['32','UHMW-WHEEL-200x50x25-BB','200x50','60','25','6205','600'],['33','UHMW-WHEEL-250x50x25-BB','250x50','60','25','6205','900'],['34','UHMW-WHEEL-300x50x25-BB','300x50','60','25','6205','1000'],['35','UHMW-WHEEL-150x75x25-BB','150x75','90','25','6205','900'],['36','UHMW-WHEEL-200x75x25-BB','200x75','90','25','6205','1100'],['37','UHMW-WHEEL-250x75x25-BB','250x75','90','25','6205','1300'],['38','UHMW-WHEEL-300x75x25-BB','300x75','90','25','6205','1500'],['39','UHMW-WHEEL-180x50x20-BB','180x50','60','20','6204','500']]},
+tr:[['1','UHMW-WHEEL-50x25x12-PLB','50x25','30','12','---','60'],['2','UHMW-WHEEL-50x25x12-BB','50x25','30','12','6001','60'],['3','UHMW-WHEEL-63x25x12-PLB','63x25','30','12','---','80'],['4','UHMW-WHEEL-63x25x12-BB','63x25','30','12','6001','80'],['5','UHMW-WHEEL-75x25x12-PLB','75x25','30','12','---','100'],['6','UHMW-WHEEL-75x25x12-BB','75x25','30','12','6001','100'],['7','UHMW-WHEEL-75x32x15-PLB','75x32','40','15','---','150'],['8','UHMW-WHEEL-75x32x15-BB','75x32','40','15','6202','150'],['9','UHMW-WHEEL-100x32x15-PLB','100x32','40','15','---','200'],['10','UHMW-WHEEL-100x32x15-BB','100x32','40','15','6202','200'],['11','UHMW-WHEEL-125x32x15-PLB','125x32','40','15','---','250'],['12','UHMW-WHEEL-125x32x15-BB','125x32','40','15','6202','250'],['13','UHMW-WHEEL-100x40x20-PLB','100x40','50','20','---','250'],['14','UHMW-WHEEL-100x40x20-BB','100x40','50','20','6004','250'],['15','UHMW-WHEEL-125x40x20-PLB','125x40','50','20','---','300'],['16','UHMW-WHEEL-125x40x20-BB','125x40','50','20','6004','300'],['17','UHMW-WHEEL-150x40x20-PLB','150x40','50','20','---','350'],['18','UHMW-WHEEL-150x40x20-BB','150x40','50','20','6004','350'],['19','UHMW-WHEEL-200x40x20-PLB','200x40','50','20','---','400'],['20','UHMW-WHEEL-200x40x20-BB','200x40','50','20','6004','400'],['21','UHMW-WHEEL-100x50x25-PLB','100x50','60','25','---','300'],['22','UHMW-WHEEL-100x50x20-BB','100x50','60','20','6004','300'],['23','UHMW-WHEEL-100x50x25-BB','100x50','60','25','6205','300'],['24','UHMW-WHEEL-125x50x25-PLB','125x50','60','25','---','400'],['25','UHMW-WHEEL-125x50x20-BB','125x50','60','20','6004','400'],['26','UHMW-WHEEL-125x50x25-BB','125x50','60','25','6205','400'],['27','UHMW-WHEEL-150x50x25-PLB','150x50','60','25','---','500'],['28','UHMW-WHEEL-150x50x20-BB','150x50','60','20','6004','500'],['29','UHMW-WHEEL-150x50x25-BB','150x50','60','25','6205','500'],['30','UHMW-WHEEL-200x50x25-PLB','200x50','60','25','---','600'],['31','UHMW-WHEEL-200x50x20-BB','200x50','60','20','6004','600'],['32','UHMW-WHEEL-200x50x25-BB','200x50','60','25','6205','600'],['33','UHMW-WHEEL-250x50x25-BB','250x50','60','25','6205','900'],['34','UHMW-WHEEL-300x50x25-BB','300x50','60','25','6205','1000'],['35','UHMW-WHEEL-150x75x25-BB','150x75','90','25','6205','900'],['36','UHMW-WHEEL-200x75x25-BB','200x75','90','25','6205','1100'],['37','UHMW-WHEEL-250x75x25-BB','250x75','90','25','6205','1300'],['38','UHMW-WHEEL-300x75x25-BB','300x75','90','25','6205','1500'],['39','UHMW-WHEEL-180x50x20-BB','180x50','60','20','6204','500']],
+roller_title:'UHMW-PE Rollers (for Conveyors) — with Ball Bearings (BB)',
+roller_th:['Roller Size DxW (mm)','Bore ID d (mm)','Bearing Number','Load Cap (kg)'],
+roller_tr:[['80x70','20','6204','500'],['80x85','20','6204','550'],['80x90','20','6204','550'],['80x96','20','6204','600'],['80x100','20','6204','600']]},
 
 puci:{t:'PU – CI Wheels (Polyurethane with Cast Iron Core)',c:'Load Capacity: 60 to 1500 kg | Hardness: 95 Shore A | Max Temp: 70°C',
 i:['https://kotibhaskar.in/images/pageimages/castors/pg06/top.jpg','https://kotibhaskar.in/images/pageimages/castors/pg06/bottom.jpg'],
 f:['Manufactured by casting process — Polyurethane bonded/moulded over Cast Iron core to form PU-CI Wheel','BB (Ball Bearing) effort is 50% less than plain bore — 70% of industries use ball bearings','High load carrying capacity / High impact strength / Low rolling and starting friction / Avoids floor damage','Hardness: 95 Shore A / Excellent wear resistance / High cut-to-tear ratio','High resistance to oil, grease and chemicals / Max Working Temperature: 70 degrees C','Widely used in Pallet Trucks, Stackers, Drum Tilters, Floor Cranes, Battery operated equipment and trolleys','Cast polyurethane properties are MUCH BETTER than injection moulded polyurethane — higher load capacity and service life','HEAVY AND THICKER SECTIONS used for better stability, safety and life','ROLLER SIZES (conveyor): 80x70, 80x85, 80x90, 80x96, 80x100 — Bore 20mm, Bearing 6204, Load 500-600kg'],
 th:['No.','Description','Wheel Size DxW (mm)','Boss Width B (mm)','Bore ID d (mm)','Bearing No.','Load Cap (kg)'],
-tr:[['1','PU-CI-WHEEL-50x25x12-BB','50x25','30','12','6001','60'],['2','PU-CI-WHEEL-63x25x12-BB','63x25','30','12','6001','80'],['3','PU-CI-WHEEL-75x25x12-BB','75x25','30','12','6001','100'],['4','PU-CI-WHEEL-75x32x15-BB','75x32','40','15','6202','150'],['5','PU-CI-WHEEL-100x32x15-BB','100x32','40','15','6202','200'],['6','PU-CI-WHEEL-125x32x15-BB','125x32','40','15','6202','250'],['7','PU-CI-WHEEL-100x40x20-BB','100x40','50','20','6004','250'],['8','PU-CI-WHEEL-125x40x20-BB','125x40','50','20','6004','300'],['9','PU-CI-WHEEL-150x40x20-BB','150x40','50','20','6004','350'],['10','PU-CI-WHEEL-200x40x20-BB','200x40','50','20','6004','400'],['11','PU-CI-WHEEL-100x50x25-BB','100x50','60','25','6205','300'],['12','PU-CI-WHEEL-125x50x25-BB','125x50','60','25','6205','400'],['13','PU-CI-WHEEL-150x50x25-BB','150x50','60','25','6205','500'],['14','PU-CI-WHEEL-200x50x25-BB','200x50','60','25','6205','600'],['15','PU-CI-WHEEL-250x50x25-BB','250x50','60','25','6205','900'],['16','PU-CI-WHEEL-300x50x25-BB','300x50','60','25','6205','1000'],['17','PU-CI-WHEEL-150x75x25-BB','150x75','90','25','6205','900'],['18','PU-CI-WHEEL-200x75x25-BB','200x75','90','25','6205','1100'],['19','PU-CI-WHEEL-250x75x25-BB','250x75','90','25','6205','1300'],['20','PU-CI-WHEEL-300x75x25-BB','300x75','90','25','6205','1500'],['21','PU-CI-WHEEL-180x50x20-BB','180x50','60','20','6204','500']]},
+tr:[['1','PU-CI-WHEEL-50x25x12-BB','50x25','30','12','6001','60'],['2','PU-CI-WHEEL-63x25x12-BB','63x25','30','12','6001','80'],['3','PU-CI-WHEEL-75x25x12-BB','75x25','30','12','6001','100'],['4','PU-CI-WHEEL-75x32x15-BB','75x32','40','15','6202','150'],['5','PU-CI-WHEEL-100x32x15-BB','100x32','40','15','6202','200'],['6','PU-CI-WHEEL-125x32x15-BB','125x32','40','15','6202','250'],['7','PU-CI-WHEEL-100x40x20-BB','100x40','50','20','6004','250'],['8','PU-CI-WHEEL-125x40x20-BB','125x40','50','20','6004','300'],['9','PU-CI-WHEEL-150x40x20-BB','150x40','50','20','6004','350'],['10','PU-CI-WHEEL-200x40x20-BB','200x40','50','20','6004','400'],['11','PU-CI-WHEEL-100x50x25-BB','100x50','60','25','6205','300'],['12','PU-CI-WHEEL-125x50x25-BB','125x50','60','25','6205','400'],['13','PU-CI-WHEEL-150x50x25-BB','150x50','60','25','6205','500'],['14','PU-CI-WHEEL-200x50x25-BB','200x50','60','25','6205','600'],['15','PU-CI-WHEEL-250x50x25-BB','250x50','60','25','6205','900'],['16','PU-CI-WHEEL-300x50x25-BB','300x50','60','25','6205','1000'],['17','PU-CI-WHEEL-150x75x25-BB','150x75','90','25','6205','900'],['18','PU-CI-WHEEL-200x75x25-BB','200x75','90','25','6205','1100'],['19','PU-CI-WHEEL-250x75x25-BB','250x75','90','25','6205','1300'],['20','PU-CI-WHEEL-300x75x25-BB','300x75','90','25','6205','1500'],['21','PU-CI-WHEEL-180x50x20-BB','180x50','60','20','6204','500']],
+roller_title:'PU-CI Rollers (for Conveyors) — with Ball Bearings (BB)',
+roller_th:['Roller Size DxW (mm)','Bore ID d (mm)','Bearing Number','Load Cap (kg)'],
+roller_tr:[['80x70','20','6204','500'],['80x85','20','6204','550'],['80x90','20','6204','550'],['80x96','20','6204','600'],['80x100','20','6204','600']]},
 
 ciw:{t:'Cast Iron Wheels (CI Wheels)',c:'Load Capacity: 100 to 2000 kg | Hardness: 175 BHN | Max Temp: 250°C | Grade: FG 200',
 i:['https://kotibhaskar.in/images/pageimages/castors/pg08/top.jpg','https://kotibhaskar.in/images/pageimages/castors/pg08/bottom.jpg'],
 f:['Manufactured from good quality graded casting — machinable and free from blow holes','High load carrying capacity with excellent wear resistance','Hardness: 175 BHN / Casting Grade: FG 200','SUITABLE FOR HIGH TEMPERATURE applications — ovens, foundries — Max Working Temperature: 250 degrees C','BB effort is 50% less than PLB — 70% of industries use ball bearings','Available in Plain Bore (PLB) and Ball Bearing (BB)','IMPORTANT: CI wheels make noise during movement and being very hard may cause damage to shop floor','ROLLER SIZES (conveyor): 80x70, 80x85, 80x90, 80x96, 80x100 — Bore 20mm, Bearing 6204, Load 800-1000kg'],
 th:['No.','Description','Wheel Size DxW (mm)','Boss Width B (mm)','Bore ID d (mm)','Bearing No.','Load Cap (kg)'],
-tr:[['1','CI-WHEEL-50x25x12-PLB','50x25','30','12','---','100'],['2','CI-WHEEL-50x25x12-BB','50x25','30','12','6001','100'],['3','CI-WHEEL-63x25x12-PLB','63x25','30','12','---','130'],['4','CI-WHEEL-63x25x12-BB','63x25','30','12','6001','130'],['5','CI-WHEEL-75x25x12-PLB','75x25','30','12','---','160'],['6','CI-WHEEL-75x25x12-BB','75x25','30','12','6001','160'],['7','CI-WHEEL-75x32x15-PLB','75x32','40','15','---','200'],['8','CI-WHEEL-75x32x15-BB','75x32','40','15','6202','200'],['9','CI-WHEEL-100x32x15-PLB','100x32','40','15','---','300'],['10','CI-WHEEL-100x32x15-BB','100x32','40','15','6202','300'],['11','CI-WHEEL-125x32x15-PLB','125x32','40','15','---','400'],['12','CI-WHEEL-125x32x15-BB','125x32','40','15','6202','400'],['13','CI-WHEEL-100x40x20-PLB','100x40','50','20','---','400'],['14','CI-WHEEL-100x40x20-BB','100x40','50','20','6004','400'],['15','CI-WHEEL-125x40x20-PLB','125x40','50','20','---','500'],['16','CI-WHEEL-125x40x20-BB','125x40','50','20','6004','500'],['17','CI-WHEEL-150x40x20-PLB','150x40','50','20','---','600'],['18','CI-WHEEL-150x40x20-BB','150x40','50','20','6004','600'],['19','CI-WHEEL-200x40x20-PLB','200x40','50','20','---','800'],['20','CI-WHEEL-200x40x20-BB','200x40','50','20','6004','800'],['21','CI-WHEEL-100x50x25-PLB','100x50','60','25','---','500'],['22','CI-WHEEL-100x50x20-BB','100x50','60','20','6004','500'],['23','CI-WHEEL-100x50x25-BB','100x50','60','25','6205','500'],['24','CI-WHEEL-125x50x25-PLB','125x50','60','25','---','600'],['25','CI-WHEEL-125x50x20-BB','125x50','60','20','6004','600'],['26','CI-WHEEL-125x50x25-BB','125x50','60','25','6205','600'],['27','CI-WHEEL-150x50x25-PLB','150x50','60','25','---','700'],['28','CI-WHEEL-150x50x20-BB','150x50','60','20','6004','700'],['29','CI-WHEEL-150x50x25-BB','150x50','60','25','6205','700'],['30','CI-WHEEL-200x50x25-PLB','200x50','60','25','---','900'],['31','CI-WHEEL-200x50x20-BB','200x50','60','20','6004','900'],['32','CI-WHEEL-200x50x25-BB','200x50','60','25','6205','900'],['33','CI-WHEEL-250x50x25-BB','250x50','60','25','6205','1100'],['34','CI-WHEEL-300x50x25-BB','300x50','60','25','6205','1400'],['35','CI-WHEEL-150x75x25-BB','150x75','90','25','6205','1000'],['36','CI-WHEEL-200x75x25-BB','200x75','90','25','6205','1300'],['37','CI-WHEEL-250x75x25-BB','250x75','90','25','6205','1600'],['38','CI-WHEEL-300x75x25-BB','300x75','90','25','6205','2000'],['39','CI-WHEEL-180x50x20-BB','180x50','60','20','6204','800']]},
+tr:[['1','CI-WHEEL-50x25x12-PLB','50x25','30','12','---','100'],['2','CI-WHEEL-50x25x12-BB','50x25','30','12','6001','100'],['3','CI-WHEEL-63x25x12-PLB','63x25','30','12','---','130'],['4','CI-WHEEL-63x25x12-BB','63x25','30','12','6001','130'],['5','CI-WHEEL-75x25x12-PLB','75x25','30','12','---','160'],['6','CI-WHEEL-75x25x12-BB','75x25','30','12','6001','160'],['7','CI-WHEEL-75x32x15-PLB','75x32','40','15','---','200'],['8','CI-WHEEL-75x32x15-BB','75x32','40','15','6202','200'],['9','CI-WHEEL-100x32x15-PLB','100x32','40','15','---','300'],['10','CI-WHEEL-100x32x15-BB','100x32','40','15','6202','300'],['11','CI-WHEEL-125x32x15-PLB','125x32','40','15','---','400'],['12','CI-WHEEL-125x32x15-BB','125x32','40','15','6202','400'],['13','CI-WHEEL-100x40x20-PLB','100x40','50','20','---','400'],['14','CI-WHEEL-100x40x20-BB','100x40','50','20','6004','400'],['15','CI-WHEEL-125x40x20-PLB','125x40','50','20','---','500'],['16','CI-WHEEL-125x40x20-BB','125x40','50','20','6004','500'],['17','CI-WHEEL-150x40x20-PLB','150x40','50','20','---','600'],['18','CI-WHEEL-150x40x20-BB','150x40','50','20','6004','600'],['19','CI-WHEEL-200x40x20-PLB','200x40','50','20','---','800'],['20','CI-WHEEL-200x40x20-BB','200x40','50','20','6004','800'],['21','CI-WHEEL-100x50x25-PLB','100x50','60','25','---','500'],['22','CI-WHEEL-100x50x20-BB','100x50','60','20','6004','500'],['23','CI-WHEEL-100x50x25-BB','100x50','60','25','6205','500'],['24','CI-WHEEL-125x50x25-PLB','125x50','60','25','---','600'],['25','CI-WHEEL-125x50x20-BB','125x50','60','20','6004','600'],['26','CI-WHEEL-125x50x25-BB','125x50','60','25','6205','600'],['27','CI-WHEEL-150x50x25-PLB','150x50','60','25','---','700'],['28','CI-WHEEL-150x50x20-BB','150x50','60','20','6004','700'],['29','CI-WHEEL-150x50x25-BB','150x50','60','25','6205','700'],['30','CI-WHEEL-200x50x25-PLB','200x50','60','25','---','900'],['31','CI-WHEEL-200x50x20-BB','200x50','60','20','6004','900'],['32','CI-WHEEL-200x50x25-BB','200x50','60','25','6205','900'],['33','CI-WHEEL-250x50x25-BB','250x50','60','25','6205','1100'],['34','CI-WHEEL-300x50x25-BB','300x50','60','25','6205','1400'],['35','CI-WHEEL-150x75x25-BB','150x75','90','25','6205','1000'],['36','CI-WHEEL-200x75x25-BB','200x75','90','25','6205','1300'],['37','CI-WHEEL-250x75x25-BB','250x75','90','25','6205','1600'],['38','CI-WHEEL-300x75x25-BB','300x75','90','25','6205','2000'],['39','CI-WHEEL-180x50x20-BB','180x50','60','20','6204','800']],
+roller_title:'Cast Iron Rollers (for Conveyors) — with Ball Bearings (BB)',
+roller_th:['Roller Size DxW (mm)','Bore ID d (mm)','Bearing Number','Load Cap (kg)'],
+roller_tr:[['80x70','20','6204','800'],['80x85','20','6204','900'],['80x90','20','6204','900'],['80x96','20','6204','1000'],['80x100','20','6204','1000']]},
 
 msw:{t:'MS Solid Track Wheels — V-Groove / Square / Round / Flange',c:'Load Capacity: 100 to 2000 kg | Max Temp: 250°C | Profiles: MS-VG / MS-SQ / MS-RO / MS-FL',
 i:['https://kotibhaskar.in/images/pageimages/castors/pg10/1.jpg','https://kotibhaskar.in/images/pageimages/castors/pg10/2.jpg','https://kotibhaskar.in/images/pageimages/castors/pg10/3.jpg','https://kotibhaskar.in/images/pageimages/castors/pg10/4.jpg','https://kotibhaskar.in/images/pageimages/castors/pg10/5.jpg'],
@@ -762,6 +775,15 @@ function openModal(id){
   p.tr.forEach(function(r){tbl+='<tr>';r.forEach(function(c){tbl+='<td>'+c+'</td>';});tbl+='</tr>';});
   tbl+='</tbody></table>';
   document.getElementById('modal-tbl').innerHTML=tbl;
+  // Extra roller table for wheel types
+  if(p.roller_th && p.roller_tr){
+    var rtbl='<div class="spec-title" style="margin-top:24px;">'+p.roller_title+'</div><table class="modal-table"><thead><tr>';
+    p.roller_th.forEach(function(h){rtbl+='<th>'+h+'</th>';});
+    rtbl+='</tr></thead><tbody>';
+    p.roller_tr.forEach(function(r){rtbl+='<tr>';r.forEach(function(c){rtbl+='<td>'+c+'</td>';});rtbl+='</tr>';});
+    rtbl+='</tbody></table>';
+    document.getElementById('modal-tbl').innerHTML+=rtbl;
+  }
   document.getElementById('modal').classList.add('open');
   document.body.style.overflow='hidden';
 }
@@ -780,5 +802,271 @@ var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){i
 document.querySelectorAll('.fade-up').forEach(function(el){obs.observe(el);});
 window.addEventListener('scroll',function(){document.querySelector('nav').style.boxShadow=window.scrollY>40?'0 4px 24px rgba(0,0,0,0.4)':'none';});
 </script>
+
+<style>
+/* ---- NEW SECTIONS ---- */
+#facility{background:var(--charcoal2);}
+#customers{background:var(--charcoal);}
+#network{background:var(--charcoal2);}
+
+.facility-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;}
+.facility-card{background:var(--charcoal);border:1px solid rgba(28,63,110,0.2);overflow:hidden;transition:border-color 0.2s;}
+.facility-card:hover{border-color:var(--navy);}
+.facility-card img{width:100%;aspect-ratio:4/3;object-fit:cover;opacity:0.85;display:block;}
+.facility-label{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:14px 16px;color:var(--steel-light);}
+
+.customers-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px;}
+.cstat{background:var(--charcoal2);border:1px solid rgba(28,63,110,0.25);padding:24px;border-left:3px solid var(--navy);}
+.cstat-num{font-family:'Barlow Condensed',sans-serif;font-size:36px;font-weight:800;color:var(--white);}
+.cstat-label{font-size:12px;color:var(--text-muted);margin-top:4px;letter-spacing:1px;text-transform:uppercase;font-family:'Barlow Condensed',sans-serif;}
+
+.star-customers{background:var(--navy-dark);padding:32px;margin-bottom:40px;border:1px solid rgba(28,63,110,0.4);}
+.star-customers h3{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:20px;color:var(--white);}
+.star-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;}
+.star-item{font-size:13px;color:var(--steel-light);padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.star-item strong{color:var(--white);}
+
+.clients-grid{columns:3;column-gap:32px;}
+.client-name{font-size:13px;color:var(--steel-light);padding:4px 0;break-inside:avoid;}
+
+.network-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+.network-table{width:100%;border-collapse:collapse;}
+.network-table th{background:var(--navy-dark);color:var(--white);padding:12px 16px;font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-align:left;}
+.network-table td{padding:10px 16px;border-bottom:1px solid rgba(255,255,255,0.05);font-size:13px;color:var(--steel-light);}
+.network-table tr:hover td{background:rgba(28,63,110,0.08);}
+.network-section-label{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--navy-light);background:rgba(28,63,110,0.12);}
+.network-section-label td{padding:10px 16px !important;color:var(--navy-light) !important;}
+.training-box{background:var(--charcoal);border:1px solid rgba(28,63,110,0.3);padding:28px;margin-top:24px;}
+.training-box h4{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;color:var(--white);}
+.training-box p{font-size:14px;color:var(--steel-light);line-height:1.7;}
+
+@media(max-width:900px){
+  .customers-stats{grid-template-columns:1fr 1fr;}
+  .clients-grid{columns:2;}
+  .network-grid{grid-template-columns:1fr;}
+}
+@media(max-width:600px){
+  .clients-grid{columns:1;}
+  .customers-stats{grid-template-columns:1fr 1fr;}
+}
+
+/* ---- PRINT STYLES ---- */
+@media print {
+  nav,#finder,.hero-buttons,.hero-stats,.hero-grid-bg,.hero-accent-line,
+  #why,#industries,footer,.modal-overlay,
+  .finder-suggestions,.view-specs-tag,
+  .product-categories,.product-grid-container,
+  #hero .hero-tag { display:none !important; }
+  
+  .modal-overlay.open {
+    display:block !important;
+    position:static !important;
+    background:white !important;
+    padding:0 !important;
+  }
+  .modal-box {
+    background:white !important;
+    color:black !important;
+    border:none !important;
+    max-width:100% !important;
+    box-shadow:none !important;
+  }
+  .modal-header { background:#1C3F6E !important; }
+  .modal-title { color:white !important; font-size:20px !important; }
+  .modal-capacity { color:#ccc !important; }
+  .modal-close { display:none !important; }
+  .modal-enquire { display:none !important; }
+  .modal-body { padding:20px !important; }
+  .modal-img { background:#f5f5f5 !important; }
+  .modal-img img { max-height:200px !important; }
+  .modal-table th { background:#1C3F6E !important; color:white !important; }
+  .modal-table td { color:#333 !important; border-bottom:1px solid #ddd !important; }
+  .modal-features li { color:#333 !important; }
+  .modal-features h4 { color:#1C3F6E !important; }
+  .spec-title { color:#1C3F6E !important; }
+  body { background:white !important; color:black !important; }
+  * { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+}
+</style>
+
+<!-- PRODUCTION FACILITY -->
+<section id="facility">
+  <div class="section-tag">Our Plant</div>
+  <h2 class="section-title">Production Facilities</h2>
+  <div class="facility-grid">
+    <div class="facility-card">
+      <img src="https://kotibhaskar.in/images/pageimages/e12_01.jpg" alt="Manufacturing Plant" onerror="this.style.display='none'">
+      <div class="facility-label">Manufacturing Plant</div>
+    </div>
+    <div class="facility-card">
+      <img src="https://kotibhaskar.in/images/pageimages/04_1.jpg" alt="Manufacturing Setup" onerror="this.style.display='none'">
+      <div class="facility-label">Manufacturing Setup</div>
+    </div>
+    <div class="facility-card">
+      <img src="https://kotibhaskar.in/images/pageimages/04_2.jpg" alt="Manufacturing Setup 2" onerror="this.style.display='none'">
+      <div class="facility-label">Production Floor</div>
+    </div>
+    <div class="facility-card">
+      <img src="https://kotibhaskar.in/images/pageimages/04_3.jpg" alt="Manufacturing Setup 3" onerror="this.style.display='none'">
+      <div class="facility-label">Workshop</div>
+    </div>
+    <div class="facility-card">
+      <img src="https://kotibhaskar.in/images/pageimages/04_4.jpg" alt="Manufacturing Setup 4" onerror="this.style.display='none'">
+      <div class="facility-label">Assembly Area</div>
+    </div>
+    <div class="facility-card">
+      <img src="https://kotibhaskar.in/images/pageimages/04_5.jpg" alt="Manufacturing Setup 5" onerror="this.style.display='none'">
+      <div class="facility-label">Fabrication</div>
+    </div>
+    <div class="facility-card">
+      <img src="https://kotibhaskar.in/images/pageimages/04_6.jpg" alt="Manufacturing Setup 6" onerror="this.style.display='none'">
+      <div class="facility-label">Machine Shop</div>
+    </div>
+    <div class="facility-card">
+      <img src="https://kotibhaskar.in/images/pageimages/04_7.jpg" alt="Manufacturing Setup 7" onerror="this.style.display='none'">
+      <div class="facility-label">Quality Control</div>
+    </div>
+    <div class="facility-card">
+      <img src="https://kotibhaskar.in/images/pageimages/04_8.jpg" alt="Factory Setup 1" onerror="this.style.display='none'">
+      <div class="facility-label">Factory Setup</div>
+    </div>
+    <div class="facility-card">
+      <img src="https://kotibhaskar.in/images/pageimages/04_9.jpg" alt="Factory Setup 2" onerror="this.style.display='none'">
+      <div class="facility-label">Storage &amp; Despatch</div>
+    </div>
+    <div class="facility-card">
+      <img src="https://kotibhaskar.in/images/pageimages/107_2.jpg" alt="Training Centre" onerror="this.style.display='none'">
+      <div class="facility-label">After-Sales Training Centre</div>
+    </div>
+    <div class="facility-card">
+      <img src="https://kotibhaskar.in/images/pageimages/107_3.jpg" alt="Training Centre 2" onerror="this.style.display='none'">
+      <div class="facility-label">Service Training</div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOMERS -->
+<section id="customers">
+  <div class="section-tag">Who Trusts Us</div>
+  <h2 class="section-title">Our Valued Customers</h2>
+  <div class="customers-stats">
+    <div class="cstat"><div class="cstat-num">20–25%</div><div class="cstat-label">Growth per year</div></div>
+    <div class="cstat"><div class="cstat-num">8–10</div><div class="cstat-label">New products added yearly</div></div>
+    <div class="cstat"><div class="cstat-num">40–50%</div><div class="cstat-label">Reduction in man effort</div></div>
+    <div class="cstat"><div class="cstat-num">90%</div><div class="cstat-label">Reduction in accident risk</div></div>
+  </div>
+  <div class="star-customers">
+    <h3>⭐ Star Customers</h3>
+    <div class="star-list">
+      <div class="star-item"><strong>Alfa Laval Ltd.</strong> &mdash; approx. 46 Equipments</div>
+      <div class="star-item"><strong>Nerolac Paints Ltd.</strong> &mdash; approx. 41 Equipments</div>
+      <div class="star-item"><strong>Orchid Chemicals Ltd.</strong> &mdash; approx. 35 Equipments</div>
+      <div class="star-item"><strong>Garware Polyester Ltd.</strong> &mdash; approx. 32 Equipments</div>
+      <div class="star-item"><strong>Mather &amp; Platt Ltd.</strong> &mdash; approx. 31 Equipments</div>
+      <div class="star-item"><strong>Kirloskar Pneumatic Ltd.</strong> &mdash; approx. 28 Equipments</div>
+      <div class="star-item"><strong>Suessen Asia India Pvt. Ltd.</strong> &mdash; approx. 25 Equipments</div>
+      <div class="star-item"><strong>ZF India Pvt. Ltd.</strong> &mdash; approx. 23 Equipments</div>
+      <div class="star-item"><strong>KSB Pumps Ltd.</strong> &mdash; approx. 22 Equipments</div>
+      <div class="star-item"><strong>Universal Equip. Pvt. Ltd.</strong> &mdash; approx. 20 Equipments</div>
+      <div class="star-item"><strong>Forbes Marshall Pvt. Ltd.</strong> &mdash; approx. 19 Equipments</div>
+      <div class="star-item"><strong>Wave Suspension Pvt. Ltd.</strong> &mdash; approx. 17 Equipments</div>
+    </div>
+  </div>
+  <div class="clients-grid">
+    <div class="client-name">A.K.P. Foundries P. Ltd. (Belgaum)</div><div class="client-name">Abhishek Alloys Pvt. Ltd. (Belgaum)</div><div class="client-name">ABS Electroplaters (I) Pvt. Ltd. (Goa)</div><div class="client-name">Accurate Gauging &amp; Instruments Pvt. Ltd.</div><div class="client-name">Aditi Foods (I) Pvt. Ltd. (Sangli)</div><div class="client-name">Aditya Auto Prod. &amp; Eng. P. Ltd. (Pune)</div><div class="client-name">Aditya Polymers (Chikhali, Pune)</div><div class="client-name">Advance Metal Powder (Mumbai)</div><div class="client-name">Advik Hi-Tech Pvt. Ltd. (Pune)</div><div class="client-name">Aerocans India Pvt. Ltd. (Khandala)</div><div class="client-name">Aerofine Polymers Pvt. Ltd. (Pune)</div><div class="client-name">AFXQ Engineers (Kolhapur)</div><div class="client-name">Alfa Laval Ltd. (Satara, Sarola, Pune)</div><div class="client-name">Alucast Auto Parts Ltd. (Belgaum)</div><div class="client-name">Amber Nutrition P. Ltd. (Indore)</div><div class="client-name">Ampacet Speciality Prod. P. Ltd. (Pune)</div><div class="client-name">Amtek Auto Ltd. (Pune)</div><div class="client-name">Aras Metal Castings (Pune)</div><div class="client-name">Arni Mech Products Pvt. Ltd. (Kolhapur)</div><div class="client-name">Ashvini Magnet Pvt. Ltd. (Pune)</div><div class="client-name">Asseal India Pvt. Ltd. (Pune)</div><div class="client-name">Atlas Copco (India) Ltd. (Nashik)</div><div class="client-name">Avik Polychem (Pune)</div><div class="client-name">B.D. Industries Pvt. Ltd. (Pune)</div><div class="client-name">B.V. Bio-Corp Pvt. Ltd. (Bhor)</div><div class="client-name">Badave Auto Comp. (Pune, A'bad)</div><div class="client-name">Bajaj Auto Ltd. (Waluj, A'bad)</div><div class="client-name">Baramati Cattle Feeds (Baramati)</div><div class="client-name">Bharat Forge Ltd. (Baramati)</div><div class="client-name">Bhushan Power &amp; Steel Ltd. (Kolkata)</div><div class="client-name">Bhushan Power &amp; Steel Ltd. (Orissa)</div><div class="client-name">Birla Precision Tech. Ltd. (Aurangabad)</div><div class="client-name">Bodycote Metallurgical (Pune)</div><div class="client-name">Brinton Carpet Asia (P) Ltd. (Pune)</div><div class="client-name">Buchade Metalcraft Pvt. Ltd. (Dombivli)</div><div class="client-name">Budhale &amp; Budhale (Kolhapur)</div><div class="client-name">Cargil Foods Industries (Kurkumbh)</div><div class="client-name">Caspro Metal Industries (Kolhapur)</div><div class="client-name">Castall Industries (Kolhapur)</div><div class="client-name">Century Enka Ltd. (Pune)</div><div class="client-name">Ceraflux India Pvt. Ltd. (Kolhapur)</div><div class="client-name">Champion CNC Engg. Work (Pune)</div><div class="client-name">Chheda Elect &amp; Electronics P.L. (Roorkee)</div><div class="client-name">Cipla Ltd. (Kurkumbh, Mumbai)</div><div class="client-name">Climate Systems Engineers (Pune)</div><div class="client-name">Cooper Foundry Pvt. Ltd. (Satara)</div><div class="client-name">Crompton Greaves Ltd. (Ahmednagar)</div><div class="client-name">Crystal Surfactants (Paithan, A'bad)</div><div class="client-name">Dana India Pvt. Ltd. (Pune)</div><div class="client-name">Datwyler Pharma Pack I.P. Ltd. (Shirval)</div><div class="client-name">DC Cable India Pvt. Ltd. (Kudal)</div><div class="client-name">Desai Brothers Ltd. (Pune)</div><div class="client-name">Dewas Techno Products P. Ltd. (M.P.)</div><div class="client-name">Dhind Wire Products P. Ltd. (Satara)</div><div class="client-name">Dimple Chemical P. Ltd. (Pune)</div><div class="client-name">Doehler India Pvt. Ltd. (Pune)</div><div class="client-name">Dol Motors Pvt. Ltd. (Mumbai)</div><div class="client-name">Electronica Plastic Machines Ltd. (Pune)</div><div class="client-name">Emcure Pharmaceuticals Ltd. (Pune)</div><div class="client-name">Emerson Network Power P. Ltd. (Pune)</div><div class="client-name">Empire Spices &amp; Foods Ltd. (Nashik)</div><div class="client-name">Emuge India Pvt. Ltd. (Pune)</div><div class="client-name">Encube Ethicals Pvt. Ltd. (Goa)</div><div class="client-name">Excella Pencils Ltd. (Sangli)</div><div class="client-name">Exide Industries Ltd. (Pune)</div><div class="client-name">Farbizo (Goa)</div><div class="client-name">Fiat India Automobiles P. L. (Pune)</div><div class="client-name">Finolex Cables Ltd. (Pune)</div><div class="client-name">Forbes Marshall Ltd. (Pune)</div><div class="client-name">Fortune Foods Ltd. (Nashik)</div><div class="client-name">Fosroc Chemicals Pvt. Ltd. (Bangalore)</div><div class="client-name">Fuchs Lubricants I. Pvt. Ltd. (Mumbai)</div><div class="client-name">Fuel Instruments &amp; Engg. (Kolhapur)</div><div class="client-name">Gainmax Ferrocast P. Ltd. (Kolhapur)</div><div class="client-name">Galaxy Aluminium LLP (Sangli)</div><div class="client-name">Garware Polyester Ltd. (Aurangabad)</div><div class="client-name">Gayatree Polymers Pvt. Ltd. (Pune)</div><div class="client-name">General Machine Tools (Ichalkaranji)</div><div class="client-name">Godawari Udyog (Sangli)</div><div class="client-name">Godrej Agrovet Limited (Baramati)</div><div class="client-name">Godrej Agrovet Limited (Satara)</div><div class="client-name">Godrej Beverages &amp; Foods (Bhopal)</div><div class="client-name">Golden Cross Pharma P.I. (Sikkim)</div><div class="client-name">Gole Precision Tools Pvt. Ltd. (Pune)</div><div class="client-name">Grindwell Norton Ltd. (Mumbai)</div><div class="client-name">Halides Chemicals P. Ltd. (Kurkumbh)</div><div class="client-name">Helvoet Pharma India Ltd. (Khandala)</div><div class="client-name">Hindustan Unilever Ltd. (Buldhana)</div><div class="client-name">Hoganas India P.L. (Ahmednagar)</div><div class="client-name">Honeywell Automation (I) Ltd. (Pune)</div><div class="client-name">Iconic Castings Pvt. Ltd. (Kolhapur)</div><div class="client-name">Indo Schottle Auto Parts P. Ltd. (Belgaum)</div><div class="client-name">Indo Schottle Auto Parts PL (Pune)</div><div class="client-name">Intelux Electronics Pvt. Ltd. (Pune)</div><div class="client-name">J.K. Packing Industry (Kolhapur)</div><div class="client-name">Jagadeesh Iron &amp; Steels P. Ltd. (Miraj)</div><div class="client-name">Jain Spices (I) P. Ltd. (Aurangabad)</div><div class="client-name">Jay Hind Scialy Ltd. (Pune)</div><div class="client-name">Jayashree Polymers Pvt. Ltd. (Pune)</div><div class="client-name">JCB Manufacturing Ltd. (Pune)</div><div class="client-name">K &amp; K Foundry Pvt. Ltd. (Kolhapur)</div><div class="client-name">Kalyani Forge Ltd. (Pune)</div><div class="client-name">Kansai Nerolac Paints Ltd. (Pune)</div><div class="client-name">Khosala Engineering P. Ltd. (Pune)</div><div class="client-name">Kirloskar Brother Ltd. (Sangli)</div><div class="client-name">Kirloskar Oil Engine (Kolhapur)</div><div class="client-name">Kirloskar Pneumatic Co. P.L. (Pune)</div><div class="client-name">Krohne Marshall P. Ltd. (Pune)</div><div class="client-name">KSB Pumps Pvt. Ltd. (Nashik)</div><div class="client-name">KSPG Automotive (I) P. Ltd. (A'nagar)</div><div class="client-name">Larsen &amp; Toubro Ltd. (Ahmednagar)</div><div class="client-name">LG Electronics (Pune)</div><div class="client-name">L'oreal India Pvt. Ltd. (Pune)</div><div class="client-name">Mahindra &amp; Mahindra Ltd. (Nashik)</div><div class="client-name">Mather &amp; Platt Pumps (Kolhapur, Pune)</div><div class="client-name">Menon &amp; Menon Ltd. (Kolhapur)</div><div class="client-name">Metal House (Chattisgarh)</div><div class="client-name">Metalmen Auto (Aurangabad)</div><div class="client-name">Midas Care Pharmaceut (Aurangabad)</div><div class="client-name">Mindarika Pvt. Ltd. (Pune)</div><div class="client-name">Mutual Industries Ltd. (Pune)</div><div class="client-name">Narkars Foods (Kolhapur)</div><div class="client-name">National Panasonic (Ranjangaon)</div><div class="client-name">Neo Toil-S Industries (Pune)</div><div class="client-name">Nippon Paints (India) P.L. (Taloja)</div><div class="client-name">Okasa Pharma Pvt. Ltd. (Satara)</div><div class="client-name">Omega Industries (Sangli)</div><div class="client-name">Padma Industries (Belgaum)</div><div class="client-name">Parvati Foundry (Hatkanangale)</div><div class="client-name">Patson Foods (I) Pvt. Ltd. (Gujarat)</div><div class="client-name">Pentagon Assembly Automation (Pune)</div><div class="client-name">PG Electroplast Ltd. (Ahmednagar)</div><div class="client-name">Piaggio Vehicles Pvt. Ltd. (Baramati)</div><div class="client-name">Polychem (Pune)</div><div class="client-name">PPG India Pvt. Ltd. (Shirwal, Satara)</div><div class="client-name">Praj Industries Ltd. (Gujarat)</div><div class="client-name">Pravin Masalewale (Pune)</div><div class="client-name">Preciforge &amp; Gears (Chakan, Pune)</div><div class="client-name">Privilege Industries Ltd. (Lonand)</div><div class="client-name">Quest Global Mfg. Pvt. Ltd. (Belgaum)</div><div class="client-name">Racold Thermo Ltd. (Pune)</div><div class="client-name">Rajnandini Foods P. Ltd. (Belgaum)</div><div class="client-name">RC Quality Solutions (Pandharpur)</div><div class="client-name">Rocket Engineering P. Ltd. (Kolhapur)</div><div class="client-name">Royal Foodstuffs P. Ltd. (Karad)</div><div class="client-name">Samarth Foundry (Kolhapur)</div><div class="client-name">Satara Roller Flour Mills P. Ltd. (Satara)</div><div class="client-name">Shani Iron &amp; Steel (Belgaum)</div><div class="client-name">Shree Padmavati CNC Engg. (Kolhapur)</div><div class="client-name">Siemens India Ltd. (Thane)</div><div class="client-name">Soham Udyog (Khed-Shivapur)</div><div class="client-name">Sonai Engineering Pvt. Ltd. (Kolhapur)</div><div class="client-name">Sound Casting Pvt. Ltd. (Kolhapur)</div><div class="client-name">Spicer India Ltd. (Satara, Pune)</div><div class="client-name">Sprax Marshall Pvt. Ltd. (Pune)</div><div class="client-name">Sun Abrasives (Aurangabad)</div><div class="client-name">Supreme Treves Pvt. Ltd. (Pune)</div><div class="client-name">Sukrut Electric Co. P. Ltd. (Pune)</div><div class="client-name">Tata Motors Ltd. (Pimpri-Pune)</div><div class="client-name">Tasty Bite Eatables Ltd. (Pune)</div><div class="client-name">Thyssenkrupp Elect. Steel (Nashik)</div><div class="client-name">Total Logistics Ltd. (Wagholi, Pune)</div><div class="client-name">Trimurti Corns Agro Foods (Pune)</div><div class="client-name">Tulip Casting Pvt. Ltd. (Kolhapur)</div><div class="client-name">Unique Auto Assemblies (Ichalkaranji)</div><div class="client-name">Unique Surface Coating (Pune)</div><div class="client-name">Universal Containers P. Ltd. (Satara)</div><div class="client-name">Valveworks India Pvt. Ltd. (Pune)</div><div class="client-name">Venky's India Ltd. (Pune)</div><div class="client-name">Versatile Equipments (Kolhapur)</div><div class="client-name">Vishwakarma Founders P. Ltd. (Kolhapur)</div><div class="client-name">Volkswagen India Pvt. Ltd. (Pune)</div><div class="client-name">Wave Suspension (Pune)</div><div class="client-name">Wonder Pressing Pvt. Ltd. (Pune)</div><div class="client-name">Yamuna Industries (Pune)</div><div class="client-name">Yash Metallics P. Ltd. (Kolhapur)</div><div class="client-name">Yeshshree Press Comp. P.L. (A'Bad)</div><div class="client-name">ZF India Pvt. Ltd. (Pune)</div><div class="client-name">Zorac Industries (Pune)</div>
+  </div>
+</section>
+
+<!-- SALES NETWORK -->
+<section id="network">
+  <div class="section-tag">Nationwide Presence</div>
+  <h2 class="section-title">Sales Network</h2>
+  <div class="network-grid">
+    <div>
+      <table class="network-table">
+        <thead><tr><th colspan="2">Nation Wide Sales Network</th></tr></thead>
+        <tbody>
+          <tr class="network-section-label"><td colspan="2">Head Office</td></tr>
+          <tr><td colspan="2">Satara, Maharashtra</td></tr>
+          <tr class="network-section-label"><td colspan="2">Manufacturing Setup</td></tr>
+          <tr><td colspan="2">Satara, Maharashtra</td></tr>
+          <tr class="network-section-label"><td colspan="2">Company Representatives</td></tr>
+          <tr><td>Pune</td><td>Sangli</td></tr>
+          <tr><td>Ahmednagar</td><td>Karad</td></tr>
+          <tr><td>Kolhapur</td><td>Belgaum</td></tr>
+          <tr><td>Miraj</td><td>Goa</td></tr>
+          <tr class="network-section-label"><td colspan="2">Associates &amp; Dealers</td></tr>
+          <tr><td>Aurangabad</td><td>Mumbai</td></tr>
+          <tr><td>Nagpur</td><td>Nashik</td></tr>
+          <tr><td>Indore</td><td>Hyderabad</td></tr>
+          <tr><td>Bhopal</td><td>Secunderabad</td></tr>
+          <tr><td>Uttaranchal</td><td>Mangalore</td></tr>
+          <tr><td>Chhattisgarh</td><td>Bangalore</td></tr>
+          <tr><td>Surat</td><td>Solapur</td></tr>
+          <tr class="network-section-label"><td colspan="2">Exports</td></tr>
+          <tr><td>Nepal</td><td>Sudan</td></tr>
+          <tr><td>Malaysia</td><td>Saudi Arabia</td></tr>
+          <tr><td>Canada</td><td>Zambia</td></tr>
+          <tr><td>Nigeria</td><td></td></tr>
+        </tbody>
+      </table>
+      <div class="training-box">
+        <h4>After Sales Service Training Centre</h4>
+        <p>Kotibhaskar Industries has started an After Sales Service Training Centre at the Satara plant. All representatives, dealers and associates undergo after-sales servicing training once a year to provide quick service at their destination and prevent equipment downtime. Many companies send their maintenance personnel to the training programme.</p>
+      </div>
+    </div>
+    <div>
+      <img src="https://kotibhaskar.in/images/pageimages/107_1.jpg" alt="India Sales Network Map" onerror="this.style.display='none'" style="width:100%;border:1px solid rgba(28,63,110,0.3);margin-bottom:16px;">
+      <img src="https://kotibhaskar.in/images/pageimages/107_2.jpg" alt="Training Centre" onerror="this.style.display='none'" style="width:100%;border:1px solid rgba(28,63,110,0.3);margin-bottom:16px;">
+      <img src="https://kotibhaskar.in/images/pageimages/107_3.jpg" alt="Training" onerror="this.style.display='none'" style="width:100%;border:1px solid rgba(28,63,110,0.3);">
+    </div>
+  </div>
+</section>
+
+<script>
+function printModal() {
+  var modal = document.getElementById('modal');
+  var title = document.getElementById('modal-title').textContent;
+  var cap = document.getElementById('modal-cap').textContent;
+  var imgs = document.getElementById('modal-imgs').innerHTML;
+  var feats = document.getElementById('modal-feats').innerHTML;
+  var tbl = document.getElementById('modal-tbl').innerHTML;
+  
+  var win = window.open('', '_blank');
+  win.document.write('<html><head><title>' + title + ' — Kotibhaskar Industries</title>');
+  win.document.write('<style>');
+  win.document.write('body{font-family:Arial,sans-serif;margin:0;padding:20px;color:#222;background:#fff;}');
+  win.document.write('.header{background:#1C3F6E;color:#fff;padding:20px 24px;margin:-20px -20px 24px;}');
+  win.document.write('.header h1{margin:0;font-size:22px;text-transform:uppercase;letter-spacing:1px;}');
+  win.document.write('.header p{margin:4px 0 0;font-size:13px;color:#b0c0cc;}');
+  win.document.write('.brand{font-size:11px;color:#8A9BA8;margin-top:4px;letter-spacing:3px;text-transform:uppercase;}');
+  win.document.write('.imgs{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;}');
+  win.document.write('.imgs div{flex:1;min-width:180px;background:#f5f5f5;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden;}');
+  win.document.write('.imgs img{max-width:100%;max-height:180px;object-fit:contain;}');
+  win.document.write('h4{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#1C3F6E;margin:20px 0 8px;border-bottom:2px solid #1C3F6E;padding-bottom:4px;}');
+  win.document.write('ul{margin:0;padding-left:16px;}li{font-size:13px;line-height:1.7;color:#333;margin-bottom:3px;}');
+  win.document.write('table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px;}');
+  win.document.write('th{background:#1C3F6E;color:#fff;padding:8px 10px;text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:1px;}');
+  win.document.write('td{padding:7px 10px;border-bottom:1px solid #ddd;color:#333;}');
+  win.document.write('tr:nth-child(even) td{background:#f9f9f9;}');
+  win.document.write('.footer{margin-top:24px;padding-top:12px;border-top:1px solid #ddd;font-size:11px;color:#888;display:flex;justify-content:space-between;}');
+  win.document.write('@media print{body{margin:0;padding:12px;}.no-print{display:none;}}');
+  win.document.write('</style></head><body>');
+  win.document.write('<div class="header">');
+  win.document.write('<div class="brand">KOTIBHASKAR INDUSTRIES &mdash; MATERIAL HANDLING SOLUTIONS</div>');
+  win.document.write('<h1>' + title + '</h1>');
+  win.document.write('<p>' + cap + '</p>');
+  win.document.write('</div>');
+  win.document.write('<div class="imgs">' + imgs + '</div>');
+  win.document.write(feats);
+  win.document.write(tbl);
+  win.document.write('<div class="footer"><span>Kotibhaskar Industries, Plot No. K-3/2/1, Addl. MIDC, Satara, Maharashtra</span><span>kotibhaskarindustries.com | +91 98224 13252</span></div>');
+  win.document.write('<div class="no-print" style="margin-top:16px;"><button onclick="window.print()" style="padding:10px 24px;background:#1C3F6E;color:#fff;border:none;cursor:pointer;font-size:14px;border-radius:2px;">Print / Save as PDF</button></div>');
+  win.document.write('</body></html>');
+  win.document.close();
+  setTimeout(function(){ win.print(); }, 500);
+}
+</script>
+
 </body>
 </html>
