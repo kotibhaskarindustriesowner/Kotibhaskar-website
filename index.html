@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#FFFFFF;border-b
 .nav-links{display:flex;gap:32px;list-style:none;}
 .nav-links a{color:#444444;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;transition:color 0.2s;border-bottom:2px solid transparent;padding-bottom:2px;}
 .nav-links a:hover{color:#C85A00;border-bottom-color:#C85A00;}
-.nav-cta{background:#C85A00!important;color:#FFFFFF!important;padding:0 20px!important;height:38px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;line-height:1!important;border-bottom:none!important;font-family:'Barlow Condensed',sans-serif!important;font-size:13px!important;font-weight:700!important;letter-spacing:1.5px!important;text-transform:uppercase!important;}
+.nav-cta{background:#C85A00!important;color:#FFFFFF!important;padding:0 20px!important;height:38px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;line-height:38px!important;border-bottom:none!important;font-family:'Barlow Condensed',sans-serif!important;font-size:13px!important;font-weight:700!important;letter-spacing:1.5px!important;text-transform:uppercase!important;}
 .nav-cta:hover{background:#E07B2A!important;}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
 .hamburger span{width:24px;height:2px;background:#444444;}
@@ -638,6 +638,7 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
 </div>
 
 <script>
+
 var P={
 hpt:{t:'Hydraulic Pallet Truck',c:'Capacity: 2500 kg',
 i:['https://kotibhaskar.in/images/pageimages/010_00.png','https://kotibhaskar.in/images/pageimages/010_01.png','https://kotibhaskar.in/images/pageimages/011_05.png','https://kotibhaskar.in/images/pageimages/011_06.png','https://kotibhaskar.in/images/pageimages/011_07.png','https://kotibhaskar.in/images/pageimages/011_08.png'],
@@ -990,7 +991,7 @@ function openModal(id){
   document.getElementById('modal-title').textContent=p.t;
   document.getElementById('modal-cap').textContent=p.c;
   var imgs='';
-  p.i.forEach(function(s){imgs+='<div class="modal-img"><img src="'+s+'" alt="'+p.t+'" onerror="this.style.display='none'"></div>';});
+  p.i.forEach(function(s){imgs+='<div class="modal-img"><img src="'+s+'" alt="'+p.t+'" onerror="this.style.display=\'none\'"></div>';});
   document.getElementById('modal-imgs').innerHTML=imgs;
   var feats='<h4>Features &amp; Applications</h4><ul>';
   p.f.forEach(function(f){feats+='<li>'+f+'</li>';});
@@ -1072,43 +1073,46 @@ function handleSubmit(){
   if(!name){alert('Please enter your name.');return;}
   if(!phone){alert('Please enter your phone number.');return;}
   if(!req){alert('Please describe your requirement.');return;}
-  var subject=encodeURIComponent('Enquiry: '+name+(company?' - '+company:''));
-  var body=encodeURIComponent(
-    'ENQUIRY FROM: kotibhaskarindustries.com
-'+
-    '=====================================
-'+
-    'Name: '+name+'
-'+
-    'Company: '+(company||'—')+'
-'+
-    'Phone: '+phone+'
-'+
-    'Email: '+(email||'—')+'
-'+
-    'Product Category: '+(cat||'—')+'
-'+
-    'Timestamp: '+now+'
 
-'+
-    'REQUIREMENT:
-'+req+'
-'+
+  var subject=encodeURIComponent('Enquiry: '+name+(company?' - '+company:''));
+  var bodyText =
+    'ENQUIRY FROM: kotibhaskarindustries.com
+' +
     '=====================================
-'+
-    'Sent via kotibhaskarindustries.com'
-  );
-  window.location.href='mailto:amodsales@gmail.com?subject='+subject+'&body='+body;
-  // Clear form
+' +
+    'Name: ' + name + '
+' +
+    'Company: ' + (company || '—') + '
+' +
+    'Phone: ' + phone + '
+' +
+    'Email: ' + (email || '—') + '
+' +
+    'Product Category: ' + (cat || '—') + '
+' +
+    'Timestamp: ' + now + '
+
+' +
+    'REQUIREMENT:
+' + req + '
+
+' +
+    '=====================================
+' +
+    'Sent via kotibhaskarindustries.com';
+  var body=encodeURIComponent(bodyText);
+
   document.getElementById('f-name').value='';
   document.getElementById('f-company').value='';
   document.getElementById('f-phone').value='';
   document.getElementById('f-email').value='';
   document.getElementById('f-cat').value='';
   document.getElementById('f-req').value='';
-  // Show popup
+
   var popup=document.getElementById('success-popup');
-  popup.style.display='flex';
+  if(popup) popup.style.display='flex';
+
+  window.location.href='mailto:amodsales@gmail.com?subject='+subject+'&body='+body;
 }
 function closePopup(){
   document.getElementById('success-popup').style.display='none';
@@ -1170,6 +1174,7 @@ var selectedIdx=-1;
 
 function liveSearch(q){
   var dd=document.getElementById('search-dropdown');
+  if(!dd) return;
   if(!q||q.length<2){dd.style.display='none';selectedIdx=-1;return;}
   q=q.toLowerCase();
   var matches=searchIndex.filter(function(p){
@@ -1178,9 +1183,9 @@ function liveSearch(q){
   if(matches.length===0){dd.style.display='none';return;}
   dd.innerHTML=matches.map(function(p,i){
     return '<div class="search-item" data-id="'+p.id+'" data-idx="'+i+'" '+
-      'onclick="selectProduct(''+p.id+'')" '+
+      'onclick="selectProduct(\''+p.id+'\')" '+
       'onmouseover="highlightItem('+i+')" '+
-      'style="padding:11px 16px;cursor:pointer;font-size:14px;color:#1A1A1A;border-bottom:1px solid #F2F0EB;font-family:'Barlow',sans-serif;">'+
+      'style="padding:11px 16px;cursor:pointer;font-size:14px;color:#1A1A1A;border-bottom:1px solid #F2F0EB;font-family:Barlow,sans-serif;">'+
       '<span style="color:#C85A00;font-weight:600;">'+p.name+'</span>'+
       '</div>';
   }).join('');
@@ -1220,6 +1225,7 @@ document.addEventListener('click',function(e){
     if(dd)dd.style.display='none';
   }
 });
+
 
 </script>
 
