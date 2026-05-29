@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#FFFFFF;border-b
 .nav-links{display:flex;gap:32px;list-style:none;}
 .nav-links a{color:#444444;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;transition:color 0.2s;border-bottom:2px solid transparent;padding-bottom:2px;}
 .nav-links a:hover{color:#C85A00;border-bottom-color:#C85A00;}
-.nav-cta{background:#C85A00!important;color:#FFFFFF!important;padding:9px 20px;border-bottom:none!important;}
+.nav-cta{background:#C85A00!important;color:#FFFFFF!important;padding:0 20px!important;height:38px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;line-height:1!important;border-bottom:none!important;font-family:'Barlow Condensed',sans-serif!important;font-size:13px!important;font-weight:700!important;letter-spacing:1.5px!important;text-transform:uppercase!important;}
 .nav-cta:hover{background:#E07B2A!important;}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
 .hamburger span{width:24px;height:2px;background:#444444;}
@@ -320,26 +320,32 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
 <section id="finder">
   <div class="finder-inner">
     <h2>Find the Right Product</h2>
-    <p>Describe your task and we'll recommend the best product</p>
-    <div class="finder-row">
-      <input type="text" id="finder-input" placeholder="e.g. move 500kg pallets in warehouse..." onkeydown="if(event.key==='Enter')findProduct()">
-      <button class="btn-primary" onclick="findProduct()">Find &rarr;</button>
+    <p>Type a product name or describe your requirement</p>
+    <div style="position:relative;max-width:600px;margin:0 auto 16px;">
+      <input type="text" id="finder-input" placeholder="e.g. PU Wheel, Platform Trolley, Drum Tilter..." 
+             autocomplete="off"
+             style="width:100%;background:#FFFFFF;border:2px solid #BFBAB2;color:#1A1A1A;padding:14px 50px 14px 18px;font-family:'Barlow',sans-serif;font-size:15px;outline:none;border-radius:2px;"
+             oninput="liveSearch(this.value)"
+             onkeydown="handleSearchKey(event)"
+             onfocus="if(this.value)liveSearch(this.value)">
+      <button onclick="findProduct()" style="position:absolute;right:0;top:0;height:100%;padding:0 18px;background:#C85A00;color:#FFFFFF;border:none;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;">GO</button>
+      <div id="search-dropdown" style="display:none;position:absolute;top:100%;left:0;right:0;background:#FFFFFF;border:1px solid #DDD8D0;border-top:none;z-index:500;max-height:300px;overflow-y:auto;box-shadow:0 8px 24px rgba(0,0,0,0.1);"></div>
     </div>
     <div class="finder-chips">
-      <div class="finder-chip" onclick="setQ('Move heavy pallets in warehouse')">Move pallets</div>
-      <div class="finder-chip" onclick="setQ('Pour liquid from drums chemical plant')">Pour from drums</div>
-      <div class="finder-chip" onclick="setQ('Stack boxes to 3 metre height')">Stack high</div>
-      <div class="finder-chip" onclick="setQ('Transport tools in CNC workshop')">CNC workshop</div>
-      <div class="finder-chip" onclick="setQ('Move gas cylinders safely')">Gas cylinders</div>
-      <div class="finder-chip" onclick="setQ('Lift heavy dies moulds floor crane')">Lift heavy dies</div>
-      <div class="finder-chip" onclick="setQ('Need floor wheels castors for trolley')">Trolley wheels</div>
-      <div class="finder-chip" onclick="setQ('Load furnace heat treatment')">Furnace loading</div>
-      <div class="finder-chip" onclick="setQ('Collect chips swarf CNC machine')">CNC chips</div>
-      <div class="finder-chip" onclick="setQ('loading dock truck warehouse ramp')">Dock leveller</div>
+      <div class="finder-chip" onclick="setQ('PU Wheel')">PU Wheel</div>
+      <div class="finder-chip" onclick="setQ('Platform Trolley')">Platform Trolley</div>
+      <div class="finder-chip" onclick="setQ('Hydraulic Pallet Truck')">Pallet Truck</div>
+      <div class="finder-chip" onclick="setQ('Drum Tilter')">Drum Tilter</div>
+      <div class="finder-chip" onclick="setQ('Heavy Duty Castor')">HD Castor</div>
+      <div class="finder-chip" onclick="setQ('Stacker')">Stacker</div>
+      <div class="finder-chip" onclick="setQ('Floor Crane')">Floor Crane</div>
+      <div class="finder-chip" onclick="setQ('CNC Tool Trolley')">CNC Trolley</div>
+      <div class="finder-chip" onclick="setQ('Cast Iron Wheel')">CI Wheel</div>
+      <div class="finder-chip" onclick="setQ('Dock Leveller')">Dock Leveller</div>
     </div>
-    <div id="finder-result">
-      <div class="finder-product-name" id="finder-name"></div>
-      <div class="finder-reason" id="finder-reason"></div>
+    <div id="finder-result" style="display:none;margin-top:16px;text-align:left;background:#FFFFFF;border:1px solid #DDD8D0;border-left:3px solid #C85A00;padding:18px 22px;">
+      <div id="finder-name" style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-transform:uppercase;color:#C85A00;margin-bottom:5px;"></div>
+      <div id="finder-reason" style="font-size:14px;color:#444444;line-height:1.7;"></div>
       <div style="margin-top:14px;">
         <button id="finder-view-btn" class="btn-primary" style="display:none;padding:10px 24px;font-size:12px;">View Specs &rarr;</button>
         <a href="#contact" class="btn-outline" style="display:inline-block;padding:10px 24px;font-size:12px;margin-left:10px;">Request Quote</a>
@@ -1056,21 +1062,175 @@ function showCat(cat,el){
 }
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
 function handleSubmit(){
-  var name=document.getElementById('f-name').value;
-  var company=document.getElementById('f-company').value;
-  var phone=document.getElementById('f-phone').value;
-  var email=document.getElementById('f-email').value;
+  var name=document.getElementById('f-name').value.trim();
+  var company=document.getElementById('f-company').value.trim();
+  var phone=document.getElementById('f-phone').value.trim();
+  var email=document.getElementById('f-email').value.trim();
   var cat=document.getElementById('f-cat').value;
-  var req=document.getElementById('f-req').value;
-  if(!name||!phone||!req){alert('Please fill in Name, Phone and Requirement.');return;}
-  var subject=encodeURIComponent('Website Enquiry from '+name+(company?' ('+company+')':''));
-  var body=encodeURIComponent('Name: '+name+'\nCompany: '+company+'\nPhone: '+phone+'\nEmail: '+email+'\nCategory: '+cat+'\n\nRequirement:\n'+req+'\n\n---\nSent via kotibhaskarindustries.com');
+  var req=document.getElementById('f-req').value.trim();
+  var now=new Date().toLocaleString('en-IN',{timeZone:'Asia/Kolkata'});
+  if(!name){alert('Please enter your name.');return;}
+  if(!phone){alert('Please enter your phone number.');return;}
+  if(!req){alert('Please describe your requirement.');return;}
+  var subject=encodeURIComponent('Enquiry: '+name+(company?' - '+company:''));
+  var body=encodeURIComponent(
+    'ENQUIRY FROM: kotibhaskarindustries.com
+'+
+    '=====================================
+'+
+    'Name: '+name+'
+'+
+    'Company: '+(company||'—')+'
+'+
+    'Phone: '+phone+'
+'+
+    'Email: '+(email||'—')+'
+'+
+    'Product Category: '+(cat||'—')+'
+'+
+    'Timestamp: '+now+'
+
+'+
+    'REQUIREMENT:
+'+req+'
+'+
+    '=====================================
+'+
+    'Sent via kotibhaskarindustries.com'
+  );
   window.location.href='mailto:amodsales@gmail.com?subject='+subject+'&body='+body;
-  document.getElementById('form-success').style.display='block';
+  // Clear form
+  document.getElementById('f-name').value='';
+  document.getElementById('f-company').value='';
+  document.getElementById('f-phone').value='';
+  document.getElementById('f-email').value='';
+  document.getElementById('f-cat').value='';
+  document.getElementById('f-req').value='';
+  // Show popup
+  var popup=document.getElementById('success-popup');
+  popup.style.display='flex';
+}
+function closePopup(){
+  document.getElementById('success-popup').style.display='none';
 }
 var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1});
 document.querySelectorAll('.fade-up').forEach(function(el){obs.observe(el);});
 window.addEventListener('scroll',function(){document.querySelector('nav').style.boxShadow=window.scrollY>30?'0 2px 14px rgba(0,0,0,0.1)':'0 2px 10px rgba(0,0,0,0.07)';});
+
+// LIVE SEARCH
+var searchIndex=[
+  {name:'Hydraulic Pallet Truck',id:'hpt',tags:'pallet truck hydraulic hand forklift'},
+  {name:'Electric Pallet Truck',id:'ept',tags:'electric pallet truck battery'},
+  {name:'Manual Stacker',id:'ms',tags:'manual stacker hydraulic lift height'},
+  {name:'Electric Stacker',id:'es',tags:'electric stacker battery lift'},
+  {name:'Hydraulic Floor Crane',id:'hfc',tags:'floor crane hydraulic mobile crane'},
+  {name:'Electric Floor Crane',id:'efc',tags:'electric floor crane battery'},
+  {name:'Hydraulic Drum Tilter',id:'hdt',tags:'drum tilter hydraulic barrel chemical'},
+  {name:'Electric Drum Tilter',id:'edt',tags:'electric drum tilter battery'},
+  {name:'Manual Drum Gripper',id:'mdg',tags:'drum gripper manual hydraulic'},
+  {name:'Electric Drum Gripper',id:'edg',tags:'electric drum gripper material tilter'},
+  {name:'Jib Crane',id:'jib',tags:'jib crane pillar wall swing'},
+  {name:'Gantry',id:'gantry',tags:'gantry portable crane'},
+  {name:'Scissor Lift',id:'sl',tags:'scissor lift hydraulic table'},
+  {name:'Hydraulic Dock Leveller',id:'dl',tags:'dock leveller loading ramp truck'},
+  {name:'Hydraulic Goods Lift',id:'gl',tags:'goods lift freight elevator'},
+  {name:'Gravity Roller Conveyor',id:'grc',tags:'roller conveyor gravity'},
+  {name:'Belt Conveyor',id:'bc',tags:'belt conveyor motor powered'},
+  {name:'Industrial Shelving',id:'ish',tags:'industrial shelf pallet rack storage'},
+  {name:'Platform Trolley',id:'pt',tags:'platform trolley flat hand truck'},
+  {name:'Workshop Trolley',id:'wt',tags:'workshop trolley tool shop'},
+  {name:'Shelf Trolley',id:'sht',tags:'shelf trolley multi tier'},
+  {name:'Sack Trolley',id:'skt',tags:'sack trolley bag hand truck'},
+  {name:'Multi Utility Trolley',id:'mut',tags:'multi utility trolley hospital hotel'},
+  {name:'Drum Trolley',id:'drmt',tags:'drum trolley barrel 200 litre'},
+  {name:'Gas Cylinder Trolley',id:'gct',tags:'gas cylinder trolley oxygen welding'},
+  {name:'Double Wheel Barrow',id:'dwb',tags:'wheel barrow double construction'},
+  {name:'Chip Trolley',id:'cht',tags:'chip trolley swarf cnc machining'},
+  {name:'CNC Tool Trolley',id:'cnct',tags:'cnc tool trolley vmc toolbox'},
+  {name:'Steel Pallet',id:'sp',tags:'steel pallet ms heavy duty'},
+  {name:'Work Table',id:'wktb',tags:'work table bench assembly'},
+  {name:'Tool Panel',id:'tp',tags:'tool panel shadow board 5s lean'},
+  {name:'Mobile Step',id:'mob',tags:'mobile step stool warehouse'},
+  {name:'Bin Trolley',id:'bt',tags:'bin trolley waste scrap'},
+  {name:'Coolant Trolley',id:'ct',tags:'coolant trolley cnc cutting fluid'},
+  {name:'Five Shelf Trolley',id:'fst',tags:'five shelf trolley storage'},
+  {name:'Furnace Trolley',id:'ft',tags:'furnace trolley heat treatment oven'},
+  {name:'Compartment Shelf',id:'cs',tags:'compartment shelf bin parts storage'},
+  {name:'UHMW PE Wheels',id:'uhmw',tags:'uhmw pe wheel polyethylene white 50 75 100 125 150 200 250 300mm'},
+  {name:'PU CI Wheels',id:'puci',tags:'pu ci wheel polyurethane cast iron 50 75 100 125 150 200 250 300mm'},
+  {name:'Cast Iron Wheels',id:'ciw',tags:'cast iron wheel ci furnace high temp 50 75 100 125 150 200 250 300mm'},
+  {name:'MS Solid Track Wheels',id:'msw',tags:'ms track wheel v groove square round rail'},
+  {name:'MD Steel Castors',id:'mdc',tags:'md medium duty castor swivel fixed pressed steel'},
+  {name:'MHD Castors',id:'mhdc',tags:'mhd medium heavy duty castor'},
+  {name:'Heavy Duty Castors',id:'hdc',tags:'heavy duty castor hd swivel fixed'},
+  {name:'HD Twin Castors',id:'hdtc',tags:'hd twin castor double wheel heavy'},
+];
+
+var selectedIdx=-1;
+
+function liveSearch(q){
+  var dd=document.getElementById('search-dropdown');
+  if(!q||q.length<2){dd.style.display='none';selectedIdx=-1;return;}
+  q=q.toLowerCase();
+  var matches=searchIndex.filter(function(p){
+    return p.name.toLowerCase().includes(q)||p.tags.toLowerCase().includes(q);
+  }).slice(0,8);
+  if(matches.length===0){dd.style.display='none';return;}
+  dd.innerHTML=matches.map(function(p,i){
+    return '<div class="search-item" data-id="'+p.id+'" data-idx="'+i+'" '+
+      'onclick="selectProduct(''+p.id+'')" '+
+      'onmouseover="highlightItem('+i+')" '+
+      'style="padding:11px 16px;cursor:pointer;font-size:14px;color:#1A1A1A;border-bottom:1px solid #F2F0EB;font-family:'Barlow',sans-serif;">'+
+      '<span style="color:#C85A00;font-weight:600;">'+p.name+'</span>'+
+      '</div>';
+  }).join('');
+  dd.style.display='block';
+  selectedIdx=-1;
+}
+
+function highlightItem(idx){
+  selectedIdx=idx;
+  document.querySelectorAll('.search-item').forEach(function(el,i){
+    el.style.background=i===idx?'#FFF0E6':'#FFFFFF';
+  });
+}
+
+function handleSearchKey(e){
+  var items=document.querySelectorAll('.search-item');
+  if(e.key==='ArrowDown'){e.preventDefault();selectedIdx=Math.min(selectedIdx+1,items.length-1);items.forEach(function(el,i){el.style.background=i===selectedIdx?'#FFF0E6':'#FFFFFF';});}
+  else if(e.key==='ArrowUp'){e.preventDefault();selectedIdx=Math.max(selectedIdx-1,0);items.forEach(function(el,i){el.style.background=i===selectedIdx?'#FFF0E6':'#FFFFFF';});}
+  else if(e.key==='Enter'){
+    if(selectedIdx>=0&&items[selectedIdx]){selectProduct(items[selectedIdx].dataset.id);}
+    else{findProduct();}
+  }
+  else if(e.key==='Escape'){document.getElementById('search-dropdown').style.display='none';}
+}
+
+function selectProduct(id){
+  document.getElementById('search-dropdown').style.display='none';
+  openModal(id);
+  // scroll to products
+  document.getElementById('products').scrollIntoView({behavior:'smooth'});
+}
+
+// Close dropdown on outside click
+document.addEventListener('click',function(e){
+  if(!e.target.closest('#finder-input')&&!e.target.closest('#search-dropdown')){
+    var dd=document.getElementById('search-dropdown');
+    if(dd)dd.style.display='none';
+  }
+});
+
 </script>
+
+<!-- SUCCESS POPUP -->
+<div id="success-popup" style="display:none;position:fixed;inset:0;background:rgba(26,35,50,0.6);z-index:3000;display:none;align-items:center;justify-content:center;">
+  <div style="background:#FFFFFF;max-width:420px;width:90%;padding:40px 36px;text-align:center;border-top:4px solid #C85A00;box-shadow:0 20px 60px rgba(0,0,0,0.2);">
+    <div style="font-size:48px;margin-bottom:16px;">✅</div>
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;text-transform:uppercase;color:#1A2332;margin-bottom:12px;">Thank You!</div>
+    <div style="font-size:15px;color:#555555;line-height:1.7;margin-bottom:28px;">Your enquiry has been received successfully. Our team will contact you soon.</div>
+    <button onclick="closePopup()" style="background:#C85A00;color:#FFFFFF;padding:13px 36px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;">Close</button>
+  </div>
+</div>
 </body>
 </html>
