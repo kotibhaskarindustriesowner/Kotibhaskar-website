@@ -292,8 +292,8 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
   <a href="#network" onclick="toggleMenu()">Sales Network</a>
   <a href="#about" onclick="toggleMenu()">About Us</a>
   <a href="#contact" onclick="toggleMenu()">Contact &amp; Quote</a>
-  <a href="Kotibhaskar_1_Catalogue.pdf" target="_blank" rel="noopener" style="color:#C85A00;">&#8595; MHE Catalogue</a>
-  <a href="Kotibhaskar_1_Castor_Catalogue.pdf" target="_blank" rel="noopener" style="color:#C85A00;">&#8595; Wheels &amp; Castors Catalogue</a>
+  <a href="Kotibhaskar%201%20Catalogue.pdf" target="_blank" rel="noopener" style="color:#C85A00;">&#8595; MHE Catalogue</a>
+  <a href="Kotibhaskar%201%20Castor%20Catalogue.pdf" target="_blank" rel="noopener" style="color:#C85A00;">&#8595; Wheels &amp; Castors Catalogue</a>
 </div>
 
 <!-- HERO -->
@@ -572,13 +572,13 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
   <!-- CATALOGUE DOWNLOADS -->
   <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px;align-items:center;">
     <span style="font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#777;margin-right:4px;">Download Catalogues:</span>
-    <a href="Kotibhaskar_1_Catalogue.pdf" target="_blank" rel="noopener"
+    <a href="Kotibhaskar%201%20Catalogue.pdf" target="_blank" rel="noopener"
       style="display:inline-flex;align-items:center;gap:7px;background:#1A2332;color:#fff;text-decoration:none;padding:9px 18px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;transition:background 0.2s;"
       onmouseenter="this.style.background='#C85A00'" onmouseleave="this.style.background='#1A2332'">
       <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1v9M7 10l-3-3M7 10l3-3M1 13h12" stroke="#C85A00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 13v2h12v-2" stroke="#C85A00" stroke-width="1.8" stroke-linecap="round"/></svg>
       MHE Catalogue
     </a>
-    <a href="Kotibhaskar_1_Castor_Catalogue.pdf" target="_blank" rel="noopener"
+    <a href="Kotibhaskar%201%20Castor%20Catalogue.pdf" target="_blank" rel="noopener"
       style="display:inline-flex;align-items:center;gap:7px;background:#1A2332;color:#fff;text-decoration:none;padding:9px 18px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;transition:background 0.2s;"
       onmouseenter="this.style.background='#C85A00'" onmouseleave="this.style.background='#1A2332'">
       <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1v9M7 10l-3-3M7 10l3-3M1 13h12" stroke="#C85A00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 13v2h12v-2" stroke="#C85A00" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -871,8 +871,8 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
     </div>
     <div class="footer-col">
       <h4>Resources</h4>
-      <a href="Kotibhaskar_1_Catalogue.pdf" target="_blank" rel="noopener">&#8595; MHE Catalogue</a>
-      <a href="Kotibhaskar_1_Castor_Catalogue.pdf" target="_blank" rel="noopener">&#8595; Wheels &amp; Castors Catalogue</a>
+      <a href="Kotibhaskar%201%20Catalogue.pdf" target="_blank" rel="noopener">&#8595; MHE Catalogue</a>
+      <a href="Kotibhaskar%201%20Castor%20Catalogue.pdf" target="_blank" rel="noopener">&#8595; Wheels &amp; Castors Catalogue</a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -1368,84 +1368,138 @@ function printModal(){
   var imgs=document.getElementById('modal-imgs').innerHTML;
   var feats=document.getElementById('modal-feats').innerHTML;
   var tbl=document.getElementById('modal-tbl').innerHTML;
-  var win=window.open('','_blank','width=960,height=750');
-  win.document.write('<!DOCTYPE html><html><head><meta charset="UTF-8">');
-  win.document.write('<title>'+title+' — Kotibhaskar Industries</title>');
-  win.document.write('<style>');
-  win.document.write('*{margin:0;padding:0;box-sizing:border-box;}');
-  win.document.write('@page{margin:12mm 12mm 14mm 12mm;size:A4;}');
-  win.document.write('body{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#1a1a1a;background:#fff;padding:0;}');
-  win.document.write('.page{padding:20px 24px;max-width:800px;margin:0 auto;position:relative;}');
-  /* Watermark */
-  win.document.write('.watermark{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-35deg);font-family:Arial,sans-serif;font-size:72px;font-weight:900;color:rgba(200,90,0,0.04);letter-spacing:4px;text-transform:uppercase;pointer-events:none;z-index:0;white-space:nowrap;}');
-  /* Header */
-  win.document.write('.pdf-hdr{background:#1A2332;color:#fff;padding:16px 20px 14px;margin-bottom:0;border-bottom:4px solid #C85A00;display:flex;justify-content:space-between;align-items:flex-start;}');
-  win.document.write('.pdf-logo-block{display:flex;align-items:center;gap:10px;}');
-  win.document.write('.pdf-logo-bars{display:flex;gap:3px;align-items:center;}');
-  win.document.write('.pdf-bar1{width:6px;height:28px;background:#C85A00;transform:skewX(-8deg);}');
-  win.document.write('.pdf-bar2{width:6px;height:28px;background:rgba(255,255,255,0.4);transform:skewX(-8deg);}');
-  win.document.write('.pdf-co-name{font-size:16px;font-weight:900;color:#fff;letter-spacing:2px;text-transform:uppercase;line-height:1.1;}');
-  win.document.write('.pdf-co-sub{font-size:8px;color:rgba(255,255,255,0.55);letter-spacing:4px;text-transform:uppercase;margin-top:2px;}');
-  win.document.write('.pdf-contact-block{text-align:right;font-size:9px;color:rgba(255,255,255,0.65);line-height:1.7;}');
-  win.document.write('.pdf-contact-block a{color:#E07B2A;text-decoration:none;}');
-  /* Product title band */
-  win.document.write('.pdf-title-band{background:#f5f0e8;border-left:5px solid #C85A00;padding:10px 16px;margin-bottom:16px;}');
-  win.document.write('.pdf-prod-title{font-size:18px;font-weight:900;text-transform:uppercase;letter-spacing:1px;color:#1A2332;}');
-  win.document.write('.pdf-prod-cap{font-size:11px;color:#666;margin-top:3px;}');
-  /* Body grid */
-  win.document.write('.pdf-body{display:grid;grid-template-columns:220px 1fr;gap:18px;margin-bottom:14px;position:relative;z-index:1;}');
-  win.document.write('.pdf-imgs{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px;}');
-  win.document.write('.modal-img{background:#f8f4ee;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid #e0d8cc;}');
-  win.document.write('.modal-img img{max-width:100%;max-height:130px;object-fit:contain;}');
-  /* Sections */
-  win.document.write('.sec-hdr{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#C85A00;background:#fff8f0;border-left:3px solid #C85A00;padding:4px 8px;margin:12px 0 6px;}');
-  win.document.write('ul{list-style:none;padding:0;}');
-  win.document.write('li{font-size:11px;color:#333;padding:3px 0 3px 12px;border-bottom:1px solid rgba(0,0,0,0.04);position:relative;line-height:1.5;}');
-  win.document.write('li::before{content:"—";position:absolute;left:0;color:#C85A00;font-size:10px;}');
-  /* Tables */
-  win.document.write('table{width:100%;border-collapse:collapse;font-size:10px;margin-top:4px;}');
-  win.document.write('th{background:#1A2332;color:#fff;padding:6px 9px;text-align:left;font-size:9px;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;}');
-  win.document.write('td{padding:5px 9px;border-bottom:1px solid #e8e0d4;color:#333;white-space:nowrap;}');
-  win.document.write('tr:nth-child(even) td{background:#fdf9f5;}');
-  win.document.write('tr:hover td{background:#fff0e6;}');
-  /* Footer */
-  win.document.write('.pdf-footer{border-top:2px solid #1A2332;padding-top:8px;margin-top:12px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1;}');
-  win.document.write('.pdf-footer-left{font-size:9px;color:#555;line-height:1.6;}');
-  win.document.write('.pdf-footer-right{font-size:8px;color:#999;text-align:right;line-height:1.6;}');
-  win.document.write('.pdf-footer-logo{font-size:10px;font-weight:900;color:#1A2332;letter-spacing:2px;}');
-  /* Print button */
-  win.document.write('.no-print{text-align:center;padding:16px 0;background:#f5f0e8;border-top:1px solid #e0d8cc;}');
-  win.document.write('@media print{.no-print{display:none!important;}.watermark{-webkit-print-color-adjust:exact;print-color-adjust:exact;}}');
-  win.document.write('</style></head><body>');
-  /* Watermark */
-  win.document.write('<div class="watermark">KOTIBHASKAR</div>');
-  win.document.write('<div class="page">');
-  /* Header */
-  win.document.write('<div class="pdf-hdr">');
-  win.document.write('<div class="pdf-logo-block"><div class="pdf-logo-bars"><div class="pdf-bar1"></div><div class="pdf-bar2"></div></div><div><div class="pdf-co-name">Kotibhaskar Industries</div><div class="pdf-co-sub">Material Handling Solutions</div></div></div>');
-  win.document.write('<div class="pdf-contact-block">kotibhaskarindustries.com<br>amodsales@gmail.com &nbsp;|&nbsp; +91 98224 13252<br>Plot K-3/2/1, Addl. MIDC, Satara, Maharashtra</div>');
-  win.document.write('</div>');
-  /* Title band */
-  win.document.write('<div class="pdf-title-band"><div class="pdf-prod-title">'+title+'</div><div class="pdf-prod-cap">'+cap+'</div></div>');
-  /* Body */
-  win.document.write('<div class="pdf-body">');
-  win.document.write('<div>');
-  win.document.write('<div class="pdf-imgs">'+imgs+'</div>');
-  win.document.write('</div>');
-  win.document.write('<div>');
-  win.document.write('<div class="sec-hdr">Features &amp; Applications</div>'+feats);
-  win.document.write('</div>');
-  win.document.write('</div>');
-  win.document.write('<div class="sec-hdr">Technical Specifications</div>'+tbl);
-  win.document.write('<p style="font-size:9px;color:#aaa;margin-top:6px;font-style:italic;">* Specifications subject to change without notice. Custom variants available on request.</p>');
-  /* Footer */
-  win.document.write('<div class="pdf-footer">');
-  win.document.write('<div class="pdf-footer-left"><div class="pdf-footer-logo">KOTIBHASKAR</div>Manufacturer &amp; Exporter of Material Handling Equipment<br>Satara, Maharashtra, India &nbsp;|&nbsp; kotibhaskarindustries.com</div>');
-  win.document.write('<div class="pdf-footer-right">Generated '+new Date().toLocaleDateString('en-IN')+'<br>amodsales@gmail.com<br>kotibhaskarindustries.com</div>');
-  win.document.write('</div>');
-  win.document.write('</div>');
-  /* Print button */
-  win.document.write('<div class="no-print"><button onclick="window.print()" style="padding:11px 32px;background:#C85A00;color:#fff;border:none;cursor:pointer;font-size:13px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;border-radius:2px;">&#128438; PRINT / SAVE AS PDF</button><p style="margin-top:8px;font-size:11px;color:#999;">Use browser Print → Save as PDF. Set paper: A4, Portrait.</p></div>');
+  /* Clean title for window title — strip HTML tags */
+  var cleanTitle=title.replace(/<[^>]+>/g,'');
+  var win=window.open('','_blank','width=900,height=720');
+  if(!win){alert('Please allow popups for this site to use Print/PDF.');return;}
+  var css=[
+    /* Reset + page setup */
+    '*{margin:0;padding:0;box-sizing:border-box;}',
+    /* A4, suppress browser header/footer as much as possible */
+    '@page{size:A4 portrait;margin:14mm 13mm 16mm 13mm;}',
+    /* body — no extra padding, no background */
+    'body{font-family:Arial,Helvetica,sans-serif;font-size:11.5px;color:#111;background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact;}',
+    /* Outer wrapper — constrained width matches A4 content area */
+    '.sheet{width:100%;max-width:760px;margin:0 auto;padding:0;}',
+    /* ---- LETTERHEAD ---- */
+    '.lh{background:#1A2332;display:flex;justify-content:space-between;align-items:stretch;border-bottom:4px solid #C85A00;page-break-inside:avoid;}',
+    '.lh-left{padding:14px 18px;display:flex;align-items:center;gap:11px;}',
+    '.lh-bars{display:flex;gap:3px;align-items:center;}',
+    '.lh-bar-o{width:7px;height:30px;background:#C85A00;transform:skewX(-8deg);}',
+    '.lh-bar-g{width:7px;height:30px;background:rgba(255,255,255,0.35);transform:skewX(-8deg);}',
+    '.lh-name{font-size:17px;font-weight:900;color:#fff;letter-spacing:2px;text-transform:uppercase;line-height:1.1;}',
+    '.lh-sub{font-size:7.5px;color:rgba(255,255,255,0.5);letter-spacing:4px;text-transform:uppercase;margin-top:3px;}',
+    '.lh-right{padding:14px 18px;text-align:right;font-size:8.5px;color:rgba(255,255,255,0.6);line-height:1.9;display:flex;flex-direction:column;justify-content:center;}',
+    '.lh-right span{color:#E07B2A;}',
+    /* ---- PRODUCT TITLE BAND ---- */
+    '.title-band{background:#f4ede3;border-left:5px solid #C85A00;padding:9px 14px 9px 14px;margin:14px 0 14px;page-break-inside:avoid;}',
+    '.title-band h1{font-size:17px;font-weight:900;text-transform:uppercase;letter-spacing:1px;color:#1A2332;line-height:1.2;}',
+    '.title-band p{font-size:10px;color:#666;margin-top:3px;line-height:1.4;}',
+    /* ---- TOP CONTENT GRID ---- */
+    '.top-grid{display:grid;grid-template-columns:210px 1fr;gap:16px;margin-bottom:14px;page-break-inside:avoid;}',
+    /* images */
+    '.img-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px;}',
+    '.modal-img{background:#f5efe6;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid #ddd4c8;height:95px;}',
+    '.modal-img img{max-width:100%;max-height:90px;object-fit:contain;display:block;}',
+    /* features */
+    '.sec-title{font-size:8.5px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#C85A00;background:#fff8f0;border-left:3px solid #C85A00;padding:4px 8px;margin:0 0 5px;}',
+    'ul.feat-list{list-style:none;padding:0;margin:0;}',
+    'ul.feat-list li{font-size:10px;color:#222;padding:2.5px 0 2.5px 13px;border-bottom:1px solid #f0ebe3;position:relative;line-height:1.45;}',
+    'ul.feat-list li::before{content:"\\2014";position:absolute;left:0;color:#C85A00;font-size:9px;}',
+    /* ---- SPEC TABLE ---- */
+    '.spec-wrap{margin-top:14px;}',
+    'table.spec{width:100%;border-collapse:collapse;font-size:9.5px;page-break-inside:auto;}',
+    'table.spec thead{display:table-header-group;}',
+    'table.spec tbody tr{page-break-inside:avoid;}',
+    'table.spec th{background:#1A2332;color:#fff;padding:6px 8px;text-align:left;font-size:8.5px;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;border-right:1px solid rgba(255,255,255,0.12);}',
+    'table.spec td{padding:5px 8px;border-bottom:1px solid #e4dcd0;color:#222;white-space:nowrap;border-right:1px solid #ede5da;}',
+    'table.spec tr:nth-child(even) td{background:#faf6f0;}',
+    'table.spec tr:last-child td{border-bottom:2px solid #1A2332;}',
+    /* ---- DISCLAIMER ---- */
+    '.disclaimer{font-size:8px;color:#999;font-style:italic;margin-top:7px;padding-top:6px;border-top:1px solid #e4dcd0;}',
+    /* ---- FOOTER ---- */
+    '.pdf-foot{border-top:2px solid #1A2332;margin-top:16px;padding-top:8px;display:flex;justify-content:space-between;align-items:flex-end;page-break-inside:avoid;}',
+    '.pdf-foot-l{font-size:8.5px;color:#444;line-height:1.7;}',
+    '.pdf-foot-brand{font-weight:900;font-size:10px;color:#1A2332;letter-spacing:2px;text-transform:uppercase;}',
+    '.pdf-foot-r{font-size:7.5px;color:#999;text-align:right;line-height:1.7;}',
+    /* ---- PRINT BUTTON (screen only) ---- */
+    '.no-print{text-align:center;padding:14px 0 18px;background:#f4ede3;border-top:1px solid #ddd4c8;margin-top:18px;}',
+    '@media print{',
+    '  .no-print{display:none!important;}',
+    '  body{margin:0;padding:0;}',
+    '  .sheet{max-width:100%;}',
+    '  .lh,.title-band,.top-grid,.spec-wrap,.pdf-foot{page-break-inside:avoid;}',
+    '}'
+  ].join('');
+
+  var body=[
+    /* Letterhead */
+    '<div class="sheet">',
+    '<div class="lh">',
+    '<div class="lh-left">',
+    '<div class="lh-bars"><div class="lh-bar-o"></div><div class="lh-bar-g"></div></div>',
+    '<div><div class="lh-name">Kotibhaskar Industries</div><div class="lh-sub">Material Handling Solutions</div></div>',
+    '</div>',
+    '<div class="lh-right">',
+    'kotibhaskarindustries.com<br>',
+    '<span>amodsales@gmail.com</span><br>',
+    '+91 98224 13252 &nbsp;|&nbsp; +91 83800 95804<br>',
+    'Plot K-3/2/1, Addl. MIDC, Satara, Maharashtra',
+    '</div>',
+    '</div>',/* end lh */
+
+    /* Title band */
+    '<div class="title-band">',
+    '<h1>'+title+'</h1>',
+    '<p>'+cap+'</p>',
+    '</div>',
+
+    /* Top content: images left, features right */
+    '<div class="top-grid">',
+    '<div><div class="img-grid">'+imgs+'</div></div>',
+    '<div>',
+    '<div class="sec-title">Key Features &amp; Applications</div>',
+    /* Convert existing feats ul to our class */
+    feats.replace('<ul>','<ul class="feat-list">'),
+    '</div>',
+    '</div>',/* end top-grid */
+
+    /* Spec table */
+    '<div class="spec-wrap">',
+    '<div class="sec-title">Technical Specifications</div>',
+    /* Add spec class to table */
+    tbl.replace(/<table/g,'<table class="spec"'),
+    '<div class="disclaimer">&#9733; Specifications subject to change without notice. Custom variants and special capacities available on request. Contact us for OEM and bulk requirements.</div>',
+    '</div>',
+
+    /* Footer */
+    '<div class="pdf-foot">',
+    '<div class="pdf-foot-l"><div class="pdf-foot-brand">Kotibhaskar Industries</div>',
+    'Manufacturer &amp; Exporter &nbsp;|&nbsp; Satara, Maharashtra, India<br>',
+    'kotibhaskarindustries.com &nbsp;|&nbsp; amodsales@gmail.com</div>',
+    '<div class="pdf-foot-r">Product Datasheet<br>',
+    new Date().toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'}),
+    '</div>',
+    '</div>',
+
+    '</div>',/* end sheet */
+
+    /* Print button — screen only */
+    '<div class="no-print">',
+    '<button onclick="window.print()" style="padding:10px 30px;background:#C85A00;color:#fff;border:none;cursor:pointer;font-family:Arial,sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;">',
+    '&#128438; Print &nbsp;/&nbsp; Save as PDF',
+    '</button>',
+    '<p style="margin-top:7px;font-size:10px;color:#888;">Chrome: More settings → Disable Headers and footers → Save as PDF &nbsp;|&nbsp; A4 Portrait</p>',
+    '</div>'
+  ].join('');
+
+  win.document.write('<!DOCTYPE html><html lang="en"><head>');
+  win.document.write('<meta charset="UTF-8">');
+  win.document.write('<meta name="viewport" content="width=device-width,initial-scale=1">');
+  win.document.write('<title>'+cleanTitle+' — Kotibhaskar Industries</title>');
+  win.document.write('<style>'+css+'</style>');
+  win.document.write('</head><body>');
+  win.document.write(body);
   win.document.write('</body></html>');
   win.document.close();
 }
