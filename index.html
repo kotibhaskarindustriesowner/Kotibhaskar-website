@@ -201,7 +201,7 @@ section{padding:84px 5%;}
 
 /* FOOTER */
 footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
-.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:32px;margin-bottom:40px;}
 .footer-brand p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.8;max-width:250px;margin-top:14px;}
 .footer-col h4{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:16px;}
 .footer-col a{display:block;color:rgba(255,255,255,.6);text-decoration:none;font-size:13px;margin-bottom:9px;transition:color .2s;}
@@ -292,6 +292,8 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
   <a href="#network" onclick="toggleMenu()">Sales Network</a>
   <a href="#about" onclick="toggleMenu()">About Us</a>
   <a href="#contact" onclick="toggleMenu()">Contact &amp; Quote</a>
+  <a href="Kotibhaskar_1_Catalogue.pdf" target="_blank" rel="noopener" style="color:#C85A00;">&#8595; MHE Catalogue</a>
+  <a href="Kotibhaskar_1_Castor_Catalogue.pdf" target="_blank" rel="noopener" style="color:#C85A00;">&#8595; Wheels &amp; Castors Catalogue</a>
 </div>
 
 <!-- HERO -->
@@ -312,147 +314,216 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
     <div class="stat"><div class="stat-num">40<span>%</span></div><div class="stat-label">Repeat Orders</div></div>
   </div>
 
-  <!-- TASK 3: CAD ENGINEERING DRAWING — HERO RIGHT -->
-  <div id="hero-cad" style="position:absolute;right:4%;top:50%;transform:translateY(-50%);width:clamp(280px,38%,520px);opacity:0.18;pointer-events:none;z-index:1;">
-    <svg viewBox="0 0 520 440" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+  <!-- HERO RIGHT — ISOMETRIC FLOOR CRANE -->
+  <div id="hero-cad" style="position:absolute;right:3%;top:50%;transform:translateY(-50%);width:clamp(300px,40%,540px);pointer-events:none;z-index:1;">
+    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;overflow:visible;">
       <defs>
-        <style>
-          .cad-line{stroke:#C85A00;stroke-width:1.2;fill:none;stroke-linecap:round;stroke-linejoin:round;}
-          .cad-thin{stroke:#1A2332;stroke-width:0.6;fill:none;stroke-linecap:round;stroke-dasharray:none;}
-          .cad-dim{stroke:#1A2332;stroke-width:0.5;fill:none;stroke-linecap:round;}
-          .cad-hatch{stroke:#1A2332;stroke-width:0.4;fill:none;opacity:0.5;}
-          .cad-text{font-family:Arial,sans-serif;font-size:9px;fill:#1A2332;font-weight:500;}
-          .cad-label{font-family:Arial,sans-serif;font-size:8px;fill:#C85A00;letter-spacing:1px;text-transform:uppercase;}
-          .cad-fill-light{fill:#fff8f0;stroke:#C85A00;stroke-width:0.8;}
-          .cad-fill-mid{fill:#f2ece4;stroke:#1A2332;stroke-width:0.6;}
-        </style>
-        <marker id="arr" markerWidth="5" markerHeight="5" refX="2.5" refY="2.5" orient="auto">
-          <path d="M0,0 L5,2.5 L0,5 Z" fill="#1A2332"/>
-        </marker>
-        <marker id="arr2" markerWidth="5" markerHeight="5" refX="2.5" refY="2.5" orient="auto-start-reverse">
-          <path d="M0,0 L5,2.5 L0,5 Z" fill="#1A2332"/>
-        </marker>
+        <!-- Shadow filter -->
+        <filter id="fc-shadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="3" dy="6" stdDeviation="6" flood-color="#1A2332" flood-opacity="0.13"/>
+        </filter>
+        <!-- Orange glow for accent parts -->
+        <filter id="fc-glow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#C85A00" flood-opacity="0.25"/>
+        </filter>
       </defs>
 
-      <!-- Title block -->
-      <rect x="2" y="2" width="516" height="436" class="cad-thin"/>
-      <rect x="6" y="6" width="508" height="428" class="cad-dim"/>
-      <!-- Title box bottom right -->
-      <rect x="340" y="390" width="168" height="40" class="cad-thin"/>
-      <line x1="340" y1="402" x2="508" y2="402" class="cad-thin"/>
-      <line x1="410" y1="390" x2="410" y2="430" class="cad-thin"/>
-      <text x="344" y="399" class="cad-label" style="font-size:7px;">KOTIBHASKAR INDUSTRIES</text>
-      <text x="344" y="412" class="cad-text">HYDRAULIC PALLET TRUCK</text>
-      <text x="344" y="422" class="cad-text" style="font-size:8px;">CAPACITY: 2500 KG</text>
-      <text x="414" y="399" class="cad-text" style="font-size:7px;">DRG NO.</text>
-      <text x="414" y="410" class="cad-text">HPT-2500</text>
-      <text x="414" y="421" class="cad-text" style="font-size:7px;">SCALE 1:10</text>
-      <text x="414" y="430" class="cad-text" style="font-size:7px;">SATARA, MH</text>
+      <!-- ============================================
+           ISOMETRIC HYDRAULIC FLOOR CRANE
+           Isometric projection: x-right=+0.866, x-up=-0.5 / y-right=-0.866, y-up=-0.5 / z-up=1
+           Origin anchor: 250, 390
+      ============================================ -->
 
-      <!-- PALLET TRUCK SIDE VIEW -->
-      <!-- Fork left horizontal arm -->
-      <rect x="50" y="300" width="200" height="14" class="cad-fill-light"/>
-      <!-- Fork right horizontal arm -->
-      <rect x="50" y="322" width="200" height="14" class="cad-fill-light"/>
-      <!-- Fork tip taper -->
-      <polygon points="250,300 270,305 250,314" class="cad-fill-light"/>
-      <polygon points="250,322 270,327 250,336" class="cad-fill-light"/>
+      <!-- Helper: iso(x,y,z) → screen
+           sx = ox + (x-y)*cos30 = ox + (x-y)*0.866
+           sy = oy - (x+y)*sin30 - z = oy - (x+y)*0.5 - z  -->
 
-      <!-- Body / chassis main block -->
-      <rect x="50" y="200" width="100" height="100" class="cad-fill-mid"/>
-      <!-- Body hatch lines -->
-      <line x1="50" y1="210" x2="60" y2="200" class="cad-hatch"/>
-      <line x1="50" y1="225" x2="75" y2="200" class="cad-hatch"/>
-      <line x1="50" y1="240" x2="90" y2="200" class="cad-hatch"/>
-      <line x1="50" y1="255" x2="105" y2="200" class="cad-hatch"/>
-      <line x1="50" y1="270" x2="120" y2="200" class="cad-hatch"/>
-      <line x1="50" y1="285" x2="135" y2="200" class="cad-hatch"/>
-      <line x1="50" y1="300" x2="150" y2="200" class="cad-hatch"/>
-      <line x1="65" y1="300" x2="150" y2="215" class="cad-hatch"/>
-      <line x1="80" y1="300" x2="150" y2="230" class="cad-hatch"/>
-      <line x1="95" y1="300" x2="150" y2="245" class="cad-hatch"/>
-      <line x1="110" y1="300" x2="150" y2="260" class="cad-hatch"/>
-      <line x1="125" y1="300" x2="150" y2="275" class="cad-hatch"/>
-      <line x1="140" y1="300" x2="150" y2="290" class="cad-hatch"/>
+      <!-- BASE PLATFORM — wide rectangular slab -->
+      <!-- corners at iso: (0,0,0),(160,0,0),(160,80,0),(0,80,0) -->
+      <!-- Top face -->
+      <polygon points="
+        250,390
+        388.6,310
+        320.4,270
+        181.7,350"
+        fill="#e8dfd4" stroke="#1A2332" stroke-width="1.8" stroke-linejoin="round" filter="url(#fc-shadow)"/>
+      <!-- Right face -->
+      <polygon points="
+        388.6,310
+        388.6,330
+        320.4,290
+        320.4,270"
+        fill="#c8bcb0" stroke="#1A2332" stroke-width="1.8" stroke-linejoin="round"/>
+      <!-- Front face -->
+      <polygon points="
+        250,390
+        250,410
+        388.6,330
+        388.6,310"
+        fill="#d8cec4" stroke="#1A2332" stroke-width="1.8" stroke-linejoin="round"/>
 
-      <!-- Pump cylinder -->
-      <rect x="120" y="130" width="18" height="75" class="cad-fill-light"/>
-      <rect x="124" y="100" width="10" height="32" class="cad-fill-mid"/>
-      <!-- Pump piston rod -->
-      <line x1="129" y1="80" x2="129" y2="100" class="cad-line" style="stroke-width:2;"/>
-      <!-- Handle vertical -->
-      <line x1="129" y1="50" x2="129" y2="95" class="cad-line" style="stroke-width:1.5;"/>
-      <!-- Handle horizontal grip -->
-      <line x1="100" y1="50" x2="165" y2="50" class="cad-line" style="stroke-width:2;stroke-linecap:round;"/>
-      <circle cx="100" cy="50" r="5" class="cad-fill-light"/>
-      <circle cx="165" cy="50" r="5" class="cad-fill-light"/>
-      <!-- Handle grip detail -->
-      <rect x="95" y="45" width="12" height="10" rx="5" class="cad-fill-mid"/>
-      <rect x="158" y="45" width="12" height="10" rx="5" class="cad-fill-mid"/>
+      <!-- OUTRIGGER LEGS — 4 corner feet -->
+      <!-- Front-right leg -->
+      <polygon points="370,318 382,311 382,331 370,338" fill="#b8aba0" stroke="#1A2332" stroke-width="1.5"/>
+      <polygon points="370,318 382,311 374,307 362,314" fill="#c8bcb0" stroke="#1A2332" stroke-width="1.5"/>
+      <!-- Front-left leg -->
+      <polygon points="250,383 262,376 262,396 250,403" fill="#b8aba0" stroke="#1A2332" stroke-width="1.5"/>
+      <polygon points="250,383 262,376 254,372 242,379" fill="#c8bcb0" stroke="#1A2332" stroke-width="1.5"/>
+      <!-- Rear-right leg -->
+      <polygon points="320,263 332,256 332,276 320,283" fill="#b8aba0" stroke="#1A2332" stroke-width="1.5"/>
+      <!-- Rear-left leg -->
+      <polygon points="200,318 212,311 212,331 200,338" fill="#b8aba0" stroke="#1A2332" stroke-width="1.5"/>
 
-      <!-- Release lever -->
-      <line x1="150" y1="205" x2="185" y2="195" class="cad-line"/>
-      <circle cx="186" cy="195" r="4" class="cad-fill-light"/>
+      <!-- MAIN VERTICAL COLUMN — rises from base centre-rear -->
+      <!-- Column base iso approx (60,40,0) to (80,40,0) top face -->
+      <!-- Front face of column -->
+      <polygon points="
+        285,350
+        295,344
+        295,140
+        285,146"
+        fill="#d0c4b8" stroke="#1A2332" stroke-width="2" stroke-linejoin="round" filter="url(#fc-shadow)"/>
+      <!-- Left face of column -->
+      <polygon points="
+        276,355
+        285,350
+        285,146
+        276,151"
+        fill="#e4d8cc" stroke="#1A2332" stroke-width="2" stroke-linejoin="round"/>
+      <!-- Top cap -->
+      <polygon points="276,151 285,146 295,140 286,145" fill="#C85A00" stroke="#1A2332" stroke-width="1.5"/>
 
-      <!-- Steering wheel / drive wheel -->
-      <circle cx="90" cy="340" r="22" class="cad-fill-mid"/>
-      <circle cx="90" cy="340" r="16" class="cad-thin"/>
-      <circle cx="90" cy="340" r="5" class="cad-thin"/>
-      <!-- Wheel spokes -->
-      <line x1="90" y1="318" x2="90" y2="340" class="cad-thin"/>
-      <line x1="90" y1="340" x2="90" y2="362" class="cad-thin"/>
-      <line x1="68" y1="340" x2="112" y2="340" class="cad-thin"/>
+      <!-- COLUMN GUIDE RAILS — two parallel tracks -->
+      <line x1="280" y1="350" x2="280" y2="148" stroke="#C85A00" stroke-width="2.5" stroke-linecap="round" filter="url(#fc-glow)"/>
+      <line x1="290" y1="344" x2="290" y2="142" stroke="#C85A00" stroke-width="2.5" stroke-linecap="round" filter="url(#fc-glow)"/>
 
-      <!-- Load wheels (small, under forks) -->
-      <circle cx="220" cy="318" r="10" class="cad-fill-mid"/>
-      <circle cx="220" cy="318" r="6" class="cad-thin"/>
-      <circle cx="220" cy="336" r="10" class="cad-fill-mid"/>
-      <circle cx="220" cy="336" r="6" class="cad-thin"/>
+      <!-- CARRIAGE / LIFT HEAD — slides on column, at 60% height -->
+      <polygon points="
+        268,220
+        285,210
+        302,200
+        302,230
+        285,240
+        268,250"
+        fill="#C85A00" stroke="#1A2332" stroke-width="2" stroke-linejoin="round" filter="url(#fc-glow)"/>
+      <!-- Carriage bolt details -->
+      <circle cx="278" cy="230" r="4" fill="#1A2332" stroke="#C85A00" stroke-width="1.2"/>
+      <circle cx="292" cy="222" r="4" fill="#1A2332" stroke="#C85A00" stroke-width="1.2"/>
 
-      <!-- Climber wheels -->
-      <circle cx="175" cy="314" r="7" class="cad-fill-mid"/>
-      <circle cx="175" cy="330" r="7" class="cad-fill-mid"/>
+      <!-- HYDRAULIC CYLINDER — behind boom -->
+      <polygon points="283,310 290,306 290,200 283,204" fill="#b8aba0" stroke="#1A2332" stroke-width="1.4"/>
+      <polygon points="276,314 283,310 283,204 276,208" fill="#c8c0b4" stroke="#1A2332" stroke-width="1.4"/>
 
-      <!-- Fork connection to body -->
-      <rect x="50" y="290" width="30" height="24" class="cad-line" style="stroke-width:1;"/>
+      <!-- BOOM ARM — extends from carriage to right -->
+      <!-- Main boom tube top face -->
+      <polygon points="
+        302,200
+        302,230
+        430,155
+        430,125"
+        fill="#d8cec4" stroke="#1A2332" stroke-width="2" stroke-linejoin="round" filter="url(#fc-shadow)"/>
+      <!-- Boom underside -->
+      <polygon points="
+        302,230
+        268,250
+        396,175
+        430,155"
+        fill="#b8aba0" stroke="#1A2332" stroke-width="2" stroke-linejoin="round"/>
+      <!-- Boom top highlight strip -->
+      <polygon points="302,200 430,125 432,128 304,203" fill="#C85A00" stroke="none" opacity="0.7"/>
 
-      <!-- DIMENSION LINES -->
-      <!-- Overall length dimension -->
-      <line x1="50" y1="370" x2="270" y2="370" class="cad-dim" marker-start="url(#arr2)" marker-end="url(#arr)"/>
-      <line x1="50" y1="362" x2="50" y2="378" class="cad-dim"/>
-      <line x1="270" y1="362" x2="270" y2="378" class="cad-dim"/>
-      <text x="155" y="367" class="cad-text" text-anchor="middle">FORK LENGTH — 1220 mm</text>
+      <!-- BOOM PIVOT JOINT at column -->
+      <circle cx="285" cy="218" r="10" fill="#1A2332" stroke="#C85A00" stroke-width="2.5" filter="url(#fc-glow)"/>
+      <circle cx="285" cy="218" r="4" fill="#C85A00"/>
 
-      <!-- Overall height dimension -->
-      <line x1="30" y1="50" x2="30" y2="300" class="cad-dim" marker-start="url(#arr2)" marker-end="url(#arr)"/>
-      <line x1="22" y1="50" x2="38" y2="50" class="cad-dim"/>
-      <line x1="22" y1="300" x2="38" y2="300" class="cad-dim"/>
-      <text x="28" y="180" class="cad-text" text-anchor="middle" transform="rotate(-90 28 180)">HEIGHT — 1160 mm</text>
+      <!-- HOOK ASSEMBLY at boom tip -->
+      <!-- Pulley wheel -->
+      <circle cx="430" cy="138" r="14" fill="#d8cec4" stroke="#1A2332" stroke-width="2"/>
+      <circle cx="430" cy="138" r="8" fill="#C85A00" stroke="#1A2332" stroke-width="1.5" filter="url(#fc-glow)"/>
+      <circle cx="430" cy="138" r="3" fill="#1A2332"/>
+      <!-- Hook chain -->
+      <line x1="430" y1="152" x2="430" y2="220" stroke="#1A2332" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4,3"/>
+      <!-- Hook shape -->
+      <path d="M427,220 Q420,235 428,242 Q436,248 438,240 L436,232" fill="none" stroke="#1A2332" stroke-width="3" stroke-linecap="round"/>
+      <!-- Safety latch -->
+      <line x1="436" y1="232" x2="428" y2="225" stroke="#C85A00" stroke-width="2" stroke-linecap="round"/>
 
-      <!-- Fork width dimension -->
-      <line x1="50" y1="350" x2="50" y2="360" class="cad-dim"/>
-      <line x1="250" y1="350" x2="250" y2="360" class="cad-dim"/>
+      <!-- WHEELS — 4 castors under base -->
+      <!-- Front-right castor -->
+      <ellipse cx="385" cy="332" rx="12" ry="7" fill="#888" stroke="#1A2332" stroke-width="1.5"/>
+      <ellipse cx="385" cy="336" rx="12" ry="5" fill="#666" stroke="#1A2332" stroke-width="1"/>
+      <!-- Front-left castor -->
+      <ellipse cx="252" cy="404" rx="12" ry="7" fill="#888" stroke="#1A2332" stroke-width="1.5"/>
+      <ellipse cx="252" cy="408" rx="12" ry="5" fill="#666" stroke="#1A2332" stroke-width="1"/>
+      <!-- Rear-right castor -->
+      <ellipse cx="328" cy="278" rx="10" ry="6" fill="#888" stroke="#1A2332" stroke-width="1.5"/>
+      <!-- Rear-left castor -->
+      <ellipse cx="205" cy="333" rx="10" ry="6" fill="#888" stroke="#1A2332" stroke-width="1.5"/>
 
-      <!-- Wheel diameter callout -->
-      <line x1="90" y1="340" x2="115" y2="370" class="cad-dim"/>
-      <text x="117" y="374" class="cad-text">Ø180mm PU</text>
+      <!-- PUMP HANDLE — extends from column side -->
+      <line x1="268" y1="270" x2="228" y2="248" stroke="#1A2332" stroke-width="3" stroke-linecap="round"/>
+      <line x1="228" y1="248" x2="218" y2="220" stroke="#1A2332" stroke-width="3" stroke-linecap="round"/>
+      <!-- Handle grip -->
+      <ellipse cx="216" cy="216" rx="10" ry="6" fill="#C85A00" stroke="#1A2332" stroke-width="1.8" transform="rotate(-20,216,216)" filter="url(#fc-glow)"/>
 
-      <!-- Load wheel callout -->
-      <line x1="220" y1="318" x2="295" y2="310" class="cad-dim"/>
-      <text x="297" y="314" class="cad-text">Ø82mm PU</text>
+      <!-- LOAD BOX being lifted — suspended from hook -->
+      <polygon points="
+        410,242
+        442,224
+        460,234
+        428,252"
+        fill="#FFF0E0" stroke="#C85A00" stroke-width="1.8" stroke-linejoin="round" opacity="0.9"/>
+      <polygon points="
+        410,242
+        410,268
+        428,278
+        428,252"
+        fill="#F5E0C8" stroke="#C85A00" stroke-width="1.8" stroke-linejoin="round" opacity="0.9"/>
+      <polygon points="
+        428,252
+        428,278
+        460,260
+        460,234"
+        fill="#E8D4B8" stroke="#C85A00" stroke-width="1.8" stroke-linejoin="round" opacity="0.9"/>
+      <!-- Chain to load -->
+      <line x1="430" y1="247" x2="430" y2="222" stroke="#1A2332" stroke-width="2" stroke-dasharray="3,2"/>
 
-      <!-- Capacity label -->
-      <text x="290" y="220" class="cad-label" style="font-size:10px;">CAP: 2500 kg</text>
-      <text x="290" y="234" class="cad-text">PT-25 / PT-25W</text>
+      <!-- ============================================
+           FLOATING INFO LABELS
+      ============================================ -->
 
-      <!-- Centre lines -->
-      <line x1="90" y1="310" x2="90" y2="375" class="cad-dim" style="stroke-dasharray:5,3;"/>
-      <line x1="60" y1="340" x2="125" y2="340" class="cad-dim" style="stroke-dasharray:5,3;"/>
-      <line x1="220" y1="296" x2="220" y2="352" class="cad-dim" style="stroke-dasharray:5,3;"/>
+      <!-- Label 1: Heavy Duty Lifting — top right -->
+      <g transform="translate(430, 95)">
+        <rect x="-3" y="-14" width="108" height="22" rx="3" fill="rgba(26,35,50,0.82)" stroke="#C85A00" stroke-width="1"/>
+        <line x1="-3" y1="4" x2="-18" y2="22" stroke="#C85A00" stroke-width="1" stroke-dasharray="2,2"/>
+        <circle cx="-18" cy="24" r="2.5" fill="#C85A00"/>
+        <text x="51" y="3" font-family="'Barlow Condensed',Arial,sans-serif" font-size="11" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="1">HEAVY DUTY LIFTING</text>
+      </g>
 
-      <!-- Section indicator -->
-      <text x="12" y="20" class="cad-label" style="font-size:8px;">SIDE ELEVATION — VIEW A</text>
-      <text x="12" y="30" class="cad-text" style="fill:#C85A00;">HYDRAULIC PALLET TRUCK — PT-25</text>
+      <!-- Label 2: Hydraulic Operation — left side mid -->
+      <g transform="translate(145, 230)">
+        <rect x="-3" y="-14" width="120" height="22" rx="3" fill="rgba(26,35,50,0.82)" stroke="#C85A00" stroke-width="1"/>
+        <line x1="117" y1="4" x2="132" y2="18" stroke="#C85A00" stroke-width="1" stroke-dasharray="2,2"/>
+        <circle cx="134" cy="20" r="2.5" fill="#C85A00"/>
+        <text x="57" y="3" font-family="'Barlow Condensed',Arial,sans-serif" font-size="11" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="1">HYDRAULIC OPERATION</text>
+      </g>
+
+      <!-- Label 3: Industrial Grade — below boom right -->
+      <g transform="translate(400, 290)">
+        <rect x="-3" y="-14" width="100" height="22" rx="3" fill="rgba(26,35,50,0.82)" stroke="#C85A00" stroke-width="1"/>
+        <line x1="30" y1="-14" x2="30" y2="-28" stroke="#C85A00" stroke-width="1" stroke-dasharray="2,2"/>
+        <circle cx="30" cy="-30" r="2.5" fill="#C85A00"/>
+        <text x="47" y="3" font-family="'Barlow Condensed',Arial,sans-serif" font-size="11" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="1">INDUSTRIAL GRADE</text>
+      </g>
+
+      <!-- Label 4: Built in Satara — bottom left -->
+      <g transform="translate(148, 385)">
+        <rect x="-3" y="-14" width="100" height="22" rx="3" fill="rgba(26,35,50,0.82)" stroke="#C85A00" stroke-width="1"/>
+        <line x1="97" y1="-5" x2="116" y2="-15" stroke="#C85A00" stroke-width="1" stroke-dasharray="2,2"/>
+        <circle cx="118" cy="-16" r="2.5" fill="#C85A00"/>
+        <text x="47" y="3" font-family="'Barlow Condensed',Arial,sans-serif" font-size="11" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="1">BUILT IN SATARA</text>
+      </g>
+
     </svg>
   </div>
 </section>
@@ -497,6 +568,23 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
 <section id="products">
   <div class="section-tag">What We Make</div>
   <h2 class="section-title">Our Products</h2>
+
+  <!-- CATALOGUE DOWNLOADS -->
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px;align-items:center;">
+    <span style="font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#777;margin-right:4px;">Download Catalogues:</span>
+    <a href="Kotibhaskar_1_Catalogue.pdf" target="_blank" rel="noopener"
+      style="display:inline-flex;align-items:center;gap:7px;background:#1A2332;color:#fff;text-decoration:none;padding:9px 18px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;transition:background 0.2s;"
+      onmouseenter="this.style.background='#C85A00'" onmouseleave="this.style.background='#1A2332'">
+      <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1v9M7 10l-3-3M7 10l3-3M1 13h12" stroke="#C85A00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 13v2h12v-2" stroke="#C85A00" stroke-width="1.8" stroke-linecap="round"/></svg>
+      MHE Catalogue
+    </a>
+    <a href="Kotibhaskar_1_Castor_Catalogue.pdf" target="_blank" rel="noopener"
+      style="display:inline-flex;align-items:center;gap:7px;background:#1A2332;color:#fff;text-decoration:none;padding:9px 18px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;transition:background 0.2s;"
+      onmouseenter="this.style.background='#C85A00'" onmouseleave="this.style.background='#1A2332'">
+      <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1v9M7 10l-3-3M7 10l3-3M1 13h12" stroke="#C85A00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 13v2h12v-2" stroke="#C85A00" stroke-width="1.8" stroke-linecap="round"/></svg>
+      Wheels &amp; Castors Catalogue
+    </a>
+  </div>
 
   <div class="product-cats">
     <div class="cat-card active" onclick="showCat('mhe',this)">
@@ -780,6 +868,11 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
       <a href="tel:+919822413252">+91 98224 13252</a>
       <a href="mailto:amodsales@gmail.com">amodsales@gmail.com</a>
       <a>Satara, Maharashtra</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="Kotibhaskar_1_Catalogue.pdf" target="_blank" rel="noopener">&#8595; MHE Catalogue</a>
+      <a href="Kotibhaskar_1_Castor_Catalogue.pdf" target="_blank" rel="noopener">&#8595; Wheels &amp; Castors Catalogue</a>
     </div>
   </div>
   <div class="footer-bottom">
