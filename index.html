@@ -35,7 +35,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bott
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(200,90,0,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(200,90,0,0.06) 1px,transparent 1px);background-size:56px 56px;}
 .hero-content{position:relative;z-index:2;max-width:680px;}
 /* TASK 3 */
-@media(max-width:900px){#hero-cad{display:none!important;}}
+
 .hero-tag{display:inline-flex;align-items:center;gap:10px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#888;margin-bottom:22px;}
 .hero-tag::before{content:'';display:block;width:28px;height:2px;background:#C85A00;}
 .hero-headline{font-family:'Barlow Condensed',sans-serif;font-size:clamp(52px,7vw,88px);font-weight:800;line-height:0.95;letter-spacing:-1px;margin-bottom:22px;text-transform:uppercase;color:#1A2332;}
@@ -314,218 +314,6 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
     <div class="stat"><div class="stat-num">40<span>%</span></div><div class="stat-label">Repeat Orders</div></div>
   </div>
 
-  <!-- HERO RIGHT — ISOMETRIC FLOOR CRANE -->
-  <div id="hero-cad" style="position:absolute;right:3%;top:50%;transform:translateY(-50%);width:clamp(300px,40%,540px);pointer-events:none;z-index:1;">
-    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;overflow:visible;">
-      <defs>
-        <!-- Shadow filter -->
-        <filter id="fc-shadow" x="-10%" y="-10%" width="120%" height="120%">
-          <feDropShadow dx="3" dy="6" stdDeviation="6" flood-color="#1A2332" flood-opacity="0.13"/>
-        </filter>
-        <!-- Orange glow for accent parts -->
-        <filter id="fc-glow" x="-20%" y="-20%" width="140%" height="140%">
-          <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#C85A00" flood-opacity="0.25"/>
-        </filter>
-      </defs>
-
-      <!-- ============================================
-           ISOMETRIC HYDRAULIC FLOOR CRANE
-           Isometric projection: x-right=+0.866, x-up=-0.5 / y-right=-0.866, y-up=-0.5 / z-up=1
-           Origin anchor: 250, 390
-      ============================================ -->
-
-      <!-- Helper: iso(x,y,z) → screen
-           sx = ox + (x-y)*cos30 = ox + (x-y)*0.866
-           sy = oy - (x+y)*sin30 - z = oy - (x+y)*0.5 - z  -->
-
-      <!-- BASE PLATFORM — wide rectangular slab -->
-      <!-- corners at iso: (0,0,0),(160,0,0),(160,80,0),(0,80,0) -->
-      <!-- Top face -->
-      <polygon points="
-        250,390
-        388.6,310
-        320.4,270
-        181.7,350"
-        fill="#e8dfd4" stroke="#1A2332" stroke-width="1.8" stroke-linejoin="round" filter="url(#fc-shadow)"/>
-      <!-- Right face -->
-      <polygon points="
-        388.6,310
-        388.6,330
-        320.4,290
-        320.4,270"
-        fill="#c8bcb0" stroke="#1A2332" stroke-width="1.8" stroke-linejoin="round"/>
-      <!-- Front face -->
-      <polygon points="
-        250,390
-        250,410
-        388.6,330
-        388.6,310"
-        fill="#d8cec4" stroke="#1A2332" stroke-width="1.8" stroke-linejoin="round"/>
-
-      <!-- OUTRIGGER LEGS — 4 corner feet -->
-      <!-- Front-right leg -->
-      <polygon points="370,318 382,311 382,331 370,338" fill="#b8aba0" stroke="#1A2332" stroke-width="1.5"/>
-      <polygon points="370,318 382,311 374,307 362,314" fill="#c8bcb0" stroke="#1A2332" stroke-width="1.5"/>
-      <!-- Front-left leg -->
-      <polygon points="250,383 262,376 262,396 250,403" fill="#b8aba0" stroke="#1A2332" stroke-width="1.5"/>
-      <polygon points="250,383 262,376 254,372 242,379" fill="#c8bcb0" stroke="#1A2332" stroke-width="1.5"/>
-      <!-- Rear-right leg -->
-      <polygon points="320,263 332,256 332,276 320,283" fill="#b8aba0" stroke="#1A2332" stroke-width="1.5"/>
-      <!-- Rear-left leg -->
-      <polygon points="200,318 212,311 212,331 200,338" fill="#b8aba0" stroke="#1A2332" stroke-width="1.5"/>
-
-      <!-- MAIN VERTICAL COLUMN — rises from base centre-rear -->
-      <!-- Column base iso approx (60,40,0) to (80,40,0) top face -->
-      <!-- Front face of column -->
-      <polygon points="
-        285,350
-        295,344
-        295,140
-        285,146"
-        fill="#d0c4b8" stroke="#1A2332" stroke-width="2" stroke-linejoin="round" filter="url(#fc-shadow)"/>
-      <!-- Left face of column -->
-      <polygon points="
-        276,355
-        285,350
-        285,146
-        276,151"
-        fill="#e4d8cc" stroke="#1A2332" stroke-width="2" stroke-linejoin="round"/>
-      <!-- Top cap -->
-      <polygon points="276,151 285,146 295,140 286,145" fill="#C85A00" stroke="#1A2332" stroke-width="1.5"/>
-
-      <!-- COLUMN GUIDE RAILS — two parallel tracks -->
-      <line x1="280" y1="350" x2="280" y2="148" stroke="#C85A00" stroke-width="2.5" stroke-linecap="round" filter="url(#fc-glow)"/>
-      <line x1="290" y1="344" x2="290" y2="142" stroke="#C85A00" stroke-width="2.5" stroke-linecap="round" filter="url(#fc-glow)"/>
-
-      <!-- CARRIAGE / LIFT HEAD — slides on column, at 60% height -->
-      <polygon points="
-        268,220
-        285,210
-        302,200
-        302,230
-        285,240
-        268,250"
-        fill="#C85A00" stroke="#1A2332" stroke-width="2" stroke-linejoin="round" filter="url(#fc-glow)"/>
-      <!-- Carriage bolt details -->
-      <circle cx="278" cy="230" r="4" fill="#1A2332" stroke="#C85A00" stroke-width="1.2"/>
-      <circle cx="292" cy="222" r="4" fill="#1A2332" stroke="#C85A00" stroke-width="1.2"/>
-
-      <!-- HYDRAULIC CYLINDER — behind boom -->
-      <polygon points="283,310 290,306 290,200 283,204" fill="#b8aba0" stroke="#1A2332" stroke-width="1.4"/>
-      <polygon points="276,314 283,310 283,204 276,208" fill="#c8c0b4" stroke="#1A2332" stroke-width="1.4"/>
-
-      <!-- BOOM ARM — extends from carriage to right -->
-      <!-- Main boom tube top face -->
-      <polygon points="
-        302,200
-        302,230
-        430,155
-        430,125"
-        fill="#d8cec4" stroke="#1A2332" stroke-width="2" stroke-linejoin="round" filter="url(#fc-shadow)"/>
-      <!-- Boom underside -->
-      <polygon points="
-        302,230
-        268,250
-        396,175
-        430,155"
-        fill="#b8aba0" stroke="#1A2332" stroke-width="2" stroke-linejoin="round"/>
-      <!-- Boom top highlight strip -->
-      <polygon points="302,200 430,125 432,128 304,203" fill="#C85A00" stroke="none" opacity="0.7"/>
-
-      <!-- BOOM PIVOT JOINT at column -->
-      <circle cx="285" cy="218" r="10" fill="#1A2332" stroke="#C85A00" stroke-width="2.5" filter="url(#fc-glow)"/>
-      <circle cx="285" cy="218" r="4" fill="#C85A00"/>
-
-      <!-- HOOK ASSEMBLY at boom tip -->
-      <!-- Pulley wheel -->
-      <circle cx="430" cy="138" r="14" fill="#d8cec4" stroke="#1A2332" stroke-width="2"/>
-      <circle cx="430" cy="138" r="8" fill="#C85A00" stroke="#1A2332" stroke-width="1.5" filter="url(#fc-glow)"/>
-      <circle cx="430" cy="138" r="3" fill="#1A2332"/>
-      <!-- Hook chain -->
-      <line x1="430" y1="152" x2="430" y2="220" stroke="#1A2332" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4,3"/>
-      <!-- Hook shape -->
-      <path d="M427,220 Q420,235 428,242 Q436,248 438,240 L436,232" fill="none" stroke="#1A2332" stroke-width="3" stroke-linecap="round"/>
-      <!-- Safety latch -->
-      <line x1="436" y1="232" x2="428" y2="225" stroke="#C85A00" stroke-width="2" stroke-linecap="round"/>
-
-      <!-- WHEELS — 4 castors under base -->
-      <!-- Front-right castor -->
-      <ellipse cx="385" cy="332" rx="12" ry="7" fill="#888" stroke="#1A2332" stroke-width="1.5"/>
-      <ellipse cx="385" cy="336" rx="12" ry="5" fill="#666" stroke="#1A2332" stroke-width="1"/>
-      <!-- Front-left castor -->
-      <ellipse cx="252" cy="404" rx="12" ry="7" fill="#888" stroke="#1A2332" stroke-width="1.5"/>
-      <ellipse cx="252" cy="408" rx="12" ry="5" fill="#666" stroke="#1A2332" stroke-width="1"/>
-      <!-- Rear-right castor -->
-      <ellipse cx="328" cy="278" rx="10" ry="6" fill="#888" stroke="#1A2332" stroke-width="1.5"/>
-      <!-- Rear-left castor -->
-      <ellipse cx="205" cy="333" rx="10" ry="6" fill="#888" stroke="#1A2332" stroke-width="1.5"/>
-
-      <!-- PUMP HANDLE — extends from column side -->
-      <line x1="268" y1="270" x2="228" y2="248" stroke="#1A2332" stroke-width="3" stroke-linecap="round"/>
-      <line x1="228" y1="248" x2="218" y2="220" stroke="#1A2332" stroke-width="3" stroke-linecap="round"/>
-      <!-- Handle grip -->
-      <ellipse cx="216" cy="216" rx="10" ry="6" fill="#C85A00" stroke="#1A2332" stroke-width="1.8" transform="rotate(-20,216,216)" filter="url(#fc-glow)"/>
-
-      <!-- LOAD BOX being lifted — suspended from hook -->
-      <polygon points="
-        410,242
-        442,224
-        460,234
-        428,252"
-        fill="#FFF0E0" stroke="#C85A00" stroke-width="1.8" stroke-linejoin="round" opacity="0.9"/>
-      <polygon points="
-        410,242
-        410,268
-        428,278
-        428,252"
-        fill="#F5E0C8" stroke="#C85A00" stroke-width="1.8" stroke-linejoin="round" opacity="0.9"/>
-      <polygon points="
-        428,252
-        428,278
-        460,260
-        460,234"
-        fill="#E8D4B8" stroke="#C85A00" stroke-width="1.8" stroke-linejoin="round" opacity="0.9"/>
-      <!-- Chain to load -->
-      <line x1="430" y1="247" x2="430" y2="222" stroke="#1A2332" stroke-width="2" stroke-dasharray="3,2"/>
-
-      <!-- ============================================
-           FLOATING INFO LABELS
-      ============================================ -->
-
-      <!-- Label 1: Heavy Duty Lifting — top right -->
-      <g transform="translate(430, 95)">
-        <rect x="-3" y="-14" width="108" height="22" rx="3" fill="rgba(26,35,50,0.82)" stroke="#C85A00" stroke-width="1"/>
-        <line x1="-3" y1="4" x2="-18" y2="22" stroke="#C85A00" stroke-width="1" stroke-dasharray="2,2"/>
-        <circle cx="-18" cy="24" r="2.5" fill="#C85A00"/>
-        <text x="51" y="3" font-family="'Barlow Condensed',Arial,sans-serif" font-size="11" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="1">HEAVY DUTY LIFTING</text>
-      </g>
-
-      <!-- Label 2: Hydraulic Operation — left side mid -->
-      <g transform="translate(145, 230)">
-        <rect x="-3" y="-14" width="120" height="22" rx="3" fill="rgba(26,35,50,0.82)" stroke="#C85A00" stroke-width="1"/>
-        <line x1="117" y1="4" x2="132" y2="18" stroke="#C85A00" stroke-width="1" stroke-dasharray="2,2"/>
-        <circle cx="134" cy="20" r="2.5" fill="#C85A00"/>
-        <text x="57" y="3" font-family="'Barlow Condensed',Arial,sans-serif" font-size="11" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="1">HYDRAULIC OPERATION</text>
-      </g>
-
-      <!-- Label 3: Industrial Grade — below boom right -->
-      <g transform="translate(400, 290)">
-        <rect x="-3" y="-14" width="100" height="22" rx="3" fill="rgba(26,35,50,0.82)" stroke="#C85A00" stroke-width="1"/>
-        <line x1="30" y1="-14" x2="30" y2="-28" stroke="#C85A00" stroke-width="1" stroke-dasharray="2,2"/>
-        <circle cx="30" cy="-30" r="2.5" fill="#C85A00"/>
-        <text x="47" y="3" font-family="'Barlow Condensed',Arial,sans-serif" font-size="11" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="1">INDUSTRIAL GRADE</text>
-      </g>
-
-      <!-- Label 4: Built in Satara — bottom left -->
-      <g transform="translate(148, 385)">
-        <rect x="-3" y="-14" width="100" height="22" rx="3" fill="rgba(26,35,50,0.82)" stroke="#C85A00" stroke-width="1"/>
-        <line x1="97" y1="-5" x2="116" y2="-15" stroke="#C85A00" stroke-width="1" stroke-dasharray="2,2"/>
-        <circle cx="118" cy="-16" r="2.5" fill="#C85A00"/>
-        <text x="47" y="3" font-family="'Barlow Condensed',Arial,sans-serif" font-size="11" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="1">BUILT IN SATARA</text>
-      </g>
-
-    </svg>
-  </div>
 </section>
 
 <!-- SMART FINDER -->
@@ -910,8 +698,8 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
 <div class="success-overlay" id="success-overlay">
   <div class="success-box">
     <div style="font-size:48px;margin-bottom:16px;">✅</div>
-    <div style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;text-transform:uppercase;color:#1A2332;margin-bottom:12px;">Thank You!</div>
-    <div style="font-size:15px;color:#555;line-height:1.7;margin-bottom:28px;">Your enquiry has been received successfully. Our team will contact you soon.</div>
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;text-transform:uppercase;color:#1A2332;margin-bottom:12px;">Email Draft Ready</div>
+    <div style="font-size:15px;color:#555;line-height:1.7;margin-bottom:28px;">Your enquiry email has been prepared in Gmail. Please review the message and click Send to submit your enquiry. Kotibhaskar Industries will only receive your enquiry after the email is sent.</div>
     <button onclick="document.getElementById('success-overlay').classList.remove('open')" class="btn-primary" style="padding:12px 32px;">Close</button>
   </div>
 </div>
