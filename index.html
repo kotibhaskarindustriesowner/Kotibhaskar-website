@@ -12,10 +12,12 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://kotibhaskarindustries.com/">
 
-<!-- ═══ FAVICON / LOGO ═══ -->
-<link rel="icon" type="image/png" href="./logo.png">
-<link rel="shortcut icon" href="./logo.png">
-<link rel="apple-touch-icon" href="./logo.png">
+<!-- ═══ FAVICON / BROWSER & GOOGLE LOGO ═══ -->
+<link rel="icon" type="image/x-icon" href="./favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+<link rel="shortcut icon" href="./favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
 
 <!-- ═══ OPEN GRAPH (Facebook, LinkedIn, WhatsApp previews) ═══ -->
 <meta property="og:type" content="website">
@@ -37,33 +39,65 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Kotibhaskar Industries",
-  "alternateName": "Kotibhaskar Material Handling Equipments",
-  "url": "https://kotibhaskarindustries.com/",
-  "logo": "https://kotibhaskarindustries.com/logo.png",
-  "image": "https://kotibhaskarindustries.com/logo.png",
-  "description": "Manufacturer of material handling equipment, industrial wheels and castors, and material handling trolleys. Founded in 2000, based at Satara MIDC, Maharashtra, India.",
-  "foundingDate": "2000",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Plot No. K-3/2/1, Additional MIDC",
-    "addressLocality": "Satara",
-    "addressRegion": "Maharashtra",
-    "postalCode": "415004",
-    "addressCountry": "IN"
-  },
-  "contactPoint": [
+  "@graph": [
     {
-      "@type": "ContactPoint",
-      "telephone": "+91-98224-13252",
-      "contactType": "sales",
-      "email": "amodsales@gmail.com",
-      "availableLanguage": ["English", "Hindi", "Marathi"]
+      "@type": ["Organization", "Manufacturer"],
+      "@id": "https://kotibhaskarindustries.com/#organization",
+      "name": "Kotibhaskar Industries",
+      "alternateName": "Kotibhaskar Material Handling Equipments",
+      "url": "https://kotibhaskarindustries.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://kotibhaskarindustries.com/logo.png",
+        "width": 200,
+        "height": 200
+      },
+      "image": "https://kotibhaskarindustries.com/logo.png",
+      "description": "Manufacturer of material handling equipment, industrial wheels and castors, and material handling trolleys. Founded in 2000, based at Satara MIDC, Maharashtra, India.",
+      "foundingDate": "2000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plot No. K-3/2/1, Additional MIDC",
+        "addressLocality": "Satara",
+        "addressRegion": "Maharashtra",
+        "postalCode": "415004",
+        "addressCountry": "IN"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-98224-13252",
+          "contactType": "sales",
+          "email": "amodsales@gmail.com",
+          "availableLanguage": ["English", "Hindi", "Marathi"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-83800-95804",
+          "contactType": "customer support",
+          "availableLanguage": ["English", "Hindi", "Marathi"]
+        }
+      ],
+      "sameAs": [
+        "https://kotibhaskar.in",
+        "https://www.linkedin.com/company/kotibhaskar-industries/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://kotibhaskarindustries.com/#website",
+      "url": "https://kotibhaskarindustries.com/",
+      "name": "Kotibhaskar Industries",
+      "description": "Material Handling Equipment Manufacturer in Satara, Maharashtra",
+      "publisher": {
+        "@id": "https://kotibhaskarindustries.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://kotibhaskarindustries.com/#finder",
+        "query-input": "required name=search_term_string"
+      }
     }
-  ],
-  "sameAs": [
-    "https://kotibhaskar.in"
   ]
 }
 </script>
@@ -714,6 +748,7 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
       <a href="#about">About Us</a>
       <a href="#customers">Customers</a>
       <a href="#network">Sales Network</a>
+      <a href="https://www.linkedin.com/company/kotibhaskar-industries/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
     <div class="footer-col">
       <h4>Contact</h4>
