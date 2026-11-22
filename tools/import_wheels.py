@@ -104,7 +104,8 @@ def main(category):
         kv = dict(specs)
 
         # --- consistency checks: Word document vs folder name -----------------
-        size = re.match(r'^([\d.]+) x ([\d.]+) \(([\d.]+) Inch Wheel\)$', kv.get('Size', ''))
+        # Size may be written "100 x 32 (4 Inch Wheel)" or "100 x 32 mm (4 Inch Wheel)"
+        size = re.match(r'^([\d.]+) x ([\d.]+)(?: mm)? \(([\d.]+) Inch Wheel\)$', kv.get('Size', ''))
         dia = re.match(r'^([\d.]+) mm$', kv.get('Wheel Diameter', ''))
         wid = re.match(r'^([\d.]+) mm$', kv.get('Wheel Width', ''))
         load = re.match(r'^([\d.]+) kg$', kv.get('Load Capacity per Caster', ''))

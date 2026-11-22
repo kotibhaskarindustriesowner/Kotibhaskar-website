@@ -123,7 +123,6 @@ img{max-width:100%;}
 .fact{background:#fff;border:1px solid #DDD8D0;border-top:3px solid #C85A00;padding:14px 16px;}
 .fact-num{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;color:#1A2332;line-height:1;}
 .fact-num small{font-size:15px;color:#C85A00;margin-left:2px;}
-.fact-inch{background:#FFF0E6;}
 .page-title .size-line{display:table;background:#fff;border:1px solid #DDD8D0;border-left:4px solid #C85A00;padding:6px 16px;margin-top:12px;font-size:clamp(22px,2.6vw,30px);font-weight:700;letter-spacing:.5px;color:#1A2332;line-height:1.2;text-transform:none;}
 .page-title .size-inch{color:#C85A00;white-space:nowrap;}
 .fact-label{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#888;margin-top:5px;}
@@ -244,7 +243,8 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
 .ps-foot{margin-top:3mm;border-top:.8mm solid #1A2332;padding-top:2mm;display:flex;justify-content:space-between;align-items:flex-end;gap:4mm;font-size:7.5pt;color:#444;line-height:1.45;}
 .ps-foot b{color:#1A2332;font-family:'Barlow Condensed',Arial,sans-serif;font-size:8.6pt;letter-spacing:1pt;text-transform:uppercase;}
 .ps-foot>div{white-space:nowrap;}
-.ps-foot>div.ps-url{white-space:normal;word-break:break-all;text-align:right;color:#777;max-width:62mm;}
+.ps-url span{white-space:nowrap;}
+.ps-foot>div.ps-url{white-space:normal;text-align:right;color:#777;max-width:62mm;}
 
 /* Printing: margins are built into the sheet. A zero page margin also leaves
    no room for the browser's own URL / date header and footer. */

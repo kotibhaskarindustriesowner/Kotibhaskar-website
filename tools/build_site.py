@@ -28,6 +28,7 @@ CATALOGUE = '/Kotibhaskar%201%20Castor%20Catalogue.pdf'
 WHATSAPP = '919822413252'
 TODAY = datetime.date.today().isoformat()
 OUT_ROOT = os.path.join(REPO, 'wheels-castors')
+NAV_CATS = []   # all built categories, used for footer links (filled in main)
 
 e = lambda s: html.escape(str(s), quote=True)
 
@@ -76,7 +77,7 @@ def display_spec(label, value):
     """Format a Word spec value for display without changing any number.
     'Size' rows such as '100 x 32 (4 Inch Wheel)' become '100 × 32 mm (4 Inch Wheel)'."""
     if label == 'Size':
-        m = re.match(r'^([\d.]+) x ([\d.]+) \((.+)\)$', value)
+        m = re.match(r'^([\d.]+) x ([\d.]+)(?: mm)? \((.+)\)$', value)
         if m:
             return f'{m.group(1)} × {m.group(2)} mm ({m.group(3)})'
     return value
@@ -122,7 +123,7 @@ def print_sheet(*, category, group_name, title, size, load, photo, drawing, spec
   <div class="ps-foot">
     <div><b>{e(c['name'])}</b><br>{e(c['website'])}</div>
     <div>{e(c['phones'][0])} &nbsp;|&nbsp; {e(c['emails'][0])}</div>
-    <div class="ps-url">{e(c['website'] + url)}</div>
+    <div class="ps-url">{'/<wbr>'.join(f'<span>{e(seg)}</span>' for seg in (c['website'] + url).split('/'))}</div>
   </div>
 </div>'''
 
@@ -209,7 +210,7 @@ def page(*, title, description, canonical, body, og_image=None, jsonld=None, wa_
       <a href="/#mhe">MHE Equipment</a>
       <a href="/#trolleys">Trolleys</a>
       <a href="/wheels-castors/">Wheels &amp; Castors</a>
-      <a href="/wheels-castors/uhmw/">UHMW Wheels</a>
+      {''.join(f'<a href="{c["url"]}">{e(c["name"])}</a>' for c in NAV_CATS)}
     </div>
     <div class="footer-col">
       <h4>Company</h4>
@@ -495,11 +496,12 @@ def build_hub(cats):
   <div class="card-grid">
 {chr(10).join(cards)}
   </div>
-  <div class="custom-note" style="margin-top:32px;"><strong>More ranges coming online</strong>PU-CI, cast iron, MS track wheels and MD / MHD / HD castor ranges are listed on our <a href="/#castors" style="color:#C85A00;">homepage</a> and in the Wheels &amp; Castors catalogue.</div>
+  <div class="custom-note" style="margin-top:32px;"><strong>More ranges coming online</strong>Other wheel and castor ranges are listed on our <a href="/#castors" style="color:#C85A00;">homepage</a> and in the Wheels &amp; Castors catalogue.</div>
 </div>'''
     jsonld = {'@context': 'https://schema.org', '@graph': [crumb_ld]}
     return page(title='Industrial Wheels & Castors Manufacturer | Kotibhaskar Industries, Satara',
-                description='Industrial wheels and castors by Kotibhaskar Industries, Satara: UHMW-PE wheels in medium duty, heavy duty and heavy duty twin ranges, with technical drawings and specifications.',
+                description='Industrial wheels and castors by Kotibhaskar Industries, Satara: ' + ', '.join(c['name'] for c in cats)
+                + ' in medium duty, heavy duty and heavy duty twin ranges, with technical drawings and specifications.',
                 canonical='/wheels-castors/', body=body, jsonld=jsonld)
 
 
@@ -516,6 +518,12 @@ def main():
             c = json.load(f)
         if c.get('products'):
             cats.append(c)
+    # order categories like the source folders ("10 UHMW", "20 PU CI", "30 ...")
+    def order(c):
+        m = re.match(r'(\d+)', os.path.basename(c.get('source_dir', '')))
+        return (int(m.group(1)) if m else 999, c['name'])
+    cats.sort(key=order)
+    NAV_CATS[:] = cats
 
     # wipe old generated pages so removed products disappear
     for c in cats:

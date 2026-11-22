@@ -1,0 +1,2139 @@
+{
+  "id": "puci",
+  "name": "PU-CI Wheels",
+  "full_name": "PU-CI Wheels & Castors (Polyurethane on Cast Iron)",
+  "material": "PUCI (Polyurethane with Cast Iron Core)",
+  "url": "/wheels-castors/puci/",
+  "source_dir": "product-sources/30 Wheels & Caster/20 PU CI",
+  "intro": "PU-CI wheels have polyurethane bonded over a cast iron core by a casting process. They combine high load capacity and impact strength with low rolling friction, are floor-friendly and resist oil, grease and chemicals. Available as wheel only, fixed caster, swivel caster and swivel caster with brake.",
+  "features": [
+    "Polyurethane bonded/moulded over Cast Iron core — casting process",
+    "High load capacity / High impact strength / Low rolling friction / Floor-friendly",
+    "Hardness: 95 Shore A / Excellent wear resistance",
+    "Resistant to oil, grease and chemicals / Max Working Temperature: 70°C",
+    "Widely used in Pallet Trucks, Stackers, Drum Tilters, Floor Cranes, Battery operated equipment",
+    "Cast polyurethane is MUCH BETTER than injection moulded — higher load capacity and service life"
+  ],
+  "groups": [
+    {
+      "id": "md",
+      "token": "MD",
+      "name": "Medium Duty",
+      "short": "MD"
+    },
+    {
+      "id": "hd",
+      "token": "HD",
+      "name": "Heavy Duty",
+      "short": "HD"
+    },
+    {
+      "id": "hd-twin",
+      "token": "HD TWIN",
+      "name": "Heavy Duty Twin",
+      "short": "HD Twin"
+    }
+  ],
+  "products": [
+    {
+      "code": "201",
+      "slug": "md-50x25",
+      "group": "md",
+      "name": "PU-CI Wheel MD 50 × 25 mm (2 Inch Wheel)",
+      "diameter_mm": 50.0,
+      "width_mm": 25.0,
+      "inch": 2.0,
+      "load_per_caster_kg": 60.0,
+      "specs": [
+        [
+          "Size",
+          "50 x 25 mm (2 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "50 mm"
+        ],
+        [
+          "Wheel Width",
+          "25 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "60 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/md-50x25-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/md-50x25-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/md-50x25-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/201 PU CI - MD - 50 x 25 (2 Inch)/201 PU CI - MD - 50 x 25 (2 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/201 PU CI - MD - 50 x 25 (2 Inch)/201 PU CI - MD - 50 x 25.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/201 PU CI - MD - 50 x 25 (2 Inch)/201 PU CI - MD - 50 x 25 (2).png"
+      }
+    },
+    {
+      "code": "202",
+      "slug": "md-63x25",
+      "group": "md",
+      "name": "PU-CI Wheel MD 63 × 25 mm (2.5 Inch Wheel)",
+      "diameter_mm": 63.0,
+      "width_mm": 25.0,
+      "inch": 2.5,
+      "load_per_caster_kg": 80.0,
+      "specs": [
+        [
+          "Size",
+          "63 x 25 mm (2.5 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "63 mm"
+        ],
+        [
+          "Wheel Width",
+          "25 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "80 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/md-63x25-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/md-63x25-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/md-63x25-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/202 PU CI - MD - 63 x 25 (2.5 Inch)/202 PU CI - MD - 63 x 25 (2.5 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/202 PU CI - MD - 63 x 25 (2.5 Inch)/202 PU CI - MD - 63 x 25.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/202 PU CI - MD - 63 x 25 (2.5 Inch)/202 PU CI - MD - 63 x 25 (2).png"
+      }
+    },
+    {
+      "code": "203",
+      "slug": "md-75x25",
+      "group": "md",
+      "name": "PU-CI Wheel MD 75 × 25 mm (3 Inch Wheel)",
+      "diameter_mm": 75.0,
+      "width_mm": 25.0,
+      "inch": 3.0,
+      "load_per_caster_kg": 100.0,
+      "specs": [
+        [
+          "Size",
+          "75 x 25 mm (3 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "75 mm"
+        ],
+        [
+          "Wheel Width",
+          "25 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "100 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/md-75x25-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/md-75x25-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/md-75x25-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/203 PU CI - MD - 75 x 25 (3 Inch)/203 PU CI - MD - 75 x 25 (3 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/203 PU CI - MD - 75 x 25 (3 Inch)/203 PU CI - MD - 75 x 25.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/203 PU CI - MD - 75 x 25 (3 Inch)/203 PU CI - MD - 75 x 25 (2).png"
+      }
+    },
+    {
+      "code": "204",
+      "slug": "md-75x32",
+      "group": "md",
+      "name": "PU-CI Wheel MD 75 × 32 mm (3 Inch Wheel)",
+      "diameter_mm": 75.0,
+      "width_mm": 32.0,
+      "inch": 3.0,
+      "load_per_caster_kg": 120.0,
+      "specs": [
+        [
+          "Size",
+          "75 x 32 mm (3 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "75 mm"
+        ],
+        [
+          "Wheel Width",
+          "32 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "120 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/md-75x32-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/md-75x32-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/md-75x32-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/204 PU CI - MD - 75 x 32 (3 Inch)/204 PU CI - MD - 75 x 32 (3 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/204 PU CI - MD - 75 x 32 (3 Inch)/204 PU CI - MD - 75 x 32.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/204 PU CI - MD - 75 x 32 (3 Inch)/204 PU CI - MD - 75 x 32 (2).png"
+      }
+    },
+    {
+      "code": "205",
+      "slug": "md-100x32",
+      "group": "md",
+      "name": "PU-CI Wheel MD 100 × 32 mm (4 Inch Wheel)",
+      "diameter_mm": 100.0,
+      "width_mm": 32.0,
+      "inch": 4.0,
+      "load_per_caster_kg": 150.0,
+      "specs": [
+        [
+          "Size",
+          "100 x 32 mm (4 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "100 mm"
+        ],
+        [
+          "Wheel Width",
+          "32 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "150 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/md-100x32-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/md-100x32-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/md-100x32-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/205 PU CI - MD - 100 x 32 (4 Inch)/205 PU CI - MD - 100 x 32 (4 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/205 PU CI - MD - 100 x 32 (4 Inch)/205 PU CI - MD - 100 x 32.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/205 PU CI - MD - 100 x 32 (4 Inch)/205 PU CI - MD - 100 x 32 (2).png"
+      }
+    },
+    {
+      "code": "206",
+      "slug": "md-125x32",
+      "group": "md",
+      "name": "PU-CI Wheel MD 125 × 32 mm (5 Inch Wheel)",
+      "diameter_mm": 125.0,
+      "width_mm": 32.0,
+      "inch": 5.0,
+      "load_per_caster_kg": 200.0,
+      "specs": [
+        [
+          "Size",
+          "125 x 32 mm (5 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "125 mm"
+        ],
+        [
+          "Wheel Width",
+          "32 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "200 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/md-125x32-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/md-125x32-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/md-125x32-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/206 PU CI - MD - 125 x 32 (5 Inch)/206 PU CI - MD - 125 x 32 (5 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/206 PU CI - MD - 125 x 32 (5 Inch)/206 PU CI - MD - 125 x 32.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/206 PU CI - MD - 125 x 32 (5 Inch)/206 PU CI - MD - 125 x 32 (2).png"
+      }
+    },
+    {
+      "code": "207",
+      "slug": "md-100x40",
+      "group": "md",
+      "name": "PU-CI Wheel MD 100 × 40 mm (4 Inch Wheel)",
+      "diameter_mm": 100.0,
+      "width_mm": 40.0,
+      "inch": 4.0,
+      "load_per_caster_kg": 200.0,
+      "specs": [
+        [
+          "Size",
+          "100 x 40 mm (4 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "100 mm"
+        ],
+        [
+          "Wheel Width",
+          "40 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "200 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/md-100x40-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/md-100x40-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/md-100x40-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/207 PU CI - MD - 100 x 40 (4 Inch)/207 PU CI - MD - 100 x 40 (4 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/207 PU CI - MD - 100 x 40 (4 Inch)/207 PU CI - MD - 100 x 40.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/207 PU CI - MD - 100 x 40 (4 Inch)/207 PU CI - MD - 100 x 40 (2).png"
+      }
+    },
+    {
+      "code": "208",
+      "slug": "md-125x40",
+      "group": "md",
+      "name": "PU-CI Wheel MD 125 × 40 mm (5 Inch Wheel)",
+      "diameter_mm": 125.0,
+      "width_mm": 40.0,
+      "inch": 5.0,
+      "load_per_caster_kg": 250.0,
+      "specs": [
+        [
+          "Size",
+          "125 x 40 mm (5 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "125 mm"
+        ],
+        [
+          "Wheel Width",
+          "40 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "250 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/md-125x40-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/md-125x40-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/md-125x40-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/208 PU CI - MD - 125 x 40 (5 Inch)/208 PU CI - MD - 125 x 40 (5 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/208 PU CI - MD - 125 x 40 (5 Inch)/208 PU CI - MD - 125 x 40.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/208 PU CI - MD - 125 x 40 (5 Inch)/208 PU CI - MD - 125 x 40 (2).png"
+      }
+    },
+    {
+      "code": "209",
+      "slug": "md-150x40",
+      "group": "md",
+      "name": "PU-CI Wheel MD 150 × 40 mm (6 Inch Wheel)",
+      "diameter_mm": 150.0,
+      "width_mm": 40.0,
+      "inch": 6.0,
+      "load_per_caster_kg": 300.0,
+      "specs": [
+        [
+          "Size",
+          "150 x 40 mm (6 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "150 mm"
+        ],
+        [
+          "Wheel Width",
+          "40 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "300 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/md-150x40-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/md-150x40-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/md-150x40-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/209 PU CI - MD - 150 x 40 (6 Inch)/209 PU CI - MD - 150 x 40 (6 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/209 PU CI - MD - 150 x 40 (6 Inch)/209 PU CI - MD - 150 x 40.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/209 PU CI - MD - 150 x 40 (6 Inch)/209 PU CI - MD - 150 x 40 (2).png"
+      }
+    },
+    {
+      "code": "210",
+      "slug": "md-200x40",
+      "group": "md",
+      "name": "PU-CI Wheel MD 200 × 40 mm (8 Inch Wheel)",
+      "diameter_mm": 200.0,
+      "width_mm": 40.0,
+      "inch": 8.0,
+      "load_per_caster_kg": 350.0,
+      "specs": [
+        [
+          "Size",
+          "200 x 40 (8 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "200 mm"
+        ],
+        [
+          "Wheel Width",
+          "40 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "350 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/md-200x40-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/md-200x40-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/md-200x40-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/210 PU CI - MD - 200 x 40 (8 Inch)/210 PU CI - MD - 200 x 40 (8 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/210 PU CI - MD - 200 x 40 (8 Inch)/210 PU CI - MD - 200 x 40.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/210 PU CI - MD - 200 x 40 (8 Inch)/210 PU CI - MD - 200 x 40 (2).png"
+      }
+    },
+    {
+      "code": "211",
+      "slug": "md-100x50",
+      "group": "md",
+      "name": "PU-CI Wheel MD 100 × 50 mm (4 Inch Wheel)",
+      "diameter_mm": 100.0,
+      "width_mm": 50.0,
+      "inch": 4.0,
+      "load_per_caster_kg": 300.0,
+      "specs": [
+        [
+          "Size",
+          "100 x 50 mm (4 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "100 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "300 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/md-100x50-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/md-100x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/md-100x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/211 PU CI - MD - 100 x 50 (4 Inch)/211 PU CI - MD - 100 x 50 (4 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/211 PU CI - MD - 100 x 50 (4 Inch)/211 PU CI - MD - 100 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/211 PU CI - MD - 100 x 50 (4 Inch)/211 PU CI - MD - 100 x 50 (2).png"
+      }
+    },
+    {
+      "code": "212",
+      "slug": "md-125x50",
+      "group": "md",
+      "name": "PU-CI Wheel MD 125 × 50 mm (5 Inch Wheel)",
+      "diameter_mm": 125.0,
+      "width_mm": 50.0,
+      "inch": 5.0,
+      "load_per_caster_kg": 350.0,
+      "specs": [
+        [
+          "Size",
+          "125 x 50 (5 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "125 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "350 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/md-125x50-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/md-125x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/md-125x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/212 PU CI - MD - 125 x 50 (5 Inch)/212 PU CI - MD - 125 x 50 (5 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/212 PU CI - MD - 125 x 50 (5 Inch)/212 PU CI - MD - 125 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/212 PU CI - MD - 125 x 50 (5 Inch)/212 PU CI - MD - 125 x 50 (2).png"
+      }
+    },
+    {
+      "code": "213",
+      "slug": "md-150x50",
+      "group": "md",
+      "name": "PU-CI Wheel MD 150 × 50 mm (6 Inch Wheel)",
+      "diameter_mm": 150.0,
+      "width_mm": 50.0,
+      "inch": 6.0,
+      "load_per_caster_kg": 400.0,
+      "specs": [
+        [
+          "Size",
+          "150 x 50 (6 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "150 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "400 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/md-150x50-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/md-150x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/md-150x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/213 PU CI - MD - 150 x 50 (6 Inch)/213 PU CI - MD - 150 x 50 (6 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/213 PU CI - MD - 150 x 50 (6 Inch)/213 PU CI - MD - 150 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/213 PU CI - MD - 150 x 50 (6 Inch)/213 PU CI - MD - 150 x 50 (2).png"
+      }
+    },
+    {
+      "code": "214",
+      "slug": "md-200x50",
+      "group": "md",
+      "name": "PU-CI Wheel MD 200 × 50 mm (8 Inch Wheel)",
+      "diameter_mm": 200.0,
+      "width_mm": 50.0,
+      "inch": 8.0,
+      "load_per_caster_kg": 500.0,
+      "specs": [
+        [
+          "Size",
+          "200 x 50 (8 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "200 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "500 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/md-200x50-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/md-200x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/md-200x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/214 PU CI - MD - 200 x 50 (8 Inch)/214 PU CI - MD - 200 x 50 (8 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/214 PU CI - MD - 200 x 50 (8 Inch)/214 PU CI - MD - 200 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/214 PU CI - MD - 200 x 50 (8 Inch)/214 PU CI - MD - 200 x 50 (2).png"
+      }
+    },
+    {
+      "code": "215",
+      "slug": "hd-100x50",
+      "group": "hd",
+      "name": "PU-CI Wheel HD 100 × 50 mm (4 Inch Wheel)",
+      "diameter_mm": 100.0,
+      "width_mm": 50.0,
+      "inch": 4.0,
+      "load_per_caster_kg": 300.0,
+      "specs": [
+        [
+          "Size",
+          "100 x 50 (4 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "100 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "300 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/hd-100x50-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/hd-100x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/hd-100x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/215 PU CI - HD - 100 x 50 (4 Inch)/215 PU CI - HD - 100 x 50 (4 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/215 PU CI - HD - 100 x 50 (4 Inch)/215 PU CI - HD - 100 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/215 PU CI - HD - 100 x 50 (4 Inch)/215 PU CI - HD - 100 x 50 (2).png"
+      }
+    },
+    {
+      "code": "216",
+      "slug": "hd-125x50",
+      "group": "hd",
+      "name": "PU-CI Wheel HD 125 × 50 mm (5 Inch Wheel)",
+      "diameter_mm": 125.0,
+      "width_mm": 50.0,
+      "inch": 5.0,
+      "load_per_caster_kg": 400.0,
+      "specs": [
+        [
+          "Size",
+          "125 x 50 (5 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "125 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "400 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/hd-125x50-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/hd-125x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/hd-125x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/216 PU CI - HD - 125 x 50 (5 Inch)/216 PU CI - HD - 125 x 50 (5 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/216 PU CI - HD - 125 x 50 (5 Inch)/216 PU CI - HD - 125 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/216 PU CI - HD - 125 x 50 (5 Inch)/216 PU CI - HD - 125 x 50 (2).png"
+      }
+    },
+    {
+      "code": "217",
+      "slug": "hd-150x50",
+      "group": "hd",
+      "name": "PU-CI Wheel HD 150 × 50 mm (6 Inch Wheel)",
+      "diameter_mm": 150.0,
+      "width_mm": 50.0,
+      "inch": 6.0,
+      "load_per_caster_kg": 500.0,
+      "specs": [
+        [
+          "Size",
+          "150 x 50 (6 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "150 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "500 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/hd-150x50-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/hd-150x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/hd-150x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/217 PU CI - HD - 150 x 50 (6 Inch)/217 PU CI - HD - 150 x 50 (6 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/217 PU CI - HD - 150 x 50 (6 Inch)/217 PU CI - HD - 150 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/217 PU CI - HD - 150 x 50 (6 Inch)/217 PU CI - HD - 150 x 50 (2).png"
+      }
+    },
+    {
+      "code": "218",
+      "slug": "hd-200x50",
+      "group": "hd",
+      "name": "PU-CI Wheel HD 200 × 50 mm (8 Inch Wheel)",
+      "diameter_mm": 200.0,
+      "width_mm": 50.0,
+      "inch": 8.0,
+      "load_per_caster_kg": 600.0,
+      "specs": [
+        [
+          "Size",
+          "200 x 50 (8 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "200 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "600 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/hd-200x50-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/hd-200x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/hd-200x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/218 PU CI - HD - 200 x 50 (8 Inch)/218 PU CI - HD - 200 x 50 (8 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/218 PU CI - HD - 200 x 50 (8 Inch)/218 PU CI - HD - 200 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/218 PU CI - HD - 200 x 50 (8 Inch)/218 PU CI - HD - 200 x 50 (2).png"
+      }
+    },
+    {
+      "code": "219",
+      "slug": "hd-250x50",
+      "group": "hd",
+      "name": "PU-CI Wheel HD 250 × 50 mm (10 Inch Wheel)",
+      "diameter_mm": 250.0,
+      "width_mm": 50.0,
+      "inch": 10.0,
+      "load_per_caster_kg": 900.0,
+      "specs": [
+        [
+          "Size",
+          "250 x 50 (10 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "250 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "900 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/hd-250x50-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/hd-250x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/hd-250x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/219 PU CI - HD - 250 x 50 (10 Inch)/219 PU CI - HD - 250 x 50 (10 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/219 PU CI - HD - 250 x 50 (10 Inch)/219 PU CI - HD - 250 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/219 PU CI - HD - 250 x 50 (10 Inch)/219 PU CI - HD - 250 x 50 (2).png"
+      }
+    },
+    {
+      "code": "220",
+      "slug": "hd-300x50",
+      "group": "hd",
+      "name": "PU-CI Wheel HD 300 × 50 mm (12 Inch Wheel)",
+      "diameter_mm": 300.0,
+      "width_mm": 50.0,
+      "inch": 12.0,
+      "load_per_caster_kg": 1000.0,
+      "specs": [
+        [
+          "Size",
+          "300 x 50 (12 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "300 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "1000 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/hd-300x50-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/hd-300x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/hd-300x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/220 PU CI - HD - 300 x 50 (12 Inch)/220 PU CI - HD - 300 x 50 (12 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/220 PU CI - HD - 300 x 50 (12 Inch)/220 PU CI - HD - 300 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/220 PU CI - HD - 300 x 50 (12 Inch)/220 PU CI - HD - 300 x 50 (2).png"
+      }
+    },
+    {
+      "code": "221",
+      "slug": "hd-150x75",
+      "group": "hd",
+      "name": "PU-CI Wheel HD 150 × 75 mm (6 Inch Wheel)",
+      "diameter_mm": 150.0,
+      "width_mm": 75.0,
+      "inch": 6.0,
+      "load_per_caster_kg": 900.0,
+      "specs": [
+        [
+          "Size",
+          "150 x 75 (6 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "150 mm"
+        ],
+        [
+          "Wheel Width",
+          "75 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "900 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/hd-150x75-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/hd-150x75-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/hd-150x75-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/221 PU CI - HD - 150 x 75 (6 Inch)/221 PU CI - HD - 150 x 75 (6 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/221 PU CI - HD - 150 x 75 (6 Inch)/221 PU CI - HD - 150 x 75.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/221 PU CI - HD - 150 x 75 (6 Inch)/221 PU CI - HD - 150 x 75 (2).png"
+      }
+    },
+    {
+      "code": "222",
+      "slug": "hd-200x75",
+      "group": "hd",
+      "name": "PU-CI Wheel HD 200 × 75 mm (8 Inch Wheel)",
+      "diameter_mm": 200.0,
+      "width_mm": 75.0,
+      "inch": 8.0,
+      "load_per_caster_kg": 1100.0,
+      "specs": [
+        [
+          "Size",
+          "200 x 75 (8 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "200 mm"
+        ],
+        [
+          "Wheel Width",
+          "75 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "1100 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/hd-200x75-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/hd-200x75-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/hd-200x75-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/222 PU CI - HD - 200 x 75 (8 Inch)/222 PU CI - HD - 200 x 75 (8 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/222 PU CI - HD - 200 x 75 (8 Inch)/222 PU CI - HD - 200 x 75.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/222 PU CI - HD - 200 x 75 (8 Inch)/222 PU CI - HD - 200 x 75 (2).png"
+      }
+    },
+    {
+      "code": "223",
+      "slug": "hd-250x75",
+      "group": "hd",
+      "name": "PU-CI Wheel HD 250 × 75 mm (10 Inch Wheel)",
+      "diameter_mm": 250.0,
+      "width_mm": 75.0,
+      "inch": 10.0,
+      "load_per_caster_kg": 1200.0,
+      "specs": [
+        [
+          "Size",
+          "250 x 75 (10 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "250 mm"
+        ],
+        [
+          "Wheel Width",
+          "75 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "1200 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/hd-250x75-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/hd-250x75-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/hd-250x75-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/223 PU CI - HD - 250 x 75 (10 Inch)/223 PU CI - HD - 250 x 75 (10 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/223 PU CI - HD - 250 x 75 (10 Inch)/223 PU CI - HD - 250 x 75.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/223 PU CI - HD - 250 x 75 (10 Inch)/223 PU CI - HD - 250 x 75 (2).png"
+      }
+    },
+    {
+      "code": "224",
+      "slug": "hd-300x75",
+      "group": "hd",
+      "name": "PU-CI Wheel HD 300 × 75 mm (12 Inch Wheel)",
+      "diameter_mm": 300.0,
+      "width_mm": 75.0,
+      "inch": 12.0,
+      "load_per_caster_kg": 1200.0,
+      "specs": [
+        [
+          "Size",
+          "300 x 75 (12 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "300 mm"
+        ],
+        [
+          "Wheel Width",
+          "75 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "1200 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/hd-300x75-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/hd-300x75-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/hd-300x75-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/224 PU CI - HD - 300 x 75 (12 Inch)/224 PU CI - HD - 300 x 75 (12 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/224 PU CI - HD - 300 x 75 (12 Inch)/224 PU CI - HD - 300 x 75.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/224 PU CI - HD - 300 x 75 (12 Inch)/224 PU CI - HD - 300 x 75 (2).png"
+      }
+    },
+    {
+      "code": "225",
+      "slug": "hd-twin-100x50",
+      "group": "hd-twin",
+      "name": "PU-CI Wheel HD Twin 100 × 50 mm (4 Inch Wheel)",
+      "diameter_mm": 100.0,
+      "width_mm": 50.0,
+      "inch": 4.0,
+      "load_per_caster_kg": 500.0,
+      "specs": [
+        [
+          "Size",
+          "100 x 50 (4 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "100 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "500 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/hd-twin-100x50-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/hd-twin-100x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/hd-twin-100x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/225 PU CI - ( HD TWIN ) - 100 x 50 (4 Inch)/225 PU CI - ( HD TWIN ) - 100 x 50 (4 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/225 PU CI - ( HD TWIN ) - 100 x 50 (4 Inch)/225 PU CI - ( HD TWIN ) - 100 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/225 PU CI - ( HD TWIN ) - 100 x 50 (4 Inch)/225 PU CI - ( HD TWIN ) - 100 x 50 (2).png"
+      }
+    },
+    {
+      "code": "226",
+      "slug": "hd-twin-125x50",
+      "group": "hd-twin",
+      "name": "PU-CI Wheel HD Twin 125 × 50 mm (5 Inch Wheel)",
+      "diameter_mm": 125.0,
+      "width_mm": 50.0,
+      "inch": 5.0,
+      "load_per_caster_kg": 600.0,
+      "specs": [
+        [
+          "Size",
+          "125 x 50 (5 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "125 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "600 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/hd-twin-125x50-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/hd-twin-125x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/hd-twin-125x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/226 PU CI - ( HD TWIN ) - 125 x 50 (5 Inch)/226 PU CI - ( HD TWIN ) - 125 x 50 (5 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/226 PU CI - ( HD TWIN ) - 125 x 50 (5 Inch)/226 PU CI - ( HD TWIN ) - 125 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/226 PU CI - ( HD TWIN ) - 125 x 50 (5 Inch)/226 PU CI - ( HD TWIN ) - 125 x 50 (2).png"
+      }
+    },
+    {
+      "code": "227",
+      "slug": "hd-twin-150x50",
+      "group": "hd-twin",
+      "name": "PU-CI Wheel HD Twin 150 × 50 mm (6 Inch Wheel)",
+      "diameter_mm": 150.0,
+      "width_mm": 50.0,
+      "inch": 6.0,
+      "load_per_caster_kg": 800.0,
+      "specs": [
+        [
+          "Size",
+          "150 x 50 (6 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "150 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "800 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/hd-twin-150x50-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/hd-twin-150x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/hd-twin-150x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/227 PU CI - ( HD TWIN ) - 150 x 50 (6 Inch)/227 PU CI - ( HD TWIN ) - 150 x 50 (6 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/227 PU CI - ( HD TWIN ) - 150 x 50 (6 Inch)/227 PU CI - ( HD TWIN ) - 150 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/227 PU CI - ( HD TWIN ) - 150 x 50 (6 Inch)/227 PU CI - ( HD TWIN ) - 150 x 50 (2).png"
+      }
+    },
+    {
+      "code": "228",
+      "slug": "hd-twin-200x50",
+      "group": "hd-twin",
+      "name": "PU-CI Wheel HD Twin 200 × 50 mm (8 Inch Wheel)",
+      "diameter_mm": 200.0,
+      "width_mm": 50.0,
+      "inch": 8.0,
+      "load_per_caster_kg": 900.0,
+      "specs": [
+        [
+          "Size",
+          "200 x 50 (8 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "200 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "900 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/hd-twin-200x50-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/hd-twin-200x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/hd-twin-200x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/228 PU CI - ( HD TWIN ) - 200 x 50 (8 Inch)/228 PU CI - ( HD TWIN ) - 200 x 50 (8 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/228 PU CI - ( HD TWIN ) - 200 x 50 (8 Inch)/228 PU CI - ( HD TWIN ) - 200 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/228 PU CI - ( HD TWIN ) - 200 x 50 (8 Inch)/228 PU CI - ( HD TWIN ) - 200 x 50 (2).png"
+      }
+    },
+    {
+      "code": "229",
+      "slug": "hd-twin-250x50",
+      "group": "hd-twin",
+      "name": "PU-CI Wheel HD Twin 250 × 50 mm (10 Inch Wheel)",
+      "diameter_mm": 250.0,
+      "width_mm": 50.0,
+      "inch": 10.0,
+      "load_per_caster_kg": 1100.0,
+      "specs": [
+        [
+          "Size",
+          "250 x 50 (10 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "250 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "1100 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/hd-twin-250x50-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/hd-twin-250x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/hd-twin-250x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/229 PU CI - ( HD TWIN ) - 250 x 50 (10 Inch)/229 PU CI - ( HD TWIN ) - 250 x 50 (10 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/229 PU CI - ( HD TWIN ) - 250 x 50 (10 Inch)/229 PU CI - ( HD TWIN ) - 250 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/229 PU CI - ( HD TWIN ) - 250 x 50 (10 Inch)/229 PU CI - ( HD TWIN ) - 250 x 50 (2).png"
+      }
+    },
+    {
+      "code": "230",
+      "slug": "hd-twin-300x50",
+      "group": "hd-twin",
+      "name": "PU-CI Wheel HD Twin 300 × 50 mm (12 Inch Wheel)",
+      "diameter_mm": 300.0,
+      "width_mm": 50.0,
+      "inch": 12.0,
+      "load_per_caster_kg": 1300.0,
+      "specs": [
+        [
+          "Size",
+          "300 x 50 (12 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "300 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "1300 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Double Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/puci/hd-twin-300x50-photo.jpg",
+        "thumb": "/assets/products/wheels/puci/hd-twin-300x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/puci/hd-twin-300x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/20 PU CI/230 PU CI - ( HD TWIN ) - 300 x 50 (12 Inch)/230 PU CI - ( HD TWIN ) - 300 x 50 (12 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/20 PU CI/230 PU CI - ( HD TWIN ) - 300 x 50 (12 Inch)/230 PU CI - ( HD TWIN ) - 300 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/20 PU CI/230 PU CI - ( HD TWIN ) - 300 x 50 (12 Inch)/230 PU CI - ( HD TWIN ) - 300 x 50 (2).png"
+      }
+    }
+  ]
+}
