@@ -1,0 +1,2140 @@
+{
+  "id": "uhmw",
+  "name": "UHMW Wheels",
+  "full_name": "UHMW-PE Wheels & Castors",
+  "material": "UHMW (Ultra-High-Molecular-Weight Polyethylene)",
+  "url": "/wheels-castors/uhmw/",
+  "source_dir": "product-sources/30 Wheels & Caster/10 UHMW",
+  "intro": "UHMW-PE wheels are manufactured from virgin UHMW-PE powder by high pressure compression moulding. They carry high loads with low rolling and starting friction, do not damage floors and resist oil, grease and chemicals. Available as wheel only, fixed caster, swivel caster and swivel caster with brake.",
+  "features": [
+    "Manufactured from virgin UHMW-PE powder — white colour — high pressure compression moulding",
+    "Ball bearing (BB) effort is 50% less than plain bore — 70% of industries use BB",
+    "High load carrying capacity / High impact strength / Low rolling & starting friction",
+    "Does NOT damage floors — ideal for polished and epoxy floors",
+    "Hardness: 75 Shore D / Excellent wear resistance / High cut-to-tear ratio",
+    "Resistant to oil, grease and chemicals / Max Working Temperature: 70°C",
+    "Does NOT crack under heavy or impact loads — unlike polypropylene or nylon wheels"
+  ],
+  "groups": [
+    {
+      "id": "md",
+      "token": "MD",
+      "name": "Medium Duty",
+      "short": "MD"
+    },
+    {
+      "id": "hd",
+      "token": "HD",
+      "name": "Heavy Duty",
+      "short": "HD"
+    },
+    {
+      "id": "hd-twin",
+      "token": "HD TWIN",
+      "name": "Heavy Duty Twin",
+      "short": "HD Twin"
+    }
+  ],
+  "products": [
+    {
+      "code": "001",
+      "slug": "md-50x25",
+      "group": "md",
+      "name": "UHMW Wheel MD 50 x 25 mm (2 Inch)",
+      "diameter_mm": 50.0,
+      "width_mm": 25.0,
+      "inch": 2.0,
+      "load_per_caster_kg": 60.0,
+      "specs": [
+        [
+          "Size",
+          "50 x 25 (2 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "50 mm"
+        ],
+        [
+          "Wheel Width",
+          "25 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "60 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/md-50x25-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/md-50x25-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/md-50x25-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/001 UHMW - MD - 50 x 25 (2 Inch)/001 UHMW - MD - 50 x 25 (2 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/001 UHMW - MD - 50 x 25 (2 Inch)/001 UHMW - MD - 50 x 25.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/001 UHMW - MD - 50 x 25 (2 Inch)/001 UHMW - MD - 50 x 25 (2).png"
+      }
+    },
+    {
+      "code": "002",
+      "slug": "md-63x25",
+      "group": "md",
+      "name": "UHMW Wheel MD 63 x 25 mm (2.5 Inch)",
+      "diameter_mm": 63.0,
+      "width_mm": 25.0,
+      "inch": 2.5,
+      "load_per_caster_kg": 80.0,
+      "specs": [
+        [
+          "Size",
+          "63 x 25 (2.5 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "63 mm"
+        ],
+        [
+          "Wheel Width",
+          "25 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "80 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/md-63x25-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/md-63x25-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/md-63x25-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/002 UHMW - MD - 63 x 25 (2.5 Inch)/002 UHMW - MD - 63 x 25 (2.5 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/002 UHMW - MD - 63 x 25 (2.5 Inch)/002 UHMW - MD - 63 x 25.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/002 UHMW - MD - 63 x 25 (2.5 Inch)/002 UHMW - MD - 63 x 25 (2).png"
+      }
+    },
+    {
+      "code": "003",
+      "slug": "md-75x25",
+      "group": "md",
+      "name": "UHMW Wheel MD 75 x 25 mm (3 Inch)",
+      "diameter_mm": 75.0,
+      "width_mm": 25.0,
+      "inch": 3.0,
+      "load_per_caster_kg": 100.0,
+      "specs": [
+        [
+          "Size",
+          "75 x 25 (3 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "75 mm"
+        ],
+        [
+          "Wheel Width",
+          "25 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "100 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/md-75x25-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/md-75x25-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/md-75x25-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/003 UHMW - MD - 75 x 25 (3 Inch)/003 UHMW - MD - 75 x 25 (3 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/003 UHMW - MD - 75 x 25 (3 Inch)/003 UHMW - MD - 75 x 25.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/003 UHMW - MD - 75 x 25 (3 Inch)/003 UHMW - MD - 75 x 25 (2).png"
+      }
+    },
+    {
+      "code": "004",
+      "slug": "md-75x32",
+      "group": "md",
+      "name": "UHMW Wheel MD 75 x 32 mm (3 Inch)",
+      "diameter_mm": 75.0,
+      "width_mm": 32.0,
+      "inch": 3.0,
+      "load_per_caster_kg": 120.0,
+      "specs": [
+        [
+          "Size",
+          "75 x 32 (3 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "75 mm"
+        ],
+        [
+          "Wheel Width",
+          "32 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "120 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/md-75x32-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/md-75x32-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/md-75x32-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/004 UHMW - MD - 75 x 32 (3 Inch)/004 UHMW - MD - 75 x 32 (3 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/004 UHMW - MD - 75 x 32 (3 Inch)/004 UHMW - MD - 75 x 32.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/004 UHMW - MD - 75 x 32 (3 Inch)/004 UHMW - MD - 75 x 32 (2).png"
+      }
+    },
+    {
+      "code": "005",
+      "slug": "md-100x32",
+      "group": "md",
+      "name": "UHMW Wheel MD 100 x 32 mm (4 Inch)",
+      "diameter_mm": 100.0,
+      "width_mm": 32.0,
+      "inch": 4.0,
+      "load_per_caster_kg": 150.0,
+      "specs": [
+        [
+          "Size",
+          "100 x 32 (4 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "100 mm"
+        ],
+        [
+          "Wheel Width",
+          "32 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "150 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/md-100x32-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/md-100x32-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/md-100x32-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/005 UHMW - MD - 100 x 32 (4 Inch)/005 UHMW - MD - 100 x 32 (4 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/005 UHMW - MD - 100 x 32 (4 Inch)/005 UHMW - MD - 100 x 32.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/005 UHMW - MD - 100 x 32 (4 Inch)/005 UHMW - MD - 100 x 32 (2).png"
+      }
+    },
+    {
+      "code": "006",
+      "slug": "md-125x32",
+      "group": "md",
+      "name": "UHMW Wheel MD 125 x 32 mm (5 Inch)",
+      "diameter_mm": 125.0,
+      "width_mm": 32.0,
+      "inch": 5.0,
+      "load_per_caster_kg": 200.0,
+      "specs": [
+        [
+          "Size",
+          "125 x 32 (5 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "125 mm"
+        ],
+        [
+          "Wheel Width",
+          "32 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "200 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/md-125x32-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/md-125x32-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/md-125x32-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/006 UHMW - MD - 125 x 32 (5 Inch)/006 UHMW - MD - 125 x 32 (5 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/006 UHMW - MD - 125 x 32 (5 Inch)/006 UHMW - MD - 125 x 32.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/006 UHMW - MD - 125 x 32 (5 Inch)/006 UHMW - MD - 125 x 32 (2).png"
+      }
+    },
+    {
+      "code": "007",
+      "slug": "md-100x40",
+      "group": "md",
+      "name": "UHMW Wheel MD 100 x 40 mm (4 Inch)",
+      "diameter_mm": 100.0,
+      "width_mm": 40.0,
+      "inch": 4.0,
+      "load_per_caster_kg": 200.0,
+      "specs": [
+        [
+          "Size",
+          "100 x 40 (4 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "100 mm"
+        ],
+        [
+          "Wheel Width",
+          "40 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "200 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/md-100x40-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/md-100x40-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/md-100x40-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/007 UHMW - MD - 100 x 40 (4 Inch)/007 UHMW - MD - 100 x 40 (4 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/007 UHMW - MD - 100 x 40 (4 Inch)/007 UHMW - MD - 100 x 40.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/007 UHMW - MD - 100 x 40 (4 Inch)/007 UHMW - MD - 100 x 40 (2).png"
+      }
+    },
+    {
+      "code": "008",
+      "slug": "md-125x40",
+      "group": "md",
+      "name": "UHMW Wheel MD 125 x 40 mm (5 Inch)",
+      "diameter_mm": 125.0,
+      "width_mm": 40.0,
+      "inch": 5.0,
+      "load_per_caster_kg": 250.0,
+      "specs": [
+        [
+          "Size",
+          "125 x 40 (5 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "125 mm"
+        ],
+        [
+          "Wheel Width",
+          "40 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "250 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/md-125x40-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/md-125x40-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/md-125x40-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/008 UHMW - MD - 125 x 40 (5 Inch)/008 UHMW - MD - 125 x 40 (5 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/008 UHMW - MD - 125 x 40 (5 Inch)/008 UHMW - MD - 125 x 40.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/008 UHMW - MD - 125 x 40 (5 Inch)/008 UHMW - MD - 125 x 40 (2).png"
+      }
+    },
+    {
+      "code": "009",
+      "slug": "md-150x40",
+      "group": "md",
+      "name": "UHMW Wheel MD 150 x 40 mm (6 Inch)",
+      "diameter_mm": 150.0,
+      "width_mm": 40.0,
+      "inch": 6.0,
+      "load_per_caster_kg": 300.0,
+      "specs": [
+        [
+          "Size",
+          "150 x 40 (6 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "150 mm"
+        ],
+        [
+          "Wheel Width",
+          "40 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "300 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/md-150x40-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/md-150x40-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/md-150x40-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/009 UHMW - MD - 150 x 40 (6 Inch)/009 UHMW - MD - 150 x 40 (6 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/009 UHMW - MD - 150 x 40 (6 Inch)/009 UHMW - MD - 150 x 40.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/009 UHMW - MD - 150 x 40 (6 Inch)/009 UHMW - MD - 150 x 40 (2).png"
+      }
+    },
+    {
+      "code": "010",
+      "slug": "md-200x40",
+      "group": "md",
+      "name": "UHMW Wheel MD 200 x 40 mm (8 Inch)",
+      "diameter_mm": 200.0,
+      "width_mm": 40.0,
+      "inch": 8.0,
+      "load_per_caster_kg": 350.0,
+      "specs": [
+        [
+          "Size",
+          "200 x 40 (8 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "200 mm"
+        ],
+        [
+          "Wheel Width",
+          "40 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "350 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/md-200x40-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/md-200x40-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/md-200x40-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/010 UHMW - MD - 200 x 40 (8 Inch)/010 UHMW - MD - 200 x 40 (8 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/010 UHMW - MD - 200 x 40 (8 Inch)/010 UHMW - MD - 200 x 40.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/010 UHMW - MD - 200 x 40 (8 Inch)/010 UHMW - MD - 200 x 40 (2).png"
+      }
+    },
+    {
+      "code": "011",
+      "slug": "md-100x50",
+      "group": "md",
+      "name": "UHMW Wheel MD 100 x 50 mm (4 Inch)",
+      "diameter_mm": 100.0,
+      "width_mm": 50.0,
+      "inch": 4.0,
+      "load_per_caster_kg": 300.0,
+      "specs": [
+        [
+          "Size",
+          "100 x 50 (4 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "100 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "300 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/md-100x50-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/md-100x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/md-100x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/011 UHMW - MD - 100 x 50 (4 Inch)/011 UHMW - MD - 100 x 50 (4 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/011 UHMW - MD - 100 x 50 (4 Inch)/011 UHMW - MD - 100 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/011 UHMW - MD - 100 x 50 (4 Inch)/011 UHMW - MD - 100 x 50 (2).png"
+      }
+    },
+    {
+      "code": "012",
+      "slug": "md-125x50",
+      "group": "md",
+      "name": "UHMW Wheel MD 125 x 50 mm (5 Inch)",
+      "diameter_mm": 125.0,
+      "width_mm": 50.0,
+      "inch": 5.0,
+      "load_per_caster_kg": 350.0,
+      "specs": [
+        [
+          "Size",
+          "125 x 50 (5 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "125 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "350 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/md-125x50-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/md-125x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/md-125x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/012 UHMW - MD - 125 x 50 (5 Inch)/012 UHMW - MD - 125 x 50 (5 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/012 UHMW - MD - 125 x 50 (5 Inch)/012 UHMW - MD - 125 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/012 UHMW - MD - 125 x 50 (5 Inch)/012 UHMW - MD - 125 x 50 (2).png"
+      }
+    },
+    {
+      "code": "013",
+      "slug": "md-150x50",
+      "group": "md",
+      "name": "UHMW Wheel MD 150 x 50 mm (6 Inch)",
+      "diameter_mm": 150.0,
+      "width_mm": 50.0,
+      "inch": 6.0,
+      "load_per_caster_kg": 400.0,
+      "specs": [
+        [
+          "Size",
+          "150 x 50 (6 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "150 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "400 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/md-150x50-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/md-150x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/md-150x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/013 UHMW - MD - 150 x 50 (6 Inch)/013 UHMW - MD - 150 x 50 (6 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/013 UHMW - MD - 150 x 50 (6 Inch)/013 UHMW - MD - 150 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/013 UHMW - MD - 150 x 50 (6 Inch)/013 UHMW - MD - 150 x 50 (2).png"
+      }
+    },
+    {
+      "code": "014",
+      "slug": "md-200x50",
+      "group": "md",
+      "name": "UHMW Wheel MD 200 x 50 mm (8 Inch)",
+      "diameter_mm": 200.0,
+      "width_mm": 50.0,
+      "inch": 8.0,
+      "load_per_caster_kg": 500.0,
+      "specs": [
+        [
+          "Size",
+          "200 x 50 (8 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "200 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "500 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/md-200x50-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/md-200x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/md-200x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/014 UHMW - MD - 200 x 50 (8 Inch)/014 UHMW - MD - 200 x 50 (8 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/014 UHMW - MD - 200 x 50 (8 Inch)/014 UHMW - MD - 200 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/014 UHMW - MD - 200 x 50 (8 Inch)/014 UHMW - MD - 200 x 50 (2).png"
+      }
+    },
+    {
+      "code": "015",
+      "slug": "hd-100x50",
+      "group": "hd",
+      "name": "UHMW Wheel HD 100 x 50 mm (4 Inch)",
+      "diameter_mm": 100.0,
+      "width_mm": 50.0,
+      "inch": 4.0,
+      "load_per_caster_kg": 300.0,
+      "specs": [
+        [
+          "Size",
+          "100 x 50 (4 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "100 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "300 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/hd-100x50-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/hd-100x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/hd-100x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/015 UHMW - HD - 100 x 50 (4 Inch)/015 UHMW - HD - 100 x 50 (4 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/015 UHMW - HD - 100 x 50 (4 Inch)/015 UHMW - HD - 100 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/015 UHMW - HD - 100 x 50 (4 Inch)/015 UHMW - HD - 100 x 50 (2).png"
+      }
+    },
+    {
+      "code": "016",
+      "slug": "hd-125x50",
+      "group": "hd",
+      "name": "UHMW Wheel HD 125 x 50 mm (5 Inch)",
+      "diameter_mm": 125.0,
+      "width_mm": 50.0,
+      "inch": 5.0,
+      "load_per_caster_kg": 400.0,
+      "specs": [
+        [
+          "Size",
+          "125 x 50 (5 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "125 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "400 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/hd-125x50-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/hd-125x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/hd-125x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/016 UHMW - HD - 125 x 50 (5 Inch)/016 UHMW - HD - 125 x 50 (5 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/016 UHMW - HD - 125 x 50 (5 Inch)/016 UHMW - HD - 125 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/016 UHMW - HD - 125 x 50 (5 Inch)/016 UHMW - HD - 125 x 50 (2).png"
+      }
+    },
+    {
+      "code": "017",
+      "slug": "hd-150x50",
+      "group": "hd",
+      "name": "UHMW Wheel HD 150 x 50 mm (6 Inch)",
+      "diameter_mm": 150.0,
+      "width_mm": 50.0,
+      "inch": 6.0,
+      "load_per_caster_kg": 500.0,
+      "specs": [
+        [
+          "Size",
+          "150 x 50 (6 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "150 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "500 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/hd-150x50-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/hd-150x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/hd-150x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/017 UHMW - HD - 150 x 50 (6 Inch)/017 UHMW - HD - 150 x 50 (6 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/017 UHMW - HD - 150 x 50 (6 Inch)/017 UHMW - HD - 150 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/017 UHMW - HD - 150 x 50 (6 Inch)/017 UHMW - HD - 150 x 50 (2).png"
+      }
+    },
+    {
+      "code": "018",
+      "slug": "hd-200x50",
+      "group": "hd",
+      "name": "UHMW Wheel HD 200 x 50 mm (8 Inch)",
+      "diameter_mm": 200.0,
+      "width_mm": 50.0,
+      "inch": 8.0,
+      "load_per_caster_kg": 600.0,
+      "specs": [
+        [
+          "Size",
+          "200 x 50 (8 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "200 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "600 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/hd-200x50-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/hd-200x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/hd-200x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/018 UHMW - HD - 200 x 50 (8 Inch)/018 UHMW - HD - 200 x 50 (8 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/018 UHMW - HD - 200 x 50 (8 Inch)/018 UHMW - HD - 200 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/018 UHMW - HD - 200 x 50 (8 Inch)/018 UHMW - HD - 200 x 50 (2).png"
+      }
+    },
+    {
+      "code": "019",
+      "slug": "hd-250x50",
+      "group": "hd",
+      "name": "UHMW Wheel HD 250 x 50 mm (10 Inch)",
+      "diameter_mm": 250.0,
+      "width_mm": 50.0,
+      "inch": 10.0,
+      "load_per_caster_kg": 700.0,
+      "specs": [
+        [
+          "Size",
+          "250 x 50 (10 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "250 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "700 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/hd-250x50-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/hd-250x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/hd-250x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/019 UHMW - HD - 250 x 50 (10 Inch)/019 UHMW - HD - 250 x 50 (10 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/019 UHMW - HD - 250 x 50 (10 Inch)/019 UHMW - HD - 250 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/019 UHMW - HD - 250 x 50 (10 Inch)/019 UHMW - HD - 250 x 50 (2).png"
+      }
+    },
+    {
+      "code": "020",
+      "slug": "hd-300x50",
+      "group": "hd",
+      "name": "UHMW Wheel HD 300 x 50 mm (12 Inch)",
+      "diameter_mm": 300.0,
+      "width_mm": 50.0,
+      "inch": 12.0,
+      "load_per_caster_kg": 800.0,
+      "specs": [
+        [
+          "Size",
+          "300 x 50 (12 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "300 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "800 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/hd-300x50-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/hd-300x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/hd-300x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/020 UHMW - HD - 300 x 50 (12 Inch)/020 UHMW - HD - 300 x 50 (12 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/020 UHMW - HD - 300 x 50 (12 Inch)/020 UHMW - HD - 300 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/020 UHMW - HD - 300 x 50 (12 Inch)/020 UHMW - HD - 300 x 50 (2).png"
+      }
+    },
+    {
+      "code": "021",
+      "slug": "hd-150x75",
+      "group": "hd",
+      "name": "UHMW Wheel HD 150 x 75 mm (6 Inch)",
+      "diameter_mm": 150.0,
+      "width_mm": 75.0,
+      "inch": 6.0,
+      "load_per_caster_kg": 700.0,
+      "specs": [
+        [
+          "Size",
+          "150 x 75 (6 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "150 mm"
+        ],
+        [
+          "Wheel Width",
+          "75 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "700 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/hd-150x75-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/hd-150x75-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/hd-150x75-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/021 UHMW - HD - 150 x 75 (6 Inch)/021 UHMW - HD - 150 x 75 (6 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/021 UHMW - HD - 150 x 75 (6 Inch)/021 UHMW - HD - 150 x 75.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/021 UHMW - HD - 150 x 75 (6 Inch)/021 UHMW - HD - 150 x 75 (2).png"
+      }
+    },
+    {
+      "code": "022",
+      "slug": "hd-200x75",
+      "group": "hd",
+      "name": "UHMW Wheel HD 200 x 75 mm (8 Inch)",
+      "diameter_mm": 200.0,
+      "width_mm": 75.0,
+      "inch": 8.0,
+      "load_per_caster_kg": 800.0,
+      "specs": [
+        [
+          "Size",
+          "200 x 75 (8 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "200 mm"
+        ],
+        [
+          "Wheel Width",
+          "75 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "800 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/hd-200x75-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/hd-200x75-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/hd-200x75-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/022 UHMW - HD - 200 x 75 (8 Inch)/022 UHMW - HD - 200 x 75 (8 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/022 UHMW - HD - 200 x 75 (8 Inch)/022 UHMW - HD - 200 x 75.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/022 UHMW - HD - 200 x 75 (8 Inch)/022 UHMW - HD - 200 x 75 (2).png"
+      }
+    },
+    {
+      "code": "023",
+      "slug": "hd-250x75",
+      "group": "hd",
+      "name": "UHMW Wheel HD 250 x 75 mm (10 Inch)",
+      "diameter_mm": 250.0,
+      "width_mm": 75.0,
+      "inch": 10.0,
+      "load_per_caster_kg": 900.0,
+      "specs": [
+        [
+          "Size",
+          "250 x 75 (10 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "250 mm"
+        ],
+        [
+          "Wheel Width",
+          "75 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "900 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/hd-250x75-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/hd-250x75-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/hd-250x75-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/023 UHMW - HD - 250 x 75 (10 Inch)/023 UHMW - HD - 250 x 75 (10 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/023 UHMW - HD - 250 x 75 (10 Inch)/023 UHMW - HD - 250 x 75.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/023 UHMW - HD - 250 x 75 (10 Inch)/023 UHMW - HD - 250 x 75 (2).png"
+      }
+    },
+    {
+      "code": "024",
+      "slug": "hd-300x75",
+      "group": "hd",
+      "name": "UHMW Wheel HD 300 x 75 mm (12 Inch)",
+      "diameter_mm": 300.0,
+      "width_mm": 75.0,
+      "inch": 12.0,
+      "load_per_caster_kg": 1000.0,
+      "specs": [
+        [
+          "Size",
+          "300 x 75 (12 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "300 mm"
+        ],
+        [
+          "Wheel Width",
+          "75 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "1000 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/hd-300x75-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/hd-300x75-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/hd-300x75-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/024 UHMW - HD - 300 x 75 (12 Inch)/024 UHMW - HD - 300 x 75 (12 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/024 UHMW - HD - 300 x 75 (12 Inch)/024 UHMW - HD - 300 x 75.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/024 UHMW - HD - 300 x 75 (12 Inch)/024 UHMW - HD - 300 x 75 (2).png"
+      }
+    },
+    {
+      "code": "025",
+      "slug": "hd-twin-100x50",
+      "group": "hd-twin",
+      "name": "UHMW Wheel HD Twin 100 x 50 mm (4 Inch)",
+      "diameter_mm": 100.0,
+      "width_mm": 50.0,
+      "inch": 4.0,
+      "load_per_caster_kg": 500.0,
+      "specs": [
+        [
+          "Size",
+          "100 x 50 (4 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "100 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "500 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/hd-twin-100x50-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/hd-twin-100x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/hd-twin-100x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/025 UHMW - ( HD TWIN ) - 100 x 50 (4 Inch)/025 UHMW - ( HD TWIN ) - 100 x 50 (4 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/025 UHMW - ( HD TWIN ) - 100 x 50 (4 Inch)/025 UHMW - ( HD TWIN ) - 100 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/025 UHMW - ( HD TWIN ) - 100 x 50 (4 Inch)/025 UHMW - ( HD TWIN ) - 100 x 50 (2).jpg"
+      }
+    },
+    {
+      "code": "026",
+      "slug": "hd-twin-125x50",
+      "group": "hd-twin",
+      "name": "UHMW Wheel HD Twin 125 x 50 mm (5 Inch)",
+      "diameter_mm": 125.0,
+      "width_mm": 50.0,
+      "inch": 5.0,
+      "load_per_caster_kg": 600.0,
+      "specs": [
+        [
+          "Size",
+          "125 x 50 (5 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "125 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "600 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/hd-twin-125x50-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/hd-twin-125x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/hd-twin-125x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/026 UHMW - ( HD TWIN ) - 125 x 50 (5 Inch)/026 UHMW - ( HD TWIN ) - 125 x 50 (5 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/026 UHMW - ( HD TWIN ) - 125 x 50 (5 Inch)/026 UHMW - ( HD TWIN ) - 125 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/026 UHMW - ( HD TWIN ) - 125 x 50 (5 Inch)/026 UHMW - ( HD TWIN ) - 125 x 50 (2).png"
+      }
+    },
+    {
+      "code": "027",
+      "slug": "hd-twin-150x50",
+      "group": "hd-twin",
+      "name": "UHMW Wheel HD Twin 150 x 50 mm (6 Inch)",
+      "diameter_mm": 150.0,
+      "width_mm": 50.0,
+      "inch": 6.0,
+      "load_per_caster_kg": 800.0,
+      "specs": [
+        [
+          "Size",
+          "150 x 50 (6 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "150 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "800 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/hd-twin-150x50-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/hd-twin-150x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/hd-twin-150x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/027 UHMW - ( HD TWIN ) - 150 x 50 (6 Inch)/027 UHMW - ( HD TWIN ) - 150 x 50 (6 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/027 UHMW - ( HD TWIN ) - 150 x 50 (6 Inch)/027 UHMW - ( HD TWIN ) - 150 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/027 UHMW - ( HD TWIN ) - 150 x 50 (6 Inch)/027 UHMW - ( HD TWIN ) - 150 x 50 (2).png"
+      }
+    },
+    {
+      "code": "028",
+      "slug": "hd-twin-200x50",
+      "group": "hd-twin",
+      "name": "UHMW Wheel HD Twin 200 x 50 mm (8 Inch)",
+      "diameter_mm": 200.0,
+      "width_mm": 50.0,
+      "inch": 8.0,
+      "load_per_caster_kg": 900.0,
+      "specs": [
+        [
+          "Size",
+          "200 x 50 (8 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "200 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "900 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/hd-twin-200x50-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/hd-twin-200x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/hd-twin-200x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/028 UHMW - ( HD TWIN ) - 200 x 50 (8 Inch)/028 UHMW - ( HD TWIN ) - 200 x 50 (8 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/028 UHMW - ( HD TWIN ) - 200 x 50 (8 Inch)/028 UHMW - ( HD TWIN ) - 200 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/028 UHMW - ( HD TWIN ) - 200 x 50 (8 Inch)/028 UHMW - ( HD TWIN ) - 200 x 50 (2).png"
+      }
+    },
+    {
+      "code": "029",
+      "slug": "hd-twin-250x50",
+      "group": "hd-twin",
+      "name": "UHMW Wheel HD Twin 250 x 50 mm (10 Inch)",
+      "diameter_mm": 250.0,
+      "width_mm": 50.0,
+      "inch": 10.0,
+      "load_per_caster_kg": 1100.0,
+      "specs": [
+        [
+          "Size",
+          "250 x 50 (10 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "250 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "1100 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/hd-twin-250x50-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/hd-twin-250x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/hd-twin-250x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/029 UHMW - ( HD TWIN ) - 250 x 50 (10 Inch)/029 UHMW - ( HD TWIN ) - 250 x 50 (10 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/029 UHMW - ( HD TWIN ) - 250 x 50 (10 Inch)/029 UHMW - ( HD TWIN ) - 250 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/029 UHMW - ( HD TWIN ) - 250 x 50 (10 Inch)/029 UHMW - ( HD TWIN ) - 250 x 50 (2).png"
+      }
+    },
+    {
+      "code": "030",
+      "slug": "hd-twin-300x50",
+      "group": "hd-twin",
+      "name": "UHMW Wheel HD Twin 300 x 50 mm (12 Inch)",
+      "diameter_mm": 300.0,
+      "width_mm": 50.0,
+      "inch": 12.0,
+      "load_per_caster_kg": 1300.0,
+      "specs": [
+        [
+          "Size",
+          "300 x 50 (12 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "300 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "1300 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Ball Bearing and Plain Bore"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/uhmw/hd-twin-300x50-photo.jpg",
+        "thumb": "/assets/products/wheels/uhmw/hd-twin-300x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/uhmw/hd-twin-300x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/10 UHMW/030 UHMW - ( HD TWIN ) - 300 x 50 (12 Inch)/030 UHMW - ( HD TWIN ) - 300 x 50 (12 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/10 UHMW/030 UHMW - ( HD TWIN ) - 300 x 50 (12 Inch)/030 UHMW - ( HD TWIN ) - 300 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/10 UHMW/030 UHMW - ( HD TWIN ) - 300 x 50 (12 Inch)/030 UHMW - ( HD TWIN ) - 300 x 50 (2).png"
+      }
+    }
+  ]
+}

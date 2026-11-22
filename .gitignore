@@ -1,0 +1,12 @@
+# Original product source files (Word documents, full-size photos and drawings).
+# Kept locally only; the website uses the optimised copies in assets/products/.
+product-sources/
+
+# Python cache from the build tools
+__pycache__/
+*.pyc
+
+# OS / editor clutter
+Thumbs.db
+desktop.ini
+.DS_Store
