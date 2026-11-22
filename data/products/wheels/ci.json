@@ -1,0 +1,2139 @@
+{
+  "id": "ci",
+  "name": "CI Wheels",
+  "full_name": "Cast Iron (CI) Wheels & Castors",
+  "material": "CI (Cast Iron)",
+  "url": "/wheels-castors/ci/",
+  "source_dir": "product-sources/30 Wheels & Caster/30 CI",
+  "intro": "Cast iron wheels offer high load carrying capacity and excellent wear resistance. Suitable for high temperature applications such as ovens and foundries. Available in plain bore and ball bearing, as wheel only, fixed caster, swivel caster and swivel caster with brake.",
+  "features": [
+    "Cast iron casting — machinable and free from blow holes",
+    "High load carrying capacity with excellent wear resistance",
+    "Suitable for high temperature applications such as ovens and foundries",
+    "BB effort is 50% less than PLB",
+    "IMPORTANT: CI wheels make noise and being very hard may cause floor damage — not suitable for polished floors",
+    "Available in Plain Bore (PLB) and Ball Bearing (BB)"
+  ],
+  "groups": [
+    {
+      "id": "md",
+      "token": "MD",
+      "name": "Medium Duty",
+      "short": "MD"
+    },
+    {
+      "id": "hd",
+      "token": "HD",
+      "name": "Heavy Duty",
+      "short": "HD"
+    },
+    {
+      "id": "hd-twin",
+      "token": "HD TWIN",
+      "name": "Heavy Duty Twin",
+      "short": "HD Twin"
+    }
+  ],
+  "products": [
+    {
+      "code": "301",
+      "slug": "md-50x25",
+      "group": "md",
+      "name": "CI Wheel MD 50 × 25 mm (2 Inch Wheel)",
+      "diameter_mm": 50.0,
+      "width_mm": 25.0,
+      "inch": 2.0,
+      "load_per_caster_kg": 60.0,
+      "specs": [
+        [
+          "Size",
+          "50 x 25 mm (2 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "50 mm"
+        ],
+        [
+          "Wheel Width",
+          "25 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "60 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/md-50x25-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/md-50x25-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/md-50x25-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/301 CI - MD - 50 x 25 (2 Inch)/301 CI - MD - 50 x 25 (2 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/301 CI - MD - 50 x 25 (2 Inch)/301 CI - MD - 50 x 25.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/301 CI - MD - 50 x 25 (2 Inch)/301 CI - MD - 50 x 25 (2).png"
+      }
+    },
+    {
+      "code": "302",
+      "slug": "md-63x25",
+      "group": "md",
+      "name": "CI Wheel MD 63 × 25 mm (2.5 Inch Wheel)",
+      "diameter_mm": 63.0,
+      "width_mm": 25.0,
+      "inch": 2.5,
+      "load_per_caster_kg": 80.0,
+      "specs": [
+        [
+          "Size",
+          "63 x 25 mm (2.5 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "63 mm"
+        ],
+        [
+          "Wheel Width",
+          "25 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "80 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/md-63x25-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/md-63x25-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/md-63x25-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/302 CI - MD - 63 x 25 (2.5 Inch)/302 CI - MD - 63 x 25 (2.5 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/302 CI - MD - 63 x 25 (2.5 Inch)/302 CI - MD - 63 x 25.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/302 CI - MD - 63 x 25 (2.5 Inch)/302 CI - MD - 63 x 25 (2).png"
+      }
+    },
+    {
+      "code": "303",
+      "slug": "md-75x25",
+      "group": "md",
+      "name": "CI Wheel MD 75 × 25 mm (3 Inch Wheel)",
+      "diameter_mm": 75.0,
+      "width_mm": 25.0,
+      "inch": 3.0,
+      "load_per_caster_kg": 100.0,
+      "specs": [
+        [
+          "Size",
+          "75 x 25 mm (3 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "75 mm"
+        ],
+        [
+          "Wheel Width",
+          "25 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "100 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/md-75x25-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/md-75x25-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/md-75x25-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/303 CI - MD - 75 x 25 (3 Inch)/303 CI - MD - 75 x 25 (3 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/303 CI - MD - 75 x 25 (3 Inch)/303 CI - MD - 75 x 25.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/303 CI - MD - 75 x 25 (3 Inch)/303 CI - MD - 75 x 25 (2).png"
+      }
+    },
+    {
+      "code": "304",
+      "slug": "md-75x32",
+      "group": "md",
+      "name": "CI Wheel MD 75 × 32 mm (3 Inch Wheel)",
+      "diameter_mm": 75.0,
+      "width_mm": 32.0,
+      "inch": 3.0,
+      "load_per_caster_kg": 120.0,
+      "specs": [
+        [
+          "Size",
+          "75 x 32 mm (3 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "75 mm"
+        ],
+        [
+          "Wheel Width",
+          "32 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "120 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/md-75x32-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/md-75x32-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/md-75x32-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/304 CI - MD - 75 x 32 (3 Inch)/304 CI - MD - 75 x 32 (3 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/304 CI - MD - 75 x 32 (3 Inch)/304 CI - MD - 75 x 32.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/304 CI - MD - 75 x 32 (3 Inch)/304 CI - MD - 75 x 32 (2).png"
+      }
+    },
+    {
+      "code": "305",
+      "slug": "md-100x32",
+      "group": "md",
+      "name": "CI Wheel MD 100 × 32 mm (4 Inch Wheel)",
+      "diameter_mm": 100.0,
+      "width_mm": 32.0,
+      "inch": 4.0,
+      "load_per_caster_kg": 150.0,
+      "specs": [
+        [
+          "Size",
+          "100 x 32 mm (4 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "100 mm"
+        ],
+        [
+          "Wheel Width",
+          "32 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "150 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/md-100x32-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/md-100x32-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/md-100x32-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/305 CI - MD - 100 x 32 (4 Inch)/305 CI - MD - 100 x 32 (4 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/305 CI - MD - 100 x 32 (4 Inch)/305 CI - MD - 100 x 32.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/305 CI - MD - 100 x 32 (4 Inch)/305 CI - MD - 100 x 32 (2).png"
+      }
+    },
+    {
+      "code": "306",
+      "slug": "md-125x32",
+      "group": "md",
+      "name": "CI Wheel MD 125 × 32 mm (5 Inch Wheel)",
+      "diameter_mm": 125.0,
+      "width_mm": 32.0,
+      "inch": 5.0,
+      "load_per_caster_kg": 200.0,
+      "specs": [
+        [
+          "Size",
+          "125 x 32 mm (5 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "125 mm"
+        ],
+        [
+          "Wheel Width",
+          "32 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "200 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/md-125x32-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/md-125x32-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/md-125x32-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/306 CI - MD - 125 x 32 (5 Inch)/306 CI - MD - 125 x 32 (5 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/306 CI - MD - 125 x 32 (5 Inch)/306 CI - MD - 125 x 32.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/306 CI - MD - 125 x 32 (5 Inch)/306 CI - MD - 125 x 32 (2).png"
+      }
+    },
+    {
+      "code": "307",
+      "slug": "md-100x40",
+      "group": "md",
+      "name": "CI Wheel MD 100 × 40 mm (4 Inch Wheel)",
+      "diameter_mm": 100.0,
+      "width_mm": 40.0,
+      "inch": 4.0,
+      "load_per_caster_kg": 200.0,
+      "specs": [
+        [
+          "Size",
+          "100 x 40 mm (4 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "100 mm"
+        ],
+        [
+          "Wheel Width",
+          "40 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "200 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/md-100x40-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/md-100x40-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/md-100x40-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/307 CI - MD - 100 x 40 (4 Inch)/307 CI - MD - 100 x 40 (4 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/307 CI - MD - 100 x 40 (4 Inch)/307 CI - MD - 100 x 40.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/307 CI - MD - 100 x 40 (4 Inch)/307 CI - MD - 100 x 40 (2).png"
+      }
+    },
+    {
+      "code": "308",
+      "slug": "md-125x40",
+      "group": "md",
+      "name": "CI Wheel MD 125 × 40 mm (5 Inch Wheel)",
+      "diameter_mm": 125.0,
+      "width_mm": 40.0,
+      "inch": 5.0,
+      "load_per_caster_kg": 250.0,
+      "specs": [
+        [
+          "Size",
+          "125 x 40 mm (5 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "125 mm"
+        ],
+        [
+          "Wheel Width",
+          "40 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "250 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/md-125x40-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/md-125x40-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/md-125x40-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/308 CI - MD - 125 x 40 (5 Inch)/308 CI - MD - 125 x 40 (5 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/308 CI - MD - 125 x 40 (5 Inch)/308 CI - MD - 125 x 40.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/308 CI - MD - 125 x 40 (5 Inch)/308 CI - MD - 125 x 40 (2).png"
+      }
+    },
+    {
+      "code": "309",
+      "slug": "md-150x40",
+      "group": "md",
+      "name": "CI Wheel MD 150 × 40 mm (6 Inch Wheel)",
+      "diameter_mm": 150.0,
+      "width_mm": 40.0,
+      "inch": 6.0,
+      "load_per_caster_kg": 300.0,
+      "specs": [
+        [
+          "Size",
+          "150 x 40 mm (6 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "150 mm"
+        ],
+        [
+          "Wheel Width",
+          "40 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "300 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/md-150x40-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/md-150x40-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/md-150x40-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/309 CI - MD - 150 x 40 (6 Inch)/309 CI - MD - 150 x 40 (6 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/309 CI - MD - 150 x 40 (6 Inch)/309 CI - MD - 150 x 40.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/309 CI - MD - 150 x 40 (6 Inch)/309 CI - MD - 150 x 40 (2).png"
+      }
+    },
+    {
+      "code": "310",
+      "slug": "md-200x40",
+      "group": "md",
+      "name": "CI Wheel MD 200 × 40 mm (8 Inch Wheel)",
+      "diameter_mm": 200.0,
+      "width_mm": 40.0,
+      "inch": 8.0,
+      "load_per_caster_kg": 350.0,
+      "specs": [
+        [
+          "Size",
+          "200 x 40 mm (8 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "200 mm"
+        ],
+        [
+          "Wheel Width",
+          "40 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "350 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/md-200x40-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/md-200x40-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/md-200x40-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/310 CI - MD - 200 x 40 (8 Inch)/310 CI - MD - 200 x 40 (8 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/310 CI - MD - 200 x 40 (8 Inch)/310 CI - MD - 200 x 40.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/310 CI - MD - 200 x 40 (8 Inch)/310 CI - MD - 200 x 40 (2).png"
+      }
+    },
+    {
+      "code": "311",
+      "slug": "md-100x50",
+      "group": "md",
+      "name": "CI Wheel MD 100 × 50 mm (4 Inch Wheel)",
+      "diameter_mm": 100.0,
+      "width_mm": 50.0,
+      "inch": 4.0,
+      "load_per_caster_kg": 300.0,
+      "specs": [
+        [
+          "Size",
+          "100 x 50 mm (4 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "100 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "300 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/md-100x50-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/md-100x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/md-100x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/311 CI - MD - 100 x 50 (4 Inch)/311 CI - MD - 100 x 50 (4 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/311 CI - MD - 100 x 50 (4 Inch)/311 CI - MD - 100 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/311 CI - MD - 100 x 50 (4 Inch)/311 CI - MD - 100 x 50 (2).png"
+      }
+    },
+    {
+      "code": "312",
+      "slug": "md-125x50",
+      "group": "md",
+      "name": "CI Wheel MD 125 × 50 mm (5 Inch Wheel)",
+      "diameter_mm": 125.0,
+      "width_mm": 50.0,
+      "inch": 5.0,
+      "load_per_caster_kg": 350.0,
+      "specs": [
+        [
+          "Size",
+          "125 x 50 mm (5 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "125 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "350 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/md-125x50-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/md-125x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/md-125x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/312 CI - MD - 125 x 50 (5 Inch)/312 CI - MD - 125 x 50 (5 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/312 CI - MD - 125 x 50 (5 Inch)/312 CI - MD - 125 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/312 CI - MD - 125 x 50 (5 Inch)/312 CI - MD - 125 x 50 (2).png"
+      }
+    },
+    {
+      "code": "313",
+      "slug": "md-150x50",
+      "group": "md",
+      "name": "CI Wheel MD 150 × 50 mm (6 Inch Wheel)",
+      "diameter_mm": 150.0,
+      "width_mm": 50.0,
+      "inch": 6.0,
+      "load_per_caster_kg": 400.0,
+      "specs": [
+        [
+          "Size",
+          "150 x 50 mm (6 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "150 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "400 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/md-150x50-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/md-150x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/md-150x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/313 CI - MD - 150 x 50 (6 Inch)/313 CI - MD - 150 x 50 (6 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/313 CI - MD - 150 x 50 (6 Inch)/313 CI - MD - 150 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/313 CI - MD - 150 x 50 (6 Inch)/313 CI - MD - 150 x 50 (2).png"
+      }
+    },
+    {
+      "code": "314",
+      "slug": "md-200x50",
+      "group": "md",
+      "name": "CI Wheel MD 200 × 50 mm (8 Inch Wheel)",
+      "diameter_mm": 200.0,
+      "width_mm": 50.0,
+      "inch": 8.0,
+      "load_per_caster_kg": 500.0,
+      "specs": [
+        [
+          "Size",
+          "200 x 50 mm (8 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "200 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "500 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/md-200x50-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/md-200x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/md-200x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/314 CI - MD - 200 x 50 (8 Inch)/314 CI - MD - 200 x 50 (8 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/314 CI - MD - 200 x 50 (8 Inch)/314 CI - MD - 200 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/314 CI - MD - 200 x 50 (8 Inch)/314 CI - MD - 200 x 50 (2).png"
+      }
+    },
+    {
+      "code": "315",
+      "slug": "hd-100x50",
+      "group": "hd",
+      "name": "CI Wheel HD 100 × 50 mm (4 Inch Wheel)",
+      "diameter_mm": 100.0,
+      "width_mm": 50.0,
+      "inch": 4.0,
+      "load_per_caster_kg": 500.0,
+      "specs": [
+        [
+          "Size",
+          "100 x 50 mm (4 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "100 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "500 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/hd-100x50-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/hd-100x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/hd-100x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/315 CI - HD - 100 x 50 (4 Inch)/315 CI - HD - 100 x 50 (4 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/315 CI - HD - 100 x 50 (4 Inch)/315 CI - HD - 100 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/315 CI - HD - 100 x 50 (4 Inch)/315 CI - HD - 100 x 50 (2).png"
+      }
+    },
+    {
+      "code": "316",
+      "slug": "hd-125x50",
+      "group": "hd",
+      "name": "CI Wheel HD 125 × 50 mm (5 Inch Wheel)",
+      "diameter_mm": 125.0,
+      "width_mm": 50.0,
+      "inch": 5.0,
+      "load_per_caster_kg": 600.0,
+      "specs": [
+        [
+          "Size",
+          "125 x 50 mm (5 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "125 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "600 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/hd-125x50-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/hd-125x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/hd-125x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/316 CI - HD - 125 x 50 (5 Inch)/316 CI - HD - 125 x 50 (5 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/316 CI - HD - 125 x 50 (5 Inch)/316 CI - HD - 125 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/316 CI - HD - 125 x 50 (5 Inch)/316 CI - HD - 125 x 50 (2).png"
+      }
+    },
+    {
+      "code": "317",
+      "slug": "hd-150x50",
+      "group": "hd",
+      "name": "CI Wheel HD 150 × 50 mm (6 Inch Wheel)",
+      "diameter_mm": 150.0,
+      "width_mm": 50.0,
+      "inch": 6.0,
+      "load_per_caster_kg": 700.0,
+      "specs": [
+        [
+          "Size",
+          "150 x 50 mm (6 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "150 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "700 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/hd-150x50-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/hd-150x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/hd-150x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/317 CI - HD - 150 x 50 (6 Inch)/317 CI - HD - 150 x 50 (6 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/317 CI - HD - 150 x 50 (6 Inch)/317 CI - HD - 150 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/317 CI - HD - 150 x 50 (6 Inch)/317 CI - HD - 150 x 50 (2).png"
+      }
+    },
+    {
+      "code": "318",
+      "slug": "hd-200x50",
+      "group": "hd",
+      "name": "CI Wheel HD 200 × 50 mm (8 Inch Wheel)",
+      "diameter_mm": 200.0,
+      "width_mm": 50.0,
+      "inch": 8.0,
+      "load_per_caster_kg": 900.0,
+      "specs": [
+        [
+          "Size",
+          "200 x 50 mm (8 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "200 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "900 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/hd-200x50-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/hd-200x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/hd-200x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/318 CI - HD - 200 x 50 (8 Inch)/318 CI - HD - 200 x 50 (8 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/318 CI - HD - 200 x 50 (8 Inch)/318 CI - HD - 200 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/318 CI - HD - 200 x 50 (8 Inch)/318 CI - HD - 200 x 50 (2).png"
+      }
+    },
+    {
+      "code": "319",
+      "slug": "hd-250x50",
+      "group": "hd",
+      "name": "CI Wheel HD 250 × 50 mm (10 Inch Wheel)",
+      "diameter_mm": 250.0,
+      "width_mm": 50.0,
+      "inch": 10.0,
+      "load_per_caster_kg": 1100.0,
+      "specs": [
+        [
+          "Size",
+          "250 x 50 mm (10 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "250 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "1100 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/hd-250x50-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/hd-250x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/hd-250x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/319 CI - HD - 250 x 50 (10 Inch)/319 CI - HD - 250 x 50 (10 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/319 CI - HD - 250 x 50 (10 Inch)/319 CI - HD - 250 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/319 CI - HD - 250 x 50 (10 Inch)/319 CI - HD - 250 x 50 (2).png"
+      }
+    },
+    {
+      "code": "320",
+      "slug": "hd-300x50",
+      "group": "hd",
+      "name": "CI Wheel HD 300 × 50 mm (12 Inch Wheel)",
+      "diameter_mm": 300.0,
+      "width_mm": 50.0,
+      "inch": 12.0,
+      "load_per_caster_kg": 1200.0,
+      "specs": [
+        [
+          "Size",
+          "300 x 50 mm (12 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "300 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "1200 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/hd-300x50-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/hd-300x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/hd-300x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/320 CI - HD - 300 x 50 (12 Inch)/320 CI - HD - 300 x 50 (12 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/320 CI - HD - 300 x 50 (12 Inch)/320 CI - HD - 300 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/320 CI - HD - 300 x 50 (12 Inch)/320 CI - HD - 300 x 50 (2).png"
+      }
+    },
+    {
+      "code": "321",
+      "slug": "hd-150x75",
+      "group": "hd",
+      "name": "CI Wheel HD 150 × 75 mm (6 Inch Wheel)",
+      "diameter_mm": 150.0,
+      "width_mm": 75.0,
+      "inch": 6.0,
+      "load_per_caster_kg": 1000.0,
+      "specs": [
+        [
+          "Size",
+          "150 x 75 mm (6 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "150 mm"
+        ],
+        [
+          "Wheel Width",
+          "75 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "1000 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/hd-150x75-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/hd-150x75-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/hd-150x75-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/321 CI - HD - 150 x 75 (6 Inch)/321 CI - HD - 150 x 75 (6 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/321 CI - HD - 150 x 75 (6 Inch)/321 CI - HD - 150 x 75.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/321 CI - HD - 150 x 75 (6 Inch)/321 CI - HD - 150 x 75 (2).png"
+      }
+    },
+    {
+      "code": "322",
+      "slug": "hd-200x75",
+      "group": "hd",
+      "name": "CI Wheel HD 200 × 75 mm (8 Inch Wheel)",
+      "diameter_mm": 200.0,
+      "width_mm": 75.0,
+      "inch": 8.0,
+      "load_per_caster_kg": 1200.0,
+      "specs": [
+        [
+          "Size",
+          "200 x 75 mm (8 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "200 mm"
+        ],
+        [
+          "Wheel Width",
+          "75 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "1200 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/hd-200x75-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/hd-200x75-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/hd-200x75-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/322 CI - HD - 200 x 75 (8 Inch)/322 CI - HD - 200 x 75 (8 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/322 CI - HD - 200 x 75 (8 Inch)/322 CI - HD - 200 x 75.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/322 CI - HD - 200 x 75 (8 Inch)/322 CI - HD - 200 x 75 (2).png"
+      }
+    },
+    {
+      "code": "323",
+      "slug": "hd-250x75",
+      "group": "hd",
+      "name": "CI Wheel HD 250 × 75 mm (10 Inch Wheel)",
+      "diameter_mm": 250.0,
+      "width_mm": 75.0,
+      "inch": 10.0,
+      "load_per_caster_kg": 1200.0,
+      "specs": [
+        [
+          "Size",
+          "250 x 75 mm (10 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "250 mm"
+        ],
+        [
+          "Wheel Width",
+          "75 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "1200 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/hd-250x75-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/hd-250x75-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/hd-250x75-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/323 CI - HD - 250 x 75 (10 Inch)/323 CI - HD - 250 x 75 (10 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/323 CI - HD - 250 x 75 (10 Inch)/323 CI - HD - 250 x 75.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/323 CI - HD - 250 x 75 (10 Inch)/323 CI - HD - 250 x 75 (2).png"
+      }
+    },
+    {
+      "code": "324",
+      "slug": "hd-300x75",
+      "group": "hd",
+      "name": "CI Wheel HD 300 × 75 mm (12 Inch Wheel)",
+      "diameter_mm": 300.0,
+      "width_mm": 75.0,
+      "inch": 12.0,
+      "load_per_caster_kg": 1200.0,
+      "specs": [
+        [
+          "Size",
+          "300 x 75 mm (12 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "300 mm"
+        ],
+        [
+          "Wheel Width",
+          "75 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "1200 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/hd-300x75-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/hd-300x75-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/hd-300x75-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/324 CI - HD - 300 x 75 (12 Inch)/324 CI - HD - 300 x 75 (12 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/324 CI - HD - 300 x 75 (12 Inch)/324 CI - HD - 300 x 75.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/324 CI - HD - 300 x 75 (12 Inch)/324 CI - HD - 300 x 75 (2).png"
+      }
+    },
+    {
+      "code": "325",
+      "slug": "hd-twin-100x50",
+      "group": "hd-twin",
+      "name": "CI Wheel HD Twin 100 × 50 mm (4 Inch Wheel)",
+      "diameter_mm": 100.0,
+      "width_mm": 50.0,
+      "inch": 4.0,
+      "load_per_caster_kg": 700.0,
+      "specs": [
+        [
+          "Size",
+          "100 x 50 mm (4 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "100 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "700 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/hd-twin-100x50-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/hd-twin-100x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/hd-twin-100x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/325 CI - ( HD TWIN ) - 100 x 50 (4 Inch)/325 CI - ( HD TWIN ) - 100 x 50 (4 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/325 CI - ( HD TWIN ) - 100 x 50 (4 Inch)/325 CI - ( HD TWIN ) - 100 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/325 CI - ( HD TWIN ) - 100 x 50 (4 Inch)/325 CI - ( HD TWIN ) - 100 x 50 (2).png"
+      }
+    },
+    {
+      "code": "326",
+      "slug": "hd-twin-125x50",
+      "group": "hd-twin",
+      "name": "CI Wheel HD Twin 125 × 50 mm (5 Inch Wheel)",
+      "diameter_mm": 125.0,
+      "width_mm": 50.0,
+      "inch": 5.0,
+      "load_per_caster_kg": 800.0,
+      "specs": [
+        [
+          "Size",
+          "125 x 50 mm (5 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "125 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "800 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/hd-twin-125x50-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/hd-twin-125x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/hd-twin-125x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/326 CI - ( HD TWIN ) - 125 x 50 (5 Inch)/326 CI - ( HD TWIN ) - 125 x 50 (5 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/326 CI - ( HD TWIN ) - 125 x 50 (5 Inch)/326 CI - ( HD TWIN ) - 125 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/326 CI - ( HD TWIN ) - 125 x 50 (5 Inch)/326 CI - ( HD TWIN ) - 125 x 50 (2).png"
+      }
+    },
+    {
+      "code": "327",
+      "slug": "hd-twin-150x50",
+      "group": "hd-twin",
+      "name": "CI Wheel HD Twin 150 × 50 mm (6 Inch Wheel)",
+      "diameter_mm": 150.0,
+      "width_mm": 50.0,
+      "inch": 6.0,
+      "load_per_caster_kg": 900.0,
+      "specs": [
+        [
+          "Size",
+          "150 x 50 mm (6 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "150 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "900 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/hd-twin-150x50-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/hd-twin-150x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/hd-twin-150x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/327 CI - ( HD TWIN ) - 150 x 50 (6 Inch)/327 CI - ( HD TWIN ) - 150 x 50 (6 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/327 CI - ( HD TWIN ) - 150 x 50 (6 Inch)/327 CI - ( HD TWIN ) - 150 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/327 CI - ( HD TWIN ) - 150 x 50 (6 Inch)/327 CI - ( HD TWIN ) - 150 x 50 (2).png"
+      }
+    },
+    {
+      "code": "328",
+      "slug": "hd-twin-200x50",
+      "group": "hd-twin",
+      "name": "CI Wheel HD Twin 200 × 50 mm (8 Inch Wheel)",
+      "diameter_mm": 200.0,
+      "width_mm": 50.0,
+      "inch": 8.0,
+      "load_per_caster_kg": 1100.0,
+      "specs": [
+        [
+          "Size",
+          "200 x 50 mm (8 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "200 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "1100 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/hd-twin-200x50-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/hd-twin-200x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/hd-twin-200x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/328 CI - ( HD TWIN ) - 200 x 50 (8 Inch)/328 CI - ( HD TWIN ) - 200 x 50 (8 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/328 CI - ( HD TWIN ) - 200 x 50 (8 Inch)/328 CI - ( HD TWIN ) - 200 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/328 CI - ( HD TWIN ) - 200 x 50 (8 Inch)/328 CI - ( HD TWIN ) - 200 x 50 (2).png"
+      }
+    },
+    {
+      "code": "329",
+      "slug": "hd-twin-250x50",
+      "group": "hd-twin",
+      "name": "CI Wheel HD Twin 250 × 50 mm (10 Inch Wheel)",
+      "diameter_mm": 250.0,
+      "width_mm": 50.0,
+      "inch": 10.0,
+      "load_per_caster_kg": 1300.0,
+      "specs": [
+        [
+          "Size",
+          "250 x 50 mm (10 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "250 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "1300 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/hd-twin-250x50-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/hd-twin-250x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/hd-twin-250x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/329 CI - ( HD TWIN ) - 250 x 50 (10 Inch)/329 CI - ( HD TWIN ) - 250 x 50 (10 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/329 CI - ( HD TWIN ) - 250 x 50 (10 Inch)/329 CI - ( HD TWIN ) - 250 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/329 CI - ( HD TWIN ) - 250 x 50 (10 Inch)/329 CI - ( HD TWIN ) - 250 x 50 (2).png"
+      }
+    },
+    {
+      "code": "330",
+      "slug": "hd-twin-300x50",
+      "group": "hd-twin",
+      "name": "CI Wheel HD Twin 300 × 50 mm (12 Inch Wheel)",
+      "diameter_mm": 300.0,
+      "width_mm": 50.0,
+      "inch": 12.0,
+      "load_per_caster_kg": 1500.0,
+      "specs": [
+        [
+          "Size",
+          "300 x 50 mm (12 Inch Wheel)"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Caster Type",
+          "Available as Wheel Only, Fixed Caster, Swivel Caster, and Swivel Caster with Brake"
+        ],
+        [
+          "Wheel Diameter",
+          "300 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Load Capacity per Caster",
+          "1500 kg"
+        ],
+        [
+          "Mounting Type",
+          "Top Plate"
+        ],
+        [
+          "Bearing Type",
+          "Available in Plain Bore and Ball Bearing"
+        ],
+        [
+          "Brake Options",
+          "Available with and without Brake"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/wheels/ci/hd-twin-300x50-photo.jpg",
+        "thumb": "/assets/products/wheels/ci/hd-twin-300x50-thumb.jpg",
+        "drawing": "/assets/products/wheels/ci/hd-twin-300x50-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/30 CI/330 CI - ( HD TWIN ) - 300 x 50 (12 Inch)/330 CI - ( HD TWIN ) - 300 x 50 (12 Inch).docx",
+        "photo": "product-sources/30 Wheels & Caster/30 CI/330 CI - ( HD TWIN ) - 300 x 50 (12 Inch)/330 CI - ( HD TWIN ) - 300 x 50.png",
+        "drawing": "product-sources/30 Wheels & Caster/30 CI/330 CI - ( HD TWIN ) - 300 x 50 (12 Inch)/330 CI - ( HD TWIN ) - 300 x 50 (2).png"
+      }
+    }
+  ]
+}
