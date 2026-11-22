@@ -124,7 +124,7 @@ def main(category):
             'code': code,
             'slug': slug,
             'group': group['id'],
-            'name': f"{cat['name'].rstrip('s')} {group['short']} {fmt(num(d))} x {fmt(num(w))} mm ({fmt(num(inch))} Inch)",
+            'name': f"{cat['name'].rstrip('s')} {group['short']} {fmt(num(d))} × {fmt(num(w))} mm ({fmt(num(inch))} Inch Wheel)",
             'diameter_mm': num(d),
             'width_mm': num(w),
             'inch': num(inch),

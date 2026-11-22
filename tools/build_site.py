@@ -18,6 +18,7 @@ import glob
 import html
 import json
 import os
+import re
 import shutil
 import urllib.parse
 
@@ -48,13 +49,91 @@ def wa_url(text):
     return f'https://wa.me/{WHATSAPP}?text=' + urllib.parse.quote(text)
 
 
+# ----------------------------------------------------------------------------
+# Company details for the printed datasheet letterhead. Every value here is
+# taken from the existing website (index.html contact section / JSON-LD).
+# Edit in ONE place; all product datasheets pick it up on the next build.
+COMPANY = {
+    'name': 'Kotibhaskar Material Handling Equipments',
+    'tagline': 'Manufacturer of material handling equipment, industrial wheels and castors',
+    'address': 'Plot No. K-3/2/1, Additional MIDC, Satara, Maharashtra 415004, India',
+    'phones': ['+91 98224 13252', '+91 83800 95804', '+91 83800 95805'],
+    'emails': ['amodsales@gmail.com', 'amodsatara@gmail.com'],
+    'website': 'kotibhaskarindustries.com',
+    'logo': '/assets/brand/logo-print.png',
+}
+
+# Spec rows that are highlighted on the web page and the printed datasheet.
+KEY_ROWS = ('Size', 'Load Capacity per Caster')
+
+
+def size_label(p):
+    """Standard size format used everywhere: 100 × 32 mm (4 Inch Wheel)"""
+    return f"{n(p['diameter_mm'])} × {n(p['width_mm'])} mm ({n(p['inch'])} Inch Wheel)"
+
+
+def display_spec(label, value):
+    """Format a Word spec value for display without changing any number.
+    'Size' rows such as '100 x 32 (4 Inch Wheel)' become '100 × 32 mm (4 Inch Wheel)'."""
+    if label == 'Size':
+        m = re.match(r'^([\d.]+) x ([\d.]+) \((.+)\)$', value)
+        if m:
+            return f'{m.group(1)} × {m.group(2)} mm ({m.group(3)})'
+    return value
+
+
+def spec_rows_html(specs):
+    return ''.join(
+        f'<tr{" class=\"key\"" if label in KEY_ROWS else ""}><th scope="row">{e(label)}</th><td>{e(display_spec(label, value))}</td></tr>'
+        for label, value in specs)
+
+
+def print_sheet(*, category, group_name, title, size, load, photo, drawing, specs, url):
+    """Branded A4 product datasheet. Hidden on screen; it is the only thing
+    printed when the visitor uses Print / Save as PDF (see site.css)."""
+    c = COMPANY
+    return f'''<div class="print-sheet" aria-hidden="true">
+  <div class="ps-head">
+    <img class="ps-logo" src="{c['logo']}" alt="Kotibhaskar Industries">
+    <div class="ps-company">
+      <div class="ps-name">{e(c['name'])}</div>
+      <div class="ps-tag">{e(c['tagline'])}</div>
+      <div class="ps-contact">{e(c['address'])}<br>
+        Tel: {' &middot; '.join(e(t) for t in c['phones'])}<br>
+        Email: {' &middot; '.join(e(m) for m in c['emails'])} &nbsp;|&nbsp; Web: {e(c['website'])}</div>
+    </div>
+  </div>
+  <div class="ps-band"><span>Product Specification Sheet</span><span>Wheels &amp; Castors &middot; {e(category)}</span></div>
+  <div class="ps-title">
+    <div>
+      <div class="ps-cat">{e(category)} &middot; {e(group_name)}</div>
+      <div class="ps-h">{e(title)}</div>
+      <div class="ps-size">{e(size)}</div>
+    </div>
+    <div class="ps-load"><span>Load Capacity per Caster</span><b>{e(load)}</b></div>
+  </div>
+  <div class="ps-imgs">
+    <figure><div class="ps-img"><img src="{photo}" alt=""></div><figcaption>Product Photograph</figcaption></figure>
+    <figure><div class="ps-img"><img src="{drawing}" alt=""></div><figcaption>Technical Drawing</figcaption></figure>
+  </div>
+  <div class="ps-sec">Technical Specifications</div>
+  <table class="ps-specs"><tbody>{spec_rows_html(specs)}</tbody></table>
+  <div class="ps-note">Specifications subject to change without notice. Contact us for a quotation.</div>
+  <div class="ps-foot">
+    <div><b>{e(c['name'])}</b><br>{e(c['website'])}</div>
+    <div>{e(c['phones'][0])} &nbsp;|&nbsp; {e(c['emails'][0])}</div>
+    <div class="ps-url">{e(c['website'] + url)}</div>
+  </div>
+</div>'''
+
+
 DL_ICON = ('<svg width="14" height="16" viewBox="0 0 14 16" fill="none" aria-hidden="true"><path d="M7 1v9M7 10l-3-3M7 10l3-3M1 13h12" '
            'stroke="#E07B2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 13v2h12v-2" stroke="#E07B2A" '
            'stroke-width="1.8" stroke-linecap="round"/></svg>')
 WA_ICON = ('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>')
 
 
-def page(*, title, description, canonical, body, og_image=None, jsonld=None, wa_text=None):
+def page(*, title, description, canonical, body, og_image=None, jsonld=None, wa_text=None, sheet=''):
     og_image = og_image or f'{SITE}/logo.png'
     wa_text = wa_text or 'Hello, I visited kotibhaskarindustries.com and would like to enquire about your products.'
     ld = ''
@@ -88,7 +167,7 @@ def page(*, title, description, canonical, body, og_image=None, jsonld=None, wa_
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
 </head>
-<body>
+<body{' class="has-sheet"' if sheet else ''}>
 <!-- Generated by tools/build_site.py from data/products — do not edit by hand -->
 <nav id="main-nav">
   <a href="/" class="brand" aria-label="Kotibhaskar Industries home">
@@ -157,6 +236,7 @@ def page(*, title, description, canonical, body, og_image=None, jsonld=None, wa_
   </div>
 </footer>
 <a id="wa-btn" href="{e(wa_url(wa_text))}" target="_blank" rel="noopener" aria-label="WhatsApp Enquiry">{WA_ICON}<span class="wa-label">WhatsApp Enquiry</span></a>
+{sheet}
 <script src="/assets/js/site.js" defer></script>
 </body>
 </html>
@@ -180,7 +260,7 @@ def crumbs(items):
 
 
 def short_name(p, group):
-    return f"{group['short']} {n(p['diameter_mm'])} x {n(p['width_mm'])}"
+    return f"{group['short']} {n(p['diameter_mm'])} × {n(p['width_mm'])} mm"
 
 
 # ----------------------------------------------------------------------------
@@ -206,13 +286,13 @@ def build_category(cat):
   <div class="p-card-body">
     <div class="p-card-duty">{e(cat['name'])} &middot; {e(g['name'])}</div>
     <div class="p-card-inch">{n(p['inch'])} Inch Wheel</div>
-    <div class="p-card-name">{x(e(short_name(p, g)))} mm</div>
+    <div class="p-card-name">{e(short_name(p, g))}</div>
     <div class="p-card-load">Load per caster: <b>{n(p['load_per_caster_kg'])} kg</b></div>
     <div class="p-card-cta">View details &rarr;</div>
   </div>
 </a>''')
-            rows.append(f'<tr><td>{e(g["short"])}</td><td><a href="{url}{p["slug"]}/">{x(e(n(p["diameter_mm"]) + " x " + n(p["width_mm"])))} mm</a></td>'
-                        f'<td class="inch-cell">{n(p["inch"])} Inch</td><td>{n(p["load_per_caster_kg"])} kg</td></tr>')
+            rows.append(f'<tr><td>{e(g["short"])}</td><td><a href="{url}{p["slug"]}/">{n(p["diameter_mm"])} &times; {n(p["width_mm"])} mm '
+                        f'<span class="inch-cell">({n(p["inch"])} Inch Wheel)</span></a></td><td>{n(p["load_per_caster_kg"])} kg</td></tr>')
         gl = [p['load_per_caster_kg'] for p in gp]
         blocks.append(f'''<section class="group-block" id="{g['id']}" aria-labelledby="h-{g['id']}">
   <div class="group-head"><h2 id="h-{g['id']}">{e(cat['name'])} &mdash; <b>{e(g['name'])}</b></h2><p>{len(gp)} sizes &middot; {n(min(gl))}&ndash;{n(max(gl))} kg per caster</p></div>
@@ -255,7 +335,7 @@ def build_category(cat):
   <h2 class="h2">Size &amp; Load Table <small>{len(prods)} sizes</small></h2>
   <div class="tbl-wrap">
     <table class="data-table">
-      <thead><tr><th scope="col">Duty</th><th scope="col">Wheel Size (D &times; W)</th><th scope="col">Inch Size</th><th scope="col">Load Capacity per Caster</th></tr></thead>
+      <thead><tr><th scope="col">Duty</th><th scope="col">Size</th><th scope="col">Load Capacity per Caster</th></tr></thead>
       <tbody>{''.join(rows)}</tbody>
     </table>
   </div>
@@ -291,32 +371,30 @@ def build_product(cat, p, idx):
     prods = cat['products']
     prev_p = prods[idx - 1] if idx > 0 else None
     next_p = prods[idx + 1] if idx + 1 < len(prods) else None
-    dims = f"{n(p['diameter_mm'])} x {n(p['width_mm'])}"
-    heading = f"{cat['name'].rstrip('s')} {g['short']} {dims} mm"
+    dims = f"{n(p['diameter_mm'])} × {n(p['width_mm'])} mm"
+    size = size_label(p)
+    base_name = f"{cat['name'].rstrip('s')} {g['short']}"
     crumb_html, crumb_ld = crumbs([('Home', '/'), ('Wheels &amp; Castors', '/wheels-castors/'), (e(cat['name']), cat['url']),
-                                   (e(g['name']), f"{cat['url']}#{g['id']}"), (x(e(dims)) + ' mm', None)])
+                                   (e(g['name']), f"{cat['url']}#{g['id']}"), (e(size), None)])
 
-    spec_rows = ''.join(
-        f'<tr{" class=\"key\"" if label == "Load Capacity per Caster" else ""}><th scope="row">{e(label)}</th><td>{e(value)}</td></tr>'
-        for label, value in p['specs'])
+    spec_rows = spec_rows_html(p['specs'])
     sibs = ''.join(
         f'<a class="sib{" current" if q["slug"] == p["slug"] else ""}" href="{cat["url"]}{q["slug"]}/"'
-        f'{" aria-current=\"page\"" if q["slug"] == p["slug"] else ""}>{x(e(n(q["diameter_mm"]) + " x " + n(q["width_mm"])))}'
-        f'<small>{n(q["inch"])} inch &middot; {n(q["load_per_caster_kg"])} kg</small></a>' for q in same)
+        f'{" aria-current=\"page\"" if q["slug"] == p["slug"] else ""}>{n(q["diameter_mm"])} &times; {n(q["width_mm"])} mm'
+        f'<small>{n(q["inch"])} Inch Wheel &middot; {n(q["load_per_caster_kg"])} kg</small></a>' for q in same)
     pn = ''
     if prev_p:
-        pn += f'<a class="btn-outline" href="{cat["url"]}{prev_p["slug"]}/">&larr; {x(e(short_name(prev_p, groups[prev_p["group"]])))}</a>'
+        pn += f'<a class="btn-outline" href="{cat["url"]}{prev_p["slug"]}/">&larr; {e(short_name(prev_p, groups[prev_p["group"]]))}</a>'
     else:
         pn += '<span></span>'
     if next_p:
-        pn += f'<a class="btn-outline" href="{cat["url"]}{next_p["slug"]}/">{x(e(short_name(next_p, groups[next_p["group"]])))} &rarr;</a>'
+        pn += f'<a class="btn-outline" href="{cat["url"]}{next_p["slug"]}/">{e(short_name(next_p, groups[next_p["group"]]))} &rarr;</a>'
 
     enquiry_name = p['name']
     body = f'''<header class="page-head">
   {crumb_html}
   <div class="duty-badge">{e(cat['name'])} &middot; <b>{e(g['name'])}</b></div>
-  <h1 class="page-title">{x(e(heading))}</h1>
-  <div class="inch-line">{n(p['inch'])} Inch Wheel</div>
+  <h1 class="page-title">{e(base_name)} <span class="size-line">{n(p['diameter_mm'])} &times; {n(p['width_mm'])} mm <span class="size-inch">({n(p['inch'])} Inch Wheel)</span></span></h1>
   <p class="page-sub">{e(cat['material'])} wheel &mdash; available as wheel only, fixed caster, swivel caster and swivel caster with brake.</p>
   <div class="key-facts">
     <div class="fact fact-inch"><div class="fact-num">{n(p['inch'])}<small>inch</small></div><div class="fact-label">Wheel size</div></div>
@@ -367,20 +445,23 @@ def build_product(cat, p, idx):
         crumb_ld,
         {'@type': 'Product', 'name': p['name'], 'url': SITE + url, 'sku': f"KI-{cat['id'].upper()}-{p['slug'].upper()}",
          'image': [SITE + p['images']['photo'], SITE + p['images']['drawing']],
-         'description': f"{p['name']}: {cat['material']} wheel, {dims} mm, load capacity {n(p['load_per_caster_kg'])} kg per caster.",
+         'description': f"{p['name']}: {cat['material']} wheel, {size}, load capacity {n(p['load_per_caster_kg'])} kg per caster.",
          'brand': {'@type': 'Brand', 'name': 'Kotibhaskar'},
          'manufacturer': {'@id': f'{SITE}/#organization'},
          'category': f"Wheels & Castors > {cat['name']} > {g['name']}",
          'material': cat['material'],
-         'additionalProperty': [{'@type': 'PropertyValue', 'name': k, 'value': v} for k, v in p['specs']]},
+         'additionalProperty': [{'@type': 'PropertyValue', 'name': k, 'value': display_spec(k, v)} for k, v in p['specs']]},
     ]}
-    title = f"{heading.replace(' x ', ' × ')} ({n(p['inch'])} Inch) – {n(p['load_per_caster_kg'])} kg per Caster | Kotibhaskar"
+    title = f"{base_name} {size} – {n(p['load_per_caster_kg'])} kg per Caster | Kotibhaskar"
     desc = (f"{p['name']} — {cat['material']} wheel, diameter {n(p['diameter_mm'])} mm, width {n(p['width_mm'])} mm, "
             f"load capacity {n(p['load_per_caster_kg'])} kg per caster. Available as wheel only, fixed, swivel and swivel with brake. "
             "Made in India by Kotibhaskar Industries, Satara.")
+    sheet = print_sheet(category=cat['name'], group_name=g['name'], title=base_name, size=size,
+                        load=f"{n(p['load_per_caster_kg'])} kg", photo=p['images']['photo'],
+                        drawing=p['images']['drawing'], specs=p['specs'], url=url)
     return page(title=title, description=desc, canonical=url, body=body, jsonld=jsonld,
                 og_image=SITE + p['images']['photo'],
-                wa_text=f'Hello, I would like a quotation for: {enquiry_name} ({SITE}{url})')
+                wa_text=f'Hello, I would like a quotation for: {enquiry_name} ({SITE}{url})', sheet=sheet)
 
 
 # ----------------------------------------------------------------------------

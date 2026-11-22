@@ -65,8 +65,29 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
   }
 
-  // Print datasheet
+  // Print datasheet — wait until the datasheet images are loaded so the
+  // photo and drawing are never missing from the printout.
+  function printSheet() {
+    var imgs = document.querySelectorAll('.print-sheet img');
+    var pending = [];
+    imgs.forEach(function (img) {
+      if (!img.complete) pending.push(new Promise(function (r) { img.onload = img.onerror = r; }));
+    });
+    Promise.all(pending).then(function () { window.print(); });
+  }
   document.querySelectorAll('[data-print]').forEach(function (b) {
-    b.addEventListener('click', function () { window.print(); });
+    b.addEventListener('click', printSheet);
   });
+
+  // On-screen A4 preview of the datasheet: add ?print-preview to a product URL
+  if (document.querySelector('.print-sheet') && /[?&]print-preview\b/.test(location.search)) {
+    document.documentElement.classList.add('print-preview');
+    var bar = document.createElement('div');
+    bar.className = 'pv-bar';
+    bar.innerHTML = '<span>A4 datasheet preview</span>' +
+      '<a class="btn-outline" href="' + location.pathname + '">Back to product page</a>' +
+      '<button type="button" class="btn-primary">&#128438; Print / Save as PDF</button>';
+    document.body.appendChild(bar);
+    bar.querySelector('button').addEventListener('click', printSheet);
+  }
 })();
