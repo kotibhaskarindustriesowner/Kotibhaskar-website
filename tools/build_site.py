@@ -595,7 +595,7 @@ def build_pt_category(cat):
         sp = [p for p in prods if p['subcat'] == sc['id']]
         kinds = sorted({p['kind'] for p in sp}, key=lambda k: k != 'Roller')
         choices.append(f'''<a class="pt-choice" href="{url}{sc['id']}/">
-  <div class="pt-choice-img"><img src="/assets/products/pallet-truck/{sc['id']}/material-card.jpg" alt="{e(sc['short'])} pallet truck rollers and wheels" loading="lazy" width="640" height="424"></div>
+  <div class="pt-choice-img"><img src="/assets/products/pallet-truck/{sc['id']}/material-wheel-roller.jpg" alt="{e(sc['short'])} pallet truck wheel and roller" loading="lazy" width="720" height="478"></div>
   <div class="pt-choice-body">
     <div class="pt-choice-name">{e(sc['short'])}</div>
     <div class="pt-choice-full">{e(sc['full'])}</div>
@@ -607,24 +607,21 @@ def build_pt_category(cat):
   </div>
 </a>''')
     loads = [p['load_kg'] for p in prods]
-    body = f'''<header class="page-head pt-head">
-  <div class="pt-head-main">
-    {crumb_html}
-    <div class="section-tag">Wheels &amp; Castors</div>
-    <h1 class="page-title">Pallet Truck <span class="hl">Wheels &amp; Rollers</span></h1>
-    <p class="page-sub">{e(cat['intro'])}</p>
-    <div class="head-actions">
-      <a class="btn-primary" href="{e(enquire_url(cat['name'], None, 'Wheels & Castors > ' + cat['name'], url))}">Enquire Now</a>
-      <a class="btn-dark" href="{CATALOGUE}" target="_blank" rel="noopener">{DL_ICON} Wheels &amp; Castors Catalogue</a>
-    </div>
-    <div class="key-facts">
-      <div class="fact"><div class="fact-num">{len(prods)}</div><div class="fact-label">Products</div></div>
-      <div class="fact"><div class="fact-num">{len(subcats)}</div><div class="fact-label">Materials</div></div>
-      <div class="fact"><div class="fact-num">{n(prods[0]['bore_mm']) if len({p['bore_mm'] for p in prods}) == 1 else '—'}<small>mm</small></div><div class="fact-label">Bore</div></div>
-      <div class="fact"><div class="fact-num">{n(min(loads))}&ndash;{n(max(loads))}<small>kg</small></div><div class="fact-label">Load capacity</div></div>
-    </div>
+    body = f'''<header class="page-head">
+  {crumb_html}
+  <div class="section-tag">Wheels &amp; Castors</div>
+  <h1 class="page-title">Pallet Truck <span class="hl">Wheels &amp; Rollers</span></h1>
+  <p class="page-sub">{e(cat['intro'])}</p>
+  <div class="head-actions">
+    <a class="btn-primary" href="{e(enquire_url(cat['name'], None, 'Wheels & Castors > ' + cat['name'], url))}">Enquire Now</a>
+    <a class="btn-dark" href="{CATALOGUE}" target="_blank" rel="noopener">{DL_ICON} Wheels &amp; Castors Catalogue</a>
   </div>
-  <figure class="pt-head-img"><img src="/assets/products/pallet-truck/category.jpg" alt="Kotibhaskar pallet truck wheels and rollers in UHMW, PU-CI and cast iron" width="1200" height="900"></figure>
+  <div class="key-facts">
+    <div class="fact"><div class="fact-num">{len(prods)}</div><div class="fact-label">Products</div></div>
+    <div class="fact"><div class="fact-num">{len(subcats)}</div><div class="fact-label">Materials</div></div>
+    <div class="fact"><div class="fact-num">{n(prods[0]['bore_mm']) if len({p['bore_mm'] for p in prods}) == 1 else '—'}<small>mm</small></div><div class="fact-label">Bore</div></div>
+    <div class="fact"><div class="fact-num">{n(min(loads))}&ndash;{n(max(loads))}<small>kg</small></div><div class="fact-label">Load capacity</div></div>
+  </div>
 </header>
 
 <div class="wrap">
