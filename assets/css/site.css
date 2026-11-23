@@ -101,6 +101,12 @@ img{max-width:100%;}
 .feat-list li{font-size:14px;color:#444;padding:6px 0 6px 18px;position:relative;line-height:1.55;break-inside:avoid;}
 .feat-list li::before{content:'—';position:absolute;left:0;color:#C85A00;}
 
+/* Wheels & Castors overview: published ranges centred in a balanced row */
+.card-grid.hub-grid{grid-template-columns:repeat(auto-fit,minmax(220px,280px));justify-content:center;}
+.hub-note{margin:32px auto 0;max-width:880px;}
+.hub-grid .p-card-img{aspect-ratio:4/3;}
+@media(max-width:600px){.card-grid.hub-grid{grid-template-columns:minmax(0,340px);}}
+
 /* TABLES */
 .tbl-wrap{overflow-x:auto;border:1px solid #DDD8D0;background:#fff;}
 .data-table{width:100%;border-collapse:collapse;font-size:14px;}

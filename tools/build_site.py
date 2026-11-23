@@ -499,14 +499,14 @@ def build_hub(cats):
   <p class="page-sub">Industrial wheels and castors manufactured at our Satara MIDC plant. Browse each range for sizes, technical drawings and specifications.</p>
   <div class="head-actions">
     <a class="btn-dark" href="{CATALOGUE}" target="_blank" rel="noopener">{DL_ICON} Wheels &amp; Castors Catalogue</a>
-    <a class="btn-outline" href="/#castors">All wheel &amp; castor types</a>
+    <a class="btn-outline" href="/#products">All product categories</a>
   </div>
 </header>
 <div class="wrap">
-  <div class="card-grid">
+  <div class="card-grid hub-grid">
 {chr(10).join(cards)}
   </div>
-  <div class="custom-note" style="margin-top:32px;"><strong>More ranges coming online</strong>Other wheel and castor ranges are listed on our <a href="/#castors" style="color:#C85A00;">homepage</a> and in the Wheels &amp; Castors catalogue.</div>
+  <div class="custom-note hub-note"><strong>More ranges coming online</strong>Further wheel and castor ranges will be added here soon. Meanwhile, see our <a href="{CATALOGUE}" target="_blank" rel="noopener" style="color:#C85A00;">Wheels &amp; Castors catalogue</a> or <a href="/#contact" style="color:#C85A00;">send us an enquiry</a>.</div>
 </div>'''
     jsonld = {'@context': 'https://schema.org', '@graph': [crumb_ld]}
     return page(title='Industrial Wheels & Castors Manufacturer | Kotibhaskar Industries, Satara',
