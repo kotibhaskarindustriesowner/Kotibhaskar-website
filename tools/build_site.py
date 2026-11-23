@@ -293,13 +293,15 @@ def build_category(cat):
 
     filter_btns = [f'<button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All <span>{len(prods)}</span></button>']
     blocks, rows = [], []
+    gi = 0
     for g in groups:
         gp = [p for p in prods if p['group'] == g['id']]
         if not gp:
             continue
+        gi += 1
         filter_btns.append(f'<button type="button" class="filter-btn" data-filter="{g["id"]}" aria-pressed="false">{e(g["name"])} <span>{len(gp)}</span></button>')
         cards = []
-        for p in gp:
+        for j, p in enumerate(gp):
             cards.append(f'''<a class="p-card" href="{url}{p['slug']}/">
   <div class="p-card-img"><img src="{p['images']['thumb']}" alt="{e(p['name'])}" loading="lazy" width="420" height="594"></div>
   <div class="p-card-body">
@@ -310,7 +312,7 @@ def build_category(cat):
     <div class="p-card-cta">View details &rarr;</div>
   </div>
 </a>''')
-            rows.append(f'<tr><td>{e(g["short"])}</td><td><a href="{url}{p["slug"]}/">{n(p["diameter_mm"])} &times; {n(p["width_mm"])} mm '
+            rows.append(f'<tr class="grp-{(gi - 1) % 3 + 1}{" grp-start" if j == 0 else ""}"><td>{e(g["short"])}</td><td><a href="{url}{p["slug"]}/">{n(p["diameter_mm"])} &times; {n(p["width_mm"])} mm '
                         f'<span class="inch-cell">({n(p["inch"])} Inch Wheel)</span></a></td><td>{n(p["load_per_caster_kg"])} kg</td></tr>')
         gl = [p['load_per_caster_kg'] for p in gp]
         blocks.append(f'''<section class="group-block" id="{g['id']}" aria-labelledby="h-{g['id']}">
@@ -350,7 +352,7 @@ def build_category(cat):
   <ul class="feat-list">{feats}</ul>
 </div>
 
-<div class="wrap">
+<div class="wrap sum-table">
   <h2 class="h2">Size &amp; Load Table <small>{len(prods)} sizes</small></h2>
   <div class="tbl-wrap">
     <table class="data-table">
@@ -570,10 +572,18 @@ def pt_card(cat, sc, p):
 def pt_table(cat, prods, subcats, show_material=True):
     sname = {s['id']: s for s in subcats}
     head = ('<th scope="col">Material</th>' if show_material else '') + '<th scope="col">Type</th><th scope="col">Size (Dia &times; Width &times; Bore)</th><th scope="col">Load Capacity</th>'
-    rows = ''.join(
-        '<tr>' + (f'<td>{e(sname[p["subcat"]]["short"])}</td>' if show_material else '')
-        + f'<td>{e(p["kind"])}</td><td><a href="{cat["url"]}{p["subcat"]}/{p["slug"]}/">{e(pt_size(p))}</a></td><td>{n(p["load_kg"])} kg</td></tr>'
-        for p in prods)
+    order = [s['id'] for s in subcats]
+    rows, prev = '', None
+    for p in prods:
+        cls = [f'grp-{order.index(p["subcat"]) % 3 + 1}'] if show_material else []
+        if show_material and p['subcat'] != prev:
+            cls.append('grp-start')
+        if p['kind'] == 'Wheel':
+            cls.append('row-wheel')
+        prev = p['subcat']
+        kind = '<span class="kind-tag">Wheel</span>' if p['kind'] == 'Wheel' else e(p['kind'])
+        rows += (f'<tr class="{" ".join(cls)}">' + (f'<td>{e(sname[p["subcat"]]["short"])}</td>' if show_material else '')
+                 + f'<td>{kind}</td><td><a href="{cat["url"]}{p["subcat"]}/{p["slug"]}/">{e(pt_size(p))}</a></td><td>{n(p["load_kg"])} kg</td></tr>')
     return f'<div class="tbl-wrap"><table class="data-table"><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>'
 
 
@@ -621,7 +631,7 @@ def build_pt_category(cat):
   </div>
 </div>
 
-<div class="wrap alt">
+<div class="wrap alt sum-table">
   <h2 class="h2">All Sizes &amp; Load Capacities <small>{len(prods)} products</small></h2>
   {pt_table(cat, prods, subcats)}
 </div>
@@ -680,7 +690,7 @@ def build_pt_subcat(cat, sc):
 {chr(10).join(blocks)}
 </div>
 
-<div class="wrap alt">
+<div class="wrap alt sum-table">
   <h2 class="h2">{e(sc['short'])} Size &amp; Load Table <small>{len(prods)} products</small></h2>
   {pt_table(cat, prods, cat['subcats'], show_material=False)}
 </div>

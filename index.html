@@ -126,6 +126,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bott
 .nav-cta{background:#C85A00!important;color:#fff!important;padding:0 20px!important;height:38px!important;line-height:1!important;margin-left:4px;display:inline-flex!important;align-items:center!important;justify-content:center!important;border-bottom:none!important;font-family:'Barlow Condensed',sans-serif!important;font-size:13px!important;font-weight:700!important;letter-spacing:1.5px!important;text-transform:uppercase!important;}
 .nav-cta:hover{background:#E07B2A!important;}
 @media(max-width:1180px){.nav-links{gap:18px;}.nav-links a{letter-spacing:1px;}.nav-cta{padding:0 16px!important;}}
+.nav-logo{height:54px;width:auto;display:block;}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
 .hamburger span{width:24px;height:2px;background:#444;}
 .mobile-menu{display:none;position:fixed;inset:68px 0 0 0;background:#fff;z-index:999;padding:28px 5%;border-top:1px solid #DDD8D0;overflow-y:auto;}
@@ -138,22 +139,25 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bott
 .hero-content{position:relative;z-index:2;max-width:680px;}
 /* TASK 3 */
 
-.hero-tag{display:inline-flex;align-items:center;gap:10px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#888;margin-bottom:22px;}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#777;margin-bottom:24px;}
 .hero-tag::before{content:'';display:block;width:28px;height:2px;background:#C85A00;}
 .hero-headline{font-family:'Barlow Condensed',sans-serif;font-size:clamp(52px,7vw,88px);font-weight:800;line-height:0.95;letter-spacing:-1px;margin-bottom:22px;text-transform:uppercase;color:#1A2332;}
 .hero-headline .hl-orange{color:#C85A00;}
 .hero-headline .hl-grey{color:#AAAAAA;}
-.hero-sub{font-size:17px;font-weight:300;line-height:1.8;color:#555;max-width:500px;margin-bottom:40px;}
+.hero-sub{font-size:24px;font-weight:300;line-height:1.6;color:#4A4A4A;max-width:640px;margin-bottom:36px;}
+.hero-buttons .btn-primary,.hero-buttons .btn-outline{font-size:16px;padding:16px 36px;letter-spacing:2.2px;}
 .hero-buttons{display:flex;gap:14px;flex-wrap:wrap;}
 .btn-primary{background:#C85A00;color:#fff;padding:14px 32px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:background .2s;display:inline-flex;align-items:center;justify-content:center;}
 .btn-primary:hover{background:#E07B2A;}
 .btn-outline{background:transparent;color:#1A2332;padding:14px 32px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:2px solid #BFBAB2;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;justify-content:center;}
 .btn-outline:hover{border-color:#C85A00;color:#C85A00;}
-.hero-stats{position:absolute;bottom:48px;right:5%;display:flex;gap:40px;}
+.hero-stats{position:absolute;bottom:64px;right:5%;display:flex;gap:48px;}
 .stat{text-align:right;}
-.stat-num{font-family:'Barlow Condensed',sans-serif;font-size:42px;font-weight:800;color:#1A2332;line-height:1;}
+.stat-num{font-family:'Barlow Condensed',sans-serif;font-size:48px;font-weight:800;color:#1A2332;line-height:1;}
 .stat-num span{color:#C85A00;}
-.stat-label{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#AAA;margin-top:3px;}
+.stat-label{font-size:13.5px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#8A8A8A;margin-top:5px;}
+/* laptops & tablets: statistics sit under the buttons instead of crowding them */
+@media(max-width:1180px){#hero{flex-direction:column;align-items:flex-start;justify-content:center;}.hero-stats{position:static;margin-top:48px;justify-content:flex-start;}.stat{text-align:left;}}
 
 /* SECTIONS */
 section{padding:84px 5%;}
@@ -383,6 +387,9 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
   .footer-top{grid-template-columns:1fr;}
   .about-pillars{grid-template-columns:1fr;}
   .hero-buttons{flex-direction:column;}
+  .hero-sub{font-size:19px;}
+  .nav-logo{height:46px;}
+  .stat-num{font-size:40px;}
   .modal-body{padding:16px;}
   .cust-list{columns:1;}
   .ind-grid{grid-template-columns:repeat(2,1fr);}
@@ -398,7 +405,7 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
 <!-- NAV -->
 <nav id="main-nav">
   <a href="#hero" style="text-decoration:none;display:flex;align-items:center;" aria-label="Kotibhaskar Industries home">
-    <img src="/assets/brand/kotibhaskar-logo.png" alt="KOTIBHASKAR" width="392" height="120" style="height:42px;width:auto;display:block;">
+    <img class="nav-logo" src="/assets/brand/kotibhaskar-logo.png" alt="KOTIBHASKAR" width="392" height="120">
   </a>
   <ul class="nav-links">
     <li><a href="#hero">Home</a></li>

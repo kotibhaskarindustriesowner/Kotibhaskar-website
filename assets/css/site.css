@@ -18,7 +18,8 @@ img{max-width:100%;}
 /* NAV (same as homepage) */
 #main-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bottom:2px solid #DDD8D0;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px;box-shadow:0 2px 10px rgba(0,0,0,0.07);}
 .brand{text-decoration:none;display:flex;align-items:center;gap:12px;}
-.brand img{height:42px;width:auto;display:block;}
+.brand img{height:54px;width:auto;display:block;}
+@media(max-width:600px){.brand img{height:46px;}}
 .footer-logo{display:inline-flex;background:#fff;padding:8px 12px;}
 .footer-logo img{height:36px;}
 .nav-links{display:flex;gap:26px;list-style:none;align-items:center;}
@@ -199,6 +200,33 @@ img{max-width:100%;}
 
 /* TABLES */
 .tbl-wrap{overflow-x:auto;border:1px solid #DDD8D0;background:#fff;}
+/* Summary size & load tables (wheel categories + pallet truck): larger type, soft group tints */
+.sum-table .h2{font-size:clamp(34px,4.6vw,60px);margin-bottom:26px;}
+.sum-table .h2 small{font-size:.48em;letter-spacing:2.5px;}
+.sum-table .data-table{font-size:24px;}
+.sum-table .data-table th{font-size:20px;letter-spacing:2px;padding:16px 22px;}
+.sum-table .data-table td{padding:14px 22px;line-height:1.3;}
+.sum-table .data-table tr.grp-1 td{background:#FFF9F2;}
+.sum-table .data-table tr.grp-2 td{background:#F3F6FA;}
+.sum-table .data-table tr.grp-3 td{background:#F4F7F1;}
+.sum-table .data-table tr.grp-start td{border-top:3px solid #E6DCCD;}
+.sum-table .data-table tbody tr:first-child td{border-top:none;}
+.sum-table .data-table tr.row-wheel td{background:#FFF1D6;border-top:2px solid #EBC98A;border-bottom:2px solid #EBC98A;font-weight:600;color:#1A2332;}
+.sum-table .data-table tr.row-wheel td:first-child{box-shadow:inset 5px 0 0 #D9A441;}
+.sum-table .kind-tag{display:inline-block;background:#C85A00;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:.78em;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:2px 10px;line-height:1.35;}
+.sum-table .data-table tbody tr:hover td{background:#FFF0E6;}
+@media(max-width:900px){
+  .sum-table .data-table{font-size:20px;}
+  .sum-table .data-table th{font-size:17px;padding:13px 14px;}
+  .sum-table .data-table td{padding:12px 14px;}
+}
+@media(max-width:600px){
+  .sum-table .h2{font-size:34px;}
+  .sum-table .data-table{font-size:16px;}
+  .sum-table .data-table th{font-size:13.5px;letter-spacing:1px;padding:11px 8px;white-space:normal;}
+  .sum-table .data-table td{padding:10px 8px;}
+  .sum-table .inch-cell{display:block;font-size:.88em;}
+}
 .data-table{width:100%;border-collapse:collapse;font-size:14px;}
 .data-table th{background:#1A2332;color:#fff;padding:10px 14px;text-align:left;font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap;font-weight:700;}
 .data-table td{padding:10px 14px;border-bottom:1px solid #DDD8D0;color:#333;}
