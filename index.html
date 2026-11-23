@@ -134,30 +134,34 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bott
 .mobile-menu a{display:block;padding:14px 0;border-bottom:1px solid #DDD8D0;color:#1A1A1A;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:600;text-transform:uppercase;}
 
 /* HERO */
-#hero{min-height:100vh;background:linear-gradient(150deg,#FFF8F2 0%,#FFF1E4 40%,#FDEBD8 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding:100px 5% 80px;border-bottom:3px solid #C85A00;}
+#hero{min-height:100vh;background:linear-gradient(150deg,#FFF8F2 0%,#FFF1E4 40%,#FDEBD8 100%);display:flex;align-items:center;gap:4%;position:relative;overflow:hidden;padding:110px 5% 80px;border-bottom:3px solid #C85A00;}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(200,90,0,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(200,90,0,0.06) 1px,transparent 1px);background-size:56px 56px;}
-.hero-content{position:relative;z-index:2;max-width:680px;}
+.hero-content{position:relative;z-index:2;flex:0 0 57%;max-width:none;}
 /* TASK 3 */
 
-.hero-tag{display:inline-flex;align-items:center;gap:10px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#777;margin-bottom:24px;}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:600;letter-spacing:3.5px;text-transform:uppercase;color:#6F6F6F;margin-bottom:26px;}
 .hero-tag::before{content:'';display:block;width:28px;height:2px;background:#C85A00;}
-.hero-headline{font-family:'Barlow Condensed',sans-serif;font-size:clamp(52px,7vw,88px);font-weight:800;line-height:0.95;letter-spacing:-1px;margin-bottom:22px;text-transform:uppercase;color:#1A2332;}
+.hero-headline{font-family:'Barlow Condensed',sans-serif;font-size:clamp(60px,8.4vw,112px);font-weight:800;line-height:0.93;letter-spacing:-1px;margin-bottom:28px;text-transform:uppercase;color:#1A2332;}
 .hero-headline .hl-orange{color:#C85A00;}
 .hero-headline .hl-grey{color:#AAAAAA;}
-.hero-sub{font-size:24px;font-weight:300;line-height:1.6;color:#4A4A4A;max-width:640px;margin-bottom:36px;}
-.hero-buttons .btn-primary,.hero-buttons .btn-outline{font-size:16px;padding:16px 36px;letter-spacing:2.2px;}
-.hero-buttons{display:flex;gap:14px;flex-wrap:wrap;}
+.hero-sub{font-size:27px;font-weight:300;line-height:1.55;color:#444;max-width:720px;margin-bottom:42px;}
+.hero-buttons .btn-primary,.hero-buttons .btn-outline{font-size:18px;padding:20px 44px;letter-spacing:2.5px;}
+.hero-buttons{display:flex;gap:16px;flex-wrap:wrap;}
 .btn-primary{background:#C85A00;color:#fff;padding:14px 32px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:background .2s;display:inline-flex;align-items:center;justify-content:center;}
 .btn-primary:hover{background:#E07B2A;}
 .btn-outline{background:transparent;color:#1A2332;padding:14px 32px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:2px solid #BFBAB2;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;justify-content:center;}
 .btn-outline:hover{border-color:#C85A00;color:#C85A00;}
-.hero-stats{position:absolute;bottom:64px;right:5%;display:flex;gap:48px;}
-.stat{text-align:right;}
-.stat-num{font-family:'Barlow Condensed',sans-serif;font-size:48px;font-weight:800;color:#1A2332;line-height:1;}
+/* desktop: statistics fill the right-hand column beside the content */
+.hero-stats{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:40px;padding-left:4%;border-left:2px solid rgba(200,90,0,.22);}
+.hero-stats .stat{text-align:center;min-width:220px;}
+.stat{text-align:left;}
+.stat-num{font-family:'Barlow Condensed',sans-serif;font-size:72px;font-weight:800;color:#1A2332;line-height:1;}
 .stat-num span{color:#C85A00;}
-.stat-label{font-size:13.5px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#8A8A8A;margin-top:5px;}
+.stat-label{font-size:15px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:#7A7A7A;margin-top:8px;}
 /* laptops & tablets: statistics sit under the buttons instead of crowding them */
-@media(max-width:1180px){#hero{flex-direction:column;align-items:flex-start;justify-content:center;}.hero-stats{position:static;margin-top:48px;justify-content:flex-start;}.stat{text-align:left;}}
+/* tablets: content full width, statistics in a row under the buttons */
+@media(max-width:1180px){.hero-sub{font-size:23px;}.hero-stats{gap:32px;}.stat-num{font-size:62px;}.hero-stats .stat{min-width:0;}}
+@media(max-width:1000px){#hero{flex-direction:column;align-items:flex-start;justify-content:center;}.hero-headline{font-size:clamp(58px,10.5vw,96px);}.hero-content{flex:none;width:100%;}.hero-stats{flex:none;flex-direction:row;align-items:flex-start;gap:56px;padding-left:0;border-left:none;margin-top:52px;justify-content:flex-start;}.hero-stats .stat{text-align:left;min-width:0;}.stat-num{font-size:60px;}.stat-label{font-size:14px;}.hero-sub{font-size:25px;}}
 
 /* SECTIONS */
 section{padding:84px 5%;}
@@ -371,7 +375,7 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
 }
 @media(max-width:900px){
   .nav-links{display:none;}.hamburger{display:flex;}
-  .hero-stats{position:static;margin-top:40px;gap:24px;justify-content:flex-start;}.stat{text-align:left;}
+  .hero-stats{margin-top:44px;gap:40px;}
   .product-cats{grid-template-columns:1fr;}
   .about-grid{grid-template-columns:1fr;gap:40px;}
   .contact-grid{grid-template-columns:1fr;}
@@ -387,9 +391,14 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
   .footer-top{grid-template-columns:1fr;}
   .about-pillars{grid-template-columns:1fr;}
   .hero-buttons{flex-direction:column;}
-  .hero-sub{font-size:19px;}
+  .hero-sub{font-size:20px;margin-bottom:32px;}
+  .hero-tag{font-size:14px;letter-spacing:2.5px;}
+  .hero-buttons .btn-primary,.hero-buttons .btn-outline{font-size:16px;padding:17px 28px;}
+  .hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:40px;width:100%;}
+  .hero-headline{font-size:64px;}
+  .stat-label{font-size:12px;letter-spacing:1.5px;}
   .nav-logo{height:46px;}
-  .stat-num{font-size:40px;}
+  .stat-num{font-size:46px;}
   .modal-body{padding:16px;}
   .cust-list{columns:1;}
   .ind-grid{grid-template-columns:repeat(2,1fr);}
