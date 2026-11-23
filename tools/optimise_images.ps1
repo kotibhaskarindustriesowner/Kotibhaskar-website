@@ -10,15 +10,24 @@
     <slug>-drawing.jpg  1100 px wide technical drawing (higher quality for line art)
   into the folder named in each product's "images" paths.
   Existing outputs are skipped unless the source is newer (use -Force to redo all).
+
+  Other product families: pass the data file instead of a wheel category, e.g.
+      powershell -ExecutionPolicy Bypass -File tools\optimise_images.ps1 -DataFile data\products\trolleys\trolleys.json
+  (products without a drawing simply get photo + thumb)
 #>
 param(
-  [Parameter(Mandatory = $true)][string]$Category,
+  [string]$Category,
+  [string]$DataFile,
   [switch]$Force
 )
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.Drawing
 $repo = Split-Path -Parent $PSScriptRoot
-$data = Get-Content -Raw -Encoding UTF8 (Join-Path $repo "data\products\wheels\$Category.json") | ConvertFrom-Json
+if (-not $DataFile) {
+  if (-not $Category) { throw 'Pass a wheel category (e.g. uhmw) or -DataFile <path>' }
+  $DataFile = "data\products\wheels\$Category.json"
+}
+$data = Get-Content -Raw -Encoding UTF8 (Join-Path $repo $DataFile) | ConvertFrom-Json
 $jpeg = [System.Drawing.Imaging.ImageCodecInfo]::GetImageEncoders() | Where-Object { $_.MimeType -eq 'image/jpeg' }
 
 function Save-Resized([string]$src, [string]$dest, [int]$width, [long]$quality) {
@@ -45,9 +54,9 @@ $made = 0; $skipped = 0
 foreach ($p in $data.products) {
   $jobs = @(
     @($p.source.photo,   $p.images.photo,   900,  82),
-    @($p.source.photo,   $p.images.thumb,   420,  78),
-    @($p.source.drawing, $p.images.drawing, 1100, 86)
+    @($p.source.photo,   $p.images.thumb,   420,  78)
   )
+  if ($p.source.drawing) { $jobs += ,@($p.source.drawing, $p.images.drawing, 1100, 86) }
   foreach ($j in $jobs) {
     $src = Join-Path $repo ($j[0] -replace '/', '\')
     $dest = Join-Path $repo (($j[1].TrimStart('/')) -replace '/', '\')
@@ -55,6 +64,6 @@ foreach ($p in $data.products) {
     if ((Save-Resized $src $dest $j[2] $j[3]) -eq 'made') { $made++ } else { $skipped++ }
   }
 }
-$outDir = Join-Path $repo "assets\products\wheels\$Category"
+$outDir = Split-Path -Parent (Join-Path $repo (($data.products[0].images.photo.TrimStart('/')) -replace '/', '\'))
 $total = (Get-ChildItem $outDir -File | Measure-Object Length -Sum)
 "{0} images written, {1} up to date. Folder now holds {2} files, {3:N1} MB." -f $made, $skipped, $total.Count, ($total.Sum / 1MB)

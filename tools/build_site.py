@@ -20,6 +20,7 @@ import json
 import os
 import re
 import shutil
+import sys
 import urllib.parse
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -65,7 +66,7 @@ def wa_url(text):
 # Edit in ONE place; all product datasheets pick it up on the next build.
 COMPANY = {
     'name': 'Kotibhaskar Material Handling Equipments',
-    'tagline': 'Manufacturer of Material Handling Equipment, Industrial Trolleys, and Industrial Wheels & Castors',
+    'tagline': 'Manufacturer of Material Handling Equipments, Industrial Trolleys, and Industrial Wheels & Castors',
     'address': 'Plot No. K-3/2/1, Additional MIDC, Satara - 415004, Maharashtra, India',
     'address_line1': 'Plot No. K-3/2/1, Additional MIDC,',
     'address_line2': 'Satara - 415004, Maharashtra, India',
@@ -190,8 +191,9 @@ def page(*, title, description, canonical, body, og_image=None, jsonld=None, wa_
     <li><a href="/#products" class="current">Products</a></li>
     <li><a href="/#customers">Customers</a></li>
     <li><a href="/#network">Pan-India Reach</a></li>
+    <li><a href="/#location">Our Location</a></li>
     <li><a href="/#about">About</a></li>
-    <li><a href="/#contact" class="nav-cta">Get Quote</a></li>
+    <li><a href="/#contact" class="nav-cta">Contact Us</a></li>
   </ul>
   <button class="hamburger" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
@@ -201,6 +203,7 @@ def page(*, title, description, canonical, body, og_image=None, jsonld=None, wa_
   <a href="/wheels-castors/">Wheels &amp; Castors</a>
   <a href="/#customers">Customers</a>
   <a href="/#network">Pan-India Reach</a>
+  <a href="/#location">Our Location</a>
   <a href="/#about">About Us</a>
   <a href="/#contact">Contact &amp; Quote</a>
   <a href="/Kotibhaskar%201%20Catalogue.pdf" target="_blank" rel="noopener" class="accent">&#8595; MHE Catalogue</a>
@@ -218,7 +221,7 @@ def page(*, title, description, canonical, body, og_image=None, jsonld=None, wa_
     <div class="footer-col">
       <h4>Products</h4>
       <a href="/#mhe">MHE Equipment</a>
-      <a href="/#trolleys">Trolleys</a>
+      <a href="/material-handling-trolleys/">Trolleys</a>
       <a href="/wheels-castors/">Wheels &amp; Castors</a>
       {''.join(f'<a href="{c["url"]}">{e(c["name"])}</a>' for c in NAV_CATS)}
     </div>
@@ -227,6 +230,7 @@ def page(*, title, description, canonical, body, og_image=None, jsonld=None, wa_
       <a href="/#about">About Us</a>
       <a href="/#customers">Customers</a>
       <a href="/#network">Pan-India Reach</a>
+      <a href="/#location">Our Location</a>
       <a href="https://www.linkedin.com/company/kotibhaskar-industries/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
     <div class="footer-col">
@@ -515,6 +519,282 @@ def build_hub(cats):
                 canonical='/wheels-castors/', body=body, jsonld=jsonld)
 
 
+# ============================================================================
+# MATERIAL HANDLING TROLLEYS (data/products/trolleys/trolleys.json)
+# Flexible products: each trolley has its own spec columns and size variants.
+# No model codes and no prices are ever rendered (checked by check_public_output).
+# ============================================================================
+TROLLEY_ROOT = os.path.join(REPO, 'material-handling-trolleys')
+
+
+def _num_unit(v):
+    m = re.match(r'\s*([\d.]+)\s*(kg|lit|liters|litres|L)\b', v or '')
+    return (float(m.group(1)), m.group(2)) if m else (None, None)
+
+
+def capacity_range(p):
+    vals = [_num_unit(v.get('Load Capacity', ''))[0] for v in p['variants']]
+    vals = [x for x in vals if x is not None]
+    if not vals:
+        return ''
+    lo, hi = min(vals), max(vals)
+    return f'{n(lo)} kg' if lo == hi else f'{n(lo)}–{n(hi)} kg'
+
+
+def split_columns(p):
+    """Columns identical for every size become 'common' specs; the rest form the table."""
+    cols = list(p['variants'][0].keys())
+    if len(p['variants']) == 1:
+        return cols, []
+    common = [c for c in cols if len({v.get(c) for v in p['variants']}) == 1]
+    table = [c for c in cols if c not in common]
+    return table, common
+
+
+def variant_text(p, v):
+    return ', '.join(v[k] for k in p.get('variant_key', []) if v.get(k))
+
+
+def wheel_html(cat, p, cls='chip-list'):
+    if not p.get('wheels'):
+        return ''
+    # a material links to a wheel category only when it is the same construction (PU-PP has no wheel page)
+    chips = ''.join((f'<a class="chip" href="{w["url"]}">' if w.get('url') else '<span class="chip">')
+                    + f'<b>{e(w["name"])}</b> {e(w["full"])}' + ('</a>' if w.get('url') else '</span>')
+                    for w in (cat['wheel_materials'][k] for k in p['wheels']))
+    return f'<div class="{cls}">{chips}</div>'
+
+
+def build_trolley_product(cat, p, idx):
+    groups = {g['id']: g for g in cat['groups']}
+    g = groups[p['group']]
+    url = f"{cat['url']}{p['slug']}/"
+    crange = capacity_range(p)
+    table_cols, common_cols = split_columns(p)
+    nsizes = len(p['variants'])
+    crumb_html, crumb_ld = crumbs([('Home', '/'), (e(cat['name']), cat['url']), (e(g['name']), f"{cat['url']}#{g['id']}"), (e(p['name']), None)])
+    path = f"{cat['name']} > {g['name']}"
+    if p.get('facts'):      # products without wheels (pallets) show their own key facts instead
+        extra_facts = ''.join(f'<div class="fact"><div class="fact-num">{e(num)}{f"<small>{e(unit)}</small>" if unit else ""}</div><div class="fact-label">{e(label)}</div></div>'
+                              for num, unit, label in p['facts'])
+    else:
+        brake_word = {'optional': 'Optional', 'standard': 'Standard'}.get(p.get('brake'), '—')
+        extra_facts = (f'<div class="fact"><div class="fact-num">{len(p.get("wheels", []))}</div><div class="fact-label">Wheel options</div></div>'
+                       f'<div class="fact"><div class="fact-num fact-text">{brake_word}</div><div class="fact-label">Parking brake</div></div>')
+
+    head_cells = ''.join(f'<th scope="col">{e(c)}</th>' for c in table_cols) + '<th scope="col"><span class="sr-only">Enquiry</span></th>'
+    body_rows = ''
+    for v in p['variants']:
+        cells = ''.join(f'<td{" class=\"key\"" if c == "Load Capacity" else ""}>{e(v[c])}</td>' for c in table_cols)
+        vt = variant_text(p, v)
+        link = enquire_url(f"{p['name']} – {vt}" if vt else p['name'], vt or None, path, url)
+        body_rows += f'<tr>{cells}<td><a class="row-enq" href="{e(link)}">Enquire</a></td></tr>'
+    common = ''
+    if common_cols:
+        common = '<p class="common-specs"><b>Common to all sizes:</b> ' + ' &middot; '.join(
+            f'{e(c)} <span>{e(p["variants"][0][c])}</span>' for c in common_cols) + '</p>'
+    feats = ''.join(f'<li>{e(f)}</li>' for f in p['features'])
+    notes = ''.join(f'<p class="t-note">{e(nt)}</p>' for nt in p.get('notes', []))
+    brake = f'<div class="brake-note"><b>Brakes</b> {e(p["brake_text"])}</div>' if p.get('brake') else ''
+    wheels = (f'<h2 class="sec-label">Wheel Options</h2>{wheel_html(cat, p)}') if p.get('wheels') else ''
+    same = [q for q in cat['products'] if q['group'] == p['group'] and q['slug'] != p['slug']]
+    sibs = ''
+    if same:
+        sibs = '<div class="wrap alt siblings-wrap"><h2 class="h2">Other ' + e(g['name']) + '</h2><div class="siblings">' + ''.join(
+            f'<a class="sib" href="{cat["url"]}{q["slug"]}/">{e(q["name"])}<small>{capacity_range(q)}</small></a>' for q in same) + '</div></div>'
+
+    body = f'''<header class="page-head t-head">
+  {crumb_html}
+  <div class="duty-badge">{e(cat['name'])} &middot; <b>{e(g['name'])}</b></div>
+  <h1 class="page-title">{e(p['name'])}</h1>
+  <p class="page-sub">{e(p['summary'])}</p>
+  <div class="key-facts">
+    <div class="fact"><div class="fact-num">{crange.replace(' kg', '')}<small>kg</small></div><div class="fact-label">Load capacity</div></div>
+    <a class="fact fact-link" href="#sizes"><div class="fact-num">{nsizes}</div><div class="fact-label">{'Size available' if nsizes == 1 else 'Sizes available'} &darr;</div></a>
+    {extra_facts}
+  </div>
+</header>
+
+<div class="wrap t-main">
+  <div class="t-layout">
+    <figure class="t-photo">
+      <a href="{p['images']['photo']}" data-lightbox><img src="{p['images']['photo']}" alt="{e(p['name'])} — product photograph" width="900" height="1165"></a>
+      <figcaption>Product photo <span>Click to enlarge</span></figcaption>
+    </figure>
+    <div>
+      <h2 class="sec-label">Construction &amp; Features</h2>
+      <ul class="feat-list t-feats">{feats}</ul>
+      {notes}
+      {wheels}
+      {brake}
+      <div class="action-box">
+        <a class="btn-primary" href="{e(enquire_url(p['name'], None, path, url))}">&#9993; Enquire Now</a>
+        <a class="btn-wa" href="{e(wa_url(f'Hello, I would like a quotation for: {p["name"]} ({SITE}{url})'))}" target="_blank" rel="noopener">{WA_ICON.replace('width="20" height="20"', 'width="18" height="18"')} WhatsApp Enquiry</a>
+        <a class="btn-dark" href="{cat['catalogue']}" target="_blank" rel="noopener">{DL_ICON} Trolley Catalogue (PDF)</a>
+        <button type="button" class="btn-outline" data-print>&#128438; Print / Save as PDF</button>
+        <p class="action-note">No prices are listed online &mdash; send an enquiry for a quotation.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap alt t-sizes" id="sizes">
+  <h2 class="h2">Available Sizes &amp; Specifications <small>{nsizes} {'size' if nsizes == 1 else 'sizes'}</small></h2>
+  <div class="tbl-wrap"><table class="data-table variant-table"><thead><tr>{head_cells}</tr></thead><tbody>{body_rows}</tbody></table></div>
+  {common}
+</div>
+{sibs}'''
+
+    jsonld = {'@context': 'https://schema.org', '@graph': [
+        crumb_ld,
+        {'@type': 'Product', 'name': p['name'], 'url': SITE + url, 'image': [SITE + p['images']['photo']],
+         'description': p['summary'], 'brand': {'@type': 'Brand', 'name': 'Kotibhaskar'},
+         'manufacturer': {'@id': f'{SITE}/#organization'}, 'category': path},
+    ]}
+    sheet = trolley_sheet(cat, g, p, url, table_cols, common_cols, crange)
+    title = f"{p['name']} – {crange} Load Capacity, {nsizes} {'Size' if nsizes == 1 else 'Sizes'} | Kotibhaskar"
+    desc = f"{p['name']} by Kotibhaskar Industries, Satara: {p['summary']} Load capacity {crange}."
+    return page(title=title, description=desc, canonical=url, body=body, jsonld=jsonld,
+                og_image=SITE + p['images']['photo'],
+                wa_text=f'Hello, I would like a quotation for: {p["name"]} ({SITE}{url})', sheet=sheet)
+
+
+def trolley_sheet(cat, g, p, url, table_cols, common_cols, crange):
+    """Branded A4 datasheet for a trolley (same letterhead as the wheel datasheets)."""
+    c = COMPANY
+    head = ''.join(f'<th>{e(col)}</th>' for col in table_cols)
+    rows = ''.join('<tr>' + ''.join(f'<td{" class=\"key\"" if col == "Load Capacity" else ""}>{e(v[col])}</td>' for col in table_cols) + '</tr>'
+                   for v in p['variants'])
+    common = (' &middot; '.join(f'{e(col)}: <b>{e(p["variants"][0][col])}</b>' for col in common_cols)) if common_cols else ''
+    wheels = ''
+    if p.get('wheels'):
+        wheels = '<div class="pst-line"><b>Wheel options:</b> ' + ' &middot; '.join(
+            f'{e(w["name"])} ({e(w["full"])})' for w in (cat['wheel_materials'][k] for k in p['wheels'])) + '</div>'
+    brake = f'<div class="pst-line"><b>Brakes:</b> {e(p["brake_text"])}</div>' if p.get('brake') else ''
+    notes = ''.join(f'<div class="pst-line">{e(nt)}</div>' for nt in p.get('notes', []))
+    feats = ''.join(f'<li>{e(f)}</li>' for f in p['features'])
+    return f'''<div class="print-sheet" aria-hidden="true">
+  <div class="ps-head">
+    <img class="ps-logo" src="{c['logo']}" alt="KOTIBHASKAR">
+    <div class="ps-company">
+      <div class="ps-name">{e(c['name'])}</div>
+      <div class="ps-tag">{e(c['tagline'])}</div>
+      <div class="ps-contact">{e(c['address'])}<br>
+        Tel: {' &middot; '.join(e(t) for t in c['phones'])}<br>
+        Email: {' &middot; '.join(e(m) for m in c['emails'])} &nbsp;|&nbsp; Web: {e(c['website'])}</div>
+    </div>
+  </div>
+  <div class="ps-band"><span>Product Specification Sheet</span><span>{e(cat['name'])} &middot; {e(g['name'])}</span></div>
+  <div class="ps-title">
+    <div>
+      <div class="ps-cat">{e(cat['name'])} &middot; {e(g['name'])}</div>
+      <div class="ps-h">{e(p['name'])}</div>
+      <div class="pst-sub">{e(p['summary'])}</div>
+    </div>
+    <div class="ps-load"><span>Load Capacity</span><b>{e(crange)}</b></div>
+  </div>
+  <div class="pst-top">
+    <div class="pst-photo"><img src="{p['images']['photo']}" alt=""></div>
+    <div class="pst-info">
+      <div class="ps-sec">Construction &amp; Features</div>
+      <ul class="pst-feats">{feats}</ul>
+      {wheels}{brake}{notes}
+    </div>
+  </div>
+  <div class="ps-sec">Available Sizes &amp; Specifications</div>
+  <table class="pst-table"><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table>
+  {f'<div class="pst-common">Common to all sizes: {common}</div>' if common else ''}
+  <div class="ps-note">Specifications subject to change without notice. Contact us for a quotation.</div>
+  <div class="ps-foot">
+    <div><b>{e(c['name'])}</b><br>{e(c['website'])}</div>
+    <div>{e(c['phones'][0])} &nbsp;|&nbsp; {e(c['emails'][0])}</div>
+    <div class="ps-url">{'/<wbr>'.join(f'<span>{e(seg)}</span>' for seg in (c['website'] + url).split('/'))}</div>
+  </div>
+</div>'''
+
+
+def build_trolley_category(cat):
+    groups = cat['groups']
+    prods = cat['products']
+    url = cat['url']
+    crumb_html, crumb_ld = crumbs([('Home', '/'), (e(cat['name']), None)])
+    filter_btns = [f'<button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All <span>{len(prods)}</span></button>']
+    blocks = []
+    for g in groups:
+        gp = [p for p in prods if p['group'] == g['id']]
+        if not gp:
+            continue
+        filter_btns.append(f'<button type="button" class="filter-btn" data-filter="{g["id"]}" aria-pressed="false">{e(g["name"])} <span>{len(gp)}</span></button>')
+        cards = ''.join(f'''<a class="p-card" href="{url}{p['slug']}/">
+  <div class="p-card-img"><img src="{p['images']['thumb']}" alt="{e(p['name'])}" loading="lazy" width="420" height="544"></div>
+  <div class="p-card-body">
+    <div class="p-card-duty">{e(g['name'])}</div>
+    <div class="p-card-name">{e(p['name'])}</div>
+    <div class="p-card-meta">{len(p['variants'])} {'size' if len(p['variants']) == 1 else 'sizes'}</div>
+    <div class="p-card-load">Load capacity: <b>{capacity_range(p)}</b></div>
+    <div class="p-card-cta">View details &rarr;</div>
+  </div>
+</a>''' for p in gp)
+        blocks.append(f'''<section class="group-block" id="{g['id']}" aria-labelledby="h-{g['id']}">
+  <div class="group-head"><h2 id="h-{g['id']}">{e(g['name'])}</h2><p>{len(gp)} {'product' if len(gp) == 1 else 'products'}</p></div>
+  <div class="card-grid">{cards}</div>
+</section>''')
+    body = f'''<header class="page-head">
+  {crumb_html}
+  <div class="section-tag">What We Make</div>
+  <h1 class="page-title">Material Handling <span class="hl">Trolleys</span></h1>
+  <p class="page-sub">{e(cat['intro'])}</p>
+  <div class="head-actions">
+    <a class="btn-primary" href="{e(enquire_url(cat['name'], None, cat['name'], url))}">Enquire Now</a>
+    <a class="btn-dark" href="{cat['catalogue']}" target="_blank" rel="noopener">{DL_ICON} Trolley Catalogue</a>
+  </div>
+</header>
+<div class="wrap">
+  <div class="filter-bar" role="group" aria-label="Filter by trolley type">{''.join(filter_btns)}</div>
+{chr(10).join(blocks)}
+</div>
+<section class="cta-band">
+  <div><h2>Need a trolley for a specific load or space?</h2><p>Tell us what you need to move &mdash; our team will recommend the right trolley and size.</p></div>
+  <div class="acts"><a class="btn-primary" href="{e(enquire_url(cat['name'], None, cat['name'], url))}">Send Enquiry</a><a class="btn-outline" href="tel:+919822413252">Call +91 98224 13252</a></div>
+</section>'''
+    jsonld = {'@context': 'https://schema.org', '@graph': [crumb_ld,
+        {'@type': 'CollectionPage', 'name': cat['name'], 'url': SITE + url, 'description': cat['intro'],
+         'mainEntity': {'@type': 'ItemList', 'numberOfItems': len(prods), 'itemListElement': [
+             {'@type': 'ListItem', 'position': i + 1, 'url': f"{SITE}{url}{p['slug']}/", 'name': p['name']} for i, p in enumerate(prods)]}}]}
+    return page(title='Material Handling Trolleys – Platform, Shelf, Turntable & Utility Trolleys | Kotibhaskar Industries',
+                description=f"{cat['intro']} {len(prods)} trolley products with sizes, capacities and specifications.",
+                canonical=url, body=body, jsonld=jsonld,
+                og_image=SITE + prods[0]['images']['photo'] if prods else None,
+                wa_text='Hello, I am interested in your material handling trolleys (kotibhaskarindustries.com).')
+
+
+# Public-output safety checks: no prices and no model codes on trolley pages
+PRICE_RX = re.compile(r'(?i)\bprice\b|\bdiscount\b|\bgst\b|\btaxable\b|total amount|\bRs\.?\s?\d|₹|\b\d{1,3},\d{3}\.\d{2}\b')
+CODE_RX = re.compile(r'\b(?:PL|WS|DR|TP|TW|SA|TPT|TWT|DWB|2SH|3SH|5SH|MU|GAS|CH|PA|CFT)\.\d{2}\.[0-9A-Z]{1,2}\b')
+
+
+def check_public_output(paths):
+    problems = []
+    for pth in paths:
+        txt = open(pth, encoding='utf-8').read()
+        visible = re.sub(r'No prices are listed online', '', txt)
+        # product content only (structured data + <main> + datasheet), not the shared nav/footer,
+        # which correctly links to the PU-CI wheel category
+        content = (txt.split('<body', 1)[0] + txt.split('<main>', 1)[-1].split('</main>', 1)[0]
+                   + (txt.split('class="print-sheet"', 1)[1] if 'class="print-sheet"' in txt else ''))
+        # trolleys use PU-PP wheels; PU-CI (a different construction) must never appear in trolley content
+        for rx, label, scope in ((PRICE_RX, 'price/commercial text', visible), (CODE_RX, 'model code', visible),
+                                 (re.compile(r'PU\s*-?\s*CI|Cast Iron Core|/wheels-castors/puci'), 'PU-CI in trolley content', content)):
+            m = rx.search(scope)
+            if m:
+                problems.append(f'{os.path.relpath(pth, REPO)}: {label} "{m.group(0)}"')
+    if problems:
+        print('BUILD STOPPED - public output check failed:')
+        for pr in problems:
+            print('  -', pr)
+        sys.exit(1)
+
+
 def write(path, content):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w', encoding='utf-8', newline='\n') as f:
@@ -550,13 +830,32 @@ def main():
             urls.append(f"{c['url']}{p['slug']}/")
             count += 1
 
+    # ---- Material Handling Trolleys
+    tcount = 0
+    tpath = os.path.join(REPO, 'data', 'products', 'trolleys', 'trolleys.json')
+    if os.path.exists(tpath):
+        with open(tpath, encoding='utf-8') as f:
+            tcat = json.load(f)
+        shutil.rmtree(TROLLEY_ROOT, ignore_errors=True)
+        written = [os.path.join(TROLLEY_ROOT, 'index.html')]
+        write(written[0], build_trolley_category(tcat))
+        urls.append(tcat['url'])
+        for i, p in enumerate(tcat['products']):
+            pth = os.path.join(TROLLEY_ROOT, p['slug'], 'index.html')
+            write(pth, build_trolley_product(tcat, p, i))
+            written.append(pth)
+            urls.append(f"{tcat['url']}{p['slug']}/")
+            tcount += 1
+        check_public_output(written)
+
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u in urls:
         pr = '1.0' if u == '/' else ('0.8' if u.count('/') <= 3 else '0.6')
         sm.append(f'  <url>\n    <loc>{SITE}{u}</loc>\n    <lastmod>{TODAY}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>{pr}</priority>\n  </url>')
     sm.append('</urlset>')
     write(os.path.join(REPO, 'sitemap.xml'), '\n'.join(sm) + '\n')
-    print(f'Built hub + {len(cats)} category page(s) + {count} product pages; sitemap has {len(urls)} URLs.')
+    print(f'Built hub + {len(cats)} category page(s) + {count} product pages; '
+          f'trolleys: category + {tcount} product page(s); sitemap has {len(urls)} URLs.')
 
 
 if __name__ == '__main__':

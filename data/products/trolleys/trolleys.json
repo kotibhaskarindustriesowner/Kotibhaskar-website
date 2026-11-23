@@ -1,0 +1,1792 @@
+{
+  "id": "trolleys",
+  "name": "Material Handling Trolleys",
+  "url": "/material-handling-trolleys/",
+  "catalogue": "/Kotibhaskar%20Trolley%20Catalogue.pdf",
+  "intro": "Kotibhaskar material handling trolleys are fabricated from M.S. sheet, tube and pipe for moving boxes, bags, crates, drums, cylinders and heavy materials in factories, godowns, stores and warehouses.",
+  "groups": [
+    {
+      "id": "platform-workshop",
+      "name": "Platform & Workshop Trolleys"
+    },
+    {
+      "id": "turntable",
+      "name": "Turntable Trolleys & Trucks"
+    },
+    {
+      "id": "shelf",
+      "name": "Shelf Trolleys"
+    },
+    {
+      "id": "hand",
+      "name": "Hand Trolleys & Barrows"
+    },
+    {
+      "id": "gas",
+      "name": "Gas Cylinder Trolleys"
+    },
+    {
+      "id": "workshop-utility",
+      "name": "Workshop Utility Trolleys"
+    },
+    {
+      "id": "pallet",
+      "name": "Industrial Steel Pallets"
+    }
+  ],
+  "wheel_materials": {
+    "uhmw": {
+      "name": "UHMW",
+      "full": "Ultra-High-Molecular-Weight Polyethylene",
+      "url": "/wheels-castors/uhmw/"
+    },
+    "pupp": {
+      "name": "PU-PP",
+      "full": "Polyurethane on Polypropylene",
+      "url": null
+    },
+    "ci": {
+      "name": "CI",
+      "full": "Cast Iron",
+      "url": "/wheels-castors/ci/"
+    }
+  },
+  "products": [
+    {
+      "num": "10",
+      "slug": "platform-trolley",
+      "name": "Platform Trolley",
+      "group": "platform-workshop",
+      "summary": "M.S. sheet platform trolley with 2 fixed and 2 swivel castors for moving corrugated boxes, gunny bags, crates and heavy materials.",
+      "features": [
+        "The platform is fabricated from a single piece of M.S. sheet, bent in six folds to form a “C” channel at the ends, with “U” grooves on the top surface for a neat appearance.",
+        "The platform is ribbed underneath with additional “C” channels for extra strength.",
+        "The push–pull handle is made from heavy M.S. round pipe and bolted on top of the platform.",
+        "Fitted with 2 fixed and 2 swivel castors.",
+        "Widely used for moving corrugated boxes, gunny bags, heavy materials, crates, etc. within factories, godowns, stores and warehouses."
+      ],
+      "variant_key": [
+        "Platform Size (L × W)",
+        "Sheet Thickness",
+        "Load Capacity"
+      ],
+      "variants": [
+        {
+          "Platform Size (L × W)": "600 × 450 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "200 kg",
+          "Platform Height": "170 mm",
+          "Handle Height": "925 mm",
+          "Overall Size (L × W × H)": "750 × 450 × 925 mm",
+          "Castor Wheel (Dia × W)": "100 × 32 mm",
+          "Wheel Bearing": "Plain bore",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "900 × 600 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "300 kg",
+          "Platform Height": "195 mm",
+          "Handle Height": "925 mm",
+          "Overall Size (L × W × H)": "1050 × 600 × 925 mm",
+          "Castor Wheel (Dia × W)": "125 × 32 mm",
+          "Wheel Bearing": "Plain bore",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "900 × 600 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "500 kg",
+          "Platform Height": "225 mm",
+          "Handle Height": "925 mm",
+          "Overall Size (L × W × H)": "1050 × 600 × 925 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "1250 × 750 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "600 kg",
+          "Platform Height": "225 mm",
+          "Handle Height": "925 mm",
+          "Overall Size (L × W × H)": "1400 × 750 × 925 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Wheel Bearing": "Plain bore",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "1250 × 750 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "800 kg",
+          "Platform Height": "275 mm",
+          "Handle Height": "925 mm",
+          "Overall Size (L × W × H)": "1400 × 750 × 925 mm",
+          "Castor Wheel (Dia × W)": "200 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "1500 × 900 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "1000 kg",
+          "Platform Height": "275 mm",
+          "Handle Height": "925 mm",
+          "Overall Size (L × W × H)": "1650 × 900 × 925 mm",
+          "Castor Wheel (Dia × W)": "200 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": "optional",
+      "brake_text": "Available with brakes and without brakes (optional swivel castor with parking brake).",
+      "notes": [],
+      "images": {
+        "photo": "/assets/products/trolleys/platform-trolley-photo.jpg",
+        "thumb": "/assets/products/trolleys/platform-trolley-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/10 Platform Trolley/1.png",
+        "pdf": "product-sources/20 Trolleys/10 Platform Trolley/010 Platform Trolley.pdf"
+      }
+    },
+    {
+      "num": "20",
+      "slug": "workshop-trolley-sheet",
+      "name": "Workshop Trolley – M.S. Sheet Sides",
+      "group": "platform-workshop",
+      "summary": "Workshop trolley with all 4 sides closed by 1.2 mm M.S. sheet up to 450 mm height, for moving loose components and materials safely.",
+      "features": [
+        "The platform is fabricated from a single piece of M.S. sheet, bent in six folds to form a “C” channel at the ends, with “U” grooves on the top surface for a neat appearance.",
+        "The platform is ribbed underneath with additional “C” channels for extra strength.",
+        "All 4 sides are closed with 1.2 mm M.S. sheet with “U” grooves for strength, about 450 mm high above the platform.",
+        "The push–pull handle is made from heavy M.S. round pipe and welded on top of the platform.",
+        "Widely used for moving loose components, corrugated boxes, gunny bags, heavy materials, crates, etc. within factories, godowns, stores and warehouses."
+      ],
+      "variant_key": [
+        "Platform Size (L × W)",
+        "Sheet Thickness",
+        "Load Capacity"
+      ],
+      "variants": [
+        {
+          "Platform Size (L × W)": "600 × 450 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "200 kg",
+          "Platform Height": "170 mm",
+          "Handle Height": "925 mm",
+          "Side Sheet (Height × Thickness)": "450 × 1.2 mm",
+          "Overall Size (L × W × H)": "750 × 450 × 925 mm",
+          "Castor Wheel (Dia × W)": "100 × 32 mm",
+          "Wheel Bearing": "Plain bore",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "900 × 600 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "300 kg",
+          "Platform Height": "195 mm",
+          "Handle Height": "925 mm",
+          "Side Sheet (Height × Thickness)": "450 × 1.2 mm",
+          "Overall Size (L × W × H)": "1050 × 600 × 925 mm",
+          "Castor Wheel (Dia × W)": "125 × 32 mm",
+          "Wheel Bearing": "Plain bore",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "900 × 600 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "500 kg",
+          "Platform Height": "225 mm",
+          "Handle Height": "925 mm",
+          "Side Sheet (Height × Thickness)": "450 × 1.2 mm",
+          "Overall Size (L × W × H)": "1050 × 600 × 925 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "1250 × 750 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "600 kg",
+          "Platform Height": "225 mm",
+          "Handle Height": "925 mm",
+          "Side Sheet (Height × Thickness)": "450 × 1.2 mm",
+          "Overall Size (L × W × H)": "1400 × 750 × 925 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Wheel Bearing": "Plain bore",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "1250 × 750 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "800 kg",
+          "Platform Height": "275 mm",
+          "Handle Height": "925 mm",
+          "Side Sheet (Height × Thickness)": "450 × 1.2 mm",
+          "Overall Size (L × W × H)": "1400 × 750 × 925 mm",
+          "Castor Wheel (Dia × W)": "200 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "1500 × 900 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "1000 kg",
+          "Platform Height": "275 mm",
+          "Handle Height": "925 mm",
+          "Side Sheet (Height × Thickness)": "450 × 1.2 mm",
+          "Overall Size (L × W × H)": "1650 × 900 × 925 mm",
+          "Castor Wheel (Dia × W)": "200 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": "optional",
+      "brake_text": "Available with brakes and without brakes (optional swivel castor with parking brake).",
+      "notes": [],
+      "images": {
+        "photo": "/assets/products/trolleys/workshop-trolley-sheet-photo.jpg",
+        "thumb": "/assets/products/trolleys/workshop-trolley-sheet-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/20 Workshop Trolley - Sheet/2.png",
+        "pdf": "product-sources/20 Trolleys/20 Workshop Trolley - Sheet/20 Workshop Trolley - Sheet.pdf"
+      }
+    },
+    {
+      "num": "30",
+      "slug": "workshop-trolley-wiremesh",
+      "name": "Workshop Trolley – Wiremesh Sides",
+      "group": "platform-workshop",
+      "summary": "Workshop trolley with all 4 sides closed by 1″ × 1″ wiremesh up to 450 mm height, for moving loose components and materials safely.",
+      "features": [
+        "The platform is fabricated from a single piece of M.S. sheet, bent in six folds to form a “C” channel at the ends, with “U” grooves on the top surface for a neat appearance.",
+        "The platform is ribbed underneath with additional “C” channels for extra strength.",
+        "All 4 sides are closed with 1″ × 1″ × 2 mm wiremesh, about 450 mm high above the platform.",
+        "The push–pull handle is made from heavy M.S. round pipe and welded on top of the platform.",
+        "Widely used for moving loose components, corrugated boxes, gunny bags, heavy materials, crates, etc. within factories, godowns, stores and warehouses."
+      ],
+      "variant_key": [
+        "Platform Size (L × W)",
+        "Sheet Thickness",
+        "Load Capacity"
+      ],
+      "variants": [
+        {
+          "Platform Size (L × W)": "600 × 450 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "200 kg",
+          "Platform Height": "170 mm",
+          "Handle Height": "925 mm",
+          "Side Wiremesh (Height × Thickness)": "450 × 2 mm",
+          "Overall Size (L × W × H)": "750 × 450 × 925 mm",
+          "Castor Wheel (Dia × W)": "100 × 32 mm",
+          "Wheel Bearing": "Plain bore",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "900 × 600 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "300 kg",
+          "Platform Height": "195 mm",
+          "Handle Height": "925 mm",
+          "Side Wiremesh (Height × Thickness)": "450 × 2 mm",
+          "Overall Size (L × W × H)": "1050 × 600 × 925 mm",
+          "Castor Wheel (Dia × W)": "125 × 32 mm",
+          "Wheel Bearing": "Plain bore",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "900 × 600 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "500 kg",
+          "Platform Height": "225 mm",
+          "Handle Height": "925 mm",
+          "Side Wiremesh (Height × Thickness)": "450 × 2 mm",
+          "Overall Size (L × W × H)": "1050 × 600 × 925 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "1250 × 750 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "600 kg",
+          "Platform Height": "225 mm",
+          "Handle Height": "925 mm",
+          "Side Wiremesh (Height × Thickness)": "450 × 2 mm",
+          "Overall Size (L × W × H)": "1400 × 750 × 925 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Wheel Bearing": "Plain bore",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "1250 × 750 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "800 kg",
+          "Platform Height": "275 mm",
+          "Handle Height": "925 mm",
+          "Side Wiremesh (Height × Thickness)": "450 × 2 mm",
+          "Overall Size (L × W × H)": "1400 × 750 × 925 mm",
+          "Castor Wheel (Dia × W)": "200 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "1500 × 900 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "1000 kg",
+          "Platform Height": "275 mm",
+          "Handle Height": "925 mm",
+          "Side Wiremesh (Height × Thickness)": "450 × 2 mm",
+          "Overall Size (L × W × H)": "1650 × 900 × 925 mm",
+          "Castor Wheel (Dia × W)": "200 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": "optional",
+      "brake_text": "Available with brakes and without brakes (optional swivel castor with parking brake).",
+      "notes": [],
+      "images": {
+        "photo": "/assets/products/trolleys/workshop-trolley-wiremesh-photo.jpg",
+        "thumb": "/assets/products/trolleys/workshop-trolley-wiremesh-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/30 Workshop Trolley - Wiremesh/3.png",
+        "pdf": "product-sources/20 Trolleys/30 Workshop Trolley - Wiremesh/30 Workshop Trolley - Wiremesh.pdf"
+      }
+    },
+    {
+      "num": "40",
+      "slug": "drum-trolley",
+      "name": "Drum Trolley",
+      "group": "hand",
+      "summary": "Drum trolley built from thick square M.S. tube for easy movement of 210-litre drums.",
+      "features": [
+        "Fabricated from thick square M.S. tube, supported by curved flats and round pipe.",
+        "Designed for easy movement of 210-litre drums in chemical factories, oil depots, godowns, warehouses, etc."
+      ],
+      "variant_key": [],
+      "variants": [
+        {
+          "Load Capacity": "300 kg",
+          "Overall Size (L × W × H)": "1550 × 650 × 800 mm",
+          "Square Tube Size": "38 × 38 mm",
+          "Handle Pipe Size": "3/4″ A Class",
+          "Wheels (Dia × W)": "200 × 50 mm",
+          "Swivel Castor (Dia × W)": "125 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": "optional",
+      "brake_text": "Available with brakes and without brakes (optional swivel castor with parking brake).",
+      "notes": [
+        "The swivel castor on all models is a UHMW medium-duty swivel castor, 125 × 50 mm, with plain bore."
+      ],
+      "images": {
+        "photo": "/assets/products/trolleys/drum-trolley-photo.jpg",
+        "thumb": "/assets/products/trolleys/drum-trolley-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/40 Drum Trolley/4.png",
+        "pdf": "product-sources/20 Trolleys/40 Drum Trolley/40 Drum Trolley.pdf"
+      }
+    },
+    {
+      "num": "50",
+      "slug": "turntable-platform-trolley",
+      "name": "Turntable Platform Trolley",
+      "group": "turntable",
+      "summary": "Heavy-duty platform trolley with a turntable front assembly for easy steering of heavy loads.",
+      "features": [
+        "The platform is fabricated from a single piece of M.S. sheet, bent in six folds to form a “C” channel at the ends, with “U” grooves on the top surface for a neat appearance.",
+        "The platform is ribbed underneath with additional “C” channels for extra strength.",
+        "The push–pull handle is made from heavy M.S. round pipe and bolted on top of the platform.",
+        "Fitted with 2 fixed castors and 2 wheels mounted on a heavy-duty turntable assembly.",
+        "The turntable assembly combines a thrust bearing with a taper roller bearing for easy steering under heavy loads.",
+        "The compact turntable assembly with spring-loaded handle improves the manoeuvrability of the trolley.",
+        "Widely used for moving corrugated boxes, gunny bags, heavy materials, crates, etc. within factories, godowns, stores and warehouses."
+      ],
+      "variant_key": [
+        "Platform Size (L × W)",
+        "Sheet Thickness",
+        "Load Capacity"
+      ],
+      "variants": [
+        {
+          "Platform Size (L × W)": "1250 × 750 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "800 kg",
+          "Platform Height": "275 mm",
+          "Handle Height": "925 mm",
+          "Turntable Handle Height": "1050 mm",
+          "Overall Size (L × W × H)": "1400 × 750 × 1050 mm",
+          "Castor Wheel (Dia × W)": "200 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "1500 × 900 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "1000 kg",
+          "Platform Height": "275 mm",
+          "Handle Height": "925 mm",
+          "Turntable Handle Height": "1050 mm",
+          "Overall Size (L × W × H)": "1650 × 900 × 1050 mm",
+          "Castor Wheel (Dia × W)": "200 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": null,
+      "brake_text": null,
+      "notes": [],
+      "images": {
+        "photo": "/assets/products/trolleys/turntable-platform-trolley-photo.jpg",
+        "thumb": "/assets/products/trolleys/turntable-platform-trolley-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/50 Turntable Platform Trolley/5.png",
+        "pdf": "product-sources/20 Trolleys/50 Turntable Platform Trolley/50 Turntable Platform Trolley.pdf"
+      }
+    },
+    {
+      "num": "60",
+      "slug": "turntable-workshop-trolley-sheet",
+      "name": "Turntable Workshop Trolley – M.S. Sheet Sides",
+      "group": "turntable",
+      "summary": "Turntable workshop trolley with 4 sides closed by 1.2 mm M.S. sheet up to 450 mm height, for heavy loose loads.",
+      "features": [
+        "The platform is fabricated from a single piece of M.S. sheet, bent in six folds to form a “C” channel at the ends, with “U” grooves on the top surface for a neat appearance.",
+        "The platform is ribbed underneath with additional “C” channels for extra strength.",
+        "All 4 sides are closed with 1.2 mm M.S. sheet with “U” grooves for strength, about 450 mm high above the platform.",
+        "The push–pull handle is made from heavy M.S. round pipe and welded on top of the platform.",
+        "Fitted with 2 fixed castors and 2 wheels mounted on a heavy-duty turntable assembly.",
+        "The turntable assembly combines a thrust bearing with a taper roller bearing for easy steering under heavy loads.",
+        "The compact turntable assembly with spring-loaded handle improves the manoeuvrability of the trolley.",
+        "Widely used for moving loose components, corrugated boxes, gunny bags, heavy materials, crates, etc. within factories, godowns, stores and warehouses."
+      ],
+      "variant_key": [
+        "Platform Size (L × W)",
+        "Sheet Thickness",
+        "Load Capacity"
+      ],
+      "variants": [
+        {
+          "Platform Size (L × W)": "1250 × 750 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "800 kg",
+          "Platform Height": "275 mm",
+          "Handle Height": "925 mm",
+          "Turntable Handle Height": "1050 mm",
+          "Side Sheet (Height × Thickness)": "450 × 1.2 mm",
+          "Overall Size (L × W × H)": "1400 × 750 × 1050 mm",
+          "Castor Wheel (Dia × W)": "200 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "1500 × 900 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "1000 kg",
+          "Platform Height": "275 mm",
+          "Handle Height": "925 mm",
+          "Turntable Handle Height": "1050 mm",
+          "Side Sheet (Height × Thickness)": "450 × 1.2 mm",
+          "Overall Size (L × W × H)": "1650 × 900 × 1050 mm",
+          "Castor Wheel (Dia × W)": "200 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": null,
+      "brake_text": null,
+      "notes": [],
+      "images": {
+        "photo": "/assets/products/trolleys/turntable-workshop-trolley-sheet-photo.jpg",
+        "thumb": "/assets/products/trolleys/turntable-workshop-trolley-sheet-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/60 Turntable Workshop Trolley - Sheet/6.png",
+        "pdf": "product-sources/20 Trolleys/60 Turntable Workshop Trolley - Sheet/60 Turntable Workshop Trolley - Sheet.pdf"
+      }
+    },
+    {
+      "num": "70",
+      "slug": "turntable-workshop-trolley-wiremesh",
+      "name": "Turntable Workshop Trolley – Wiremesh Sides",
+      "group": "turntable",
+      "summary": "Turntable workshop trolley with 4 sides closed by 1″ × 1″ wiremesh up to 450 mm height, for heavy loose loads.",
+      "features": [
+        "The platform is fabricated from a single piece of M.S. sheet, bent in six folds to form a “C” channel at the ends, with “U” grooves on the top surface for a neat appearance.",
+        "The platform is ribbed underneath with additional “C” channels for extra strength.",
+        "All 4 sides are closed with 1″ × 1″ × 2 mm wiremesh, about 450 mm high above the platform.",
+        "The push–pull handle is made from heavy M.S. round pipe and welded on top of the platform.",
+        "Fitted with 2 fixed castors and 2 wheels mounted on a heavy-duty turntable assembly.",
+        "The turntable assembly combines a thrust bearing with a taper roller bearing for easy steering under heavy loads.",
+        "The compact turntable assembly with spring-loaded handle improves the manoeuvrability of the trolley.",
+        "Widely used for moving loose components, corrugated boxes, gunny bags, heavy materials, crates, etc. within factories, godowns, stores and warehouses."
+      ],
+      "variant_key": [
+        "Platform Size (L × W)",
+        "Sheet Thickness",
+        "Load Capacity"
+      ],
+      "variants": [
+        {
+          "Platform Size (L × W)": "1250 × 750 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "800 kg",
+          "Platform Height": "275 mm",
+          "Handle Height": "925 mm",
+          "Turntable Handle Height": "1050 mm",
+          "Side Wiremesh (Height × Thickness)": "450 × 2 mm",
+          "Overall Size (L × W × H)": "1400 × 750 × 1050 mm",
+          "Castor Wheel (Dia × W)": "200 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "1500 × 900 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "1000 kg",
+          "Platform Height": "275 mm",
+          "Handle Height": "925 mm",
+          "Turntable Handle Height": "1050 mm",
+          "Side Wiremesh (Height × Thickness)": "450 × 2 mm",
+          "Overall Size (L × W × H)": "1650 × 900 × 1050 mm",
+          "Castor Wheel (Dia × W)": "200 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": null,
+      "brake_text": null,
+      "notes": [],
+      "images": {
+        "photo": "/assets/products/trolleys/turntable-workshop-trolley-wiremesh-photo.jpg",
+        "thumb": "/assets/products/trolleys/turntable-workshop-trolley-wiremesh-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/70 Turntable Workshop Trolley - Wiremesh/7.png",
+        "pdf": "product-sources/20 Trolleys/70 Turntable Workshop Trolley - Wiremesh/70 Turntable Workshop Trolley - Wiremesh.pdf"
+      }
+    },
+    {
+      "num": "80",
+      "slug": "sack-trolley",
+      "name": "Sack Trolley",
+      "group": "hand",
+      "summary": "Sack trolley built from thick round M.S. pipe with a curved back support shaped for gunny bags.",
+      "features": [
+        "Fabricated from thick round M.S. pipe, with M.S. flats pressed into a curved back support suited to gunny bags.",
+        "Designed for easy movement of gunny bags in sugar factories, rice and dal mills, godowns, factories, etc."
+      ],
+      "variant_key": [
+        "Load Capacity"
+      ],
+      "variants": [
+        {
+          "Load Capacity": "100 kg",
+          "Overall Size (L × W × H)": "1150 × 450 × 450 mm",
+          "Width at Nose": "350 mm",
+          "Pipe Size": "3/4″ A Class",
+          "Pipe Section": "Round",
+          "Wheel (Dia × W)": "200 × 50 mm",
+          "Wheel Bearing": "Plain bore",
+          "Colour": "Blue"
+        },
+        {
+          "Load Capacity": "150 kg",
+          "Overall Size (L × W × H)": "1150 × 450 × 450 mm",
+          "Width at Nose": "350 mm",
+          "Pipe Size": "1″ A Class",
+          "Pipe Section": "Elliptical",
+          "Wheel (Dia × W)": "200 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": null,
+      "brake_text": null,
+      "notes": [],
+      "images": {
+        "photo": "/assets/products/trolleys/sack-trolley-photo.jpg",
+        "thumb": "/assets/products/trolleys/sack-trolley-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/80 Sack Trolley/8.png",
+        "pdf": "product-sources/20 Trolleys/80 Sack Trolley/80 Sack Trolley.pdf"
+      }
+    },
+    {
+      "num": "90",
+      "slug": "turntable-platform-truck",
+      "name": "Turntable Platform Truck",
+      "group": "turntable",
+      "summary": "Heavy-duty turntable platform truck on a rectangular-tube base frame, for manual pulling or forklift towing.",
+      "features": [
+        "The base frame is fabricated from heavy-duty rectangular tube, and the top is covered with a single piece of M.S. sheet bent in two folds to form a “C” channel at the ends, with “U” grooves on the top surface for a neat appearance.",
+        "The push–pull handle is made from heavy M.S. round pipe and welded on top of the platform.",
+        "Fitted with 2 fixed castors and 2 wheels mounted on a heavy-duty turntable assembly.",
+        "The turntable assembly combines a thrust bearing with a taper roller bearing for easy steering under heavy loads.",
+        "The compact turntable assembly with spring-loaded handle improves the manoeuvrability of the trolley.",
+        "Supplied with a manual pulling handle for manual operation, or a towing handle suitable for forklift towing.",
+        "Widely used for moving bulk materials, corrugated boxes, gunny bags, heavy materials, crates, etc. within factories, godowns, stores and warehouses."
+      ],
+      "variant_key": [
+        "Platform Size (L × W)",
+        "Sheet Thickness",
+        "Load Capacity"
+      ],
+      "variants": [
+        {
+          "Platform Size (L × W)": "1800 × 1000 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "1000 kg",
+          "Platform Height": "450 mm",
+          "Handle Height": "925 mm",
+          "Turntable Handle Height": "1100 mm",
+          "Overall Size (L × W × H)": "2000 × 1000 × 1100 mm",
+          "Castor Wheel (Dia × W)": "300 × 75 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "2100 × 1000 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "1500 kg",
+          "Platform Height": "450 mm",
+          "Handle Height": "925 mm",
+          "Turntable Handle Height": "1100 mm",
+          "Overall Size (L × W × H)": "2300 × 1000 × 1100 mm",
+          "Castor Wheel (Dia × W)": "300 × 75 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "2400 × 1000 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "2000 kg",
+          "Platform Height": "450 mm",
+          "Handle Height": "925 mm",
+          "Turntable Handle Height": "1100 mm",
+          "Overall Size (L × W × H)": "2600 × 1000 × 1100 mm",
+          "Castor Wheel (Dia × W)": "300 × 75 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": null,
+      "brake_text": null,
+      "notes": [],
+      "images": {
+        "photo": "/assets/products/trolleys/turntable-platform-truck-photo.jpg",
+        "thumb": "/assets/products/trolleys/turntable-platform-truck-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/90 Turntable Platform Truck/9.png",
+        "pdf": "product-sources/20 Trolleys/90 Turntable Platform Truck/90 Turntable Platform Truck.pdf"
+      }
+    },
+    {
+      "num": "100",
+      "slug": "turntable-workshop-truck-sheet",
+      "name": "Turntable Workshop Truck – M.S. Sheet Sides",
+      "group": "turntable",
+      "summary": "Heavy-duty turntable workshop truck with 3 sides closed by 2 mm M.S. sheet and a hinged door on the 4th side.",
+      "features": [
+        "The base frame is fabricated from heavy-duty rectangular tube, and the top is covered with a single piece of M.S. sheet bent in two folds to form a “C” channel at the ends, with “U” grooves on the top surface for a neat appearance.",
+        "The push–pull handle is made from heavy M.S. round pipe and welded on top of the platform.",
+        "Fitted with 2 fixed castors and 2 wheels mounted on a heavy-duty turntable assembly.",
+        "The turntable assembly combines a thrust bearing with a taper roller bearing for easy steering under heavy loads.",
+        "The compact turntable assembly with spring-loaded handle improves the manoeuvrability of the trolley.",
+        "Supplied with a manual pulling handle for manual operation, or a towing handle suitable for forklift towing.",
+        "Three sides are closed with 2.0 mm M.S. sheet with “U” grooves for strength, up to 425 mm above the platform; the 4th side has a hinged door for loading and unloading.",
+        "Widely used for moving bulk materials, corrugated boxes, gunny bags, heavy materials, crates, etc. within factories, godowns, stores and warehouses."
+      ],
+      "variant_key": [
+        "Platform Size (L × W)",
+        "Sheet Thickness",
+        "Load Capacity"
+      ],
+      "variants": [
+        {
+          "Platform Size (L × W)": "1800 × 1000 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "1000 kg",
+          "Platform Height": "450 mm",
+          "Handle Height": "925 mm",
+          "Turntable Handle Height": "1100 mm",
+          "Side Sheet (Height × Thickness)": "425 × 2 mm",
+          "Overall Size (L × W × H)": "2000 × 1000 × 1100 mm",
+          "Castor Wheel (Dia × W)": "300 × 75 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "2100 × 1000 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "1500 kg",
+          "Platform Height": "450 mm",
+          "Handle Height": "925 mm",
+          "Turntable Handle Height": "1100 mm",
+          "Side Sheet (Height × Thickness)": "425 × 2 mm",
+          "Overall Size (L × W × H)": "2300 × 1000 × 1100 mm",
+          "Castor Wheel (Dia × W)": "300 × 75 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "2400 × 1000 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "2000 kg",
+          "Platform Height": "450 mm",
+          "Handle Height": "925 mm",
+          "Turntable Handle Height": "1100 mm",
+          "Side Sheet (Height × Thickness)": "425 × 2 mm",
+          "Overall Size (L × W × H)": "2600 × 1000 × 1100 mm",
+          "Castor Wheel (Dia × W)": "300 × 75 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": null,
+      "brake_text": null,
+      "notes": [],
+      "images": {
+        "photo": "/assets/products/trolleys/turntable-workshop-truck-sheet-photo.jpg",
+        "thumb": "/assets/products/trolleys/turntable-workshop-truck-sheet-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/100 Turntable Workshop Truck - Sheet/10.png",
+        "pdf": "product-sources/20 Trolleys/100 Turntable Workshop Truck - Sheet/100 Turntable Workshop Truck - Sheet.pdf"
+      }
+    },
+    {
+      "num": "110",
+      "slug": "turntable-workshop-truck-wiremesh",
+      "name": "Turntable Workshop Truck – Wiremesh Sides",
+      "group": "turntable",
+      "summary": "Heavy-duty turntable workshop truck with 3 sides closed by 1″ × 1″ wiremesh and a hinged door on the 4th side.",
+      "features": [
+        "The base frame is fabricated from heavy-duty rectangular tube, and the top is covered with a single piece of M.S. sheet bent in two folds to form a “C” channel at the ends, with “U” grooves on the top surface for a neat appearance.",
+        "The push–pull handle is made from heavy M.S. round pipe and welded on top of the platform.",
+        "Fitted with 2 fixed castors and 2 wheels mounted on a heavy-duty turntable assembly.",
+        "The turntable assembly combines a thrust bearing with a taper roller bearing for easy steering under heavy loads.",
+        "The compact turntable assembly with spring-loaded handle improves the manoeuvrability of the trolley.",
+        "Supplied with a manual pulling handle for manual operation, or a towing handle suitable for forklift towing.",
+        "Three sides are closed with M.S. wiremesh 1″ × 1″ × 2 mm, up to 425 mm above the platform; the 4th side has a hinged door for loading and unloading.",
+        "Widely used for moving bulk materials, corrugated boxes, gunny bags, heavy materials, crates, etc. within factories, godowns, stores and warehouses."
+      ],
+      "variant_key": [
+        "Platform Size (L × W)",
+        "Sheet Thickness",
+        "Load Capacity"
+      ],
+      "variants": [
+        {
+          "Platform Size (L × W)": "1800 × 1000 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "1000 kg",
+          "Platform Height": "450 mm",
+          "Handle Height": "925 mm",
+          "Turntable Handle Height": "1100 mm",
+          "Side Wiremesh (Height × Thickness)": "425 × 2 mm",
+          "Overall Size (L × W × H)": "2000 × 1000 × 1100 mm",
+          "Castor Wheel (Dia × W)": "300 × 75 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "2100 × 1000 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "1500 kg",
+          "Platform Height": "450 mm",
+          "Handle Height": "925 mm",
+          "Turntable Handle Height": "1100 mm",
+          "Side Wiremesh (Height × Thickness)": "425 × 2 mm",
+          "Overall Size (L × W × H)": "2300 × 1000 × 1100 mm",
+          "Castor Wheel (Dia × W)": "300 × 75 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        },
+        {
+          "Platform Size (L × W)": "2400 × 1000 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "2000 kg",
+          "Platform Height": "450 mm",
+          "Handle Height": "925 mm",
+          "Turntable Handle Height": "1100 mm",
+          "Side Wiremesh (Height × Thickness)": "425 × 2 mm",
+          "Overall Size (L × W × H)": "2600 × 1000 × 1100 mm",
+          "Castor Wheel (Dia × W)": "300 × 75 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": null,
+      "brake_text": null,
+      "notes": [],
+      "images": {
+        "photo": "/assets/products/trolleys/turntable-workshop-truck-wiremesh-photo.jpg",
+        "thumb": "/assets/products/trolleys/turntable-workshop-truck-wiremesh-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/110 Turntable Workshop Truck - Wiremesh/11.png",
+        "pdf": "product-sources/20 Trolleys/110 Turntable Workshop Truck - Wiremesh/110 Turntable Workshop Truck - Wiremesh.pdf"
+      }
+    },
+    {
+      "num": "120",
+      "slug": "double-wheel-barrow",
+      "name": "Double Wheel Barrow",
+      "group": "hand",
+      "summary": "M.S. sheet pan barrow with two front wheels for better balance, for light materials, chips, garbage and gardening.",
+      "features": [
+        "The pan is fabricated from bent M.S. sheet, ribbed with angles at the corners and flats at the edges.",
+        "The base frame is made from double pipe, bent to shape, with ribs at the bottom.",
+        "Two wheels at the front give better balance.",
+        "Used for carrying light materials, loose components, garbage, metal chips and burrs, and for gardening."
+      ],
+      "variant_key": [
+        "Load Capacity"
+      ],
+      "variants": [
+        {
+          "Load Capacity": "150 kg",
+          "Volumetric Capacity": "80 litres",
+          "Pan Size at Top": "400 × 800 mm",
+          "Pan Size at Bottom": "400 × 600 mm",
+          "Pan Depth at Wheel End": "350 mm",
+          "Pan Depth at Handle End": "260 mm",
+          "Pan Sheet Thickness": "1.2 mm",
+          "Base Frame Pipe": "3/4″ A Class",
+          "Overall Size (L × W × H)": "1300 × 550 × 750 mm",
+          "Wheel (Dia × W)": "250 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        },
+        {
+          "Load Capacity": "200 kg",
+          "Volumetric Capacity": "80 litres",
+          "Pan Size at Top": "400 × 800 mm",
+          "Pan Size at Bottom": "400 × 600 mm",
+          "Pan Depth at Wheel End": "350 mm",
+          "Pan Depth at Handle End": "260 mm",
+          "Pan Sheet Thickness": "2.0 mm",
+          "Base Frame Pipe": "3/4″ A Class",
+          "Overall Size (L × W × H)": "1300 × 550 × 750 mm",
+          "Wheel (Dia × W)": "300 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": null,
+      "brake_text": null,
+      "notes": [],
+      "images": {
+        "photo": "/assets/products/trolleys/double-wheel-barrow-photo.jpg",
+        "thumb": "/assets/products/trolleys/double-wheel-barrow-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/120 Double Wheel Barrow/12.png",
+        "pdf": "product-sources/20 Trolleys/120 Double Wheel Barrow/120 Double Wheel Barrow.pdf"
+      }
+    },
+    {
+      "num": "130",
+      "slug": "two-shelf-trolley",
+      "name": "Two Shelf Trolley",
+      "group": "shelf",
+      "summary": "Two-shelf M.S. trolley for shop-floor mini stores, assembly lines and work tables.",
+      "features": [
+        "The shelves are fabricated from a single piece of M.S. sheet, bent in six folds to form a “C” channel at the ends, with “U” grooves on the top surface for a neat appearance.",
+        "The shelves are ribbed underneath with additional “C” channels for extra strength.",
+        "The push–pull handle is made from heavy M.S. round pipe and welded to the trolley.",
+        "Suits most industrial, commercial and retail storage needs — widely used on shop floors as mini stores, on assembly lines to supply materials, or as work and assembly tables."
+      ],
+      "variant_key": [
+        "Shelf Size (L × W)",
+        "Sheet Thickness",
+        "Load Capacity"
+      ],
+      "variants": [
+        {
+          "Shelf Size (L × W)": "600 × 450 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "200 kg",
+          "Capacity per Shelf": "100 kg",
+          "Bottom Shelf Height": "170 mm",
+          "Top Shelf Height": "800 mm",
+          "Handle Height": "925 mm",
+          "Overall Size (L × W × H)": "750 × 450 × 925 mm",
+          "Castor Wheel (Dia × W)": "100 × 32 mm",
+          "Wheel Bearing": "Plain bore",
+          "Colour": "Blue"
+        },
+        {
+          "Shelf Size (L × W)": "900 × 600 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "300 kg",
+          "Capacity per Shelf": "150 kg",
+          "Bottom Shelf Height": "195 mm",
+          "Top Shelf Height": "800 mm",
+          "Handle Height": "925 mm",
+          "Overall Size (L × W × H)": "1050 × 600 × 925 mm",
+          "Castor Wheel (Dia × W)": "125 × 32 mm",
+          "Wheel Bearing": "Plain bore",
+          "Colour": "Blue"
+        },
+        {
+          "Shelf Size (L × W)": "900 × 600 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "500 kg",
+          "Capacity per Shelf": "250 kg",
+          "Bottom Shelf Height": "225 mm",
+          "Top Shelf Height": "800 mm",
+          "Handle Height": "925 mm",
+          "Overall Size (L × W × H)": "1050 × 600 × 925 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        },
+        {
+          "Shelf Size (L × W)": "1250 × 750 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "600 kg",
+          "Capacity per Shelf": "300 kg",
+          "Bottom Shelf Height": "225 mm",
+          "Top Shelf Height": "800 mm",
+          "Handle Height": "925 mm",
+          "Overall Size (L × W × H)": "1400 × 750 × 925 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Wheel Bearing": "Plain bore",
+          "Colour": "Blue"
+        },
+        {
+          "Shelf Size (L × W)": "1250 × 750 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "800 kg",
+          "Capacity per Shelf": "400 kg",
+          "Bottom Shelf Height": "275 mm",
+          "Top Shelf Height": "800 mm",
+          "Handle Height": "925 mm",
+          "Overall Size (L × W × H)": "1400 × 750 × 925 mm",
+          "Castor Wheel (Dia × W)": "200 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": "optional",
+      "brake_text": "Available with brakes and without brakes (optional swivel castor with parking brake).",
+      "notes": [],
+      "images": {
+        "photo": "/assets/products/trolleys/two-shelf-trolley-photo.jpg",
+        "thumb": "/assets/products/trolleys/two-shelf-trolley-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/130 Two Shelf Trolley/13.png",
+        "pdf": "product-sources/20 Trolleys/130 Two Shelf Trolley/130 Two Shelf Trolley.pdf"
+      }
+    },
+    {
+      "num": "140",
+      "slug": "three-shelf-trolley",
+      "name": "Three Shelf Trolley",
+      "group": "shelf",
+      "summary": "Three-shelf M.S. trolley for shop-floor mini stores, assembly lines and work tables.",
+      "features": [
+        "The shelves are fabricated from a single piece of M.S. sheet, bent in six folds to form a “C” channel at the ends, with “U” grooves on the top surface for a neat appearance.",
+        "The shelves are ribbed underneath with additional “C” channels for extra strength.",
+        "The push–pull handle is made from heavy M.S. round pipe and welded to the trolley.",
+        "Suits most industrial, commercial and retail storage needs — widely used on shop floors as mini stores, on assembly lines to supply materials, or as work and assembly tables."
+      ],
+      "variant_key": [
+        "Shelf Size (L × W)",
+        "Sheet Thickness",
+        "Load Capacity"
+      ],
+      "variants": [
+        {
+          "Shelf Size (L × W)": "600 × 450 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "210 kg",
+          "Capacity per Shelf": "70 kg",
+          "Bottom Shelf Height": "170 mm",
+          "Middle Shelf Height": "500 mm",
+          "Top Shelf Height": "800 mm",
+          "Handle Height": "925 mm",
+          "Overall Size (L × W × H)": "750 × 450 × 925 mm",
+          "Castor Wheel (Dia × W)": "100 × 32 mm",
+          "Wheel Bearing": "Plain bore",
+          "Colour": "Blue"
+        },
+        {
+          "Shelf Size (L × W)": "900 × 600 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "300 kg",
+          "Capacity per Shelf": "100 kg",
+          "Bottom Shelf Height": "195 mm",
+          "Middle Shelf Height": "500 mm",
+          "Top Shelf Height": "800 mm",
+          "Handle Height": "925 mm",
+          "Overall Size (L × W × H)": "1050 × 600 × 925 mm",
+          "Castor Wheel (Dia × W)": "125 × 32 mm",
+          "Wheel Bearing": "Plain bore",
+          "Colour": "Blue"
+        },
+        {
+          "Shelf Size (L × W)": "900 × 600 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "450 kg",
+          "Capacity per Shelf": "150 kg",
+          "Bottom Shelf Height": "225 mm",
+          "Middle Shelf Height": "500 mm",
+          "Top Shelf Height": "800 mm",
+          "Handle Height": "925 mm",
+          "Overall Size (L × W × H)": "1050 × 600 × 925 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        },
+        {
+          "Shelf Size (L × W)": "1250 × 750 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "600 kg",
+          "Capacity per Shelf": "200 kg",
+          "Bottom Shelf Height": "225 mm",
+          "Middle Shelf Height": "500 mm",
+          "Top Shelf Height": "800 mm",
+          "Handle Height": "925 mm",
+          "Overall Size (L × W × H)": "1400 × 750 × 925 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Wheel Bearing": "Plain bore",
+          "Colour": "Blue"
+        },
+        {
+          "Shelf Size (L × W)": "1250 × 750 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "750 kg",
+          "Capacity per Shelf": "250 kg",
+          "Bottom Shelf Height": "275 mm",
+          "Middle Shelf Height": "500 mm",
+          "Top Shelf Height": "800 mm",
+          "Handle Height": "925 mm",
+          "Overall Size (L × W × H)": "1400 × 750 × 925 mm",
+          "Castor Wheel (Dia × W)": "200 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": "optional",
+      "brake_text": "Available with brakes and without brakes (optional swivel castor with parking brake).",
+      "notes": [],
+      "images": {
+        "photo": "/assets/products/trolleys/three-shelf-trolley-photo.jpg",
+        "thumb": "/assets/products/trolleys/three-shelf-trolley-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/140 Three Shelf Trolley/14.png",
+        "pdf": "product-sources/20 Trolleys/140 Three Shelf Trolley/140 Three Shelf Trolley.pdf"
+      }
+    },
+    {
+      "num": "150",
+      "slug": "five-shelf-trolley",
+      "name": "Five Shelf Trolley",
+      "group": "shelf",
+      "summary": "Five-shelf M.S. trolley with three adjustable middle shelves, for shop-floor storage and assembly lines.",
+      "features": [
+        "The shelves are fabricated from a single piece of M.S. sheet, bent in six folds to form a “C” channel at the ends, with “U” grooves on the top surface for a neat appearance.",
+        "The shelves are ribbed underneath with additional “C” channels for extra strength.",
+        "The push–pull handle is made from heavy M.S. round pipe and welded to the trolley.",
+        "The bottom and top shelves are welded to the trolley structure; the three middle shelves are adjustable to suit your requirements.",
+        "Suits most industrial, commercial and retail storage needs — widely used on shop floors as mini stores, on assembly lines to supply materials, or as work and assembly tables."
+      ],
+      "variant_key": [
+        "Shelf Size (L × W)",
+        "Sheet Thickness",
+        "Load Capacity"
+      ],
+      "variants": [
+        {
+          "Shelf Size (L × W)": "900 × 600 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "300 kg",
+          "Capacity per Shelf": "60 kg",
+          "Bottom Shelf Height": "195 mm",
+          "Middle Shelves Height": "Adjustable",
+          "Top Shelf Height": "1350 mm",
+          "Handle Height": "925 mm",
+          "Overall Size (L × W × H)": "1050 × 600 × 1350 mm",
+          "Castor Wheel (Dia × W)": "125 × 32 mm",
+          "Wheel Bearing": "Plain bore",
+          "Colour": "Blue"
+        },
+        {
+          "Shelf Size (L × W)": "900 × 600 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "500 kg",
+          "Capacity per Shelf": "100 kg",
+          "Bottom Shelf Height": "225 mm",
+          "Middle Shelves Height": "Adjustable",
+          "Top Shelf Height": "1380 mm",
+          "Handle Height": "925 mm",
+          "Overall Size (L × W × H)": "1050 × 600 × 1380 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        },
+        {
+          "Shelf Size (L × W)": "1250 × 750 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "600 kg",
+          "Capacity per Shelf": "120 kg",
+          "Bottom Shelf Height": "225 mm",
+          "Middle Shelves Height": "Adjustable",
+          "Top Shelf Height": "1380 mm",
+          "Handle Height": "925 mm",
+          "Overall Size (L × W × H)": "1400 × 750 × 1380 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Wheel Bearing": "Plain bore",
+          "Colour": "Blue"
+        },
+        {
+          "Shelf Size (L × W)": "1250 × 750 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "800 kg",
+          "Capacity per Shelf": "160 kg",
+          "Bottom Shelf Height": "275 mm",
+          "Middle Shelves Height": "Adjustable",
+          "Top Shelf Height": "1440 mm",
+          "Handle Height": "925 mm",
+          "Overall Size (L × W × H)": "1400 × 750 × 1440 mm",
+          "Castor Wheel (Dia × W)": "200 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": "optional",
+      "brake_text": "Available with brakes and without brakes (optional swivel castor with parking brake).",
+      "notes": [],
+      "images": {
+        "photo": "/assets/products/trolleys/five-shelf-trolley-photo.jpg",
+        "thumb": "/assets/products/trolleys/five-shelf-trolley-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/150 Five Shelf Trolley/15.png",
+        "pdf": "product-sources/20 Trolleys/150 Five Shelf Trolley/150 Five Shelf Trolley.pdf"
+      }
+    },
+    {
+      "num": "160",
+      "slug": "multi-utility-trolley",
+      "name": "Multi Utility Trolley",
+      "group": "hand",
+      "summary": "Round-pipe hand trolley with a long front nose and a folding platform for corrugated boxes of different sizes.",
+      "features": [
+        "Fabricated from thick round M.S. pipe, with a front nose about 300 mm long for better support of corrugated boxes.",
+        "An additional folding platform accommodates larger boxes.",
+        "Designed for easy movement of corrugated boxes in factories, godowns, warehouses, etc."
+      ],
+      "variant_key": [],
+      "variants": [
+        {
+          "Load Capacity": "200 kg",
+          "Overall Size (L × W × H)": "1150 × 600 × 450 mm",
+          "Back Support Width": "450 mm",
+          "Nose Size": "300 × 600 mm",
+          "Folding Platform Size": "500 × 300 mm",
+          "Pipe Size": "3/4″ A Class",
+          "Wheel (Dia × W)": "200 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": null,
+      "brake_text": null,
+      "notes": [],
+      "images": {
+        "photo": "/assets/products/trolleys/multi-utility-trolley-photo.jpg",
+        "thumb": "/assets/products/trolleys/multi-utility-trolley-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/160 Multi Utility Trolley/16.png",
+        "pdf": "product-sources/20 Trolleys/160 Multi Utility Trolley/160 Multi Utility Trolley.pdf"
+      }
+    },
+    {
+      "num": "170",
+      "slug": "gas-cylinder-trolley-single",
+      "name": "Gas Cylinder Trolley – Single Cylinder",
+      "group": "gas",
+      "summary": "Single-cylinder trolley for CO2, O2, nitrogen and argon cylinders (240 mm dia × 1400 mm long).",
+      "features": [
+        "Fabricated from heavy M.S. round pipe, neatly bent, with an M.S. plate at the bottom and curved M.S. flats with “U” grooves.",
+        "A lockable safety chain is provided as a standard feature.",
+        "Suitable for CO2, O2, nitrogen and argon cylinders of 240 mm diameter × 1400 mm length.",
+        "Widely used for moving gas cylinders within factories, godowns, stores and warehouses."
+      ],
+      "variant_key": [],
+      "variants": [
+        {
+          "Load Capacity": "100 kg",
+          "Suitable Cylinder (Dia × L)": "240 × 1400 mm",
+          "Overall Size (L × W × H)": "1350 × 500 × 800 mm",
+          "Back Support Width": "300 mm",
+          "Nose Size (L × W)": "250 × 300 mm",
+          "Pipe Size": "3/4″ A Class",
+          "Wheels (Dia × W)": "200 × 50 mm",
+          "Swivel Castor (Dia × W)": "125 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": "optional",
+      "brake_text": "Available with brakes and without brakes (optional swivel castor with parking brake).",
+      "notes": [
+        "The swivel castor on all models is a UHMW medium-duty swivel castor, 125 × 50 mm, with plain bore."
+      ],
+      "images": {
+        "photo": "/assets/products/trolleys/gas-cylinder-trolley-single-photo.jpg",
+        "thumb": "/assets/products/trolleys/gas-cylinder-trolley-single-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/170 Gas Cylinder Trolley - CO2/17.png",
+        "pdf": "product-sources/20 Trolleys/170 Gas Cylinder Trolley - CO2/170 Gas Cylinder Trolley - CO2.pdf"
+      }
+    },
+    {
+      "num": "180",
+      "slug": "gas-cylinder-trolley-lpg",
+      "name": "Gas Cylinder Trolley – LPG Cylinder",
+      "group": "gas",
+      "summary": "Single-cylinder trolley for LPG cylinders (340 mm dia × 600 mm long).",
+      "features": [
+        "Fabricated from heavy M.S. round pipe, neatly bent, with an M.S. plate at the bottom and curved M.S. flats with “U” grooves.",
+        "A lockable safety chain is provided as a standard feature.",
+        "Suitable for LPG cylinders of 340 mm diameter × 600 mm length.",
+        "Widely used for moving LPG cylinders within factories, godowns, stores and warehouses."
+      ],
+      "variant_key": [],
+      "variants": [
+        {
+          "Load Capacity": "100 kg",
+          "Suitable Cylinder (Dia × L)": "340 × 600 mm",
+          "Overall Size (L × W × H)": "1150 × 500 × 450 mm",
+          "Back Support Width": "300 mm",
+          "Nose Size (L × W)": "250 × 300 mm",
+          "Pipe Size": "3/4″ A Class",
+          "Wheels (Dia × W)": "200 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": null,
+      "brake_text": null,
+      "notes": [],
+      "images": {
+        "photo": "/assets/products/trolleys/gas-cylinder-trolley-lpg-photo.jpg",
+        "thumb": "/assets/products/trolleys/gas-cylinder-trolley-lpg-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/180 Gas Cylinder Trolley - LPG/18.png",
+        "pdf": "product-sources/20 Trolleys/180 Gas Cylinder Trolley - LPG/180 Gas Cylinder Trolley - LPG.pdf"
+      }
+    },
+    {
+      "num": "190",
+      "slug": "gas-cylinder-trolley-double",
+      "name": "Gas Cylinder Trolley – Two Cylinders",
+      "group": "gas",
+      "summary": "Two-cylinder trolley carrying one O2 cylinder and one LPG cylinder together.",
+      "features": [
+        "Fabricated from heavy M.S. round pipe, neatly bent, with an M.S. plate at the bottom and curved M.S. flats with “U” grooves.",
+        "A lockable safety chain is provided as a standard feature.",
+        "Carries one O2 cylinder (240 mm dia × 1400 mm) and one LPG cylinder (340 mm dia × 600 mm).",
+        "Widely used for moving O2 and LPG cylinders within factories, godowns, stores and warehouses."
+      ],
+      "variant_key": [],
+      "variants": [
+        {
+          "Load Capacity": "200 kg",
+          "Suitable Cylinder (Dia × L)": "O2: 240 × 1400 mm · LPG: 340 × 600 mm",
+          "Overall Size (L × W × H)": "1350 × 900 × 800 mm",
+          "Pipe Size": "3/4″ A Class",
+          "Wheels (Dia × W)": "200 × 50 mm",
+          "Swivel Castor (Dia × W)": "125 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": "optional",
+      "brake_text": "Available with brakes and without brakes (optional swivel castor with parking brake).",
+      "notes": [
+        "The swivel castor on all models is a UHMW medium-duty swivel castor, 125 × 50 mm, with plain bore."
+      ],
+      "images": {
+        "photo": "/assets/products/trolleys/gas-cylinder-trolley-double-photo.jpg",
+        "thumb": "/assets/products/trolleys/gas-cylinder-trolley-double-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/190 Gas Cylinder Trolley - Double/19.png",
+        "pdf": "product-sources/20 Trolleys/190 Gas Cylinder Trolley - Double/190 Gas Cylinder Trolley - Double.pdf"
+      }
+    },
+    {
+      "num": "200",
+      "slug": "chip-trolley",
+      "name": "Chip Trolley",
+      "group": "workshop-utility",
+      "summary": "Tilting chip trolley with a leak-proof M.S. tank, foot-operated tipping and a drain valve for coolant.",
+      "features": [
+        "The base is fabricated from M.S. rectangular and square tubes, fitted with 2 fixed and 2 swivel castors.",
+        "The chip storage tank is fabricated from thick M.S. sheet and welded on all sides to make it leak-proof.",
+        "The tank is mounted on the base with brass bush bearing housings.",
+        "A spring-loaded foot pedal allows easy tilting of the tank to empty it.",
+        "The tank has a drain plug at the bottom and a 1/2″ ball valve to drain coolant."
+      ],
+      "variant_key": [
+        "Tank Size (L × W × H)",
+        "Load Capacity"
+      ],
+      "variants": [
+        {
+          "Tank Size (L × W × H)": "450 × 450 × 400 mm",
+          "Load Capacity": "100 kg",
+          "Tank Base (L × W)": "450 × 300 mm",
+          "Tank Top (L × W)": "450 × 450 mm",
+          "Tank Height from Ground": "600 mm",
+          "Overall Size (L × W × H)": "750 × 750 × 900 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        },
+        {
+          "Tank Size (L × W × H)": "600 × 600 × 500 mm",
+          "Load Capacity": "200 kg",
+          "Tank Base (L × W)": "600 × 400 mm",
+          "Tank Top (L × W)": "600 × 600 mm",
+          "Tank Height from Ground": "700 mm",
+          "Overall Size (L × W × H)": "900 × 900 × 900 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": "standard",
+      "brake_text": "One swivel castor is fitted with a parking brake for safety as standard.",
+      "notes": [],
+      "images": {
+        "photo": "/assets/products/trolleys/chip-trolley-photo.jpg",
+        "thumb": "/assets/products/trolleys/chip-trolley-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/200 Chip Trolley/20.png",
+        "pdf": "product-sources/20 Trolleys/200 Chip Trolley/200 Chip Trolley.pdf"
+      }
+    },
+    {
+      "num": "210",
+      "slug": "industrial-steel-pallet-plain",
+      "name": "Industrial Steel Pallet – Plain Top",
+      "group": "pallet",
+      "summary": "Plain-top M.S. steel pallet with 120 mm ground clearance, for shop-floor movement and pallet racking.",
+      "features": [
+        "Fabricated from a single piece of M.S. sheet, bent in six folds to form a “C” channel at the ends, with “U” grooves on the top surface for a neat appearance and added strength.",
+        "The “C” channels are welded together to form a strong base.",
+        "The base is welded onto rectangular “C” channel box-section legs, giving 120 mm ground clearance for easy entry of material handling equipment.",
+        "Each pallet has 3 legs — one at each end and one at the centre.",
+        "With full-length support, the pallet suits material movement on the shop floor as well as storage on pallet racking systems, shelving, etc."
+      ],
+      "variant_key": [
+        "Pallet Size (L × W)",
+        "Sheet Thickness",
+        "Load Capacity"
+      ],
+      "variants": [
+        {
+          "Pallet Size (L × W)": "1000 × 1000 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "1000 kg",
+          "Ground Clearance": "120 mm",
+          "Pallet Top Height": "150 mm",
+          "Colour": "Blue"
+        },
+        {
+          "Pallet Size (L × W)": "1000 × 1000 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "1500 kg",
+          "Ground Clearance": "120 mm",
+          "Pallet Top Height": "150 mm",
+          "Colour": "Blue"
+        },
+        {
+          "Pallet Size (L × W)": "1200 × 1200 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "1000 kg",
+          "Ground Clearance": "120 mm",
+          "Pallet Top Height": "150 mm",
+          "Colour": "Blue"
+        },
+        {
+          "Pallet Size (L × W)": "1200 × 1200 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "1500 kg",
+          "Ground Clearance": "120 mm",
+          "Pallet Top Height": "150 mm",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [],
+      "brake": null,
+      "brake_text": null,
+      "notes": [],
+      "images": {
+        "photo": "/assets/products/trolleys/industrial-steel-pallet-plain-photo.jpg",
+        "thumb": "/assets/products/trolleys/industrial-steel-pallet-plain-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/210 Industrial Steel Pallet - Plain Top/21.png",
+        "pdf": "product-sources/20 Trolleys/210 Industrial Steel Pallet - Plain Top/210 Industrial Steel Pallet - Plain Top.pdf"
+      },
+      "facts": [
+        [
+          "120",
+          "mm",
+          "Ground clearance"
+        ],
+        [
+          "3",
+          "",
+          "Legs per pallet"
+        ]
+      ]
+    },
+    {
+      "num": "220",
+      "slug": "industrial-steel-pallet-sheet",
+      "name": "Industrial Steel Pallet – M.S. Sheet Sides",
+      "group": "pallet",
+      "summary": "M.S. steel pallet with 4 sides closed by 1.2 mm M.S. sheet up to 450 mm height.",
+      "features": [
+        "All 4 sides are closed with 1.2 mm M.S. sheet up to 450 mm height.",
+        "Fabricated from a single piece of M.S. sheet, bent in six folds to form a “C” channel at the ends, with “U” grooves on the top surface for a neat appearance and added strength.",
+        "The “C” channels are welded together to form a strong base.",
+        "The base is welded onto rectangular “C” channel box-section legs, giving 120 mm ground clearance for easy entry of material handling equipment.",
+        "Each pallet has 3 legs — one at each end and one at the centre.",
+        "With full-length support, the pallet suits material movement on the shop floor as well as storage on pallet racking systems, shelving, etc."
+      ],
+      "variant_key": [
+        "Pallet Size (L × W)",
+        "Sheet Thickness",
+        "Load Capacity"
+      ],
+      "variants": [
+        {
+          "Pallet Size (L × W)": "1000 × 1000 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "1000 kg",
+          "Ground Clearance": "120 mm",
+          "Pallet Top Height": "150 mm",
+          "Side Panels": "M.S. sheet 1.2 mm, 450 mm high",
+          "Colour": "Blue"
+        },
+        {
+          "Pallet Size (L × W)": "1000 × 1000 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "1500 kg",
+          "Ground Clearance": "120 mm",
+          "Pallet Top Height": "150 mm",
+          "Side Panels": "M.S. sheet 1.2 mm, 450 mm high",
+          "Colour": "Blue"
+        },
+        {
+          "Pallet Size (L × W)": "1200 × 1200 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "1000 kg",
+          "Ground Clearance": "120 mm",
+          "Pallet Top Height": "150 mm",
+          "Side Panels": "M.S. sheet 1.2 mm, 450 mm high",
+          "Colour": "Blue"
+        },
+        {
+          "Pallet Size (L × W)": "1200 × 1200 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "1500 kg",
+          "Ground Clearance": "120 mm",
+          "Pallet Top Height": "150 mm",
+          "Side Panels": "M.S. sheet 1.2 mm, 450 mm high",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [],
+      "brake": null,
+      "brake_text": null,
+      "notes": [],
+      "images": {
+        "photo": "/assets/products/trolleys/industrial-steel-pallet-sheet-photo.jpg",
+        "thumb": "/assets/products/trolleys/industrial-steel-pallet-sheet-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/220 Industrial Steel Pallet - Sheet/22.png",
+        "pdf": "product-sources/20 Trolleys/220 Industrial Steel Pallet - Sheet/220 Industrial Steel Pallet - Sheet.pdf"
+      },
+      "facts": [
+        [
+          "120",
+          "mm",
+          "Ground clearance"
+        ],
+        [
+          "3",
+          "",
+          "Legs per pallet"
+        ]
+      ]
+    },
+    {
+      "num": "230",
+      "slug": "industrial-steel-pallet-wiremesh",
+      "name": "Industrial Steel Pallet – Wiremesh Sides",
+      "group": "pallet",
+      "summary": "M.S. steel pallet with 4 sides closed by 1″ × 1″ wiremesh up to 450 mm height.",
+      "features": [
+        "All 4 sides are closed with 1″ × 1″ wiremesh up to 450 mm height.",
+        "Fabricated from a single piece of M.S. sheet, bent in six folds to form a “C” channel at the ends, with “U” grooves on the top surface for a neat appearance and added strength.",
+        "The “C” channels are welded together to form a strong base.",
+        "The base is welded onto rectangular “C” channel box-section legs, giving 120 mm ground clearance for easy entry of material handling equipment.",
+        "Each pallet has 3 legs — one at each end and one at the centre.",
+        "With full-length support, the pallet suits material movement on the shop floor as well as storage on pallet racking systems, shelving, etc."
+      ],
+      "variant_key": [
+        "Pallet Size (L × W)",
+        "Sheet Thickness",
+        "Load Capacity"
+      ],
+      "variants": [
+        {
+          "Pallet Size (L × W)": "1000 × 1000 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "1000 kg",
+          "Ground Clearance": "120 mm",
+          "Pallet Top Height": "150 mm",
+          "Side Panels": "Wiremesh 1″ × 1″, 450 mm high",
+          "Colour": "Blue"
+        },
+        {
+          "Pallet Size (L × W)": "1000 × 1000 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "1500 kg",
+          "Ground Clearance": "120 mm",
+          "Pallet Top Height": "150 mm",
+          "Side Panels": "Wiremesh 1″ × 1″, 450 mm high",
+          "Colour": "Blue"
+        },
+        {
+          "Pallet Size (L × W)": "1200 × 1200 mm",
+          "Sheet Thickness": "1.2 mm",
+          "Load Capacity": "1000 kg",
+          "Ground Clearance": "120 mm",
+          "Pallet Top Height": "150 mm",
+          "Side Panels": "Wiremesh 1″ × 1″, 450 mm high",
+          "Colour": "Blue"
+        },
+        {
+          "Pallet Size (L × W)": "1200 × 1200 mm",
+          "Sheet Thickness": "2.0 mm",
+          "Load Capacity": "1500 kg",
+          "Ground Clearance": "120 mm",
+          "Pallet Top Height": "150 mm",
+          "Side Panels": "Wiremesh 1″ × 1″, 450 mm high",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [],
+      "brake": null,
+      "brake_text": null,
+      "notes": [],
+      "images": {
+        "photo": "/assets/products/trolleys/industrial-steel-pallet-wiremesh-photo.jpg",
+        "thumb": "/assets/products/trolleys/industrial-steel-pallet-wiremesh-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/230 Industrial Steel Pallet - Wiremesh/23.png",
+        "pdf": "product-sources/20 Trolleys/230 Industrial Steel Pallet - Wiremesh/230 Industrial Steel Pallet - Wiremesh.pdf"
+      },
+      "facts": [
+        [
+          "120",
+          "mm",
+          "Ground clearance"
+        ],
+        [
+          "3",
+          "",
+          "Legs per pallet"
+        ]
+      ]
+    },
+    {
+      "num": "240",
+      "slug": "coolant-feeding-trolley",
+      "name": "Coolant Feeding Trolley",
+      "group": "workshop-utility",
+      "summary": "Mobile coolant tank with electric pump, rotary hand pump and level indicator for feeding machine tools.",
+      "features": [
+        "The base is fabricated from a single piece of M.S. sheet, bent to form a “C” channel at the ends and ribbed underneath with angles.",
+        "The coolant tank is fabricated above the base from thick M.S. sheet and welded on all sides to make it leak-proof.",
+        "The tank has an oil breather at the top, a drain plug at the bottom and a 1/2″ ball valve with a small flexible pipe for emergency draining.",
+        "A level indicator is provided at the top of the tank.",
+        "Fitted with a single-phase 0.25 HP electric water pump with about 5 m of 1″ flexible pipe; the control panel has an MCB, On/Off button and an industrial metal-clad plug and socket.",
+        "Also fitted with a rotary hand pump and an A4-size drawing pocket."
+      ],
+      "variant_key": [
+        "Tank Capacity",
+        "Load Capacity"
+      ],
+      "variants": [
+        {
+          "Tank Capacity": "200 litres",
+          "Load Capacity": "300 kg",
+          "Platform Size (L × W)": "900 × 600 mm",
+          "Tank Size (L × W × H)": "600 × 600 × 600 mm",
+          "Overall Size (L × W × H)": "1050 × 600 × 950 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        },
+        {
+          "Tank Capacity": "400 litres",
+          "Load Capacity": "600 kg",
+          "Platform Size (L × W)": "1250 × 750 mm",
+          "Tank Size (L × W × H)": "900 × 750 × 600 mm",
+          "Overall Size (L × W × H)": "1400 × 750 × 950 mm",
+          "Castor Wheel (Dia × W)": "200 × 50 mm",
+          "Wheel Bearing": "Ball bearing",
+          "Colour": "Blue"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": "standard",
+      "brake_text": "One swivel castor is fitted with a parking brake for safety as standard.",
+      "notes": [],
+      "images": {
+        "photo": "/assets/products/trolleys/coolant-feeding-trolley-photo.jpg",
+        "thumb": "/assets/products/trolleys/coolant-feeding-trolley-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/240 Coolant Feeding Trolley/24.png",
+        "pdf": "product-sources/20 Trolleys/240 Coolant Feeding Trolley/240 Coolant Feeding Trolley.pdf"
+      }
+    }
+  ]
+}

@@ -21,11 +21,13 @@ img{max-width:100%;}
 .brand img{height:42px;width:auto;display:block;}
 .footer-logo{display:inline-flex;background:#fff;padding:8px 12px;}
 .footer-logo img{height:36px;}
-.nav-links{display:flex;gap:28px;list-style:none;align-items:center;}
-.nav-links a{color:#444;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;transition:color .2s;border-bottom:2px solid transparent;padding-bottom:2px;}
+.nav-links{display:flex;gap:26px;list-style:none;align-items:center;}
+.nav-links li{display:flex;align-items:center;}
+.nav-links a{color:#444;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;transition:color .2s;border-bottom:2px solid transparent;padding:4px 0 2px;line-height:1.2;white-space:nowrap;}
 .nav-links a:hover,.nav-links a.current{color:#C85A00;border-bottom-color:#C85A00;}
-.nav-cta{background:#C85A00!important;color:#fff!important;padding:0 20px!important;height:38px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;border-bottom:none!important;font-weight:700!important;}
+.nav-cta{background:#C85A00!important;color:#fff!important;padding:0 20px!important;height:38px!important;line-height:1!important;margin-left:4px;display:inline-flex!important;align-items:center!important;justify-content:center!important;border-bottom:none!important;font-weight:700!important;}
 .nav-cta:hover{background:#E07B2A!important;}
+@media(max-width:1180px){.nav-links{gap:18px;}.nav-links a{letter-spacing:1px;}.nav-cta{padding:0 16px!important;}}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;}
 .hamburger span{width:24px;height:2px;background:#444;display:block;}
 .mobile-menu{display:none;position:fixed;inset:68px 0 0 0;background:#fff;z-index:999;padding:28px 5%;border-top:1px solid #DDD8D0;overflow-y:auto;}
@@ -106,6 +108,77 @@ img{max-width:100%;}
 .hub-note{margin:32px auto 0;max-width:880px;}
 .hub-grid .p-card-img{aspect-ratio:4/3;}
 @media(max-width:600px){.card-grid.hub-grid{grid-template-columns:minmax(0,340px);}}
+
+/* TROLLEY PRODUCT PAGES */
+.t-layout{display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);gap:40px;align-items:start;}
+.t-photo{margin:0;background:#fff;border:1px solid #DDD8D0;}
+.t-photo a{display:block;cursor:zoom-in;}
+.t-photo img{width:100%;height:auto;display:block;}
+.t-photo figcaption{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1A2332;padding:10px 12px;border-top:1px solid #EEE8E0;display:flex;justify-content:space-between;}
+.t-photo figcaption span{color:#C85A00;}
+.feat-list.t-feats{columns:1;margin-bottom:20px;}
+.t-note{font-size:13px;color:#444;background:#F7F4EF;border-left:3px solid #1A2332;padding:8px 12px;margin:-8px 0 18px;}
+.chip-list{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;}
+.chip{display:inline-flex;align-items:baseline;gap:6px;background:#fff;border:1px solid #DDD8D0;border-left:3px solid #C85A00;padding:7px 12px;font-size:13px;color:#444;text-decoration:none;transition:all .2s;}
+.chip b{font-family:'Barlow Condensed',sans-serif;font-size:16px;color:#1A2332;letter-spacing:.5px;}
+.chip:hover{border-color:#C85A00;background:#FFF0E6;}
+.brake-note{background:#FFF0E6;border:1px solid rgba(200,90,0,.25);padding:10px 14px;font-size:14px;color:#333;margin-bottom:4px;}
+.brake-note b{font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#C85A00;margin-right:8px;}
+.fact-num.fact-text{font-size:22px;padding-top:4px;}
+.variant-table th,.variant-table td{white-space:nowrap;}
+.variant-table td.key{color:#C85A00;font-weight:700;}
+.row-enq{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#fff!important;background:#C85A00;padding:5px 10px;text-decoration:none!important;}
+.row-enq:hover{background:#E07B2A;}
+.common-specs{margin-top:12px;font-size:14px;color:#444;}
+.common-specs b{font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;color:#1A2332;margin-right:4px;}
+.common-specs span{font-weight:600;color:#1A2332;}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+/* keep the screen-reader label inside the scrolling table, so it cannot widen the page on phones */
+.variant-table th{position:relative;}
+@media(max-width:900px){.t-layout{grid-template-columns:1fr;gap:24px;}.t-photo{max-width:520px;}}
+/* compact trolley product page: smaller photo column (aspect ratio kept), tighter spacing above the sizes table */
+@media screen{
+  .page-head.t-head{padding-bottom:28px;}
+  .t-head .key-facts{margin-top:20px;}
+  .wrap.t-main{padding-top:36px;padding-bottom:36px;}
+  .wrap.t-sizes{padding-top:40px;scroll-margin-top:68px;}
+  .fact-link{display:block;text-decoration:none;color:inherit;transition:background .2s;}
+  .fact-link:hover{background:#FFF0E6;}
+  .fact-link:hover .fact-label{color:#C85A00;}
+  .t-main .t-layout{grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:44px;}
+  .t-main .feat-list.t-feats{margin-bottom:16px;}
+  .t-main .feat-list.t-feats li{padding:5px 0 5px 18px;}
+  .t-main .action-box{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;padding:18px;}
+  .t-main .action-box .action-note{grid-column:1/-1;margin:0;}
+}
+@media screen and (max-width:900px){
+  .t-main .t-layout{grid-template-columns:1fr;gap:24px;}
+  .t-main .t-photo{max-width:400px;width:100%;margin:0 auto;}
+  .wrap.t-main{padding-top:28px;padding-bottom:28px;}
+  .wrap.t-sizes{padding-top:32px;}
+}
+@media screen and (max-width:560px){
+  .t-main .action-box{grid-template-columns:1fr;}
+}
+
+/* TROLLEY A4 DATASHEET (shares the letterhead classes .ps-*) */
+.pst-sub{font-size:9pt;color:#555;line-height:1.4;margin-top:1mm;max-width:120mm;}
+.pst-top{display:grid;grid-template-columns:78mm 1fr;gap:6mm;margin:4mm 0 4mm;flex:none;align-items:start;}
+.pst-photo{border:.3mm solid #DDD8D0;position:relative;aspect-ratio:1545/2000;max-height:108mm;}
+.print-sheet .pst-table+.pst-common+.ps-note,.print-sheet .pst-table+.ps-note{margin-bottom:auto;}
+.pst-photo img{position:absolute;top:2mm;left:2mm;width:calc(100% - 4mm);height:calc(100% - 4mm);object-fit:contain;}
+.pst-feats{list-style:none;margin:0 0 2mm;padding:0;}
+.pst-feats li{font-size:8.6pt;color:#222;line-height:1.4;padding:1mm 0 1mm 4mm;position:relative;border-bottom:.2mm solid #F0EBE3;}
+.pst-feats li::before{content:'—';position:absolute;left:0;color:#C85A00;}
+.pst-line{font-size:8.6pt;color:#222;line-height:1.45;margin-top:1.6mm;}
+.pst-line b{color:#C85A00;}
+.pst-table{width:100%;border-collapse:collapse;font-size:8pt;flex:none;}
+.pst-table th{background:#1A2332;color:#fff;font-family:'Barlow Condensed',Arial,sans-serif;font-size:7.6pt;font-weight:700;letter-spacing:.5pt;text-transform:uppercase;padding:1.4mm 1.8mm;text-align:left;border:.25mm solid #1A2332;}
+.pst-table td{padding:1.3mm 1.8mm;border:.25mm solid #DDD8D0;color:#222;white-space:nowrap;}
+.pst-table tr:nth-child(even) td{background:#F7F4EF;}
+.pst-table td.key{color:#C85A00;font-weight:700;}
+.pst-common{font-size:8pt;color:#444;margin-top:1.5mm;}
+.pst-common b{color:#1A2332;}
 
 /* TABLES */
 .tbl-wrap{overflow-x:auto;border:1px solid #DDD8D0;background:#fff;}
