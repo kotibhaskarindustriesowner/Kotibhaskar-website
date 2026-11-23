@@ -585,7 +585,7 @@ def build_pt_category(cat):
         sp = [p for p in prods if p['subcat'] == sc['id']]
         kinds = sorted({p['kind'] for p in sp}, key=lambda k: k != 'Roller')
         choices.append(f'''<a class="pt-choice" href="{url}{sc['id']}/">
-  <div class="pt-choice-img"><img src="{sp[0]['images']['thumb']}" alt="{e(sc['short'])} pallet truck rollers and wheels" loading="lazy" width="420" height="594"></div>
+  <div class="pt-choice-img"><img src="/assets/products/pallet-truck/{sc['id']}/material-card.jpg" alt="{e(sc['short'])} pallet truck rollers and wheels" loading="lazy" width="600" height="479"></div>
   <div class="pt-choice-body">
     <div class="pt-choice-name">{e(sc['short'])}</div>
     <div class="pt-choice-full">{e(sc['full'])}</div>
