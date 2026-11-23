@@ -1,0 +1,543 @@
+{
+  "id": "ms-track",
+  "name": "MS Solid Track Wheels",
+  "url": "/wheels-castors/ms-track/",
+  "intro": "Mild steel solid track wheels in V-groove, square-groove, round-groove and flange-type profiles, available in plain bore and ball bearing versions. Maximum working temperature 250 °C.",
+  "material": "Mild Steel",
+  "max_temp": "250 °C",
+  "shared_capacity_note": "Load capacities are the same for V-groove, square-groove, round-groove and flange-type wheels.",
+  "cover": {
+    "image": "/assets/products/ms-track/cover.jpg",
+    "source": "product-sources/30 Wheels & Caster/50 MS Track wheels/Cover image.png"
+  },
+  "source_pdf": "product-sources/30 Wheels & Caster/50 MS Track wheels/Information/Castor & Wheels 2024 A.cdr.pdf",
+  "rows": [
+    {
+      "no": 1,
+      "diameter_mm": 50,
+      "width_mm": 25,
+      "boss_mm": 30,
+      "bore_mm": 12,
+      "bearing": "Plain Bore",
+      "bearing_no": null,
+      "load_kg": 100
+    },
+    {
+      "no": 2,
+      "diameter_mm": 50,
+      "width_mm": 25,
+      "boss_mm": 30,
+      "bore_mm": 12,
+      "bearing": "Ball Bearing",
+      "bearing_no": "6001",
+      "load_kg": 100
+    },
+    {
+      "no": 3,
+      "diameter_mm": 63,
+      "width_mm": 25,
+      "boss_mm": 30,
+      "bore_mm": 12,
+      "bearing": "Plain Bore",
+      "bearing_no": null,
+      "load_kg": 130
+    },
+    {
+      "no": 4,
+      "diameter_mm": 63,
+      "width_mm": 25,
+      "boss_mm": 30,
+      "bore_mm": 12,
+      "bearing": "Ball Bearing",
+      "bearing_no": "6001",
+      "load_kg": 130
+    },
+    {
+      "no": 5,
+      "diameter_mm": 75,
+      "width_mm": 25,
+      "boss_mm": 30,
+      "bore_mm": 12,
+      "bearing": "Plain Bore",
+      "bearing_no": null,
+      "load_kg": 160
+    },
+    {
+      "no": 6,
+      "diameter_mm": 75,
+      "width_mm": 25,
+      "boss_mm": 30,
+      "bore_mm": 12,
+      "bearing": "Ball Bearing",
+      "bearing_no": "6001",
+      "load_kg": 160
+    },
+    {
+      "no": 7,
+      "diameter_mm": 75,
+      "width_mm": 32,
+      "boss_mm": 40,
+      "bore_mm": 15,
+      "bearing": "Plain Bore",
+      "bearing_no": null,
+      "load_kg": 200
+    },
+    {
+      "no": 8,
+      "diameter_mm": 75,
+      "width_mm": 32,
+      "boss_mm": 40,
+      "bore_mm": 15,
+      "bearing": "Ball Bearing",
+      "bearing_no": "6202",
+      "load_kg": 200
+    },
+    {
+      "no": 9,
+      "diameter_mm": 100,
+      "width_mm": 32,
+      "boss_mm": 40,
+      "bore_mm": 15,
+      "bearing": "Plain Bore",
+      "bearing_no": null,
+      "load_kg": 300
+    },
+    {
+      "no": 10,
+      "diameter_mm": 100,
+      "width_mm": 32,
+      "boss_mm": 40,
+      "bore_mm": 15,
+      "bearing": "Ball Bearing",
+      "bearing_no": "6202",
+      "load_kg": 300
+    },
+    {
+      "no": 11,
+      "diameter_mm": 125,
+      "width_mm": 32,
+      "boss_mm": 40,
+      "bore_mm": 15,
+      "bearing": "Plain Bore",
+      "bearing_no": null,
+      "load_kg": 400
+    },
+    {
+      "no": 12,
+      "diameter_mm": 125,
+      "width_mm": 32,
+      "boss_mm": 40,
+      "bore_mm": 15,
+      "bearing": "Ball Bearing",
+      "bearing_no": "6202",
+      "load_kg": 400
+    },
+    {
+      "no": 13,
+      "diameter_mm": 100,
+      "width_mm": 40,
+      "boss_mm": 50,
+      "bore_mm": 20,
+      "bearing": "Plain Bore",
+      "bearing_no": null,
+      "load_kg": 400
+    },
+    {
+      "no": 14,
+      "diameter_mm": 100,
+      "width_mm": 40,
+      "boss_mm": 50,
+      "bore_mm": 20,
+      "bearing": "Ball Bearing",
+      "bearing_no": "6004",
+      "load_kg": 400
+    },
+    {
+      "no": 15,
+      "diameter_mm": 125,
+      "width_mm": 40,
+      "boss_mm": 50,
+      "bore_mm": 20,
+      "bearing": "Plain Bore",
+      "bearing_no": null,
+      "load_kg": 500
+    },
+    {
+      "no": 16,
+      "diameter_mm": 125,
+      "width_mm": 40,
+      "boss_mm": 50,
+      "bore_mm": 20,
+      "bearing": "Ball Bearing",
+      "bearing_no": "6004",
+      "load_kg": 500
+    },
+    {
+      "no": 17,
+      "diameter_mm": 150,
+      "width_mm": 40,
+      "boss_mm": 50,
+      "bore_mm": 20,
+      "bearing": "Plain Bore",
+      "bearing_no": null,
+      "load_kg": 600
+    },
+    {
+      "no": 18,
+      "diameter_mm": 150,
+      "width_mm": 40,
+      "boss_mm": 50,
+      "bore_mm": 20,
+      "bearing": "Ball Bearing",
+      "bearing_no": "6004",
+      "load_kg": 600
+    },
+    {
+      "no": 19,
+      "diameter_mm": 200,
+      "width_mm": 40,
+      "boss_mm": 50,
+      "bore_mm": 20,
+      "bearing": "Plain Bore",
+      "bearing_no": null,
+      "load_kg": 800
+    },
+    {
+      "no": 20,
+      "diameter_mm": 200,
+      "width_mm": 40,
+      "boss_mm": 50,
+      "bore_mm": 20,
+      "bearing": "Ball Bearing",
+      "bearing_no": "6004",
+      "load_kg": 800
+    },
+    {
+      "no": 21,
+      "diameter_mm": 100,
+      "width_mm": 50,
+      "boss_mm": 60,
+      "bore_mm": 25,
+      "bearing": "Plain Bore",
+      "bearing_no": null,
+      "load_kg": 500
+    },
+    {
+      "no": 22,
+      "diameter_mm": 100,
+      "width_mm": 50,
+      "boss_mm": 60,
+      "bore_mm": 25,
+      "bearing": "Ball Bearing",
+      "bearing_no": "6205",
+      "load_kg": 500
+    },
+    {
+      "no": 23,
+      "diameter_mm": 125,
+      "width_mm": 50,
+      "boss_mm": 60,
+      "bore_mm": 25,
+      "bearing": "Plain Bore",
+      "bearing_no": null,
+      "load_kg": 600
+    },
+    {
+      "no": 24,
+      "diameter_mm": 125,
+      "width_mm": 50,
+      "boss_mm": 60,
+      "bore_mm": 25,
+      "bearing": "Ball Bearing",
+      "bearing_no": "6205",
+      "load_kg": 600
+    },
+    {
+      "no": 25,
+      "diameter_mm": 150,
+      "width_mm": 50,
+      "boss_mm": 60,
+      "bore_mm": 25,
+      "bearing": "Plain Bore",
+      "bearing_no": null,
+      "load_kg": 700
+    },
+    {
+      "no": 26,
+      "diameter_mm": 150,
+      "width_mm": 50,
+      "boss_mm": 60,
+      "bore_mm": 25,
+      "bearing": "Ball Bearing",
+      "bearing_no": "6205",
+      "load_kg": 700
+    },
+    {
+      "no": 27,
+      "diameter_mm": 200,
+      "width_mm": 50,
+      "boss_mm": 60,
+      "bore_mm": 25,
+      "bearing": "Plain Bore",
+      "bearing_no": null,
+      "load_kg": 900,
+      "correction": "Wheel Size column printed \"150 x 50\"; description says 200 x 50 x 25 PLB. Owner confirmed 200 x 50 mm, Plain Bore, 900 kg (2026-11-23)."
+    },
+    {
+      "no": 28,
+      "diameter_mm": 200,
+      "width_mm": 50,
+      "boss_mm": 60,
+      "bore_mm": 25,
+      "bearing": "Ball Bearing",
+      "bearing_no": "6205",
+      "load_kg": 900
+    },
+    {
+      "no": 29,
+      "diameter_mm": 250,
+      "width_mm": 50,
+      "boss_mm": 60,
+      "bore_mm": 25,
+      "bearing": "Ball Bearing",
+      "bearing_no": "6205",
+      "load_kg": 1100
+    },
+    {
+      "no": 30,
+      "diameter_mm": 300,
+      "width_mm": 50,
+      "boss_mm": 60,
+      "bore_mm": 25,
+      "bearing": "Ball Bearing",
+      "bearing_no": "6205",
+      "load_kg": 1400
+    },
+    {
+      "no": 31,
+      "diameter_mm": 150,
+      "width_mm": 75,
+      "boss_mm": 75,
+      "bore_mm": 25,
+      "bearing": "Ball Bearing",
+      "bearing_no": "6205",
+      "load_kg": 1000
+    },
+    {
+      "no": 32,
+      "diameter_mm": 200,
+      "width_mm": 75,
+      "boss_mm": 75,
+      "bore_mm": 25,
+      "bearing": "Ball Bearing",
+      "bearing_no": "6205",
+      "load_kg": 1300
+    },
+    {
+      "no": 33,
+      "diameter_mm": 250,
+      "width_mm": 75,
+      "boss_mm": 75,
+      "bore_mm": 25,
+      "bearing": "Ball Bearing",
+      "bearing_no": "6205",
+      "load_kg": 1600
+    },
+    {
+      "no": 34,
+      "diameter_mm": 300,
+      "width_mm": 75,
+      "boss_mm": 75,
+      "bore_mm": 25,
+      "bearing": "Ball Bearing",
+      "bearing_no": "6205",
+      "load_kg": 2000
+    }
+  ],
+  "profiles": [
+    {
+      "id": "v-groove",
+      "name": "V-Groove",
+      "title": "MS V-Groove Track Wheels",
+      "images": {
+        "photo": "/assets/products/ms-track/v-groove/photo.jpg",
+        "thumb": "/assets/products/ms-track/v-groove/thumb.jpg",
+        "drawings": [
+          {
+            "width_mm": 25,
+            "boss_mm": 30,
+            "src": "/assets/products/ms-track/v-groove/drawing-25.jpg"
+          },
+          {
+            "width_mm": 32,
+            "boss_mm": 40,
+            "src": "/assets/products/ms-track/v-groove/drawing-32.jpg"
+          },
+          {
+            "width_mm": 40,
+            "boss_mm": 50,
+            "src": "/assets/products/ms-track/v-groove/drawing-40.jpg"
+          },
+          {
+            "width_mm": 50,
+            "boss_mm": 60,
+            "src": "/assets/products/ms-track/v-groove/drawing-50.jpg"
+          },
+          {
+            "width_mm": 75,
+            "boss_mm": 75,
+            "src": "/assets/products/ms-track/v-groove/drawing-75.jpg"
+          }
+        ]
+      },
+      "source": {
+        "photo": "product-sources/30 Wheels & Caster/50 MS Track wheels/01 V Groove 00/01 V Groove 00.png",
+        "drawings": {
+          "25": "product-sources/30 Wheels & Caster/50 MS Track wheels/01 V Groove 00/01 V Groove 25.png",
+          "32": "product-sources/30 Wheels & Caster/50 MS Track wheels/01 V Groove 00/01 V Groove 32.png",
+          "40": "product-sources/30 Wheels & Caster/50 MS Track wheels/01 V Groove 00/01 V Groove 40.png",
+          "50": "product-sources/30 Wheels & Caster/50 MS Track wheels/01 V Groove 00/01 V Groove 50.png",
+          "75": "product-sources/30 Wheels & Caster/50 MS Track wheels/01 V Groove 00/01 V Groove 75.png"
+        }
+      }
+    },
+    {
+      "id": "square-groove",
+      "name": "Square-Groove",
+      "title": "MS Square-Groove Track Wheels",
+      "images": {
+        "photo": "/assets/products/ms-track/square-groove/photo.jpg",
+        "thumb": "/assets/products/ms-track/square-groove/thumb.jpg",
+        "drawings": [
+          {
+            "width_mm": 25,
+            "boss_mm": 30,
+            "src": "/assets/products/ms-track/square-groove/drawing-25.jpg"
+          },
+          {
+            "width_mm": 32,
+            "boss_mm": 40,
+            "src": "/assets/products/ms-track/square-groove/drawing-32.jpg"
+          },
+          {
+            "width_mm": 40,
+            "boss_mm": 50,
+            "src": "/assets/products/ms-track/square-groove/drawing-40.jpg"
+          },
+          {
+            "width_mm": 50,
+            "boss_mm": 60,
+            "src": "/assets/products/ms-track/square-groove/drawing-50.jpg"
+          },
+          {
+            "width_mm": 75,
+            "boss_mm": 75,
+            "src": "/assets/products/ms-track/square-groove/drawing-75.jpg"
+          }
+        ]
+      },
+      "source": {
+        "photo": "product-sources/30 Wheels & Caster/50 MS Track wheels/02 Square Groove 00/02 Square Groove 00.png",
+        "drawings": {
+          "25": "product-sources/30 Wheels & Caster/50 MS Track wheels/02 Square Groove 00/02 Square Groove 25.png",
+          "32": "product-sources/30 Wheels & Caster/50 MS Track wheels/02 Square Groove 00/02 Square Groove 32.png",
+          "40": "product-sources/30 Wheels & Caster/50 MS Track wheels/02 Square Groove 00/02 Square Groove 40.png",
+          "50": "product-sources/30 Wheels & Caster/50 MS Track wheels/02 Square Groove 00/02 Square Groove 50.png",
+          "75": "product-sources/30 Wheels & Caster/50 MS Track wheels/02 Square Groove 00/02 Square Groove 75.png"
+        }
+      }
+    },
+    {
+      "id": "round-groove",
+      "name": "Round-Groove",
+      "title": "MS Round-Groove Track Wheels",
+      "images": {
+        "photo": "/assets/products/ms-track/round-groove/photo.jpg",
+        "thumb": "/assets/products/ms-track/round-groove/thumb.jpg",
+        "drawings": [
+          {
+            "width_mm": 25,
+            "boss_mm": 30,
+            "src": "/assets/products/ms-track/round-groove/drawing-25.jpg"
+          },
+          {
+            "width_mm": 32,
+            "boss_mm": 40,
+            "src": "/assets/products/ms-track/round-groove/drawing-32.jpg"
+          },
+          {
+            "width_mm": 40,
+            "boss_mm": 50,
+            "src": "/assets/products/ms-track/round-groove/drawing-40.jpg"
+          },
+          {
+            "width_mm": 50,
+            "boss_mm": 60,
+            "src": "/assets/products/ms-track/round-groove/drawing-50.jpg"
+          },
+          {
+            "width_mm": 75,
+            "boss_mm": 75,
+            "src": "/assets/products/ms-track/round-groove/drawing-75.jpg"
+          }
+        ]
+      },
+      "source": {
+        "photo": "product-sources/30 Wheels & Caster/50 MS Track wheels/03 Round Groove 00/03 Round Groove 00.png",
+        "drawings": {
+          "25": "product-sources/30 Wheels & Caster/50 MS Track wheels/03 Round Groove 00/03 Round Groove 25.png",
+          "32": "product-sources/30 Wheels & Caster/50 MS Track wheels/03 Round Groove 00/03 Round Groove 32.png",
+          "40": "product-sources/30 Wheels & Caster/50 MS Track wheels/03 Round Groove 00/03 Round Groove 40.png",
+          "50": "product-sources/30 Wheels & Caster/50 MS Track wheels/03 Round Groove 00/03 Round Groove 50.png",
+          "75": "product-sources/30 Wheels & Caster/50 MS Track wheels/03 Round Groove 00/03 Round Groove 75.png"
+        }
+      }
+    },
+    {
+      "id": "flange-type",
+      "name": "Flange-Type",
+      "title": "MS Flange-Type Track Wheels",
+      "images": {
+        "photo": "/assets/products/ms-track/flange-type/photo.jpg",
+        "thumb": "/assets/products/ms-track/flange-type/thumb.jpg",
+        "drawings": [
+          {
+            "width_mm": 25,
+            "boss_mm": 30,
+            "src": "/assets/products/ms-track/flange-type/drawing-25.jpg"
+          },
+          {
+            "width_mm": 32,
+            "boss_mm": 40,
+            "src": "/assets/products/ms-track/flange-type/drawing-32.jpg"
+          },
+          {
+            "width_mm": 40,
+            "boss_mm": 50,
+            "src": "/assets/products/ms-track/flange-type/drawing-40.jpg"
+          },
+          {
+            "width_mm": 50,
+            "boss_mm": 60,
+            "src": "/assets/products/ms-track/flange-type/drawing-50.jpg"
+          },
+          {
+            "width_mm": 75,
+            "boss_mm": 75,
+            "src": "/assets/products/ms-track/flange-type/drawing-75.jpg"
+          }
+        ]
+      },
+      "source": {
+        "photo": "product-sources/30 Wheels & Caster/50 MS Track wheels/04 Flange Type 00/04 Flange Type 00.png",
+        "drawings": {
+          "25": "product-sources/30 Wheels & Caster/50 MS Track wheels/04 Flange Type 00/04 Flange Type 25.png",
+          "32": "product-sources/30 Wheels & Caster/50 MS Track wheels/04 Flange Type 00/04 Flange Type 32.png",
+          "40": "product-sources/30 Wheels & Caster/50 MS Track wheels/04 Flange Type 00/04 Flange Type 40.png",
+          "50": "product-sources/30 Wheels & Caster/50 MS Track wheels/04 Flange Type 00/04 Flange Type 50.png",
+          "75": "product-sources/30 Wheels & Caster/50 MS Track wheels/04 Flange Type 00/04 Flange Type 75.png"
+        }
+      }
+    }
+  ]
+}

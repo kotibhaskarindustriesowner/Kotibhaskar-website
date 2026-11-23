@@ -105,11 +105,38 @@ img{max-width:100%;}
 .feat-list li::before{content:'—';position:absolute;left:0;color:#C85A00;}
 
 /* Wheels & Castors overview: published ranges centred in a balanced row */
-.card-grid.hub-grid{grid-template-columns:repeat(4,minmax(0,280px));justify-content:center;}
+.card-grid.hub-grid{grid-template-columns:repeat(5,minmax(0,250px));justify-content:center;}
 .hub-note{margin:32px auto 0;max-width:880px;}
 .hub-grid .p-card-img{aspect-ratio:4/3;}
-@media(max-width:1100px){.card-grid.hub-grid{grid-template-columns:repeat(2,minmax(0,300px));}}
+@media(max-width:1100px){.card-grid.hub-grid{grid-template-columns:repeat(3,minmax(0,280px));}}
+@media(max-width:760px){.card-grid.hub-grid{grid-template-columns:repeat(2,minmax(0,300px));}}
 @media(max-width:600px){.card-grid.hub-grid{grid-template-columns:minmax(0,340px);}}
+/* MS solid track wheels */
+.pt-choices.ms-choices{grid-template-columns:repeat(4,minmax(0,1fr));}
+@media(max-width:1100px){.pt-choices.ms-choices{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:600px){.pt-choices.ms-choices{grid-template-columns:1fr;}}
+.ms-note{font-size:15px;color:#444;line-height:1.6;margin:0 0 16px;}
+.sum-table .ms-note{font-size:17px;}
+.ms-table th small{font-size:.75em;letter-spacing:1px;color:#E0B48A;font-weight:600;}
+.ms-table td.key{color:#C85A00;font-weight:700;}
+.ms-table th{position:relative;}   /* keeps the screen-reader 'Enquiry' label inside the scrolling table */
+.sum-table .data-table.ms-table{font-size:21px;}
+.sum-table .ms-table th{white-space:normal;font-size:17px;line-height:1.2;padding:14px 16px;vertical-align:bottom;}
+.sum-table .ms-table td{padding:12px 16px;white-space:nowrap;}
+@media(max-width:900px){.sum-table .data-table.ms-table{font-size:17px;}.sum-table .ms-table th{font-size:14px;padding:11px 10px;}.sum-table .ms-table td{padding:10px;}}
+@media(max-width:600px){.sum-table .data-table.ms-table{font-size:14px;}.sum-table .ms-table th{font-size:12px;letter-spacing:.5px;padding:9px 6px;}.sum-table .ms-table td{padding:8px 5px;white-space:normal;}.sum-table .ms-table .row-enq{padding:4px 6px;font-size:11px;letter-spacing:1px;}}
+@media(max-width:900px){.sum-table .ms-table td{white-space:normal;}}
+.t-photo.ms-photo{max-width:440px;}
+.ms-drawings{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;}
+.ms-drawings figure{margin:0;background:#fff;border:1px solid #DDD8D0;display:flex;flex-direction:column;}
+.ms-drawings a{display:block;aspect-ratio:1414/2000;overflow:hidden;cursor:zoom-in;}
+.ms-drawings img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .3s;}
+.ms-drawings a:hover img{transform:scale(1.03);}
+.ms-drawings figcaption{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#1A2332;padding:9px 10px;border-top:1px solid #EEE8E0;display:flex;flex-direction:column;gap:2px;}
+.ms-drawings figcaption span{color:#C85A00;}
+@media(max-width:1000px){.ms-drawings{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media(max-width:600px){.ms-drawings{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}}
+.hub-grid .hub-cover .p-card-img img{object-fit:contain;background:#fff;}
 /* Pallet truck wheels & rollers: material choice cards */
 .pt-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}
 .pt-choice{background:#fff;border:1px solid #DDD8D0;border-top:4px solid #C85A00;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:all .2s;}
@@ -382,6 +409,27 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
   body:not(.has-sheet) *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
 }
 
+/* MS track wheel datasheet: two A4 pages */
+.print-sheet + .print-sheet{break-before:page;}
+.ms-sheet .pst-sub{font-size:9pt;color:#555;margin-top:1mm;}
+.ms-ps-top{display:grid;grid-template-columns:58mm 1fr;gap:6mm;margin:4mm 0 3mm;align-items:start;}
+.ms-ps-photo{border:.3mm solid #DDD8D0;aspect-ratio:1414/2000;position:relative;}
+.ms-ps-photo img{position:absolute;inset:1.5mm;width:calc(100% - 3mm);height:calc(100% - 3mm);object-fit:contain;}
+.ms-sheet .ps-specs th{width:42%;font-size:8pt;padding:1mm 2.5mm;}
+.ms-sheet .ps-specs td{font-size:8.4pt;padding:1mm 2.5mm;}
+.ms-ps-legend{float:right;font-family:'Barlow',Arial,sans-serif;font-size:7.4pt;font-weight:600;letter-spacing:0;text-transform:none;color:#777;}
+.ms-ps-draw{display:grid;grid-template-columns:repeat(5,1fr);gap:2.5mm;align-items:start;}
+.ms-ps-draw figure{margin:0;border:.3mm solid #DDD8D0;display:flex;flex-direction:column;min-height:0;}
+.ms-ps-draw .ps-img{position:relative;aspect-ratio:1414/2000;}
+.ms-ps-draw .ps-img img{position:absolute;top:1mm;left:1mm;width:calc(100% - 2mm);height:calc(100% - 2mm);object-fit:contain;}
+.ms-ps-draw figcaption{font-family:'Barlow Condensed',Arial,sans-serif;font-size:7.6pt;font-weight:700;letter-spacing:.6pt;text-transform:uppercase;text-align:center;color:#1A2332;padding:1mm;border-top:.3mm solid #EEE8E0;background:#F7F4EF;}
+.ms-ps-table{margin-top:4mm;}
+.ms-ps-table th,.ms-ps-table td{font-size:8.2pt;padding:.95mm 2.5mm;text-align:center;line-height:1.25;}
+.ms-ps-table td.key{font-weight:700;color:#C85A00;}
+.ms-sheet .ps-note{margin-bottom:auto;}
+.ms-sheet .ps-foot{margin-top:auto;}
+html.print-preview .print-sheet + .print-sheet{margin-top:24px;}
+
 /* On-screen A4 preview (?print-preview) */
 html.print-preview body{background:#5F6670;padding:64px 0 32px;}
 html.print-preview body > *:not(.print-sheet):not(.pv-bar){display:none!important;}
@@ -391,3 +439,4 @@ html.print-preview .print-sheet{display:flex;margin:0 auto;box-shadow:0 10px 40p
 .pv-bar .btn-primary,.pv-bar .btn-outline{padding:8px 18px;font-size:13px;}
 .pv-bar .btn-outline{color:#fff;border-color:rgba(255,255,255,.4);}
 @media print{.pv-bar{display:none!important;}html.print-preview body{background:#fff;padding:0;}html.print-preview .print-sheet{box-shadow:none;}}
+.ms-note.ms-draw-note{font-style:italic;color:#666;margin-top:-6px;}

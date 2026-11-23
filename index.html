@@ -200,7 +200,8 @@ section{padding:84px 5%;}
 .prod-arrow{display:inline-block;margin-top:5px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#C85A00;opacity:0;transition:opacity .2s;}
 .prod-item:hover .prod-arrow{opacity:1;}
 /* Wheels & Castors: three completed ranges, centred and evenly sized */
-#grid-castors .prod-grid{grid-template-columns:repeat(4,minmax(0,1fr));max-width:960px;margin:0 auto;gap:16px;}
+#grid-castors .prod-grid{grid-template-columns:repeat(5,minmax(0,1fr));max-width:1180px;margin:0 auto;gap:16px;}
+@media(max-width:1100px){#grid-castors .prod-grid{grid-template-columns:repeat(3,minmax(0,1fr));max-width:760px;}}
 @media(max-width:900px){#grid-castors .prod-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:560px;}}
 #grid-castors .prod-arrow{opacity:1;}
 @media(max-width:600px){
@@ -536,7 +537,7 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
       <div class="cat-num">03</div>
       <svg class="cat-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="24" cy="24" r="14"/><circle cx="24" cy="24" r="6"/><path d="M24 10v4M24 34v4M10 24h4M34 24h4"/></svg>
       <div class="cat-name">Wheels &amp; Castors</div>
-      <div class="cat-desc">UHMW-PE, PU-CI &amp; Cast Iron wheels, pallet truck wheels &amp; rollers &mdash; 108 products</div>
+      <div class="cat-desc">UHMW-PE, PU-CI &amp; Cast Iron wheels, pallet truck wheels &amp; rollers, MS solid track wheels</div>
     </div>
   </div>
 
@@ -602,8 +603,8 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
       <a class="prod-item" href="/wheels-castors/puci/" style="text-decoration:none;color:inherit;display:block;"><div class="prod-img"><img src="/assets/products/wheels/puci/md-100x50-thumb.jpg" alt="PU CI Wheels" loading="lazy"></div><div class="prod-name">PU &ndash; CI Wheels</div><span class="prod-arrow">&rarr; 30 Sizes</span></a>
       <a class="prod-item" href="/wheels-castors/ci/" style="text-decoration:none;color:inherit;display:block;"><div class="prod-img"><img src="/assets/products/wheels/ci/md-100x50-thumb.jpg" alt="Cast Iron Wheels" loading="lazy"></div><div class="prod-name">Cast Iron Wheels</div><span class="prod-arrow">&rarr; 30 Sizes</span></a>
       <a class="prod-item" href="/wheels-castors/pallet-truck/" style="text-decoration:none;color:inherit;display:block;"><div class="prod-img"><img src="/assets/products/pallet-truck/category-thumb.jpg" alt="Pallet Truck Wheels &amp; Rollers" loading="lazy"></div><div class="prod-name">Pallet Truck Wheels &amp; Rollers</div><span class="prod-arrow">&rarr; 18 Products</span></a>
+      <a class="prod-item" href="/wheels-castors/ms-track/" style="text-decoration:none;color:inherit;display:block;"><div class="prod-img"><img src="/assets/products/ms-track/cover-thumb.jpg" alt="MS Solid Track Wheels" loading="lazy"></div><div class="prod-name">MS Solid Track Wheels</div><span class="prod-arrow">&rarr; 4 Profiles</span></a>
       <!-- HIDDEN UNTIL READY: MS track wheels and castor series (photos, drawings and specs pending).
-      <div class="prod-item" onclick="openModal('msw')"><div class="prod-img"><img src="https://kotibhaskar.in/images/castors/index/4.jpg" alt="MS Track Wheels" loading="lazy"></div><div class="prod-name">MS Solid Track Wheels</div><span class="prod-arrow">&rarr; Specs</span></div>
       <div class="prod-item" onclick="openModal('mdc')"><div class="prod-img"><img src="https://kotibhaskar.in/images/castors/index/5.jpg" alt="MD Steel Castors" loading="lazy"></div><div class="prod-name">MD Steel Castors</div><span class="prod-arrow">&rarr; Specs</span></div>
       <div class="prod-item" onclick="openModal('mhdc')"><div class="prod-img"><img src="https://kotibhaskar.in/images/castors/index/6.jpg" alt="MHD Castors" loading="lazy"></div><div class="prod-name">MHD Castors</div><span class="prod-arrow">&rarr; Specs</span></div>
       <div class="prod-item" onclick="openModal('hdc')"><div class="prod-img"><img src="https://kotibhaskar.in/images/castors/index/7.jpg" alt="Heavy Duty Castors" loading="lazy"></div><div class="prod-name">Heavy Duty Castors</div><span class="prod-arrow">&rarr; Specs</span></div>
@@ -1033,6 +1034,7 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
       <a href="/wheels-castors/puci/">PU-CI Wheels</a>
       <a href="/wheels-castors/ci/">CI Wheels</a>
       <a href="/wheels-castors/pallet-truck/">Pallet Truck Wheels &amp; Rollers</a>
+      <a href="/wheels-castors/ms-track/">MS Solid Track Wheels</a>
     </div>
     <div class="footer-col">
       <h4>Company</h4>
@@ -1318,7 +1320,11 @@ var SC=[
 {k:['uhmw roller','uhmw pallet truck','white roller','nylon roller'],id:'ptw_uhmw',p:'UHMW Pallet Truck Wheels & Rollers',r:'UHMW rollers 80 mm dia (70-100 mm wide) and a 180 x 50 mm wheel — ball bearing, 20 mm bore, 500-600 kg.'},
 {k:['pu roller','puci roller','pu-ci roller','polyurethane roller','pu pallet truck'],id:'ptw_puci',p:'PU-CI Pallet Truck Wheels & Rollers',r:'PU-CI rollers 80 mm dia (70-100 mm wide) and a 180 x 50 mm wheel — ball bearing, 20 mm bore, 500-600 kg.'},
 {k:['ci roller','cast iron roller','iron roller','ci pallet truck'],id:'ptw_ci',p:'CI Pallet Truck Wheels & Rollers',r:'Cast iron rollers 80 mm dia (70-100 mm wide) and a 180 x 50 mm wheel — ball bearing, 20 mm bore, 800-1000 kg.'},
-{k:['track wheel','v groove wheel','rail wheel','groove wheel'],id:'msw',p:'MS Solid Track Wheels',r:'MS track wheels in V-Groove, Square, Round and Flange profiles. 100-2000 kg. Max 250°C.'},
+{k:['track wheel','ms wheel','mild steel wheel','rail wheel','groove wheel','steel track wheel'],id:'msw',p:'MS Solid Track Wheels',r:'Mild steel track wheels in V-groove, square-groove, round-groove and flange-type profiles, plain bore or ball bearing, 50-300 mm, 100-2000 kg per wheel. Max working temperature 250 °C.'},
+{k:['v groove','v-groove','vee groove'],id:'ms_vg',p:'MS V-Groove Track Wheels',r:'Mild steel V-groove track wheels, 50-300 mm diameter, plain bore or ball bearing, 100-2000 kg per wheel.'},
+{k:['square groove','square-groove'],id:'ms_sq',p:'MS Square-Groove Track Wheels',r:'Mild steel square-groove track wheels, 50-300 mm diameter, plain bore or ball bearing, 100-2000 kg per wheel.'},
+{k:['round groove','round-groove'],id:'ms_ro',p:'MS Round-Groove Track Wheels',r:'Mild steel round-groove track wheels, 50-300 mm diameter, plain bore or ball bearing, 100-2000 kg per wheel.'},
+{k:['flange wheel','flange type','flanged wheel'],id:'ms_fl',p:'MS Flange-Type Track Wheels',r:'Mild steel flange-type track wheels, 50-300 mm diameter, plain bore or ball bearing, 100-2000 kg per wheel.'},
 {k:['medium castor','md castor','small castor','light castor'],id:'mdc',p:'MD Steel Castors',r:'Medium duty pressed steel castors — fixed and swivel. 60-500 kg. UHMW, PU-CI, CI or MS-TR wheel options.'},
 {k:['mhd castor','medium heavy castor'],id:'mhdc',p:'MHD Castors',r:'Medium heavy duty castors — 300-1000 kg. Forged bracket, ball race swivel. Fixed and swivel with brake.'},
 {k:['heavy castor','hd castor','heavy duty castor','high load castor'],id:'hdc',p:'Heavy Duty Castors',r:'Heavy duty castors — 300-1200 kg per castor. Machined ball race. Maintenance free. UHMW/PU-CI/CI/MS-TR options.'},
@@ -1380,7 +1386,11 @@ var SI=[
   {n:'UHMW Pallet Truck Rollers & Wheels',id:'ptw_uhmw',t:'uhmw pallet truck roller wheel white 80 x 70 85 90 96 100 180 x 50'},
   {n:'PU-CI Pallet Truck Rollers & Wheels',id:'ptw_puci',t:'pu ci puci polyurethane pallet truck roller wheel red 80 x 70 85 90 96 100 180 x 50'},
   {n:'CI Pallet Truck Rollers & Wheels',id:'ptw_ci',t:'ci cast iron pallet truck roller wheel 80 x 70 85 90 96 100 180 x 50'},
-  {n:'MS Solid Track Wheels',id:'msw',t:'ms track wheel v groove square round flange rail overhead crane'},
+  {n:'MS Solid Track Wheels',id:'msw',t:'ms mild steel solid track wheel rail groove flange v square round plain bore ball bearing'},
+  {n:'MS V-Groove Track Wheels',id:'ms_vg',t:'ms v groove vee track wheel mild steel'},
+  {n:'MS Square-Groove Track Wheels',id:'ms_sq',t:'ms square groove track wheel mild steel'},
+  {n:'MS Round-Groove Track Wheels',id:'ms_ro',t:'ms round groove track wheel mild steel'},
+  {n:'MS Flange-Type Track Wheels',id:'ms_fl',t:'ms flange type flanged track wheel mild steel'},
   {n:'MD Steel Castors',id:'mdc',t:'md medium duty castor swivel fixed pressed steel light'},
   {n:'MHD Castors',id:'mhdc',t:'mhd medium heavy duty castor swivel fixed'},
   {n:'Heavy Duty Castors',id:'hdc',t:'hd heavy duty castor swivel fixed maintenance free'},
@@ -1406,13 +1416,13 @@ function toggleMenu(){
 /* Products that now have their own dedicated pages (generated by tools/build_site.py).
    The card, product finder and search all open these pages instead of the popup. */
 var PAGES={uhmw:'/wheels-castors/uhmw/',puci:'/wheels-castors/puci/',ciw:'/wheels-castors/ci/',
-  ptw:'/wheels-castors/pallet-truck/',ptw_uhmw:'/wheels-castors/pallet-truck/uhmw/',ptw_puci:'/wheels-castors/pallet-truck/puci/',ptw_ci:'/wheels-castors/pallet-truck/ci/',
+  ptw:'/wheels-castors/pallet-truck/',msw:'/wheels-castors/ms-track/',ms_vg:'/wheels-castors/ms-track/v-groove/',ms_sq:'/wheels-castors/ms-track/square-groove/',ms_ro:'/wheels-castors/ms-track/round-groove/',ms_fl:'/wheels-castors/ms-track/flange-type/',ptw_uhmw:'/wheels-castors/pallet-truck/uhmw/',ptw_puci:'/wheels-castors/pallet-truck/puci/',ptw_ci:'/wheels-castors/pallet-truck/ci/',
   tr_platform_trolley:'/material-handling-trolleys/platform-trolley/',tr_workshop_trolley_sheet:'/material-handling-trolleys/workshop-trolley-sheet/',tr_workshop_trolley_wiremesh:'/material-handling-trolleys/workshop-trolley-wiremesh/',tr_drum_trolley:'/material-handling-trolleys/drum-trolley/',tr_turntable_platform_trolley:'/material-handling-trolleys/turntable-platform-trolley/',tr_turntable_workshop_trolley_sheet:'/material-handling-trolleys/turntable-workshop-trolley-sheet/',tr_turntable_workshop_trolley_wiremesh:'/material-handling-trolleys/turntable-workshop-trolley-wiremesh/',tr_sack_trolley:'/material-handling-trolleys/sack-trolley/',tr_turntable_platform_truck:'/material-handling-trolleys/turntable-platform-truck/',tr_turntable_workshop_truck_sheet:'/material-handling-trolleys/turntable-workshop-truck-sheet/',tr_turntable_workshop_truck_wiremesh:'/material-handling-trolleys/turntable-workshop-truck-wiremesh/',tr_double_wheel_barrow:'/material-handling-trolleys/double-wheel-barrow/',tr_two_shelf_trolley:'/material-handling-trolleys/two-shelf-trolley/',tr_three_shelf_trolley:'/material-handling-trolleys/three-shelf-trolley/',tr_five_shelf_trolley:'/material-handling-trolleys/five-shelf-trolley/',tr_multi_utility_trolley:'/material-handling-trolleys/multi-utility-trolley/',tr_gas_cylinder_trolley_single:'/material-handling-trolleys/gas-cylinder-trolley-single/',tr_gas_cylinder_trolley_lpg:'/material-handling-trolleys/gas-cylinder-trolley-lpg/',tr_gas_cylinder_trolley_double:'/material-handling-trolleys/gas-cylinder-trolley-double/',tr_chip_trolley:'/material-handling-trolleys/chip-trolley/',tr_industrial_steel_pallet_plain:'/material-handling-trolleys/industrial-steel-pallet-plain/',tr_industrial_steel_pallet_sheet:'/material-handling-trolleys/industrial-steel-pallet-sheet/',tr_industrial_steel_pallet_wiremesh:'/material-handling-trolleys/industrial-steel-pallet-wiremesh/',tr_coolant_feeding_trolley:'/material-handling-trolleys/coolant-feeding-trolley/'};
 
 /* Categories not yet published (data kept for later). They are removed from the
    product finder and search suggestions, and their popups cannot be opened.
    To publish one later: build its pages, add it to PAGES and delete it here. */
-var HIDDEN={msw:1,mdc:1,mhdc:1,hdc:1,hdtc:1};
+var HIDDEN={mdc:1,mhdc:1,hdc:1,hdtc:1};
 var SC_HIDDEN=SC.filter(function(s){return HIDDEN[s.id];});
 SC=SC.filter(function(s){return !HIDDEN[s.id];});
 SI=SI.filter(function(s){return !HIDDEN[s.id];});

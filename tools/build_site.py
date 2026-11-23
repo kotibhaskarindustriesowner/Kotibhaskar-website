@@ -486,7 +486,7 @@ def build_product(cat, p, idx):
 
 
 # ----------------------------------------------------------------------------
-def build_hub(cats, pt=None):
+def build_hub(cats, pt=None, ms=None):
     crumb_html, crumb_ld = crumbs([('Home', '/'), ('Wheels &amp; Castors', None)])
     cards = []
     for c in cats:
@@ -511,6 +511,18 @@ def build_hub(cats, pt=None):
     <div class="p-card-name">{e(pt['name'])}</div>
     <div class="p-card-meta">{' &middot; '.join(e(s['name']) for s in pt['subcats'])}</div>
     <div class="p-card-load">Load capacity: <b>{n(min(loads))}&ndash;{n(max(loads))} kg</b></div>
+    <div class="p-card-cta">View range &rarr;</div>
+  </div>
+</a>''')
+    if ms:
+        loads = [r['load_kg'] for r in ms['rows']]
+        cards.append(f'''<a class="p-card hub-cover" href="{ms['url']}">
+  <div class="p-card-img"><img src="/assets/products/ms-track/cover-thumb.jpg" alt="{e(ms['name'])}" loading="lazy" width="480" height="679"></div>
+  <div class="p-card-body">
+    <div class="p-card-duty">{len(ms['profiles'])} profiles</div>
+    <div class="p-card-name">{e(ms['name'])}</div>
+    <div class="p-card-meta">{' &middot; '.join(e(p['name']) for p in ms['profiles'])}</div>
+    <div class="p-card-load">Load per wheel: <b>{n(min(loads))}&ndash;{n(max(loads))} kg</b></div>
     <div class="p-card-cta">View range &rarr;</div>
   </div>
 </a>''')
@@ -799,6 +811,282 @@ def build_pt_product(cat, sc, p):
                             f"ball bearing, load capacity {n(p['load_kg'])} kg. Made in India by Kotibhaskar Industries, Satara.",
                 canonical=url, body=body, jsonld=jsonld, og_image=SITE + p['images']['photo'],
                 wa_text=f'Hello, I would like a quotation for: {p["name"]} ({SITE}{url})', sheet=sheet)
+
+
+# ============================================================================
+# MS SOLID TRACK WHEELS (data/products/ms-track/ms-track.json)
+# 5th wheels & castors category: 1 category page + 4 profile pages.
+# One shared size table (capacities are the same for all profiles per the catalogue).
+# Mounting type and bracket information are not in the source and are not shown.
+# ============================================================================
+MS_ROOT = os.path.join(OUT_ROOT, 'ms-track')
+
+
+def ms_list(vals, unit='mm'):
+    vals = sorted(set(vals))
+    return (', '.join(n(v) for v in vals[:-1]) + ' and ' + n(vals[-1]) if len(vals) > 1 else n(vals[0])) + (f' {unit}' if unit else '')
+
+
+def ms_range(vals, unit):
+    return f'{n(min(vals))}–{n(max(vals))} {unit}'
+
+
+def ms_bearing(r):
+    return f"Ball Bearing &middot; {e(r['bearing_no'])}" if r['bearing_no'] else 'Plain Bore'
+
+
+def ms_table(cat, rows, prof=None, url=None):
+    """Complete size table; rows tinted per wheel width. With prof, each row gets an Enquire link."""
+    widths = sorted({r['width_mm'] for r in rows})
+    head = ('<th scope="col">Wheel Diameter<br><small>mm</small></th><th scope="col">Wheel Width<br><small>mm</small></th>'
+            '<th scope="col">Boss Width<br><small>mm</small></th><th scope="col">Bore ID<br><small>mm</small></th>'
+            '<th scope="col">Bearing Type / Number</th><th scope="col">Load Capacity per Wheel<br><small>kg</small></th>'
+            + ('<th scope="col"><span class="sr-only">Enquiry</span></th>' if prof else ''))
+    body, prev = '', None
+    for r in rows:
+        cls = f'grp-{widths.index(r["width_mm"]) % 3 + 1}' + (' grp-start' if r['width_mm'] != prev else '')
+        prev = r['width_mm']
+        enq = ''
+        if prof:
+            size = f"{r['diameter_mm']} × {r['width_mm']} mm, bore {r['bore_mm']} mm, {r['bearing']}" + (f" {r['bearing_no']}" if r['bearing_no'] else '')
+            link = enquire_url(f"{prof['title'][:-1]} – {size}", size, f"Wheels & Castors > {cat['name']} > {prof['name']}", url)
+            enq = f'<td><a class="row-enq" href="{e(link)}">Enquire</a></td>'
+        body += (f'<tr class="{cls}"><td>{n(r["diameter_mm"])}</td><td>{n(r["width_mm"])}</td><td>{n(r["boss_mm"])}</td>'
+                 f'<td>{n(r["bore_mm"])}</td><td>{ms_bearing(r)}</td><td class="key">{n(r["load_kg"])}</td>{enq}</tr>')
+    return f'<div class="tbl-wrap"><table class="data-table ms-table"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
+
+
+def ms_specs(cat, prof):
+    rows = cat['rows']
+    bnos = sorted({r['bearing_no'] for r in rows if r['bearing_no']}, key=lambda b: [r['bearing_no'] for r in rows].index(b))
+    return [
+        ('Wheel Material', cat['material']),
+        ('Wheel Profile', prof['name']),
+        ('Wheel Diameter', ms_range([r['diameter_mm'] for r in rows], 'mm') + ' (see size table)'),
+        ('Wheel Width', ms_list([r['width_mm'] for r in rows])),
+        ('Boss Width', ms_list([r['boss_mm'] for r in rows]) + ' (by wheel width)'),
+        ('Bore ID', ms_list([r['bore_mm'] for r in rows]) + ' (see size table)'),
+        ('Bearing Type', 'Plain Bore or Ball Bearing (see size table)'),
+        ('Bearing Number', ', '.join(bnos) + ' (ball bearing versions)'),
+        ('Load Capacity per Wheel', ms_range([r['load_kg'] for r in rows], 'kg') + ' (see size table)'),
+        ('Maximum Working Temperature', cat['max_temp']),
+        ('Brand', 'Kotibhaskar'),
+        ('Country', 'Made in India'),
+    ]
+
+
+def ms_head_facts(cat):
+    rows = cat['rows']
+    return f'''<div class="key-facts">
+    <div class="fact"><div class="fact-num">{len({(r['diameter_mm'], r['width_mm'], r['bore_mm']) for r in rows})}</div><div class="fact-label">Sizes</div></div>
+    <div class="fact"><div class="fact-num">{n(min(r['diameter_mm'] for r in rows))}&ndash;{n(max(r['diameter_mm'] for r in rows))}<small>mm</small></div><div class="fact-label">Wheel diameter</div></div>
+    <div class="fact"><div class="fact-num">{n(min(r['load_kg'] for r in rows))}&ndash;{n(max(r['load_kg'] for r in rows))}<small>kg</small></div><div class="fact-label">Load per wheel</div></div>
+    <div class="fact"><div class="fact-num">{e(cat['max_temp'].replace(' °C', ''))}<small>°C</small></div><div class="fact-label">Max. working temp.</div></div>
+  </div>'''
+
+
+def build_ms_category(cat):
+    url = cat['url']
+    crumb_html, crumb_ld = crumbs([('Home', '/'), ('Wheels &amp; Castors', '/wheels-castors/'), (e(cat['name']), None)])
+    cards = ''.join(f'''<a class="pt-choice" href="{url}{p['id']}/">
+  <div class="pt-choice-img"><img src="{p['images']['card']}" alt="{e(p['title'])}" loading="lazy" width="600" height="606"></div>
+  <div class="pt-choice-body">
+    <div class="pt-choice-name">{e(p['name'])}</div>
+    <div class="pt-choice-full">{e(p['title'])}</div>
+    <ul class="pt-choice-facts">
+      <li><b>{len({(r['diameter_mm'], r['width_mm'], r['bore_mm']) for r in cat['rows']})}</b> sizes &middot; plain bore &amp; ball bearing</li>
+      <li>Load per wheel <b>{ms_range([r['load_kg'] for r in cat['rows']], 'kg')}</b></li>
+    </ul>
+    <div class="pt-choice-cta">View {e(p['name'])} wheels &rarr;</div>
+  </div>
+</a>''' for p in cat['profiles'])
+    body = f'''<header class="page-head">
+  {crumb_html}
+  <div class="section-tag">Wheels &amp; Castors</div>
+  <h1 class="page-title">MS Solid <span class="hl">Track Wheels</span></h1>
+  <p class="page-sub">{e(cat['intro'])}</p>
+  <div class="head-actions">
+    <a class="btn-primary" href="{e(enquire_url(cat['name'], None, 'Wheels & Castors > ' + cat['name'], url))}">Enquire Now</a>
+    <a class="btn-dark" href="{CATALOGUE}" target="_blank" rel="noopener">{DL_ICON} Wheels &amp; Castors Catalogue</a>
+  </div>
+  {ms_head_facts(cat)}
+</header>
+
+<div class="wrap">
+  <h2 class="h2">Choose a Profile</h2>
+  <div class="pt-choices ms-choices">
+{cards}
+  </div>
+</div>
+
+<div class="wrap alt sum-table">
+  <h2 class="h2">All Sizes &amp; Load Capacities <small>{len(cat['rows'])} configurations</small></h2>
+  <p class="ms-note">{e(cat['shared_capacity_note'])}</p>
+  {ms_table(cat, cat['rows'])}
+</div>
+
+<section class="cta-band">
+  <div><h2>Need help choosing a track wheel?</h2><p>Tell us the profile, size and bearing you need &mdash; our team will confirm availability.</p></div>
+  <div class="acts"><a class="btn-primary" href="{e(enquire_url(cat['name'], None, 'Wheels & Castors > ' + cat['name'], url))}">Send Enquiry</a><a class="btn-outline" href="tel:+919822413252">Call +91 98224 13252</a></div>
+</section>'''
+    jsonld = {'@context': 'https://schema.org', '@graph': [
+        crumb_ld,
+        {'@type': 'CollectionPage', 'name': cat['name'], 'url': SITE + url, 'description': cat['intro'],
+         'isPartOf': {'@id': f'{SITE}/#website'},
+         'mainEntity': {'@type': 'ItemList', 'numberOfItems': len(cat['profiles']), 'itemListElement': [
+             {'@type': 'ListItem', 'position': i + 1, 'url': f"{SITE}{url}{p['id']}/", 'name': p['title']} for i, p in enumerate(cat['profiles'])]}},
+    ]}
+    loads = [r['load_kg'] for r in cat['rows']]
+    return page(title=f"MS Solid Track Wheels – V-Groove, Square, Round & Flange, {n(min(loads))}–{n(max(loads))} kg | Kotibhaskar",
+                description=f"{cat['intro']} Load capacity {n(min(loads))}–{n(max(loads))} kg per wheel. Made in India by Kotibhaskar Industries, Satara.",
+                canonical=url, body=body, jsonld=jsonld, og_image=SITE + cat['cover']['image'],
+                wa_text=f"Hello, I'm interested in your MS solid track wheels (kotibhaskarindustries.com{url}).")
+
+
+def ms_letterhead(cat, prof):
+    c = COMPANY
+    return f'''  <div class="ps-head">
+    <img class="ps-logo" src="{c['logo']}" alt="KOTIBHASKAR">
+    <div class="ps-company">
+      <div class="ps-name">{e(c['name'])}</div>
+      <div class="ps-tag">{e(c['tagline'])}</div>
+      <div class="ps-contact">{e(c['address'])}<br>
+        Tel: {' &middot; '.join(e(t) for t in c['phones'])}<br>
+        Email: {' &middot; '.join(e(m) for m in c['emails'])} &nbsp;|&nbsp; Web: {e(c['website'])}</div>
+    </div>
+  </div>
+  <div class="ps-band"><span>Product Specification Sheet</span><span>Wheels &amp; Castors &middot; {e(cat['name'])}</span></div>'''
+
+
+def ms_foot(url, page_no):
+    c = COMPANY
+    return f'''  <div class="ps-foot">
+    <div><b>{e(c['name'])}</b><br>{e(c['website'])}</div>
+    <div>{e(c['phones'][0])} &nbsp;|&nbsp; {e(c['emails'][0])} &nbsp;|&nbsp; Page {page_no} of 2</div>
+    <div class="ps-url">{'/<wbr>'.join(f'<span>{e(seg)}</span>' for seg in (c['website'] + url).split('/'))}</div>
+  </div>'''
+
+
+def ms_sheet(cat, prof, url):
+    rows = cat['rows']
+    specs = ''.join(f'<tr><th>{e(k)}</th><td>{e(v)}</td></tr>' for k, v in ms_specs(cat, prof))
+    draws = ''.join(f'<figure><div class="ps-img"><img src="{d["src"]}" alt=""></div><figcaption>W {d["width_mm"]} &middot; Boss {d["boss_mm"]} mm</figcaption></figure>'
+                    for d in prof['images']['drawings'])
+    load = ms_range([r['load_kg'] for r in rows], 'kg')
+    trows = ''.join(f'<tr><td>{n(r["diameter_mm"])}</td><td>{n(r["width_mm"])}</td><td>{n(r["boss_mm"])}</td><td>{n(r["bore_mm"])}</td>'
+                    f'<td>{ms_bearing(r)}</td><td class="key">{n(r["load_kg"])}</td></tr>' for r in rows)
+    return f'''<div class="print-sheet ms-sheet" aria-hidden="true">
+{ms_letterhead(cat, prof)}
+  <div class="ps-title">
+    <div>
+      <div class="ps-cat">{e(cat['name'])} &middot; {e(prof['name'])}</div>
+      <div class="ps-h">{e(prof['title'])}</div>
+      <div class="pst-sub">{e(cat['material'])} &middot; plain bore and ball bearing versions &middot; maximum working temperature {e(cat['max_temp'])}</div>
+    </div>
+    <div class="ps-load"><span>Load Capacity per Wheel</span><b>{load}</b></div>
+  </div>
+  <div class="ms-ps-top">
+    <div class="ms-ps-photo"><img src="{prof['images']['photo']}" alt=""></div>
+    <div>
+      <div class="ps-sec">Technical Specifications</div>
+      <table class="ps-specs"><tbody>{specs}</tbody></table>
+    </div>
+  </div>
+  <div class="ps-sec">Dimensional Drawings <span class="ms-ps-legend">D = wheel diameter &middot; d = bore ID &middot; values per size on page 2</span></div>
+  <div class="ms-ps-draw">{draws}</div>
+  <div class="ps-note">The drawings illustrate ball-bearing configurations; plain-bore versions are available where listed in the size table.</div>
+{ms_foot(url, 1)}
+</div>
+<div class="print-sheet ms-sheet" aria-hidden="true">
+{ms_letterhead(cat, prof)}
+  <div class="ps-title">
+    <div>
+      <div class="ps-cat">{e(cat['name'])} &middot; {e(prof['name'])}</div>
+      <div class="ps-h">{e(prof['title'])} &mdash; Sizes &amp; Load Capacities</div>
+    </div>
+  </div>
+  <table class="pst-table ms-ps-table"><thead><tr><th>Wheel Diameter (mm)</th><th>Wheel Width (mm)</th><th>Boss Width (mm)</th><th>Bore ID (mm)</th><th>Bearing Type / Number</th><th>Load Capacity per Wheel (kg)</th></tr></thead><tbody>{trows}</tbody></table>
+  <div class="ps-note">{e(cat['shared_capacity_note'])} Specifications subject to change without notice. Contact us for a quotation.</div>
+{ms_foot(url, 2)}
+</div>'''
+
+
+def build_ms_product(cat, prof):
+    url = f"{cat['url']}{prof['id']}/"
+    rows = cat['rows']
+    path = f"Wheels & Castors > {cat['name']} > {prof['name']}"
+    crumb_html, crumb_ld = crumbs([('Home', '/'), ('Wheels &amp; Castors', '/wheels-castors/'), (e(cat['name']), cat['url']), (e(prof['name']), None)])
+    specs_html = ''.join(f'<tr><th scope="row">{e(k)}</th><td>{e(v)}</td></tr>' for k, v in ms_specs(cat, prof))
+    draws = ''.join(f'''<figure>
+          <a href="{d['src']}" data-lightbox><img src="{d['src']}" alt="{e(prof['title'])} — dimensional drawing, wheel width {d['width_mm']} mm" loading="lazy" width="1100" height="1556"></a>
+          <figcaption>Wheel width {d['width_mm']} mm <span>Boss width {d['boss_mm']} mm</span></figcaption>
+        </figure>''' for d in prof['images']['drawings'])
+    sibs = ''.join(f'<a class="sib{" current" if q["id"] == prof["id"] else ""}" href="{cat["url"]}{q["id"]}/"'
+                   f'{" aria-current=\"page\"" if q["id"] == prof["id"] else ""}>{e(q["name"])}<small>MS track wheels</small></a>' for q in cat['profiles'])
+    body = f'''<header class="page-head">
+  {crumb_html}
+  <div class="duty-badge">{e(cat['name'])} &middot; <b>{e(prof['name'])}</b></div>
+  <h1 class="page-title">{e(prof['title'])}</h1>
+  <p class="page-sub">Mild steel solid track wheels with a {e(prof['name'])} profile, in plain bore and ball bearing versions.</p>
+  {ms_head_facts(cat)}
+</header>
+
+<div class="wrap">
+  <div class="t-layout">
+    <figure class="t-photo ms-photo">
+      <a href="{prof['images']['photo']}" data-lightbox><img src="{prof['images']['photo']}" alt="{e(prof['title'])} — product photograph" width="900" height="1273"></a>
+      <figcaption>Product photo <span>Click to enlarge</span></figcaption>
+    </figure>
+    <div>
+      <h2 class="sec-label">Technical Specifications</h2>
+      <div class="tbl-wrap"><table class="data-table spec-table"><tbody>{specs_html}</tbody></table></div>
+      <p class="ms-note">{e(cat['shared_capacity_note'])}</p>
+      <div class="action-box">
+        <a class="btn-primary" href="{e(enquire_url(prof['title'], None, path, url))}">&#9993; Enquire Now</a>
+        <a class="btn-wa" href="{e(wa_url(f'Hello, I would like a quotation for: {prof["title"]} ({SITE}{url})'))}" target="_blank" rel="noopener">{WA_ICON.replace('width="20" height="20"', 'width="18" height="18"')} WhatsApp Enquiry</a>
+        <a class="btn-dark" href="{CATALOGUE}" target="_blank" rel="noopener">{DL_ICON} Wheels &amp; Castors Catalogue (PDF)</a>
+        <button type="button" class="btn-outline" data-print>&#128438; Print / Save as PDF</button>
+        <p class="action-note">No prices are listed online &mdash; send an enquiry for a quotation.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap alt sum-table" id="sizes">
+  <h2 class="h2">Sizes &amp; Load Capacities <small>{len(rows)} configurations</small></h2>
+  {ms_table(cat, rows, prof, url)}
+</div>
+
+<div class="wrap">
+  <h2 class="h2">Dimensional Drawings <small>by wheel width</small></h2>
+  <p class="ms-note">D = wheel diameter, d = bore ID &mdash; the values for each size are listed in the table above. Click a drawing to enlarge.</p>
+  <p class="ms-note ms-draw-note">The drawings illustrate ball-bearing configurations; plain-bore versions are available where listed in the size table.</p>
+  <div class="ms-drawings">
+        {draws}
+  </div>
+</div>
+
+<div class="wrap alt siblings-wrap">
+  <h2 class="h2">Other MS Track Wheel Profiles</h2>
+  <div class="siblings">{sibs}</div>
+  <p style="margin-top:22px;"><a class="btn-outline" href="{cat['url']}">View all MS Solid Track Wheels</a></p>
+</div>'''
+    jsonld = {'@context': 'https://schema.org', '@graph': [
+        crumb_ld,
+        {'@type': 'Product', 'name': prof['title'], 'url': SITE + url,
+         'image': [SITE + prof['images']['photo']] + [SITE + d['src'] for d in prof['images']['drawings']],
+         'description': f"{prof['title']}: {cat['material']}, {ms_range([r['diameter_mm'] for r in rows], 'mm')} diameter, plain bore and ball bearing, "
+                        f"{ms_range([r['load_kg'] for r in rows], 'kg')} per wheel, maximum working temperature {cat['max_temp']}.",
+         'brand': {'@type': 'Brand', 'name': 'Kotibhaskar'}, 'manufacturer': {'@id': f'{SITE}/#organization'},
+         'category': path, 'material': cat['material'],
+         'additionalProperty': [{'@type': 'PropertyValue', 'name': k, 'value': v} for k, v in ms_specs(cat, prof)]},
+    ]}
+    return page(title=f"{prof['title']} – {ms_range([r['diameter_mm'] for r in rows], 'mm')}, {ms_range([r['load_kg'] for r in rows], 'kg')} | Kotibhaskar",
+                description=f"{prof['title']} by Kotibhaskar Industries, Satara: {cat['material']}, plain bore and ball bearing, "
+                            f"{len(rows)} size and bearing configurations, {ms_range([r['load_kg'] for r in rows], 'kg')} per wheel, max. {cat['max_temp']}.",
+                canonical=url, body=body, jsonld=jsonld, og_image=SITE + prof['images']['photo'],
+                wa_text=f'Hello, I would like a quotation for: {prof["title"]} ({SITE}{url})', sheet=ms_sheet(cat, prof, url))
+
 
 
 # ============================================================================
@@ -1107,13 +1395,21 @@ def main():
             NAV_CATS.append({'url': pt['url'], 'name': pt['name']})   # footer link
         else:
             pt = None
+    ms = None
+    mspath = os.path.join(REPO, 'data', 'products', 'ms-track', 'ms-track.json')
+    if os.path.exists(mspath):
+        with open(mspath, encoding='utf-8') as f:
+            ms = json.load(f)
+        for prof in ms['profiles']:
+            prof['images']['card'] = f"/assets/products/ms-track/{prof['id']}/card.jpg"
+        NAV_CATS.append({'url': ms['url'], 'name': ms['name']})   # footer link
 
     # wipe old generated pages so removed products disappear
     for c in cats:
         shutil.rmtree(os.path.join(OUT_ROOT, c['id']), ignore_errors=True)
 
     urls = ['/', '/wheels-castors/']
-    write(os.path.join(OUT_ROOT, 'index.html'), build_hub(cats, pt))
+    write(os.path.join(OUT_ROOT, 'index.html'), build_hub(cats, pt, ms))
     count = 0
     for c in cats:
         write(os.path.join(OUT_ROOT, c['id'], 'index.html'), build_category(c))
@@ -1143,6 +1439,21 @@ def main():
                 ptcount += 1
         check_public_output(written, forbid_puci=False)
 
+    # ---- MS Solid Track Wheels (category + 4 profile pages)
+    mscount = 0
+    if ms:
+        shutil.rmtree(MS_ROOT, ignore_errors=True)
+        written = [os.path.join(MS_ROOT, 'index.html')]
+        write(written[0], build_ms_category(ms))
+        urls.append(ms['url'])
+        for prof in ms['profiles']:
+            pth = os.path.join(MS_ROOT, prof['id'], 'index.html')
+            write(pth, build_ms_product(ms, prof))
+            written.append(pth)
+            urls.append(f"{ms['url']}{prof['id']}/")
+            mscount += 1
+        check_public_output(written, forbid_puci=False)
+
     # ---- Material Handling Trolleys
     tcount = 0
     tpath = os.path.join(REPO, 'data', 'products', 'trolleys', 'trolleys.json')
@@ -1169,6 +1480,7 @@ def main():
     write(os.path.join(REPO, 'sitemap.xml'), '\n'.join(sm) + '\n')
     print(f'Built hub + {len(cats)} category page(s) + {count} product pages; '
           f'pallet truck: category + {len(pt["subcats"]) if pt else 0} material pages + {ptcount} product pages; '
+          f'MS track wheels: category + {mscount} profile pages; '
           f'trolleys: category + {tcount} product page(s); sitemap has {len(urls)} URLs.')
 
 
