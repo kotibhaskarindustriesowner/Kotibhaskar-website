@@ -43,6 +43,22 @@ publishing doubtful data.
 4. To route the homepage card to the new pages, add the popup id to
    `var PAGES={...}` in `index.html`.
 
+## Pallet Truck Wheels & Rollers (4th wheels & castors category)
+
+Source: `product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/<UHMW|PUCI|CI>/`
+(one folder per product with a `.docx` and two numbered images).
+
+```powershell
+python tools/import_pallet_truck.py
+powershell -ExecutionPolicy Bypass -File tools\optimise_images.ps1 -DataFile data\products\pallet-truck\pallet-truck.json
+python tools/build_site.py
+```
+
+Pages: `/wheels-castors/pallet-truck/` → `/wheels-castors/pallet-truck/<uhmw|puci|ci>/` →
+`/wheels-castors/pallet-truck/<material>/<roller|wheel>-DxWxBore/`.
+Which image is the photo is listed in `PHOTO` in the importer (checked by eye); owner-approved
+fixes to Word values are listed in `MATERIAL_CORRECTIONS` and recorded in the data file.
+
 ## Rules
 - Never edit files in `wheels-castors/` by hand — they are overwritten on each build.
 - Spec values come only from the Word documents; nothing is typed in by hand.

@@ -20,7 +20,7 @@
   }
 
   // Category filter (category pages)
-  var buttons = document.querySelectorAll('.filter-btn');
+  var buttons = document.querySelectorAll('button.filter-btn');   // link-style switchers (<a class="filter-btn">) are left alone
   var blocks = document.querySelectorAll('.group-block');
   function applyFilter(id, push) {
     var found = false;

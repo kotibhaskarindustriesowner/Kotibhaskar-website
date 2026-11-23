@@ -77,7 +77,8 @@ COMPANY = {
 }
 
 # Spec rows that are highlighted on the web page and the printed datasheet.
-KEY_ROWS = ('Size', 'Load Capacity per Caster')
+# ('Load Capacity' is the label used by the pallet truck wheel & roller documents.)
+KEY_ROWS = ('Size', 'Load Capacity per Caster', 'Load Capacity')
 
 
 def size_label(p):
@@ -92,6 +93,9 @@ def display_spec(label, value):
         m = re.match(r'^([\d.]+) x ([\d.]+)(?: mm)? \((.+)\)$', value)
         if m:
             return f'{m.group(1)} × {m.group(2)} mm ({m.group(3)})'
+        # pallet truck rollers: '80 x 100 x 20 mm' (diameter x width x bore) -> '80 × 100 × 20 mm'
+        if re.match(r'^[\d.]+( x [\d.]+)+ mm$', value):
+            return value.replace(' x ', ' × ')
     return value
 
 
@@ -101,7 +105,7 @@ def spec_rows_html(specs):
         for label, value in specs)
 
 
-def print_sheet(*, category, group_name, title, size, load, photo, drawing, specs, url):
+def print_sheet(*, category, group_name, title, size, load, photo, drawing, specs, url, load_label='Load Capacity per Caster'):
     """Branded A4 product datasheet. Hidden on screen; it is the only thing
     printed when the visitor uses Print / Save as PDF (see site.css)."""
     c = COMPANY
@@ -123,7 +127,7 @@ def print_sheet(*, category, group_name, title, size, load, photo, drawing, spec
       <div class="ps-h">{e(title)}</div>
       <div class="ps-size">{e(size)}</div>
     </div>
-    <div class="ps-load"><span>Load Capacity per Caster</span><b>{e(load)}</b></div>
+    <div class="ps-load"><span>{e(load_label)}</span><b>{e(load)}</b></div>
   </div>
   <div class="ps-imgs">
     <figure><div class="ps-img"><img src="{photo}" alt=""></div><figcaption>Product Photograph</figcaption></figure>
@@ -480,7 +484,7 @@ def build_product(cat, p, idx):
 
 
 # ----------------------------------------------------------------------------
-def build_hub(cats):
+def build_hub(cats, pt=None):
     crumb_html, crumb_ld = crumbs([('Home', '/'), ('Wheels &amp; Castors', None)])
     cards = []
     for c in cats:
@@ -493,6 +497,18 @@ def build_hub(cats):
     <div class="p-card-name">{e(c['name'])}</div>
     <div class="p-card-meta">{' &middot; '.join(e(g['name']) for g in c['groups'])}</div>
     <div class="p-card-load">Load per caster: <b>{n(min(loads))}&ndash;{n(max(loads))} kg</b></div>
+    <div class="p-card-cta">View range &rarr;</div>
+  </div>
+</a>''')
+    if pt and pt.get('products'):
+        loads = [p['load_kg'] for p in pt['products']]
+        cards.append(f'''<a class="p-card" href="{pt['url']}">
+  <div class="p-card-img"><img src="{pt['products'][0]['images']['thumb']}" alt="{e(pt['name'])}" loading="lazy" width="420" height="594"></div>
+  <div class="p-card-body">
+    <div class="p-card-duty">{len(pt['products'])} products</div>
+    <div class="p-card-name">{e(pt['name'])}</div>
+    <div class="p-card-meta">{' &middot; '.join(e(s['name']) for s in pt['subcats'])}</div>
+    <div class="p-card-load">Load capacity: <b>{n(min(loads))}&ndash;{n(max(loads))} kg</b></div>
     <div class="p-card-cta">View range &rarr;</div>
   </div>
 </a>''')
@@ -515,8 +531,264 @@ def build_hub(cats):
     jsonld = {'@context': 'https://schema.org', '@graph': [crumb_ld]}
     return page(title='Industrial Wheels & Castors Manufacturer | Kotibhaskar Industries, Satara',
                 description='Industrial wheels and castors by Kotibhaskar Industries, Satara: ' + ', '.join(c['name'] for c in cats)
-                + ' in medium duty, heavy duty and heavy duty twin ranges, with technical drawings and specifications.',
+                + ' in medium duty, heavy duty and heavy duty twin ranges'
+                + (f", plus {pt['name'].lower()}" if pt and pt.get('products') else '')
+                + ', with technical drawings and specifications.',
                 canonical='/wheels-castors/', body=body, jsonld=jsonld)
+
+
+# ============================================================================
+# PALLET TRUCK WHEELS & ROLLERS (data/products/pallet-truck/pallet-truck.json)
+# 4th wheels & castors category with three material sub-categories.
+# Sizes are diameter x width x bore; no caster / inch conventions are applied.
+# ============================================================================
+PT_ROOT = os.path.join(OUT_ROOT, 'pallet-truck')
+
+
+def pt_size(p):
+    return f"{p['diameter_mm']} × {p['width_mm']} × {p['bore_mm']} mm"
+
+
+def pt_range(vals, unit):
+    lo, hi = min(vals), max(vals)
+    return f'{n(lo)} {unit}' if lo == hi else f'{n(lo)}–{n(hi)} {unit}'
+
+
+def pt_card(cat, sc, p):
+    return f'''<a class="p-card" href="{cat['url']}{sc['id']}/{p['slug']}/">
+  <div class="p-card-img"><img src="{p['images']['thumb']}" alt="{e(p['name'])}" loading="lazy" width="420" height="594"></div>
+  <div class="p-card-body">
+    <div class="p-card-duty">{e(sc['short'])} &middot; Pallet Truck {e(p['kind'])}</div>
+    <div class="p-card-inch">{n(p['diameter_mm'])} &times; {n(p['width_mm'])} mm</div>
+    <div class="p-card-name">Bore {n(p['bore_mm'])} mm &middot; Ball bearing</div>
+    <div class="p-card-load">Load capacity: <b>{n(p['load_kg'])} kg</b></div>
+    <div class="p-card-cta">View details &rarr;</div>
+  </div>
+</a>'''
+
+
+def pt_table(cat, prods, subcats, show_material=True):
+    sname = {s['id']: s for s in subcats}
+    head = ('<th scope="col">Material</th>' if show_material else '') + '<th scope="col">Type</th><th scope="col">Size (Dia &times; Width &times; Bore)</th><th scope="col">Load Capacity</th>'
+    rows = ''.join(
+        '<tr>' + (f'<td>{e(sname[p["subcat"]]["short"])}</td>' if show_material else '')
+        + f'<td>{e(p["kind"])}</td><td><a href="{cat["url"]}{p["subcat"]}/{p["slug"]}/">{e(pt_size(p))}</a></td><td>{n(p["load_kg"])} kg</td></tr>'
+        for p in prods)
+    return f'<div class="tbl-wrap"><table class="data-table"><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>'
+
+
+def build_pt_category(cat):
+    prods, subcats, url = cat['products'], cat['subcats'], cat['url']
+    crumb_html, crumb_ld = crumbs([('Home', '/'), ('Wheels &amp; Castors', '/wheels-castors/'), (e(cat['name']), None)])
+    choices = []
+    for sc in subcats:
+        sp = [p for p in prods if p['subcat'] == sc['id']]
+        kinds = sorted({p['kind'] for p in sp}, key=lambda k: k != 'Roller')
+        choices.append(f'''<a class="pt-choice" href="{url}{sc['id']}/">
+  <div class="pt-choice-img"><img src="{sp[0]['images']['thumb']}" alt="{e(sc['short'])} pallet truck rollers and wheels" loading="lazy" width="420" height="594"></div>
+  <div class="pt-choice-body">
+    <div class="pt-choice-name">{e(sc['short'])}</div>
+    <div class="pt-choice-full">{e(sc['full'])}</div>
+    <ul class="pt-choice-facts">
+      <li><b>{len(sp)}</b> products &middot; {' &amp; '.join(e(k + 's') for k in kinds)}</li>
+      <li>Load capacity <b>{pt_range([p['load_kg'] for p in sp], 'kg')}</b></li>
+    </ul>
+    <div class="pt-choice-cta">View {e(sc['short'])} range &rarr;</div>
+  </div>
+</a>''')
+    loads = [p['load_kg'] for p in prods]
+    body = f'''<header class="page-head">
+  {crumb_html}
+  <div class="section-tag">Wheels &amp; Castors</div>
+  <h1 class="page-title">Pallet Truck <span class="hl">Wheels &amp; Rollers</span></h1>
+  <p class="page-sub">{e(cat['intro'])}</p>
+  <div class="head-actions">
+    <a class="btn-primary" href="{e(enquire_url(cat['name'], None, 'Wheels & Castors > ' + cat['name'], url))}">Enquire Now</a>
+    <a class="btn-dark" href="{CATALOGUE}" target="_blank" rel="noopener">{DL_ICON} Wheels &amp; Castors Catalogue</a>
+  </div>
+  <div class="key-facts">
+    <div class="fact"><div class="fact-num">{len(prods)}</div><div class="fact-label">Products</div></div>
+    <div class="fact"><div class="fact-num">{len(subcats)}</div><div class="fact-label">Materials</div></div>
+    <div class="fact"><div class="fact-num">{n(prods[0]['bore_mm']) if len({p['bore_mm'] for p in prods}) == 1 else '—'}<small>mm</small></div><div class="fact-label">Bore</div></div>
+    <div class="fact"><div class="fact-num">{n(min(loads))}&ndash;{n(max(loads))}<small>kg</small></div><div class="fact-label">Load capacity</div></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <h2 class="h2">Choose a Material</h2>
+  <div class="pt-choices">
+{chr(10).join(choices)}
+  </div>
+</div>
+
+<div class="wrap alt">
+  <h2 class="h2">All Sizes &amp; Load Capacities <small>{len(prods)} products</small></h2>
+  {pt_table(cat, prods, subcats)}
+</div>
+
+<section class="cta-band">
+  <div><h2>Need a replacement wheel or roller?</h2><p>Tell us your pallet truck model and the size you need &mdash; our team will confirm the right part.</p></div>
+  <div class="acts"><a class="btn-primary" href="{e(enquire_url(cat['name'], None, 'Wheels & Castors > ' + cat['name'], url))}">Send Enquiry</a><a class="btn-outline" href="tel:+919822413252">Call +91 98224 13252</a></div>
+</section>'''
+    jsonld = {'@context': 'https://schema.org', '@graph': [
+        crumb_ld,
+        {'@type': 'CollectionPage', 'name': cat['name'], 'url': SITE + url, 'description': cat['intro'],
+         'isPartOf': {'@id': f'{SITE}/#website'},
+         'mainEntity': {'@type': 'ItemList', 'numberOfItems': len(prods), 'itemListElement': [
+             {'@type': 'ListItem', 'position': i + 1, 'url': f"{SITE}{url}{p['subcat']}/{p['slug']}/", 'name': p['name']} for i, p in enumerate(prods)]}},
+    ]}
+    return page(title=f"Pallet Truck Wheels & Rollers – UHMW, PU-CI & Cast Iron, {n(min(loads))}–{n(max(loads))} kg | Kotibhaskar",
+                description=f"{cat['intro']} {len(prods)} products with technical drawings and specifications. Made in India by Kotibhaskar Industries, Satara.",
+                canonical=url, body=body, jsonld=jsonld, og_image=SITE + prods[0]['images']['photo'],
+                wa_text=f"Hello, I'm interested in your pallet truck wheels & rollers (kotibhaskarindustries.com{url}).")
+
+
+def build_pt_subcat(cat, sc):
+    prods = [p for p in cat['products'] if p['subcat'] == sc['id']]
+    url = f"{cat['url']}{sc['id']}/"
+    crumb_html, crumb_ld = crumbs([('Home', '/'), ('Wheels &amp; Castors', '/wheels-castors/'), (e(cat['name']), cat['url']), (e(sc['short']), None)])
+    switch = ''.join(f'<a class="filter-btn{" active" if s["id"] == sc["id"] else ""}" href="{cat["url"]}{s["id"]}/"'
+                     f'{" aria-current=\"page\"" if s["id"] == sc["id"] else ""}>{e(s["short"])} <span>{sum(p["subcat"] == s["id"] for p in cat["products"])}</span></a>'
+                     for s in cat['subcats'])
+    blocks = []
+    for kind in ('Roller', 'Wheel'):
+        kp = [p for p in prods if p['kind'] == kind]
+        if not kp:
+            continue
+        blocks.append(f'''<section class="group-block" aria-labelledby="h-{kind.lower()}">
+  <div class="group-head"><h2 id="h-{kind.lower()}">{e(sc['short'])} Pallet Truck <b>{e(kind)}s</b></h2><p>{len(kp)} {'size' if len(kp) == 1 else 'sizes'} &middot; {pt_range([p['load_kg'] for p in kp], 'kg')}</p></div>
+  <div class="card-grid">
+{chr(10).join(pt_card(cat, sc, p) for p in kp)}
+  </div>
+</section>''')
+    loads = [p['load_kg'] for p in prods]
+    body = f'''<header class="page-head">
+  {crumb_html}
+  <div class="duty-badge">{e(cat['name'])} &middot; <b>{e(sc['short'])}</b></div>
+  <h1 class="page-title">{e(sc['short'])} Pallet Truck <span class="hl">Wheels &amp; Rollers</span></h1>
+  <p class="page-sub">{e(sc['full'])} rollers and wheels for hand pallet trucks &mdash; ball bearing, {n(prods[0]['bore_mm'])} mm bore.</p>
+  <div class="key-facts">
+    <div class="fact"><div class="fact-num">{len(prods)}</div><div class="fact-label">Products</div></div>
+    <div class="fact"><div class="fact-num">{pt_range([p['diameter_mm'] for p in prods], '').strip()}<small>mm</small></div><div class="fact-label">Diameter</div></div>
+    <div class="fact"><div class="fact-num">{pt_range([p['width_mm'] for p in prods], '').strip()}<small>mm</small></div><div class="fact-label">Width</div></div>
+    <div class="fact"><div class="fact-num">{n(min(loads))}&ndash;{n(max(loads))}<small>kg</small></div><div class="fact-label">Load capacity</div></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="filter-bar" role="navigation" aria-label="Choose material">{switch}<a class="filter-btn" href="{cat['url']}">All materials</a></div>
+{chr(10).join(blocks)}
+</div>
+
+<div class="wrap alt">
+  <h2 class="h2">{e(sc['short'])} Size &amp; Load Table <small>{len(prods)} products</small></h2>
+  {pt_table(cat, prods, cat['subcats'], show_material=False)}
+</div>
+
+<section class="cta-band">
+  <div><h2>Need a replacement wheel or roller?</h2><p>Tell us your pallet truck model and the size you need &mdash; our team will confirm the right part.</p></div>
+  <div class="acts"><a class="btn-primary" href="{e(enquire_url(f"{sc['short']} {cat['name']}", None, f"Wheels & Castors > {cat['name']} > {sc['short']}", url))}">Send Enquiry</a><a class="btn-outline" href="tel:+919822413252">Call +91 98224 13252</a></div>
+</section>'''
+    jsonld = {'@context': 'https://schema.org', '@graph': [
+        crumb_ld,
+        {'@type': 'CollectionPage', 'name': f"{sc['short']} {cat['name']}", 'url': SITE + url,
+         'isPartOf': {'@id': f'{SITE}/#website'},
+         'mainEntity': {'@type': 'ItemList', 'numberOfItems': len(prods), 'itemListElement': [
+             {'@type': 'ListItem', 'position': i + 1, 'url': f"{SITE}{url}{p['slug']}/", 'name': p['name']} for i, p in enumerate(prods)]}},
+    ]}
+    return page(title=f"{sc['short']} Pallet Truck Wheels & Rollers ({sc['full']}) – {len(prods)} Sizes | Kotibhaskar",
+                description=f"{sc['short']} ({sc['full']}) pallet truck rollers and wheels by Kotibhaskar Industries, Satara: {len(prods)} sizes, "
+                            f"ball bearing, {n(prods[0]['bore_mm'])} mm bore, {n(min(loads))}–{n(max(loads))} kg load capacity.",
+                canonical=url, body=body, jsonld=jsonld, og_image=SITE + prods[0]['images']['photo'],
+                wa_text=f"Hello, I'm interested in your {sc['short']} pallet truck wheels & rollers (kotibhaskarindustries.com{url}).")
+
+
+def build_pt_product(cat, sc, p):
+    url = f"{cat['url']}{sc['id']}/{p['slug']}/"
+    size = pt_size(p)
+    path = f"Wheels & Castors > {cat['name']} > {sc['short']}"
+    title_base = f"{sc['short']} Pallet Truck {p['kind']}"
+    crumb_html, crumb_ld = crumbs([('Home', '/'), ('Wheels &amp; Castors', '/wheels-castors/'), (e(cat['name']), cat['url']),
+                                   (e(sc['short']), f"{cat['url']}{sc['id']}/"), (e(f"{p['kind']} {size}"), None)])
+    same = [q for q in cat['products'] if q['subcat'] == sc['id']]
+    sibs = ''.join(
+        f'<a class="sib{" current" if q["slug"] == p["slug"] else ""}" href="{cat["url"]}{sc["id"]}/{q["slug"]}/"'
+        f'{" aria-current=\"page\"" if q["slug"] == p["slug"] else ""}>{e(q["kind"])} {n(q["diameter_mm"])} &times; {n(q["width_mm"])} mm'
+        f'<small>Bore {n(q["bore_mm"])} mm &middot; {n(q["load_kg"])} kg</small></a>' for q in same)
+    others = [q for q in cat['products'] if q['subcat'] != sc['id'] and q['slug'] == p['slug']]
+    smap = {s['id']: s for s in cat['subcats']}
+    alt = ''
+    if others:
+        alt = ('<p class="pt-alt"><b>Same size in other materials:</b> ' + ' &middot; '.join(
+            f'<a href="{cat["url"]}{q["subcat"]}/{q["slug"]}/">{e(smap[q["subcat"]]["short"])} &ndash; {n(q["load_kg"])} kg</a>' for q in others) + '</p>')
+    body = f'''<header class="page-head">
+  {crumb_html}
+  <div class="duty-badge">{e(cat['name'])} &middot; <b>{e(sc['short'])}</b></div>
+  <h1 class="page-title">{e(title_base)} <span class="size-line">{n(p['diameter_mm'])} &times; {n(p['width_mm'])} &times; {n(p['bore_mm'])} mm <span class="size-inch">(Dia &times; Width &times; Bore)</span></span></h1>
+  <p class="page-sub">{e(sc['full'])} {e(p['kind'].lower())} for hand pallet trucks, with ball bearings.</p>
+  <div class="key-facts">
+    <div class="fact"><div class="fact-num">{n(p['diameter_mm'])}<small>mm</small></div><div class="fact-label">{e(p['kind'])} diameter</div></div>
+    <div class="fact"><div class="fact-num">{n(p['width_mm'])}<small>mm</small></div><div class="fact-label">{e(p['kind'])} width</div></div>
+    <div class="fact"><div class="fact-num">{n(p['bore_mm'])}<small>mm</small></div><div class="fact-label">Bore ID</div></div>
+    <div class="fact"><div class="fact-num">{n(p['load_kg'])}<small>kg</small></div><div class="fact-label">Load capacity</div></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="prod-layout">
+    <div>
+      <div class="gallery">
+        <figure>
+          <a href="{p['images']['photo']}" data-lightbox><img src="{p['images']['photo']}" alt="{e(p['name'])} — product photograph" width="900" height="1273"></a>
+          <figcaption>Product photo <span>Click to enlarge</span></figcaption>
+        </figure>
+        <figure>
+          <a href="{p['images']['drawing']}" data-lightbox><img src="{p['images']['drawing']}" alt="{e(p['name'])} — technical dimensional drawing" width="1100" height="1556"></a>
+          <figcaption>Technical drawing <span>Click to enlarge</span></figcaption>
+        </figure>
+      </div>
+    </div>
+    <div>
+      <h2 class="sec-label">Technical Specifications</h2>
+      <div class="tbl-wrap">
+        <table class="data-table spec-table"><tbody>{spec_rows_html(p['specs'])}</tbody></table>
+      </div>
+      {alt}
+      <div class="action-box">
+        <a class="btn-primary" href="{e(enquire_url(p['name'], size, path, url))}">&#9993; Enquire Now</a>
+        <a class="btn-wa" href="{e(wa_url(f'Hello, I would like a quotation for: {p["name"]} ({SITE}{url})'))}" target="_blank" rel="noopener">{WA_ICON.replace('width="20" height="20"', 'width="18" height="18"')} WhatsApp Enquiry</a>
+        <a class="btn-dark" href="{CATALOGUE}" target="_blank" rel="noopener">{DL_ICON} Wheels &amp; Castors Catalogue (PDF)</a>
+        <button type="button" class="btn-outline" data-print>&#128438; Print / Save as PDF</button>
+        <p class="action-note">No prices are listed online &mdash; send an enquiry for a quotation.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap alt siblings-wrap">
+  <h2 class="h2">Other {e(sc['short'])} Pallet Truck Wheels &amp; Rollers</h2>
+  <div class="siblings">{sibs}</div>
+  <p style="margin-top:22px;"><a class="btn-outline" href="{cat['url']}">View all {len(cat['products'])} {e(cat['name'])}</a></p>
+</div>'''
+    jsonld = {'@context': 'https://schema.org', '@graph': [
+        crumb_ld,
+        {'@type': 'Product', 'name': p['name'], 'url': SITE + url,
+         'image': [SITE + p['images']['photo'], SITE + p['images']['drawing']],
+         'description': f"{p['name']}: {sc['full']} pallet truck {p['kind'].lower()}, diameter {n(p['diameter_mm'])} mm, width {n(p['width_mm'])} mm, "
+                        f"bore {n(p['bore_mm'])} mm, ball bearing, load capacity {n(p['load_kg'])} kg.",
+         'brand': {'@type': 'Brand', 'name': 'Kotibhaskar'},
+         'manufacturer': {'@id': f'{SITE}/#organization'},
+         'category': path, 'material': dict(p['specs']).get('Wheel Material', ''),
+         'additionalProperty': [{'@type': 'PropertyValue', 'name': k, 'value': display_spec(k, v)} for k, v in p['specs']]},
+    ]}
+    sheet = print_sheet(category=cat['name'], group_name=sc['short'], title=title_base, size=f'{size} (Dia × Width × Bore)',
+                        load=f"{n(p['load_kg'])} kg", photo=p['images']['photo'], drawing=p['images']['drawing'],
+                        specs=p['specs'], url=url, load_label='Load Capacity')
+    return page(title=f"{title_base} {size} – {n(p['load_kg'])} kg | Kotibhaskar",
+                description=f"{p['name']} — {sc['full']}, diameter {n(p['diameter_mm'])} mm, width {n(p['width_mm'])} mm, bore {n(p['bore_mm'])} mm, "
+                            f"ball bearing, load capacity {n(p['load_kg'])} kg. Made in India by Kotibhaskar Industries, Satara.",
+                canonical=url, body=body, jsonld=jsonld, og_image=SITE + p['images']['photo'],
+                wa_text=f'Hello, I would like a quotation for: {p["name"]} ({SITE}{url})', sheet=sheet)
 
 
 # ============================================================================
@@ -773,7 +1045,7 @@ PRICE_RX = re.compile(r'(?i)\bprice\b|\bdiscount\b|\bgst\b|\btaxable\b|total amo
 CODE_RX = re.compile(r'\b(?:PL|WS|DR|TP|TW|SA|TPT|TWT|DWB|2SH|3SH|5SH|MU|GAS|CH|PA|CFT)\.\d{2}\.[0-9A-Z]{1,2}\b')
 
 
-def check_public_output(paths):
+def check_public_output(paths, forbid_puci=True):
     problems = []
     for pth in paths:
         txt = open(pth, encoding='utf-8').read()
@@ -783,8 +1055,10 @@ def check_public_output(paths):
         content = (txt.split('<body', 1)[0] + txt.split('<main>', 1)[-1].split('</main>', 1)[0]
                    + (txt.split('class="print-sheet"', 1)[1] if 'class="print-sheet"' in txt else ''))
         # trolleys use PU-PP wheels; PU-CI (a different construction) must never appear in trolley content
-        for rx, label, scope in ((PRICE_RX, 'price/commercial text', visible), (CODE_RX, 'model code', visible),
-                                 (re.compile(r'PU\s*-?\s*CI|Cast Iron Core|/wheels-castors/puci'), 'PU-CI in trolley content', content)):
+        checks = [(PRICE_RX, 'price/commercial text', visible), (CODE_RX, 'model code', visible)]
+        if forbid_puci:
+            checks.append((re.compile(r'PU\s*-?\s*CI|Cast Iron Core|/wheels-castors/puci'), 'PU-CI in trolley content', content))
+        for rx, label, scope in checks:
             m = rx.search(scope)
             if m:
                 problems.append(f'{os.path.relpath(pth, REPO)}: {label} "{m.group(0)}"')
@@ -814,13 +1088,22 @@ def main():
         return (int(m.group(1)) if m else 999, c['name'])
     cats.sort(key=order)
     NAV_CATS[:] = cats
+    pt = None
+    ptpath = os.path.join(REPO, 'data', 'products', 'pallet-truck', 'pallet-truck.json')
+    if os.path.exists(ptpath):
+        with open(ptpath, encoding='utf-8') as f:
+            pt = json.load(f)
+        if pt.get('products'):
+            NAV_CATS.append({'url': pt['url'], 'name': pt['name']})   # footer link
+        else:
+            pt = None
 
     # wipe old generated pages so removed products disappear
     for c in cats:
         shutil.rmtree(os.path.join(OUT_ROOT, c['id']), ignore_errors=True)
 
     urls = ['/', '/wheels-castors/']
-    write(os.path.join(OUT_ROOT, 'index.html'), build_hub(cats))
+    write(os.path.join(OUT_ROOT, 'index.html'), build_hub(cats, pt))
     count = 0
     for c in cats:
         write(os.path.join(OUT_ROOT, c['id'], 'index.html'), build_category(c))
@@ -829,6 +1112,26 @@ def main():
             write(os.path.join(OUT_ROOT, c['id'], p['slug'], 'index.html'), build_product(c, p, i))
             urls.append(f"{c['url']}{p['slug']}/")
             count += 1
+
+    # ---- Pallet Truck Wheels & Rollers (category > material > product)
+    ptcount = 0
+    if pt:
+        shutil.rmtree(PT_ROOT, ignore_errors=True)
+        written = [os.path.join(PT_ROOT, 'index.html')]
+        write(written[0], build_pt_category(pt))
+        urls.append(pt['url'])
+        for sc in pt['subcats']:
+            pth = os.path.join(PT_ROOT, sc['id'], 'index.html')
+            write(pth, build_pt_subcat(pt, sc))
+            written.append(pth)
+            urls.append(f"{pt['url']}{sc['id']}/")
+            for p in [q for q in pt['products'] if q['subcat'] == sc['id']]:
+                pth = os.path.join(PT_ROOT, sc['id'], p['slug'], 'index.html')
+                write(pth, build_pt_product(pt, sc, p))
+                written.append(pth)
+                urls.append(f"{pt['url']}{sc['id']}/{p['slug']}/")
+                ptcount += 1
+        check_public_output(written, forbid_puci=False)
 
     # ---- Material Handling Trolleys
     tcount = 0
@@ -855,6 +1158,7 @@ def main():
     sm.append('</urlset>')
     write(os.path.join(REPO, 'sitemap.xml'), '\n'.join(sm) + '\n')
     print(f'Built hub + {len(cats)} category page(s) + {count} product pages; '
+          f'pallet truck: category + {len(pt["subcats"]) if pt else 0} material pages + {ptcount} product pages; '
           f'trolleys: category + {tcount} product page(s); sitemap has {len(urls)} URLs.')
 
 

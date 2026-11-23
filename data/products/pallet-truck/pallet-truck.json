@@ -1,0 +1,1171 @@
+{
+  "id": "pallet-truck",
+  "name": "Pallet Truck Wheels & Rollers",
+  "url": "/wheels-castors/pallet-truck/",
+  "intro": "Replacement rollers and wheels for hand pallet trucks, manufactured in UHMW, PU-CI and cast iron. Every roller and wheel is fitted with ball bearings and has a 20 mm bore.",
+  "products": [
+    {
+      "subcat": "uhmw",
+      "kind": "Roller",
+      "slug": "roller-80x70x20",
+      "name": "UHMW Pallet Truck Roller 80 × 70 × 20 mm",
+      "diameter_mm": 80,
+      "width_mm": 70,
+      "bore_mm": 20,
+      "load_kg": 500.0,
+      "specs": [
+        [
+          "Size",
+          "80 x 70 x 20 mm"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Wheel Diameter",
+          "80 mm"
+        ],
+        [
+          "Wheel Width",
+          "70 mm"
+        ],
+        [
+          "Bore ID",
+          "20 mm"
+        ],
+        [
+          "Load Capacity",
+          "500 kg"
+        ],
+        [
+          "Bearing Type",
+          "Ball Bearing"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/pallet-truck/uhmw/roller-80x70x20-photo.jpg",
+        "thumb": "/assets/products/pallet-truck/uhmw/roller-80x70x20-thumb.jpg",
+        "drawing": "/assets/products/pallet-truck/uhmw/roller-80x70x20-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/UHMW/UHMW  Roller  80  x  70  x  20  BB/UHMW  Roller  80  x  70  x  20  BB.docx",
+        "photo": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/UHMW/UHMW  Roller  80  x  70  x  20  BB/193.png",
+        "drawing": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/UHMW/UHMW  Roller  80  x  70  x  20  BB/194.png"
+      }
+    },
+    {
+      "subcat": "uhmw",
+      "kind": "Roller",
+      "slug": "roller-80x85x20",
+      "name": "UHMW Pallet Truck Roller 80 × 85 × 20 mm",
+      "diameter_mm": 80,
+      "width_mm": 85,
+      "bore_mm": 20,
+      "load_kg": 550.0,
+      "specs": [
+        [
+          "Size",
+          "80 x 85 x 20 mm"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Wheel Diameter",
+          "80 mm"
+        ],
+        [
+          "Wheel Width",
+          "85 mm"
+        ],
+        [
+          "Bore ID",
+          "20 mm"
+        ],
+        [
+          "Load Capacity",
+          "550 kg"
+        ],
+        [
+          "Bearing Type",
+          "Ball Bearing"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/pallet-truck/uhmw/roller-80x85x20-photo.jpg",
+        "thumb": "/assets/products/pallet-truck/uhmw/roller-80x85x20-thumb.jpg",
+        "drawing": "/assets/products/pallet-truck/uhmw/roller-80x85x20-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/UHMW/UHMW  Roller  80  x  85  x  20  BB/UHMW  Roller  80  x  85  x  20  BB.docx",
+        "photo": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/UHMW/UHMW  Roller  80  x  85  x  20  BB/193.png",
+        "drawing": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/UHMW/UHMW  Roller  80  x  85  x  20  BB/195.png"
+      }
+    },
+    {
+      "subcat": "uhmw",
+      "kind": "Roller",
+      "slug": "roller-80x90x20",
+      "name": "UHMW Pallet Truck Roller 80 × 90 × 20 mm",
+      "diameter_mm": 80,
+      "width_mm": 90,
+      "bore_mm": 20,
+      "load_kg": 550.0,
+      "specs": [
+        [
+          "Size",
+          "80 x 90 x 20 mm"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Wheel Diameter",
+          "80 mm"
+        ],
+        [
+          "Wheel Width",
+          "90 mm"
+        ],
+        [
+          "Bore ID",
+          "20 mm"
+        ],
+        [
+          "Load Capacity",
+          "550 kg"
+        ],
+        [
+          "Bearing Type",
+          "Ball Bearing"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/pallet-truck/uhmw/roller-80x90x20-photo.jpg",
+        "thumb": "/assets/products/pallet-truck/uhmw/roller-80x90x20-thumb.jpg",
+        "drawing": "/assets/products/pallet-truck/uhmw/roller-80x90x20-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/UHMW/UHMW  Roller  80  x  90  x  20  BB/UHMW  Roller  80  x  90  x  20  BB.docx",
+        "photo": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/UHMW/UHMW  Roller  80  x  90  x  20  BB/193.png",
+        "drawing": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/UHMW/UHMW  Roller  80  x  90  x  20  BB/196.png"
+      }
+    },
+    {
+      "subcat": "uhmw",
+      "kind": "Roller",
+      "slug": "roller-80x96x20",
+      "name": "UHMW Pallet Truck Roller 80 × 96 × 20 mm",
+      "diameter_mm": 80,
+      "width_mm": 96,
+      "bore_mm": 20,
+      "load_kg": 600.0,
+      "specs": [
+        [
+          "Size",
+          "80 x 96 x 20 mm"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Wheel Diameter",
+          "80 mm"
+        ],
+        [
+          "Wheel Width",
+          "96 mm"
+        ],
+        [
+          "Bore ID",
+          "20 mm"
+        ],
+        [
+          "Load Capacity",
+          "600 kg"
+        ],
+        [
+          "Bearing Type",
+          "Ball Bearing"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/pallet-truck/uhmw/roller-80x96x20-photo.jpg",
+        "thumb": "/assets/products/pallet-truck/uhmw/roller-80x96x20-thumb.jpg",
+        "drawing": "/assets/products/pallet-truck/uhmw/roller-80x96x20-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/UHMW/UHMW  Roller  80  x  96  x  20  BB/UHMW  Roller  80  x  96  x  20  BB.docx",
+        "photo": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/UHMW/UHMW  Roller  80  x  96  x  20  BB/193.png",
+        "drawing": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/UHMW/UHMW  Roller  80  x  96  x  20  BB/197.png"
+      }
+    },
+    {
+      "subcat": "uhmw",
+      "kind": "Roller",
+      "slug": "roller-80x100x20",
+      "name": "UHMW Pallet Truck Roller 80 × 100 × 20 mm",
+      "diameter_mm": 80,
+      "width_mm": 100,
+      "bore_mm": 20,
+      "load_kg": 600.0,
+      "specs": [
+        [
+          "Size",
+          "80 x 100 x 20 mm"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Wheel Diameter",
+          "80 mm"
+        ],
+        [
+          "Wheel Width",
+          "100 mm"
+        ],
+        [
+          "Bore ID",
+          "20 mm"
+        ],
+        [
+          "Load Capacity",
+          "600 kg"
+        ],
+        [
+          "Bearing Type",
+          "Ball Bearing"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/pallet-truck/uhmw/roller-80x100x20-photo.jpg",
+        "thumb": "/assets/products/pallet-truck/uhmw/roller-80x100x20-thumb.jpg",
+        "drawing": "/assets/products/pallet-truck/uhmw/roller-80x100x20-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/UHMW/UHMW  Roller  80  x  100  x  20  BB/UHMW  Roller  80  x  100  x  20  BB.docx",
+        "photo": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/UHMW/UHMW  Roller  80  x  100  x  20  BB/193.png",
+        "drawing": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/UHMW/UHMW  Roller  80  x  100  x  20  BB/198.png"
+      }
+    },
+    {
+      "subcat": "uhmw",
+      "kind": "Wheel",
+      "slug": "wheel-180x50x20",
+      "name": "UHMW Pallet Truck Wheel 180 × 50 × 20 mm",
+      "diameter_mm": 180,
+      "width_mm": 50,
+      "bore_mm": 20,
+      "load_kg": 500.0,
+      "specs": [
+        [
+          "Size",
+          "180 x 50 x 20 mm"
+        ],
+        [
+          "Wheel Material",
+          "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+        ],
+        [
+          "Wheel Diameter",
+          "180 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Bore ID",
+          "20 mm"
+        ],
+        [
+          "Load Capacity",
+          "500 kg"
+        ],
+        [
+          "Bearing Type",
+          "Ball Bearing"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/pallet-truck/uhmw/wheel-180x50x20-photo.jpg",
+        "thumb": "/assets/products/pallet-truck/uhmw/wheel-180x50x20-thumb.jpg",
+        "drawing": "/assets/products/pallet-truck/uhmw/wheel-180x50x20-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/UHMW/UHMW  Wheel  180  x  50  x  20/UHMW  Wheel  180  x  50  x  20.docx",
+        "photo": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/UHMW/UHMW  Wheel  180  x  50  x  20/211.png",
+        "drawing": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/UHMW/UHMW  Wheel  180  x  50  x  20/212.png"
+      }
+    },
+    {
+      "subcat": "puci",
+      "kind": "Roller",
+      "slug": "roller-80x70x20",
+      "name": "PU-CI Pallet Truck Roller 80 × 70 × 20 mm",
+      "diameter_mm": 80,
+      "width_mm": 70,
+      "bore_mm": 20,
+      "load_kg": 550.0,
+      "specs": [
+        [
+          "Size",
+          "80 x 70 x 20 mm"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Wheel Diameter",
+          "80 mm"
+        ],
+        [
+          "Wheel Width",
+          "70 mm"
+        ],
+        [
+          "Bore ID",
+          "20 mm"
+        ],
+        [
+          "Load Capacity",
+          "550 kg"
+        ],
+        [
+          "Bearing Type",
+          "Ball Bearing"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/pallet-truck/puci/roller-80x70x20-photo.jpg",
+        "thumb": "/assets/products/pallet-truck/puci/roller-80x70x20-thumb.jpg",
+        "drawing": "/assets/products/pallet-truck/puci/roller-80x70x20-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/PUCI/PU  -  CI  Roller  80  x  70  x  20  BB/PU  -  CI  Roller  80  x  70  x  20  BB.docx",
+        "photo": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/PUCI/PU  -  CI  Roller  80  x  70  x  20  BB/199.png",
+        "drawing": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/PUCI/PU  -  CI  Roller  80  x  70  x  20  BB/200.png"
+      }
+    },
+    {
+      "subcat": "puci",
+      "kind": "Roller",
+      "slug": "roller-80x85x20",
+      "name": "PU-CI Pallet Truck Roller 80 × 85 × 20 mm",
+      "diameter_mm": 80,
+      "width_mm": 85,
+      "bore_mm": 20,
+      "load_kg": 550.0,
+      "specs": [
+        [
+          "Size",
+          "80 x 85 x 20 mm"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Wheel Diameter",
+          "80 mm"
+        ],
+        [
+          "Wheel Width",
+          "85 mm"
+        ],
+        [
+          "Bore ID",
+          "20 mm"
+        ],
+        [
+          "Load Capacity",
+          "550 kg"
+        ],
+        [
+          "Bearing Type",
+          "Ball Bearing"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/pallet-truck/puci/roller-80x85x20-photo.jpg",
+        "thumb": "/assets/products/pallet-truck/puci/roller-80x85x20-thumb.jpg",
+        "drawing": "/assets/products/pallet-truck/puci/roller-80x85x20-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/PUCI/PU  -  CI  Roller  80  x  85  x  20  BB/PU  -  CI  Roller  80  x  85  x  20  BB.docx",
+        "photo": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/PUCI/PU  -  CI  Roller  80  x  85  x  20  BB/199.png",
+        "drawing": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/PUCI/PU  -  CI  Roller  80  x  85  x  20  BB/201.png"
+      }
+    },
+    {
+      "subcat": "puci",
+      "kind": "Roller",
+      "slug": "roller-80x90x20",
+      "name": "PU-CI Pallet Truck Roller 80 × 90 × 20 mm",
+      "diameter_mm": 80,
+      "width_mm": 90,
+      "bore_mm": 20,
+      "load_kg": 550.0,
+      "specs": [
+        [
+          "Size",
+          "80 x 90 x 20 mm"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Wheel Diameter",
+          "80 mm"
+        ],
+        [
+          "Wheel Width",
+          "90 mm"
+        ],
+        [
+          "Bore ID",
+          "20 mm"
+        ],
+        [
+          "Load Capacity",
+          "550 kg"
+        ],
+        [
+          "Bearing Type",
+          "Ball Bearing"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/pallet-truck/puci/roller-80x90x20-photo.jpg",
+        "thumb": "/assets/products/pallet-truck/puci/roller-80x90x20-thumb.jpg",
+        "drawing": "/assets/products/pallet-truck/puci/roller-80x90x20-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/PUCI/PU  -  CI  Roller  80  x  90  x  20  BB/PU  -  CI  Roller  80  x  90  x  20  BB.docx",
+        "photo": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/PUCI/PU  -  CI  Roller  80  x  90  x  20  BB/199.png",
+        "drawing": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/PUCI/PU  -  CI  Roller  80  x  90  x  20  BB/202.png"
+      }
+    },
+    {
+      "subcat": "puci",
+      "kind": "Roller",
+      "slug": "roller-80x96x20",
+      "name": "PU-CI Pallet Truck Roller 80 × 96 × 20 mm",
+      "diameter_mm": 80,
+      "width_mm": 96,
+      "bore_mm": 20,
+      "load_kg": 600.0,
+      "specs": [
+        [
+          "Size",
+          "80 x 96 x 20 mm"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Wheel Diameter",
+          "80 mm"
+        ],
+        [
+          "Wheel Width",
+          "96 mm"
+        ],
+        [
+          "Bore ID",
+          "20 mm"
+        ],
+        [
+          "Load Capacity",
+          "600 kg"
+        ],
+        [
+          "Bearing Type",
+          "Ball Bearing"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/pallet-truck/puci/roller-80x96x20-photo.jpg",
+        "thumb": "/assets/products/pallet-truck/puci/roller-80x96x20-thumb.jpg",
+        "drawing": "/assets/products/pallet-truck/puci/roller-80x96x20-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/PUCI/PU  -  CI  Roller  80  x  96  x  20  BB/PU  -  CI  Roller  80  x  96  x  20  BB.docx",
+        "photo": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/PUCI/PU  -  CI  Roller  80  x  96  x  20  BB/199.png",
+        "drawing": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/PUCI/PU  -  CI  Roller  80  x  96  x  20  BB/203.png"
+      }
+    },
+    {
+      "subcat": "puci",
+      "kind": "Roller",
+      "slug": "roller-80x100x20",
+      "name": "PU-CI Pallet Truck Roller 80 × 100 × 20 mm",
+      "diameter_mm": 80,
+      "width_mm": 100,
+      "bore_mm": 20,
+      "load_kg": 600.0,
+      "specs": [
+        [
+          "Size",
+          "80 x 100 x 20 mm"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Wheel Diameter",
+          "80 mm"
+        ],
+        [
+          "Wheel Width",
+          "100 mm"
+        ],
+        [
+          "Bore ID",
+          "20 mm"
+        ],
+        [
+          "Load Capacity",
+          "600 kg"
+        ],
+        [
+          "Bearing Type",
+          "Ball Bearing"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/pallet-truck/puci/roller-80x100x20-photo.jpg",
+        "thumb": "/assets/products/pallet-truck/puci/roller-80x100x20-thumb.jpg",
+        "drawing": "/assets/products/pallet-truck/puci/roller-80x100x20-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/PUCI/PU  -  CI  Roller  80  x  100  x  20  BB/PU  -  CI  Roller  80  x  100  x  20  BB.docx",
+        "photo": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/PUCI/PU  -  CI  Roller  80  x  100  x  20  BB/199.png",
+        "drawing": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/PUCI/PU  -  CI  Roller  80  x  100  x  20  BB/204.png"
+      }
+    },
+    {
+      "subcat": "puci",
+      "kind": "Wheel",
+      "slug": "wheel-180x50x20",
+      "name": "PU-CI Pallet Truck Wheel 180 × 50 × 20 mm",
+      "diameter_mm": 180,
+      "width_mm": 50,
+      "bore_mm": 20,
+      "load_kg": 500.0,
+      "specs": [
+        [
+          "Size",
+          "180 x 50 x 20 mm"
+        ],
+        [
+          "Wheel Material",
+          "PUCI ( Polyurethane with Cast Iron Core )"
+        ],
+        [
+          "Wheel Diameter",
+          "180 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Bore ID",
+          "20 mm"
+        ],
+        [
+          "Load Capacity",
+          "500 kg"
+        ],
+        [
+          "Bearing Type",
+          "Ball Bearing"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/pallet-truck/puci/wheel-180x50x20-photo.jpg",
+        "thumb": "/assets/products/pallet-truck/puci/wheel-180x50x20-thumb.jpg",
+        "drawing": "/assets/products/pallet-truck/puci/wheel-180x50x20-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/PUCI/PU  -  CI  Wheel  180  x  50  x  20  BB/PU  -  CI  Wheel  180  x  50  x  20  BB.docx",
+        "photo": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/PUCI/PU  -  CI  Wheel  180  x  50  x  20  BB/213.png",
+        "drawing": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/PUCI/PU  -  CI  Wheel  180  x  50  x  20  BB/214.png"
+      }
+    },
+    {
+      "subcat": "ci",
+      "kind": "Roller",
+      "slug": "roller-80x70x20",
+      "name": "CI Pallet Truck Roller 80 × 70 × 20 mm",
+      "diameter_mm": 80,
+      "width_mm": 70,
+      "bore_mm": 20,
+      "load_kg": 800.0,
+      "specs": [
+        [
+          "Size",
+          "80 x 70 x 20 mm"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Wheel Diameter",
+          "80 mm"
+        ],
+        [
+          "Wheel Width",
+          "70 mm"
+        ],
+        [
+          "Bore ID",
+          "20 mm"
+        ],
+        [
+          "Load Capacity",
+          "800 kg"
+        ],
+        [
+          "Bearing Type",
+          "Ball Bearing"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/pallet-truck/ci/roller-80x70x20-photo.jpg",
+        "thumb": "/assets/products/pallet-truck/ci/roller-80x70x20-thumb.jpg",
+        "drawing": "/assets/products/pallet-truck/ci/roller-80x70x20-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/CI/CI  Roller  80  x  70  x  20  BB/CI  Roller  80  x  70  x  20  BB.docx",
+        "photo": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/CI/CI  Roller  80  x  70  x  20  BB/205.png",
+        "drawing": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/CI/CI  Roller  80  x  70  x  20  BB/206.png"
+      }
+    },
+    {
+      "subcat": "ci",
+      "kind": "Roller",
+      "slug": "roller-80x85x20",
+      "name": "CI Pallet Truck Roller 80 × 85 × 20 mm",
+      "diameter_mm": 80,
+      "width_mm": 85,
+      "bore_mm": 20,
+      "load_kg": 900.0,
+      "specs": [
+        [
+          "Size",
+          "80 x 85 x 20 mm"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Wheel Diameter",
+          "80 mm"
+        ],
+        [
+          "Wheel Width",
+          "85 mm"
+        ],
+        [
+          "Bore ID",
+          "20 mm"
+        ],
+        [
+          "Load Capacity",
+          "900 kg"
+        ],
+        [
+          "Bearing Type",
+          "Ball Bearing"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/pallet-truck/ci/roller-80x85x20-photo.jpg",
+        "thumb": "/assets/products/pallet-truck/ci/roller-80x85x20-thumb.jpg",
+        "drawing": "/assets/products/pallet-truck/ci/roller-80x85x20-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/CI/CI  Roller  80  x  85  x  20  BB/CI  Roller  80  x  85  x  20  BB.docx",
+        "photo": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/CI/CI  Roller  80  x  85  x  20  BB/205.png",
+        "drawing": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/CI/CI  Roller  80  x  85  x  20  BB/207.png"
+      }
+    },
+    {
+      "subcat": "ci",
+      "kind": "Roller",
+      "slug": "roller-80x90x20",
+      "name": "CI Pallet Truck Roller 80 × 90 × 20 mm",
+      "diameter_mm": 80,
+      "width_mm": 90,
+      "bore_mm": 20,
+      "load_kg": 900.0,
+      "specs": [
+        [
+          "Size",
+          "80 x 90 x 20 mm"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Wheel Diameter",
+          "80 mm"
+        ],
+        [
+          "Wheel Width",
+          "90 mm"
+        ],
+        [
+          "Bore ID",
+          "20 mm"
+        ],
+        [
+          "Load Capacity",
+          "900 kg"
+        ],
+        [
+          "Bearing Type",
+          "Ball Bearing"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/pallet-truck/ci/roller-80x90x20-photo.jpg",
+        "thumb": "/assets/products/pallet-truck/ci/roller-80x90x20-thumb.jpg",
+        "drawing": "/assets/products/pallet-truck/ci/roller-80x90x20-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/CI/CI  Roller  80  x  90  x  20  BB/CI  Roller  80  x  90  x  20  BB.docx",
+        "photo": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/CI/CI  Roller  80  x  90  x  20  BB/205.png",
+        "drawing": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/CI/CI  Roller  80  x  90  x  20  BB/208.png"
+      }
+    },
+    {
+      "subcat": "ci",
+      "kind": "Roller",
+      "slug": "roller-80x96x20",
+      "name": "CI Pallet Truck Roller 80 × 96 × 20 mm",
+      "diameter_mm": 80,
+      "width_mm": 96,
+      "bore_mm": 20,
+      "load_kg": 1000.0,
+      "specs": [
+        [
+          "Size",
+          "80 x 96 x 20 mm"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Wheel Diameter",
+          "80 mm"
+        ],
+        [
+          "Wheel Width",
+          "96 mm"
+        ],
+        [
+          "Bore ID",
+          "20 mm"
+        ],
+        [
+          "Load Capacity",
+          "1000 kg"
+        ],
+        [
+          "Bearing Type",
+          "Ball Bearing"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/pallet-truck/ci/roller-80x96x20-photo.jpg",
+        "thumb": "/assets/products/pallet-truck/ci/roller-80x96x20-thumb.jpg",
+        "drawing": "/assets/products/pallet-truck/ci/roller-80x96x20-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/CI/CI  Roller  80  x  96  x  20  BB/CI  Roller  80  x  96  x  20  BB.docx",
+        "photo": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/CI/CI  Roller  80  x  96  x  20  BB/205.png",
+        "drawing": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/CI/CI  Roller  80  x  96  x  20  BB/209.png"
+      },
+      "corrections": [
+        {
+          "field": "Wheel Material",
+          "word_value": "UHMW ( Ultra-High-Molecular-Weight Polyethylene )",
+          "shown_as": "CI ( Cast Iron )",
+          "reason": "Owner instruction 2026-11-23: folder, file name and photo are Cast Iron; Word material line was a copy error."
+        }
+      ]
+    },
+    {
+      "subcat": "ci",
+      "kind": "Roller",
+      "slug": "roller-80x100x20",
+      "name": "CI Pallet Truck Roller 80 × 100 × 20 mm",
+      "diameter_mm": 80,
+      "width_mm": 100,
+      "bore_mm": 20,
+      "load_kg": 1000.0,
+      "specs": [
+        [
+          "Size",
+          "80 x 100 x 20 mm"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Wheel Diameter",
+          "80 mm"
+        ],
+        [
+          "Wheel Width",
+          "100 mm"
+        ],
+        [
+          "Bore ID",
+          "20 mm"
+        ],
+        [
+          "Load Capacity",
+          "1000 kg"
+        ],
+        [
+          "Bearing Type",
+          "Ball Bearing"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/pallet-truck/ci/roller-80x100x20-photo.jpg",
+        "thumb": "/assets/products/pallet-truck/ci/roller-80x100x20-thumb.jpg",
+        "drawing": "/assets/products/pallet-truck/ci/roller-80x100x20-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/CI/CI  Roller  80  x  100  x  20  BB/CI  Roller  80  x  100  x  20  BB.docx",
+        "photo": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/CI/CI  Roller  80  x  100  x  20  BB/205.png",
+        "drawing": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/CI/CI  Roller  80  x  100  x  20  BB/210.png"
+      },
+      "corrections": [
+        {
+          "field": "Wheel Material",
+          "word_value": "UHMW ( Ultra-High-Molecular-Weight Polyethylene )",
+          "shown_as": "CI ( Cast Iron )",
+          "reason": "Owner instruction 2026-11-23: folder, file name and photo are Cast Iron; Word material line was a copy error."
+        }
+      ]
+    },
+    {
+      "subcat": "ci",
+      "kind": "Wheel",
+      "slug": "wheel-180x50x20",
+      "name": "CI Pallet Truck Wheel 180 × 50 × 20 mm",
+      "diameter_mm": 180,
+      "width_mm": 50,
+      "bore_mm": 20,
+      "load_kg": 800.0,
+      "specs": [
+        [
+          "Size",
+          "180 x 50 x 20 mm"
+        ],
+        [
+          "Wheel Material",
+          "CI ( Cast Iron )"
+        ],
+        [
+          "Wheel Diameter",
+          "180 mm"
+        ],
+        [
+          "Wheel Width",
+          "50 mm"
+        ],
+        [
+          "Bore ID",
+          "20 mm"
+        ],
+        [
+          "Load Capacity",
+          "800 kg"
+        ],
+        [
+          "Bearing Type",
+          "Ball Bearing"
+        ],
+        [
+          "Grade",
+          "Industrial Grade"
+        ],
+        [
+          "Brand",
+          "Kotibhaskar"
+        ],
+        [
+          "Country",
+          "Made in India"
+        ]
+      ],
+      "images": {
+        "photo": "/assets/products/pallet-truck/ci/wheel-180x50x20-photo.jpg",
+        "thumb": "/assets/products/pallet-truck/ci/wheel-180x50x20-thumb.jpg",
+        "drawing": "/assets/products/pallet-truck/ci/wheel-180x50x20-drawing.jpg"
+      },
+      "source": {
+        "docx": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/CI/CI  Wheel  180  x  50  x  20  BB/CI  Wheel  180  x  50  x  20  BB.docx",
+        "photo": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/CI/CI  Wheel  180  x  50  x  20  BB/215.png",
+        "drawing": "product-sources/30 Wheels & Caster/40 Pallet  Truck  Wheels  &  Rollers/CI/CI  Wheel  180  x  50  x  20  BB/216.png"
+      },
+      "corrections": [
+        {
+          "field": "Wheel Material",
+          "word_value": "UHMW ( Ultra-High-Molecular-Weight Polyethylene )",
+          "shown_as": "CI ( Cast Iron )",
+          "reason": "Owner instruction 2026-11-23: folder, file name and photo are Cast Iron; Word material line was a copy error."
+        }
+      ]
+    }
+  ],
+  "subcats": [
+    {
+      "id": "uhmw",
+      "name": "UHMW",
+      "short": "UHMW",
+      "full": "Ultra-High-Molecular-Weight Polyethylene",
+      "material": "UHMW ( Ultra-High-Molecular-Weight Polyethylene )"
+    },
+    {
+      "id": "puci",
+      "name": "PU-CI",
+      "short": "PU-CI",
+      "full": "Polyurethane with Cast Iron Core",
+      "material": "PUCI ( Polyurethane with Cast Iron Core )"
+    },
+    {
+      "id": "ci",
+      "name": "CI",
+      "short": "CI",
+      "full": "Cast Iron",
+      "material": "CI ( Cast Iron )"
+    }
+  ]
+}
