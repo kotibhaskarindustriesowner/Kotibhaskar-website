@@ -195,12 +195,10 @@ img{max-width:100%;}
 /* keep the screen-reader label inside the scrolling table, so it cannot widen the page on phones */
 .variant-table th{position:relative;}
 @media(max-width:900px){.t-layout{grid-template-columns:1fr;gap:24px;}.t-photo{max-width:520px;}}
-@media(min-width:901px) and (max-width:1180px){.t-main .key-facts.t-facts{grid-template-columns:repeat(2,minmax(0,1fr));}}
 /* compact trolley product page: smaller photo column (aspect ratio kept), tighter spacing above the sizes table */
 @media screen{
   .page-head.t-head{padding-bottom:28px;}
-  .t-main .key-facts.t-facts{margin:6px 0 28px;max-width:none;}
-  .t-main .t-facts + .sec-label{margin-top:4px;}
+  .t-head .key-facts{margin-top:20px;}
   .wrap.t-main{padding-top:36px;padding-bottom:36px;}
   .wrap.t-sizes{padding-top:40px;scroll-margin-top:68px;}
   .fact-link{display:block;text-decoration:none;color:inherit;transition:background .2s;}

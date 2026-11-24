@@ -1190,6 +1190,11 @@ def build_trolley_product(cat, p, idx):
   <div class="duty-badge">{e(cat['name'])} &middot; <b>{e(g['name'])}</b></div>
   <h1 class="page-title">{e(p['name'])}</h1>
   <p class="page-sub">{e(p['summary'])}</p>
+  <div class="key-facts">
+    <div class="fact"><div class="fact-num">{crange.replace(' kg', '')}<small>kg</small></div><div class="fact-label">Load capacity</div></div>
+    <a class="fact fact-link" href="#sizes"><div class="fact-num">{nsizes}</div><div class="fact-label">{'Size available' if nsizes == 1 else 'Sizes available'} &darr;</div></a>
+    {extra_facts}
+  </div>
 </header>
 
 <div class="wrap t-main">
@@ -1203,11 +1208,6 @@ def build_trolley_product(cat, p, idx):
       <ul class="feat-list t-feats">{feats}</ul>
       {'<p class="t-multi">Available in multiple sizes and configurations. Please refer to the <a href="#sizes">specifications table below</a> for details.</p>' if nsizes > 1 else ''}
       {notes}
-      <div class="key-facts t-facts">
-        <div class="fact"><div class="fact-num">{crange.replace(' kg', '')}<small>kg</small></div><div class="fact-label">Load capacity</div></div>
-        <a class="fact fact-link" href="#sizes"><div class="fact-num">{nsizes}</div><div class="fact-label">{'Size available' if nsizes == 1 else 'Sizes available'} &darr;</div></a>
-        {extra_facts}
-      </div>
       {wheels}
       {brake}
       <dl class="t-origin"><div><dt>Brand</dt><dd>Kotibhaskar</dd></div><div><dt>Country of Origin</dt><dd>Made in India</dd></div></dl>
