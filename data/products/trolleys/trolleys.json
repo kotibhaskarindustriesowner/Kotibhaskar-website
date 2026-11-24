@@ -32,6 +32,22 @@
     {
       "id": "pallet",
       "name": "Industrial Steel Pallets"
+    },
+    {
+      "id": "cnc",
+      "name": "CNC Tool Trolleys"
+    },
+    {
+      "id": "work-table",
+      "name": "Industrial Work Tables"
+    },
+    {
+      "id": "bin",
+      "name": "Bin Trolleys"
+    },
+    {
+      "id": "access-steps",
+      "name": "Mobile Access Steps"
     }
   ],
   "wheel_materials": {
@@ -1787,6 +1803,499 @@
         "photo": "product-sources/20 Trolleys/240 Coolant Feeding Trolley/24.png",
         "pdf": "product-sources/20 Trolleys/240 Coolant Feeding Trolley/240 Coolant Feeding Trolley.pdf"
       }
+    },
+    {
+      "num": "250",
+      "slug": "cnc-tool-trolley-600x5",
+      "name": "CNC Tool Trolley – 600 × 5",
+      "group": "cnc",
+      "summary": "CNC tool trolley 600 × 5 with tool pockets for BT 30, BT 40 or BT 50 tool holders; load capacity 200 kg.",
+      "features": [
+        "Available with tool pockets for BT 30 (40 pockets), BT 40 (30 pockets), BT 50 (20 pockets).",
+        "Load capacity 200 kg."
+      ],
+      "variant_key": [
+        "Tool Holder Type",
+        "Tool Pockets"
+      ],
+      "variants": [
+        {
+          "Trolley Size": "600 × 5",
+          "Tool Holder Type": "BT 30",
+          "Tool Pockets": "40 nos",
+          "Load Capacity": "200 kg"
+        },
+        {
+          "Trolley Size": "600 × 5",
+          "Tool Holder Type": "BT 40",
+          "Tool Pockets": "30 nos",
+          "Load Capacity": "200 kg"
+        },
+        {
+          "Trolley Size": "600 × 5",
+          "Tool Holder Type": "BT 50",
+          "Tool Pockets": "20 nos",
+          "Load Capacity": "200 kg"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": null,
+      "brake_text": null,
+      "notes": [],
+      "table_always": [
+        "Load Capacity"
+      ],
+      "images": {
+        "photo": "/assets/products/trolleys/cnc-tool-trolley-600x5-photo.jpg",
+        "thumb": "/assets/products/trolleys/cnc-tool-trolley-600x5-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/250 CNC Tool Trolley/25.png",
+        "catalogue": "Kotibhaskar Trolley Catalogue, product 25"
+      }
+    },
+    {
+      "num": "260",
+      "slug": "cnc-tool-trolley-600x7",
+      "name": "CNC Tool Trolley – 600 × 7",
+      "group": "cnc",
+      "summary": "CNC tool trolley 600 × 7 with tool pockets for BT 30, BT 40 or BT 50 tool holders; load capacity 200 kg.",
+      "features": [
+        "Available with tool pockets for BT 30 (56 pockets), BT 40 (42 pockets), BT 50 (28 pockets).",
+        "Load capacity 200 kg."
+      ],
+      "variant_key": [
+        "Tool Holder Type",
+        "Tool Pockets"
+      ],
+      "variants": [
+        {
+          "Trolley Size": "600 × 7",
+          "Tool Holder Type": "BT 30",
+          "Tool Pockets": "56 nos",
+          "Load Capacity": "200 kg"
+        },
+        {
+          "Trolley Size": "600 × 7",
+          "Tool Holder Type": "BT 40",
+          "Tool Pockets": "42 nos",
+          "Load Capacity": "200 kg"
+        },
+        {
+          "Trolley Size": "600 × 7",
+          "Tool Holder Type": "BT 50",
+          "Tool Pockets": "28 nos",
+          "Load Capacity": "200 kg"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": null,
+      "brake_text": null,
+      "notes": [],
+      "table_always": [
+        "Load Capacity"
+      ],
+      "images": {
+        "photo": "/assets/products/trolleys/cnc-tool-trolley-600x7-photo.jpg",
+        "thumb": "/assets/products/trolleys/cnc-tool-trolley-600x7-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/260 CNC Tool Trolley/26.png",
+        "catalogue": "Kotibhaskar Trolley Catalogue, product 26"
+      }
+    },
+    {
+      "num": "270",
+      "slug": "cnc-tool-trolley-900x5",
+      "name": "CNC Tool Trolley – 900 × 5",
+      "group": "cnc",
+      "summary": "CNC tool trolley 900 × 5 with tool pockets for BT 30, BT 40 or BT 50 tool holders; load capacity 400 kg.",
+      "features": [
+        "Available with tool pockets for BT 30 (70 pockets), BT 40 (50 pockets), BT 50 (30 pockets).",
+        "Load capacity 400 kg."
+      ],
+      "variant_key": [
+        "Tool Holder Type",
+        "Tool Pockets"
+      ],
+      "variants": [
+        {
+          "Trolley Size": "900 × 5",
+          "Tool Holder Type": "BT 30",
+          "Tool Pockets": "70 nos",
+          "Load Capacity": "400 kg"
+        },
+        {
+          "Trolley Size": "900 × 5",
+          "Tool Holder Type": "BT 40",
+          "Tool Pockets": "50 nos",
+          "Load Capacity": "400 kg"
+        },
+        {
+          "Trolley Size": "900 × 5",
+          "Tool Holder Type": "BT 50",
+          "Tool Pockets": "30 nos",
+          "Load Capacity": "400 kg"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": null,
+      "brake_text": null,
+      "notes": [],
+      "table_always": [
+        "Load Capacity"
+      ],
+      "images": {
+        "photo": "/assets/products/trolleys/cnc-tool-trolley-900x5-photo.jpg",
+        "thumb": "/assets/products/trolleys/cnc-tool-trolley-900x5-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/270 CNC Tool Trolley/27.png",
+        "catalogue": "Kotibhaskar Trolley Catalogue, product 27"
+      }
+    },
+    {
+      "num": "280",
+      "slug": "cnc-tool-trolley-900x7",
+      "name": "CNC Tool Trolley – 900 × 7",
+      "group": "cnc",
+      "summary": "CNC tool trolley 900 × 7 with tool pockets for BT 30, BT 40 or BT 50 tool holders; load capacity 400 kg.",
+      "features": [
+        "Available with tool pockets for BT 30 (98 pockets), BT 40 (70 pockets), BT 50 (42 pockets).",
+        "Load capacity 400 kg."
+      ],
+      "variant_key": [
+        "Tool Holder Type",
+        "Tool Pockets"
+      ],
+      "variants": [
+        {
+          "Trolley Size": "900 × 7",
+          "Tool Holder Type": "BT 30",
+          "Tool Pockets": "98 nos",
+          "Load Capacity": "400 kg"
+        },
+        {
+          "Trolley Size": "900 × 7",
+          "Tool Holder Type": "BT 40",
+          "Tool Pockets": "70 nos",
+          "Load Capacity": "400 kg"
+        },
+        {
+          "Trolley Size": "900 × 7",
+          "Tool Holder Type": "BT 50",
+          "Tool Pockets": "42 nos",
+          "Load Capacity": "400 kg"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": null,
+      "brake_text": null,
+      "notes": [],
+      "table_always": [
+        "Load Capacity"
+      ],
+      "images": {
+        "photo": "/assets/products/trolleys/cnc-tool-trolley-900x7-photo.jpg",
+        "thumb": "/assets/products/trolleys/cnc-tool-trolley-900x7-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/280 CNC Tool Trolley/28.png",
+        "catalogue": "Kotibhaskar Trolley Catalogue, product 28"
+      }
+    },
+    {
+      "num": "290",
+      "slug": "industrial-work-table-a",
+      "name": "Industrial Work Table – Type A",
+      "group": "work-table",
+      "summary": "Industrial work table fabricated from thick M.S. tubes with an M.S. sheet top, with top shelf, bottom shelf and 1 cupboard.",
+      "features": [
+        "Fabricated from thick M.S. square and rectangular tubes, with an M.S. sheet top.",
+        "Fitted with a top shelf, a bottom shelf and 1 cupboard."
+      ],
+      "variant_key": [
+        "Table Size",
+        "Load Capacity"
+      ],
+      "variants": [
+        {
+          "Table Size": "1200 × 600 mm",
+          "Load Capacity": "400 kg"
+        },
+        {
+          "Table Size": "1500 × 750 mm",
+          "Load Capacity": "600 kg"
+        },
+        {
+          "Table Size": "1800 × 900 mm",
+          "Load Capacity": "800 kg"
+        }
+      ],
+      "wheels": [],
+      "brake": null,
+      "brake_text": null,
+      "notes": [],
+      "table_always": [
+        "Load Capacity"
+      ],
+      "images": {
+        "photo": "/assets/products/trolleys/industrial-work-table-a-photo.jpg",
+        "thumb": "/assets/products/trolleys/industrial-work-table-a-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/290 Industrial Work Table/29.png",
+        "catalogue": "Kotibhaskar Trolley Catalogue, product 29"
+      },
+      "facts": [
+        [
+          "2",
+          "",
+          "Shelves"
+        ],
+        [
+          "1",
+          "",
+          "Cupboard"
+        ]
+      ]
+    },
+    {
+      "num": "300",
+      "slug": "industrial-work-table-b",
+      "name": "Industrial Work Table – Type B",
+      "group": "work-table",
+      "summary": "Industrial work table with top shelf, bottom shelf and 1 cupboard, plus a vertical frame with pin board and tube light fitting with 1 socket.",
+      "features": [
+        "Fitted with a top shelf, a bottom shelf and 1 cupboard.",
+        "Vertical frame with pin board and tube light fitting with 1 socket."
+      ],
+      "variant_key": [
+        "Table Size",
+        "Load Capacity"
+      ],
+      "variants": [
+        {
+          "Table Size": "1200 × 600 mm",
+          "Load Capacity": "400 kg"
+        },
+        {
+          "Table Size": "1500 × 750 mm",
+          "Load Capacity": "600 kg"
+        },
+        {
+          "Table Size": "1800 × 900 mm",
+          "Load Capacity": "800 kg"
+        }
+      ],
+      "wheels": [],
+      "brake": null,
+      "brake_text": null,
+      "notes": [],
+      "table_always": [
+        "Load Capacity"
+      ],
+      "images": {
+        "photo": "/assets/products/trolleys/industrial-work-table-b-photo.jpg",
+        "thumb": "/assets/products/trolleys/industrial-work-table-b-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/300 Industrial Work Table/30.png",
+        "catalogue": "Kotibhaskar Trolley Catalogue, product 30"
+      },
+      "facts": [
+        [
+          "2",
+          "",
+          "Shelves"
+        ],
+        [
+          "1",
+          "",
+          "Cupboard"
+        ]
+      ]
+    },
+    {
+      "num": "310",
+      "slug": "bin-trolley-single-sided",
+      "name": "Bin Trolley – Single Sided",
+      "group": "bin",
+      "summary": "Single-sided bin trolley holding 24, 20 or 16 bins depending on bin size; load capacity 300 kg.",
+      "features": [
+        "Single-sided construction.",
+        "Holds 24, 20 or 16 bins per trolley, depending on the bin size.",
+        "Load capacity 300 kg."
+      ],
+      "variant_key": [
+        "Bin Size",
+        "Bins per Trolley"
+      ],
+      "variants": [
+        {
+          "Bin Size": "200 × 125 × 100 mm",
+          "Bins per Trolley": "24 bins",
+          "Load Capacity": "300 kg"
+        },
+        {
+          "Bin Size": "230 × 150 × 125 mm",
+          "Bins per Trolley": "20 bins",
+          "Load Capacity": "300 kg"
+        },
+        {
+          "Bin Size": "300 × 210 × 160 mm",
+          "Bins per Trolley": "16 bins",
+          "Load Capacity": "300 kg"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": null,
+      "brake_text": null,
+      "notes": [],
+      "table_always": [
+        "Load Capacity"
+      ],
+      "images": {
+        "photo": "/assets/products/trolleys/bin-trolley-single-sided-photo.jpg",
+        "thumb": "/assets/products/trolleys/bin-trolley-single-sided-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/310 Bin Trolley - Single Sided/31.png",
+        "catalogue": "Kotibhaskar Trolley Catalogue, product 31"
+      }
+    },
+    {
+      "num": "320",
+      "slug": "bin-trolley-double-sided",
+      "name": "Bin Trolley – Double Sided",
+      "group": "bin",
+      "summary": "Double-sided bin trolley holding 48, 40 or 32 bins depending on bin size; load capacity 500 kg.",
+      "features": [
+        "Double-sided construction.",
+        "Holds 48, 40 or 32 bins per trolley, depending on the bin size.",
+        "Load capacity 500 kg."
+      ],
+      "variant_key": [
+        "Bin Size",
+        "Bins per Trolley"
+      ],
+      "variants": [
+        {
+          "Bin Size": "200 × 125 × 100 mm",
+          "Bins per Trolley": "48 bins",
+          "Load Capacity": "500 kg"
+        },
+        {
+          "Bin Size": "230 × 150 × 125 mm",
+          "Bins per Trolley": "40 bins",
+          "Load Capacity": "500 kg"
+        },
+        {
+          "Bin Size": "300 × 210 × 160 mm",
+          "Bins per Trolley": "32 bins",
+          "Load Capacity": "500 kg"
+        }
+      ],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
+      "brake": null,
+      "brake_text": null,
+      "notes": [],
+      "table_always": [
+        "Load Capacity"
+      ],
+      "images": {
+        "photo": "/assets/products/trolleys/bin-trolley-double-sided-photo.jpg",
+        "thumb": "/assets/products/trolleys/bin-trolley-double-sided-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/320 Bin Trolley - Double Sided/32.png",
+        "catalogue": "Kotibhaskar Trolley Catalogue, product 32"
+      }
+    },
+    {
+      "num": "330",
+      "slug": "mobile-access-steps",
+      "name": "Mobile Access Steps",
+      "group": "access-steps",
+      "summary": "Welded steel mobile access steps for reaching difficult places, in 1000, 2000, 3000 and 4000 mm heights; load capacity 300 kg.",
+      "features": [
+        "The base is fabricated from M.S. rectangular tube and fitted with 2 fixed and 2 swivel castors; 1 swivel castor has brakes for safety.",
+        "Welded steel access steps designed to reach difficult places."
+      ],
+      "variant_key": [
+        "Height"
+      ],
+      "variants": [
+        {
+          "Height": "1000 mm",
+          "Load Capacity": "300 kg"
+        },
+        {
+          "Height": "2000 mm",
+          "Load Capacity": "300 kg"
+        },
+        {
+          "Height": "3000 mm",
+          "Load Capacity": "300 kg"
+        },
+        {
+          "Height": "4000 mm",
+          "Load Capacity": "300 kg"
+        }
+      ],
+      "wheels": [],
+      "brake": "standard",
+      "brake_text": "1 swivel castor is fitted with brakes for safety.",
+      "notes": [
+        "Please check that the selected unit leaves sufficient head space for working."
+      ],
+      "table_always": [
+        "Load Capacity"
+      ],
+      "images": {
+        "photo": "/assets/products/trolleys/mobile-access-steps-photo.jpg",
+        "thumb": "/assets/products/trolleys/mobile-access-steps-thumb.jpg"
+      },
+      "source": {
+        "photo": "product-sources/20 Trolleys/330 Mobile Access Steps/33.png",
+        "catalogue": "Kotibhaskar Trolley Catalogue, product 33"
+      },
+      "facts": [
+        [
+          "4",
+          "",
+          "Castors (2 fixed, 2 swivel)"
+        ],
+        [
+          "Standard",
+          "",
+          "Castor brake"
+        ]
+      ]
     }
   ]
 }

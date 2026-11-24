@@ -1127,7 +1127,8 @@ def split_columns(p):
     cols = list(p['variants'][0].keys())
     if len(p['variants']) == 1:
         return cols, []
-    common = [c for c in cols if len({v.get(c) for v in p['variants']}) == 1]
+    keep = set(p.get('table_always', []))
+    common = [c for c in cols if c not in keep and len({v.get(c) for v in p['variants']}) == 1]
     table = [c for c in cols if c not in common]
     return table, common
 
@@ -1156,7 +1157,7 @@ def build_trolley_product(cat, p, idx):
     crumb_html, crumb_ld = crumbs([('Home', '/'), (e(cat['name']), cat['url']), (e(g['name']), f"{cat['url']}#{g['id']}"), (e(p['name']), None)])
     path = f"{cat['name']} > {g['name']}"
     if p.get('facts'):      # products without wheels (pallets) show their own key facts instead
-        extra_facts = ''.join(f'<div class="fact"><div class="fact-num">{e(num)}{f"<small>{e(unit)}</small>" if unit else ""}</div><div class="fact-label">{e(label)}</div></div>'
+        extra_facts = ''.join(f'<div class="fact"><div class="fact-num{"" if re.match(r"^[0-9.–-]+$", num) else " fact-text"}">{e(num)}{f"<small>{e(unit)}</small>" if unit else ""}</div><div class="fact-label">{e(label)}</div></div>'
                               for num, unit, label in p['facts'])
     else:
         brake_word = {'optional': 'Optional', 'standard': 'Standard'}.get(p.get('brake'), '—')
@@ -1189,11 +1190,7 @@ def build_trolley_product(cat, p, idx):
   <div class="duty-badge">{e(cat['name'])} &middot; <b>{e(g['name'])}</b></div>
   <h1 class="page-title">{e(p['name'])}</h1>
   <p class="page-sub">{e(p['summary'])}</p>
-  <div class="key-facts">
-    <div class="fact"><div class="fact-num">{crange.replace(' kg', '')}<small>kg</small></div><div class="fact-label">Load capacity</div></div>
-    <a class="fact fact-link" href="#sizes"><div class="fact-num">{nsizes}</div><div class="fact-label">{'Size available' if nsizes == 1 else 'Sizes available'} &darr;</div></a>
-    {extra_facts}
-  </div>
+  {'<p class="t-multi">Available in multiple sizes and configurations. Please refer to the <a href="#sizes">specifications table below</a> for details.</p>' if nsizes > 1 else ''}
 </header>
 
 <div class="wrap t-main">
@@ -1206,8 +1203,14 @@ def build_trolley_product(cat, p, idx):
       <h2 class="sec-label">Construction &amp; Features</h2>
       <ul class="feat-list t-feats">{feats}</ul>
       {notes}
+      <div class="key-facts t-facts">
+        <div class="fact"><div class="fact-num">{crange.replace(' kg', '')}<small>kg</small></div><div class="fact-label">Load capacity</div></div>
+        <a class="fact fact-link" href="#sizes"><div class="fact-num">{nsizes}</div><div class="fact-label">{'Size available' if nsizes == 1 else 'Sizes available'} &darr;</div></a>
+        {extra_facts}
+      </div>
       {wheels}
       {brake}
+      <dl class="t-origin"><div><dt>Brand</dt><dd>Kotibhaskar</dd></div><div><dt>Country of Origin</dt><dd>Made in India</dd></div></dl>
       <div class="action-box">
         <a class="btn-primary" href="{e(enquire_url(p['name'], None, path, url))}">&#9993; Enquire Now</a>
         <a class="btn-wa" href="{e(wa_url(f'Hello, I would like a quotation for: {p["name"]} ({SITE}{url})'))}" target="_blank" rel="noopener">{WA_ICON.replace('width="20" height="20"', 'width="18" height="18"')} WhatsApp Enquiry</a>
@@ -1280,6 +1283,7 @@ def trolley_sheet(cat, g, p, url, table_cols, common_cols, crange):
       <div class="ps-sec">Construction &amp; Features</div>
       <ul class="pst-feats">{feats}</ul>
       {wheels}{brake}{notes}
+      <div class="pst-line"><b>Brand:</b> Kotibhaskar &nbsp;&middot;&nbsp; <b>Country of Origin:</b> Made in India</div>
     </div>
   </div>
   <div class="ps-sec">Available Sizes &amp; Specifications</div>
@@ -1351,7 +1355,7 @@ def build_trolley_category(cat):
 
 # Public-output safety checks: no prices and no model codes on trolley pages
 PRICE_RX = re.compile(r'(?i)\bprice\b|\bdiscount\b|\bgst\b|\btaxable\b|total amount|\bRs\.?\s?\d|₹|\b\d{1,3},\d{3}\.\d{2}\b')
-CODE_RX = re.compile(r'\b(?:PL|WS|DR|TP|TW|SA|TPT|TWT|DWB|2SH|3SH|5SH|MU|GAS|CH|PA|CFT)\.\d{2}\.[0-9A-Z]{1,2}\b')
+CODE_RX = re.compile(r'\b(?:PL|WS|DR|TP|TW|SA|TPT|TWT|DWB|2SH|3SH|5SH|MU|GAS|CH|PA|CFT|CNC|WT|MAS)\.\d{2}\.[0-9A-Z]{1,2}\b|\bBIN\.\d\.[SD]\d\b')
 
 
 def check_public_output(paths, forbid_puci=True):

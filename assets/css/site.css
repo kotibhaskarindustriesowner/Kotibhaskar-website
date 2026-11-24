@@ -111,6 +111,14 @@ img{max-width:100%;}
 @media(max-width:1100px){.card-grid.hub-grid{grid-template-columns:repeat(3,minmax(0,280px));}}
 @media(max-width:760px){.card-grid.hub-grid{grid-template-columns:repeat(2,minmax(0,300px));}}
 @media(max-width:600px){.card-grid.hub-grid{grid-template-columns:minmax(0,340px);}}
+/* Trolley pages: multiple-size note and brand / origin */
+.t-multi{font-size:15px;color:#1A2332;font-weight:600;margin:-6px 0 0;max-width:760px;}
+.t-multi a{color:#C85A00;}
+.t-origin{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:16px 0 0;border:1px solid #DDD8D0;background:#fff;}
+.t-origin>div{padding:10px 14px;}
+.t-origin>div+div{border-left:1px solid #DDD8D0;}
+.t-origin dt{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#C85A00;margin-bottom:2px;}
+.t-origin dd{margin:0;font-size:15px;font-weight:600;color:#1A2332;}
 /* MS solid track wheels */
 .pt-choices.ms-choices{grid-template-columns:repeat(2,minmax(0,1fr));max-width:1080px;gap:20px;}
 .ms-choices .pt-choice{display:grid;grid-template-columns:200px minmax(0,1fr);}
@@ -187,10 +195,12 @@ img{max-width:100%;}
 /* keep the screen-reader label inside the scrolling table, so it cannot widen the page on phones */
 .variant-table th{position:relative;}
 @media(max-width:900px){.t-layout{grid-template-columns:1fr;gap:24px;}.t-photo{max-width:520px;}}
+@media(min-width:901px) and (max-width:1180px){.t-main .key-facts.t-facts{grid-template-columns:repeat(2,minmax(0,1fr));}}
 /* compact trolley product page: smaller photo column (aspect ratio kept), tighter spacing above the sizes table */
 @media screen{
   .page-head.t-head{padding-bottom:28px;}
-  .t-head .key-facts{margin-top:20px;}
+  .t-main .key-facts.t-facts{margin:6px 0 28px;max-width:none;}
+  .t-main .t-facts + .sec-label{margin-top:4px;}
   .wrap.t-main{padding-top:36px;padding-bottom:36px;}
   .wrap.t-sizes{padding-top:40px;scroll-margin-top:68px;}
   .fact-link{display:block;text-decoration:none;color:inherit;transition:background .2s;}
