@@ -385,6 +385,7 @@ def build_product(h, data, fam, p):
         sibs = f'<div class="wrap alt siblings-wrap"><h2 class="h2">Other {e(fam["name"])}</h2><div class="siblings">' + ''.join(
             f'<a class="sib" href="{product_url(q)}">{e(q["name"])}<small>{e(q["operation"])}</small></a>' for q in same) + '</div></div>'
     multi = nconf > 1
+    vid = h.video_html(url)
     body = f'''<header class="page-head t-head">
   {crumb_html}
   <div class="duty-badge">{e(fam['name'])} &middot; <b>{e(p['subtype'])}</b></div>
@@ -395,12 +396,13 @@ def build_product(h, data, fam, p):
 </header>
 
 <div class="wrap t-main eq-main">
-  <div class="eq-top{'' if p['images'].get('drawing') else ' eq-top-1'}">
+  <div class="eq-top{'' if p['images'].get('drawing') else ' eq-top-1'}{' eq-has-vid' if vid else ''}">
     <figure class="t-photo eq-panel">
       <a href="{p['images']['photo']}" data-lightbox><img src="{p['images']['photo']}" alt="{e(p['name'])} — product photograph" width="900" height="1273"></a>
       <figcaption>Product photo <span>Click to enlarge</span></figcaption>
     </figure>
     {drawing}
+    {vid}
     <div class="eq-aside">
       {f'<p class="t-multi">Available in multiple configurations. Please refer to the <a href="#specs">specifications table below</a> for details.</p>' if multi else ''}
       {spm}

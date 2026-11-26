@@ -45,6 +45,55 @@ NAV_CATS = []   # all built categories, used for footer links (filled in main)
 e = lambda s: html.escape(str(s), quote=True)
 
 
+# ---- Product demonstration videos (data/videos.json): one entry per YouTube video, listing its product pages
+def load_videos():
+    with open(os.path.join(REPO, 'data', 'videos.json'), encoding='utf-8') as f:
+        data = json.load(f)
+    by_page = {}
+    for v in data['videos']:
+        if not re.fullmatch(r'[A-Za-z0-9_-]{11}', v['id']):
+            raise SystemExit(f"videos.json: '{v['id']}' is not a YouTube video id (11 characters after youtu.be/)")
+        for pg in v['pages']:
+            by_page.setdefault(pg, []).append(v)
+    return by_page
+
+
+VIDEOS = load_videos()
+VIDEO_PAGES_USED = set()
+
+
+def video_html(url):
+    """Compact 'Watch Product Demonstration' strip for a product page; '' when the page has no video.
+    The link opens YouTube without JavaScript; site.js turns it into an in-page popup player."""
+    vs = VIDEOS.get(url)
+    if not vs:
+        return ''
+    VIDEO_PAGES_USED.add(url)
+
+    def link(v, cls, inner):
+        return (f'<a class="{cls}" href="https://www.youtube.com/watch?v={v["id"]}" target="_blank" rel="noopener" '
+                f'data-yt="{v["id"]}" data-yt-title="{e(v["title"])}">{inner}</a>')
+    v = vs[0]
+    main = link(v, 'vid-main',
+                f'<span class="vid-thumb"><img src="https://i.ytimg.com/vi/{v["id"]}/mqdefault.jpg" alt="" width="320" height="180" '
+                f'loading="lazy" decoding="async"><span class="vid-play" aria-hidden="true"></span>'
+                f'<span class="vid-dur">{e(v.get("duration", ""))}</span></span>'
+                f'<span class="vid-text"><b>{e(v["title"])}</b><small>&#9654; Play video</small></span>')
+    more = ''
+    if len(vs) > 1:
+        more = (f'<details class="vid-more"><summary>More videos ({len(vs) - 1})</summary><ul>' + ''.join(
+            f'<li>{link(o, "vid-link", "&#9654; " + e(o["title"]) + (" <span>" + e(o["duration"]) + "</span>" if o.get("duration") else ""))}</li>'
+            for o in vs[1:]) + '</ul></details>')
+    return (f'<section class="vid-box" aria-label="Product demonstration video">'
+            f'<h2 class="vid-label">Watch Product Demonstration</h2>{main}{more}</section>')
+
+
+def check_videos_used():
+    missing = sorted(set(VIDEOS) - VIDEO_PAGES_USED)
+    if missing:
+        raise SystemExit('videos.json lists pages that were not built (check the URL): ' + ', '.join(missing))
+
+
 def n(v):
     """Format a number without a trailing .0"""
     return str(int(v)) if float(v).is_integer() else str(v)
@@ -1165,6 +1214,7 @@ def build_trolley_product(cat, p, idx):
     url = f"{cat['url']}{p['slug']}/"
     crange = capacity_range(p)
     table_cols, common_cols = split_columns(p)
+    vid = video_html(url)
     nsizes = len(p['variants'])
     crumb_html, crumb_ld = crumbs([('Home', '/'), (e(cat['name']), cat['url']), (e(g['name']), f"{cat['url']}#{g['id']}"), (e(p['name']), None)])
     path = f"{cat['name']} > {g['name']}"
@@ -1211,10 +1261,10 @@ def build_trolley_product(cat, p, idx):
 
 <div class="wrap t-main">
   <div class="t-layout">
-    <figure class="t-photo">
+    {'<div class="t-media">' if vid else ''}<figure class="t-photo">
       <a href="{p['images']['photo']}" data-lightbox><img src="{p['images']['photo']}" alt="{e(p['name'])} — product photograph" width="900" height="1165"></a>
       <figcaption>Product photo <span>Click to enlarge</span></figcaption>
-    </figure>
+    </figure>{vid + '</div>' if vid else ''}
     <div>
       <h2 class="sec-label">Construction &amp; Features</h2>
       <ul class="feat-list t-feats">{feats}</ul>
@@ -1503,6 +1553,7 @@ def main():
     import build_equipment
     eq_urls, eqcount = build_equipment.build(sys.modules[__name__])
     urls += eq_urls
+    check_videos_used()
 
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u in urls:

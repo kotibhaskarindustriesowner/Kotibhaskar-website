@@ -65,6 +65,71 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
   }
 
+  // Product demonstration videos: the YouTube player (privacy-enhanced domain) is created only
+  // when a video is clicked, inside a popup; closing the popup removes the player, which stops playback.
+  var vids = document.querySelectorAll('a[data-yt]');
+  if (vids.length) {
+    var vm = null, vidFrom = null;
+    var closeVid = function () {
+      if (!vm) return;
+      vm.parentNode.removeChild(vm);
+      vm = null;
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', vidKey);
+      if (vidFrom) vidFrom.focus();
+    };
+    var vidKey = function (e) {
+      if (e.key === 'Escape') closeVid();
+    };
+    var openVid = function (id, title) {
+      closeVid();
+      vm = document.createElement('div');
+      vm.className = 'vid-modal';
+      vm.setAttribute('role', 'dialog');
+      vm.setAttribute('aria-modal', 'true');
+      vm.setAttribute('aria-label', title);
+      var box = document.createElement('div');
+      box.className = 'vid-dialog';
+      var bar = document.createElement('div');
+      bar.className = 'vid-bar';
+      var t = document.createElement('span');
+      t.textContent = title;
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'vid-close';
+      btn.setAttribute('aria-label', 'Close video');
+      btn.innerHTML = '&times; Close';
+      btn.addEventListener('click', closeVid);
+      bar.appendChild(t);
+      bar.appendChild(btn);
+      var fr = document.createElement('div');
+      fr.className = 'vid-frame';
+      var ifr = document.createElement('iframe');
+      ifr.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0&playsinline=1';
+      ifr.title = title;
+      ifr.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture; fullscreen');
+      ifr.setAttribute('allowfullscreen', '');
+      ifr.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      fr.appendChild(ifr);
+      box.appendChild(bar);
+      box.appendChild(fr);
+      vm.appendChild(box);
+      vm.addEventListener('click', function (e) { if (e.target === vm) closeVid(); });
+      document.body.appendChild(vm);
+      document.body.style.overflow = 'hidden';
+      document.addEventListener('keydown', vidKey);
+      btn.focus();
+    };
+    vids.forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;   // let "open in new tab" work
+        e.preventDefault();
+        vidFrom = a;
+        openVid(a.getAttribute('data-yt'), a.getAttribute('data-yt-title') || 'Product demonstration');
+      });
+    });
+  }
+
   // Print datasheet — wait until the datasheet images are loaded so the
   // photo and drawing are never missing from the printout.
   function printSheet() {
