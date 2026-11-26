@@ -106,20 +106,26 @@ def showcase_picks(fam, prods, n):
 # compact family cards (owner design, 26 Nov 2026). Rows follow the owner's order:
 # Pallet Trucks, Stackers, Floor Cranes, Scissor Lifts; Drum Lifters & Tilters beside Drum Lifters with
 # Auto Gripper; Goods Lifts; Material Lifters & Tilters beside Gantries; then the remaining families.
-SHOWCASE_ROWS = [['pallet-trucks', 'stackers', 'floor-cranes'],
-                 ['scissor-lifts', 'drum-lifters-tilters', 'drum-grippers'],
+SHOWCASE_ROWS = [['pallet-trucks', 'stackers'],
+                 ['floor-cranes', 'scissor-lifts'],
+                 ['drum-lifters-tilters', 'drum-grippers'],
                  ['goods-lifts', 'material-lifters-tilters', 'gantries'],
                  ['order-pickers', 'dock-levellers', 'industrial-shelving', 'conveyors']]
-# two visibly different machines per family (one for the single-product dock leveller)
+# framed thumbnails per card: as many as fit the card width (2 cards per row -> 4, 3 -> 3, 4 -> 2)
+MAX_THUMBS = {2: 4, 3: 3, 4: 2}
+# visibly different machines, in display order (the first MAX_THUMBS are used)
 SHOWCASE = {
-    'pallet-trucks': ['hydraulic-pallet-truck-550', 'electric-pallet-truck'],
-    'stackers': ['manual-stacker-550', 'electric-stacker'],
-    'floor-cranes': ['manual-hydraulic-floor-crane', 'semi-electric-ac-counterbalance-floor-crane-fixed-boom'],
-    'scissor-lifts': ['manual-hydraulic-scissor-lift-single', 'electro-hydraulic-scissor-lift-2000x2000'],
-    'drum-lifters-tilters': ['manual-drum-lifter-tilter', 'electric-drum-lifter-tilter'],
-    'drum-grippers': ['manual-drum-lifter-auto-gripper', 'semi-electric-ac-drum-lifter-auto-gripper'],
-    'goods-lifts': ['two-channel-goods-lift', 'four-channel-lifting-cage'],
-    'material-lifters-tilters': ['manual-material-lifter-tilter', 'semi-electric-ac-material-lifter-tilter'],
+    'pallet-trucks': ['hydraulic-pallet-truck-550', 'roll-lifting-pallet-truck', 'high-lift-scissor-pallet-truck', 'electric-pallet-truck'],
+    'stackers': ['manual-stacker-550', 'semi-electric-ac-stacker-with-cage', 'semi-electric-dc-stacker-with-jib-hook', 'electric-stacker'],
+    'floor-cranes': ['manual-hydraulic-floor-crane', 'semi-electric-ac-counterbalance-floor-crane-fixed-boom',
+                     'semi-electric-dc-counterbalance-floor-crane-swivelling-boom', 'electric-floor-crane'],
+    'scissor-lifts': ['manual-hydraulic-scissor-lift-single', 'semi-electric-ac-hydraulic-scissor-lift-double',
+                      'electro-hydraulic-scissor-lift-2000x2000', 'electro-hydraulic-double-scissor-lift-spm'],
+    'drum-lifters-tilters': ['manual-drum-lifter-tilter', 'semi-electric-ac-drum-lifter-tilter', 'semi-electric-dc-drum-lifter-tilter',
+                             'electric-drum-lifter-tilter'],
+    'drum-grippers': ['manual-drum-lifter-auto-gripper', 'semi-electric-ac-drum-lifter-auto-gripper', 'semi-electric-dc-drum-lifter-auto-gripper'],
+    'goods-lifts': ['two-channel-goods-lift', 'four-channel-goods-lift', 'four-channel-lifting-cage'],
+    'material-lifters-tilters': ['manual-material-lifter-tilter', 'semi-electric-ac-material-lifter-tilter', 'semi-electric-dc-material-lifter-tilter'],
     'gantries': ['manual-gantry', 'electric-gantry'],
     'order-pickers': ['semi-electric-ac-order-picker', 'electric-order-picker'],
     'dock-levellers': ['electro-hydraulic-dock-leveller'],
@@ -130,11 +136,12 @@ SHOWCASE = {
 
 def family_card(fam, prods, per_row):
     chosen = SHOWCASE.get(fam['id'])
-    picks = [next(p for p in prods if p['slug'] == s) for s in chosen] if chosen else showcase_picks(fam, prods, 2)
+    picks = [next(p for p in prods if p['slug'] == s) for s in chosen] if chosen else showcase_picks(fam, prods, 4)
+    picks = picks[:MAX_THUMBS[per_row]]
     n = len(prods)
-    imgs = ''.join(thumb(p) for p in picks)
+    imgs = ''.join(f'<span class="eqc-frame">{thumb(p)}</span>' for p in picks)
     return f'''<a class="eqc eqc-{per_row}" href="{family_url(fam)}" aria-label="{e(fam['name'])} — {n} product{'s' if n != 1 else ''}">
-  <div class="eqc-photos eqc-n{len(picks)}">{imgs}</div>
+  <div class="eqc-photos eqc-n{len(picks)}" style="--slots:{MAX_THUMBS[per_row]}">{imgs}</div>
   <div class="eqc-foot"><div><h3 class="eqc-name">{e(fam['name'])}</h3><span class="eqc-count">{n} product{'s' if n != 1 else ''}</span></div><span class="eqc-arrow" aria-hidden="true">&rarr;</span></div>
 </a>'''
 
@@ -325,8 +332,8 @@ def build_product(h, data, fam, p):
         chips.append('<li class="spm">SPM — built to order</li>')
     drawing = ''
     if p['images'].get('drawing'):
-        drawing = f'''<figure class="t-photo eq-drawing">
-      <a href="{p['images']['drawing']}" data-lightbox><img src="{p['images']['drawing']}" alt="{e(p['name'])} — technical drawing with dimensions" width="1100" height="1556" loading="lazy" decoding="async"></a>
+        drawing = f'''<figure class="t-photo eq-panel eq-drawing">
+      <a href="{p['images']['drawing']}" data-lightbox><img src="{p['images']['drawing']}" alt="{e(p['name'])} — technical drawing with dimensions" width="1100" height="1556" decoding="async"></a>
       <figcaption>Technical drawing <span>Click to enlarge</span></figcaption>
     </figure>'''
     wheels = ''
@@ -349,18 +356,14 @@ def build_product(h, data, fam, p):
   <div class="key-facts">{''.join(facts)}</div>
 </header>
 
-<div class="wrap t-main">
-  <div class="t-layout eq-layout{' eq-side' if p.get('media_side') and p['images'].get('drawing') else ''}">
-    <div class="eq-media">
-      <figure class="t-photo">
-        <a href="{p['images']['photo']}" data-lightbox><img src="{p['images']['photo']}" alt="{e(p['name'])} — product photograph" width="900" height="1273"></a>
-        <figcaption>Product photo <span>Click to enlarge</span></figcaption>
-      </figure>
-      {drawing}
-    </div>
-    <div>
-      <h2 class="sec-label">Construction &amp; Features</h2>
-      {feats_html(p['text'])}
+<div class="wrap t-main eq-main">
+  <div class="eq-top{'' if p['images'].get('drawing') else ' eq-top-1'}">
+    <figure class="t-photo eq-panel">
+      <a href="{p['images']['photo']}" data-lightbox><img src="{p['images']['photo']}" alt="{e(p['name'])} — product photograph" width="900" height="1273"></a>
+      <figcaption>Product photo <span>Click to enlarge</span></figcaption>
+    </figure>
+    {drawing}
+    <div class="eq-aside">
       {f'<p class="t-multi">Available in multiple configurations. Please refer to the <a href="#specs">specifications table below</a> for details.</p>' if multi else ''}
       {spm}
       {wheels}
@@ -374,6 +377,8 @@ def build_product(h, data, fam, p):
       </div>
     </div>
   </div>
+  <h2 class="sec-label eq-feats-label">Construction &amp; Features</h2>
+  {feats_html(p['text'])}
 </div>
 
 <div class="wrap alt t-sizes" id="specs">

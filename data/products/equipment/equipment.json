@@ -5060,7 +5060,7 @@
    "slug": "manual-hydraulic-floor-crane",
    "name": "Manual Hydraulic Floor Crane",
    "family": "floor-cranes",
-   "subtype": "Hydraulic Floor Cranes",
+   "subtype": "Manual Floor Cranes",
    "operation": "Manual",
    "tables": [
     {
@@ -5159,7 +5159,7 @@
    "slug": "semi-electric-ac-hydraulic-floor-crane",
    "name": "Semi-Electric AC Hydraulic Floor Crane",
    "family": "floor-cranes",
-   "subtype": "Hydraulic Floor Cranes",
+   "subtype": "Semi-Electric AC Floor Cranes",
    "operation": "Semi-Electric AC",
    "tables": [
     {
@@ -5277,7 +5277,7 @@
    "slug": "semi-electric-dc-hydraulic-floor-crane",
    "name": "Semi-Electric DC Hydraulic Floor Crane",
    "family": "floor-cranes",
-   "subtype": "Hydraulic Floor Cranes",
+   "subtype": "Semi-Electric DC Floor Cranes",
    "operation": "Semi-Electric DC",
    "tables": [
     {
@@ -5399,7 +5399,7 @@
    "slug": "manual-counterbalance-floor-crane-fixed-boom",
    "name": "Manual Counterbalance Floor Crane – Fixed Boom",
    "family": "floor-cranes",
-   "subtype": "Counterbalance Floor Cranes – Fixed Boom",
+   "subtype": "Manual Floor Cranes",
    "operation": "Manual",
    "tables": [
     {
@@ -5496,7 +5496,7 @@
    "slug": "semi-electric-ac-counterbalance-floor-crane-fixed-boom",
    "name": "Semi-Electric AC Counterbalance Floor Crane – Fixed Boom",
    "family": "floor-cranes",
-   "subtype": "Counterbalance Floor Cranes – Fixed Boom",
+   "subtype": "Semi-Electric AC Floor Cranes",
    "operation": "Semi-Electric AC",
    "tables": [
     {
@@ -5612,7 +5612,7 @@
    "slug": "semi-electric-dc-counterbalance-floor-crane-fixed-boom",
    "name": "Semi-Electric DC Counterbalance Floor Crane – Fixed Boom",
    "family": "floor-cranes",
-   "subtype": "Counterbalance Floor Cranes – Fixed Boom",
+   "subtype": "Semi-Electric DC Floor Cranes",
    "operation": "Semi-Electric DC",
    "tables": [
     {
@@ -5732,7 +5732,7 @@
    "slug": "manual-counterbalance-floor-crane-swivelling-boom",
    "name": "Manual Counterbalance Floor Crane – Swivelling Boom",
    "family": "floor-cranes",
-   "subtype": "Counterbalance Floor Cranes – Swivelling Boom",
+   "subtype": "Manual Floor Cranes",
    "operation": "Manual",
    "tables": [
     {
@@ -5830,7 +5830,7 @@
    "slug": "semi-electric-ac-counterbalance-floor-crane-swivelling-boom",
    "name": "Semi-Electric AC Counterbalance Floor Crane – Swivelling Boom",
    "family": "floor-cranes",
-   "subtype": "Counterbalance Floor Cranes – Swivelling Boom",
+   "subtype": "Semi-Electric AC Floor Cranes",
    "operation": "Semi-Electric AC",
    "tables": [
     {
@@ -5947,7 +5947,7 @@
    "slug": "semi-electric-dc-counterbalance-floor-crane-swivelling-boom",
    "name": "Semi-Electric DC Counterbalance Floor Crane – Swivelling Boom",
    "family": "floor-cranes",
-   "subtype": "Counterbalance Floor Cranes – Swivelling Boom",
+   "subtype": "Semi-Electric DC Floor Cranes",
    "operation": "Semi-Electric DC",
    "tables": [
     {

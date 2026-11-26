@@ -536,7 +536,7 @@ add('electric-drum-lifter-tilter', 'Electric Drum Lifter & Tilter', 'drum-lifter
 for op, (p1, p2), f in (('M', (1, 2), ('10', '10', '20')), ('AC', (4, 5), ('20', '30', '40')), ('DC', (7, 8), ('30', '50', '60'))):
     pre = {'M': 'manual', 'AC': 'semi-electric-ac', 'DC': 'semi-electric-dc'}[op]
     intro = {'M': [0], 'AC': [3], 'DC': [6]}[op]
-    add(f'{pre}-hydraulic-floor-crane', ('Manual' if op == 'M' else OPS[op]) + ' Hydraulic Floor Crane', 'floor-cranes', 'Hydraulic Floor Cranes', op,
+    add(f'{pre}-hydraulic-floor-crane', ('Manual' if op == 'M' else OPS[op]) + ' Hydraulic Floor Crane', 'floor-cranes', f'{OPS[op]} Floor Cranes', op,
         [('70', f[0], f[1]), ('70', f[0], f[2])], [crane_table('045', [p1, p2])],
         text('045', intro) + text('045', [p1], keep=(r'Operation|telescopic boom' if op == 'M' else r'telescopic boom')),
         f'{OPS[op]} hydraulic floor crane with telescopic boom adjustable from 1000 to 1500 mm; 1000 kg and 1500 kg capacities with 2500 mm lift.',
@@ -554,7 +554,7 @@ for (boom, op), (pg, intro, f5, f10) in CB.items():
     tbl = {'title': None, 'head': ['Specification', '500 kg', '1000 kg'],
            'rows': [[r[0], r[1], next((s[1] for s in t1000['rows'] if s[0] == r[0]), '—')] for r in t500['rows']]}
     add(f'{pre}-counterbalance-floor-crane-{boom}-boom', f'{("Manual" if op == "M" else OPS[op])} Counterbalance Floor Crane – {bt}',
-        'floor-cranes', f'Counterbalance Floor Cranes – {bt}', op, [('70',) + f5, ('70',) + f10], [tbl],
+        'floor-cranes', f'{OPS[op]} Floor Cranes', op, [('70',) + f5, ('70',) + f10], [tbl],
         text('046', intro, drop_line=CB_LINES) + (text('046', [pg], keep=r'telescopic boom') if pg not in intro else []),
         f'{OPS[op]} counterbalanced floor crane with {bt.lower()}; 500 kg and 1000 kg capacities with 2500 mm lift.',
         wheels=UHMW_OPTS, capacities=['500 kg', '1000 kg'], lifts=['2.5 m'])
