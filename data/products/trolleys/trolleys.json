@@ -1809,10 +1809,16 @@
       "slug": "cnc-tool-trolley-600x5",
       "name": "CNC Tool Trolley – 600 × 5",
       "group": "cnc",
-      "summary": "CNC tool trolley 600 × 5 with tool pockets for BT 30, BT 40 or BT 50 tool holders; load capacity 200 kg.",
+      "summary": "CNC tool trolley with a 600 × 600 mm platform and 5 adjustable tool pocket trays for BT 30, BT 40 or BT 50 tool holders; load capacity 200 kg.",
       "features": [
-        "Available with tool pockets for BT 30 (40 pockets), BT 40 (30 pockets), BT 50 (20 pockets).",
-        "Load capacity 200 kg."
+        "Trolley size 600 × 5 = 600 × 600 mm platform with 5 tool pocket trays.",
+        "Fabricated from a single piece of M.S. sheet, bent in six folds to form a “C” channel at the ends, with “U” grooves on the top surface; ribbed underneath with additional “C” channels for strength.",
+        "“A” shape (taper shape) for easy access to all tools; gives instant tool identification and systematic tool storage.",
+        "Plastic tool pockets in three sizes — BT 30, BT 40 and BT 50 — made from high-quality engineering plastic that protects the tools.",
+        "Also available for HSK-A-50, HSK-A-63 and HSK-A-100; the overall mounting dimensions are the same for BT 30 & HSK-A-50, BT 40 & HSK-A-63 and BT 50 & HSK-A-100.",
+        "Tool pocket trays are easily adjustable; each tray has 4 holes to set its inclination in 10° steps, from straight up to 30°.",
+        "A tray for changed or working tools and an A4-size pocket for drawings are provided as standard.",
+        "Fitted with 2 fixed and 2 swivel castors; 1 swivel castor has a parking brake for safety."
       ],
       "variant_key": [
         "Tool Holder Type",
@@ -1822,20 +1828,44 @@
         {
           "Trolley Size": "600 × 5",
           "Tool Holder Type": "BT 30",
+          "Tool Pocket Trays": "5",
+          "Tool Pockets per Tray": "8",
           "Tool Pockets": "40 nos",
-          "Load Capacity": "200 kg"
+          "Load Capacity": "200 kg",
+          "Platform Size (L × W)": "600 × 600 mm",
+          "Platform Height": "225 mm",
+          "Vertical Frame Height": "600 mm",
+          "Overall Size (L × W × H)": "900 × 600 × 900 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Colour": "Blue"
         },
         {
           "Trolley Size": "600 × 5",
           "Tool Holder Type": "BT 40",
+          "Tool Pocket Trays": "5",
+          "Tool Pockets per Tray": "6",
           "Tool Pockets": "30 nos",
-          "Load Capacity": "200 kg"
+          "Load Capacity": "200 kg",
+          "Platform Size (L × W)": "600 × 600 mm",
+          "Platform Height": "225 mm",
+          "Vertical Frame Height": "600 mm",
+          "Overall Size (L × W × H)": "900 × 600 × 900 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Colour": "Blue"
         },
         {
           "Trolley Size": "600 × 5",
           "Tool Holder Type": "BT 50",
+          "Tool Pocket Trays": "5",
+          "Tool Pockets per Tray": "4",
           "Tool Pockets": "20 nos",
-          "Load Capacity": "200 kg"
+          "Load Capacity": "200 kg",
+          "Platform Size (L × W)": "600 × 600 mm",
+          "Platform Height": "225 mm",
+          "Vertical Frame Height": "600 mm",
+          "Overall Size (L × W × H)": "900 × 600 × 900 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Colour": "Blue"
         }
       ],
       "wheels": [
@@ -1843,8 +1873,8 @@
         "pupp",
         "ci"
       ],
-      "brake": null,
-      "brake_text": null,
+      "brake": "standard",
+      "brake_text": "1 swivel castor is fitted with a parking brake for safety.",
       "notes": [],
       "table_always": [
         "Load Capacity"
@@ -1863,10 +1893,16 @@
       "slug": "cnc-tool-trolley-600x7",
       "name": "CNC Tool Trolley – 600 × 7",
       "group": "cnc",
-      "summary": "CNC tool trolley 600 × 7 with tool pockets for BT 30, BT 40 or BT 50 tool holders; load capacity 200 kg.",
+      "summary": "CNC tool trolley with a 600 × 600 mm platform and 7 adjustable tool pocket trays for BT 30, BT 40 or BT 50 tool holders; load capacity 200 kg.",
       "features": [
-        "Available with tool pockets for BT 30 (56 pockets), BT 40 (42 pockets), BT 50 (28 pockets).",
-        "Load capacity 200 kg."
+        "Trolley size 600 × 7 = 600 × 600 mm platform with 7 tool pocket trays.",
+        "Fabricated from a single piece of M.S. sheet, bent in six folds to form a “C” channel at the ends, with “U” grooves on the top surface; ribbed underneath with additional “C” channels for strength.",
+        "“A” shape (taper shape) for easy access to all tools; gives instant tool identification and systematic tool storage.",
+        "Plastic tool pockets in three sizes — BT 30, BT 40 and BT 50 — made from high-quality engineering plastic that protects the tools.",
+        "Also available for HSK-A-50, HSK-A-63 and HSK-A-100; the overall mounting dimensions are the same for BT 30 & HSK-A-50, BT 40 & HSK-A-63 and BT 50 & HSK-A-100.",
+        "Tool pocket trays are easily adjustable; each tray has 4 holes to set its inclination in 10° steps, from straight up to 30°.",
+        "A tray for changed or working tools and an A4-size pocket for drawings are provided as standard.",
+        "Fitted with 2 fixed and 2 swivel castors; 1 swivel castor has a parking brake for safety."
       ],
       "variant_key": [
         "Tool Holder Type",
@@ -1876,20 +1912,44 @@
         {
           "Trolley Size": "600 × 7",
           "Tool Holder Type": "BT 30",
+          "Tool Pocket Trays": "7",
+          "Tool Pockets per Tray": "8",
           "Tool Pockets": "56 nos",
-          "Load Capacity": "200 kg"
+          "Load Capacity": "200 kg",
+          "Platform Size (L × W)": "600 × 600 mm",
+          "Platform Height": "225 mm",
+          "Vertical Frame Height": "900 mm",
+          "Overall Size (L × W × H)": "900 × 600 × 1200 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Colour": "Blue"
         },
         {
           "Trolley Size": "600 × 7",
           "Tool Holder Type": "BT 40",
+          "Tool Pocket Trays": "7",
+          "Tool Pockets per Tray": "6",
           "Tool Pockets": "42 nos",
-          "Load Capacity": "200 kg"
+          "Load Capacity": "200 kg",
+          "Platform Size (L × W)": "600 × 600 mm",
+          "Platform Height": "225 mm",
+          "Vertical Frame Height": "900 mm",
+          "Overall Size (L × W × H)": "900 × 600 × 1200 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Colour": "Blue"
         },
         {
           "Trolley Size": "600 × 7",
           "Tool Holder Type": "BT 50",
+          "Tool Pocket Trays": "7",
+          "Tool Pockets per Tray": "4",
           "Tool Pockets": "28 nos",
-          "Load Capacity": "200 kg"
+          "Load Capacity": "200 kg",
+          "Platform Size (L × W)": "600 × 600 mm",
+          "Platform Height": "225 mm",
+          "Vertical Frame Height": "900 mm",
+          "Overall Size (L × W × H)": "900 × 600 × 1200 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Colour": "Blue"
         }
       ],
       "wheels": [
@@ -1897,8 +1957,8 @@
         "pupp",
         "ci"
       ],
-      "brake": null,
-      "brake_text": null,
+      "brake": "standard",
+      "brake_text": "1 swivel castor is fitted with a parking brake for safety.",
       "notes": [],
       "table_always": [
         "Load Capacity"
@@ -1917,10 +1977,16 @@
       "slug": "cnc-tool-trolley-900x5",
       "name": "CNC Tool Trolley – 900 × 5",
       "group": "cnc",
-      "summary": "CNC tool trolley 900 × 5 with tool pockets for BT 30, BT 40 or BT 50 tool holders; load capacity 400 kg.",
+      "summary": "CNC tool trolley with a 900 × 600 mm platform and 5 adjustable tool pocket trays for BT 30, BT 40 or BT 50 tool holders; load capacity 400 kg.",
       "features": [
-        "Available with tool pockets for BT 30 (70 pockets), BT 40 (50 pockets), BT 50 (30 pockets).",
-        "Load capacity 400 kg."
+        "Trolley size 900 × 5 = 900 × 600 mm platform with 5 tool pocket trays.",
+        "Fabricated from a single piece of M.S. sheet, bent in six folds to form a “C” channel at the ends, with “U” grooves on the top surface; ribbed underneath with additional “C” channels for strength.",
+        "“A” shape (taper shape) for easy access to all tools; gives instant tool identification and systematic tool storage.",
+        "Plastic tool pockets in three sizes — BT 30, BT 40 and BT 50 — made from high-quality engineering plastic that protects the tools.",
+        "Also available for HSK-A-50, HSK-A-63 and HSK-A-100; the overall mounting dimensions are the same for BT 30 & HSK-A-50, BT 40 & HSK-A-63 and BT 50 & HSK-A-100.",
+        "Tool pocket trays are easily adjustable; each tray has 4 holes to set its inclination in 10° steps, from straight up to 30°.",
+        "A tray for changed or working tools and an A4-size pocket for drawings are provided as standard.",
+        "Fitted with 2 fixed and 2 swivel castors; 1 swivel castor has a parking brake for safety."
       ],
       "variant_key": [
         "Tool Holder Type",
@@ -1930,20 +1996,44 @@
         {
           "Trolley Size": "900 × 5",
           "Tool Holder Type": "BT 30",
+          "Tool Pocket Trays": "5",
+          "Tool Pockets per Tray": "14",
           "Tool Pockets": "70 nos",
-          "Load Capacity": "400 kg"
+          "Load Capacity": "400 kg",
+          "Platform Size (L × W)": "900 × 600 mm",
+          "Platform Height": "225 mm",
+          "Vertical Frame Height": "600 mm",
+          "Overall Size (L × W × H)": "1200 × 600 × 900 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Colour": "Blue"
         },
         {
           "Trolley Size": "900 × 5",
           "Tool Holder Type": "BT 40",
+          "Tool Pocket Trays": "5",
+          "Tool Pockets per Tray": "10",
           "Tool Pockets": "50 nos",
-          "Load Capacity": "400 kg"
+          "Load Capacity": "400 kg",
+          "Platform Size (L × W)": "900 × 600 mm",
+          "Platform Height": "225 mm",
+          "Vertical Frame Height": "600 mm",
+          "Overall Size (L × W × H)": "1200 × 600 × 900 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Colour": "Blue"
         },
         {
           "Trolley Size": "900 × 5",
           "Tool Holder Type": "BT 50",
+          "Tool Pocket Trays": "5",
+          "Tool Pockets per Tray": "6",
           "Tool Pockets": "30 nos",
-          "Load Capacity": "400 kg"
+          "Load Capacity": "400 kg",
+          "Platform Size (L × W)": "900 × 600 mm",
+          "Platform Height": "225 mm",
+          "Vertical Frame Height": "600 mm",
+          "Overall Size (L × W × H)": "1200 × 600 × 900 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Colour": "Blue"
         }
       ],
       "wheels": [
@@ -1951,8 +2041,8 @@
         "pupp",
         "ci"
       ],
-      "brake": null,
-      "brake_text": null,
+      "brake": "standard",
+      "brake_text": "1 swivel castor is fitted with a parking brake for safety.",
       "notes": [],
       "table_always": [
         "Load Capacity"
@@ -1971,10 +2061,16 @@
       "slug": "cnc-tool-trolley-900x7",
       "name": "CNC Tool Trolley – 900 × 7",
       "group": "cnc",
-      "summary": "CNC tool trolley 900 × 7 with tool pockets for BT 30, BT 40 or BT 50 tool holders; load capacity 400 kg.",
+      "summary": "CNC tool trolley with a 900 × 600 mm platform and 7 adjustable tool pocket trays for BT 30, BT 40 or BT 50 tool holders; load capacity 400 kg.",
       "features": [
-        "Available with tool pockets for BT 30 (98 pockets), BT 40 (70 pockets), BT 50 (42 pockets).",
-        "Load capacity 400 kg."
+        "Trolley size 900 × 7 = 900 × 600 mm platform with 7 tool pocket trays.",
+        "Fabricated from a single piece of M.S. sheet, bent in six folds to form a “C” channel at the ends, with “U” grooves on the top surface; ribbed underneath with additional “C” channels for strength.",
+        "“A” shape (taper shape) for easy access to all tools; gives instant tool identification and systematic tool storage.",
+        "Plastic tool pockets in three sizes — BT 30, BT 40 and BT 50 — made from high-quality engineering plastic that protects the tools.",
+        "Also available for HSK-A-50, HSK-A-63 and HSK-A-100; the overall mounting dimensions are the same for BT 30 & HSK-A-50, BT 40 & HSK-A-63 and BT 50 & HSK-A-100.",
+        "Tool pocket trays are easily adjustable; each tray has 4 holes to set its inclination in 10° steps, from straight up to 30°.",
+        "A tray for changed or working tools and an A4-size pocket for drawings are provided as standard.",
+        "Fitted with 2 fixed and 2 swivel castors; 1 swivel castor has a parking brake for safety."
       ],
       "variant_key": [
         "Tool Holder Type",
@@ -1984,20 +2080,44 @@
         {
           "Trolley Size": "900 × 7",
           "Tool Holder Type": "BT 30",
+          "Tool Pocket Trays": "7",
+          "Tool Pockets per Tray": "14",
           "Tool Pockets": "98 nos",
-          "Load Capacity": "400 kg"
+          "Load Capacity": "400 kg",
+          "Platform Size (L × W)": "900 × 600 mm",
+          "Platform Height": "225 mm",
+          "Vertical Frame Height": "900 mm",
+          "Overall Size (L × W × H)": "1200 × 600 × 1200 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Colour": "Blue"
         },
         {
           "Trolley Size": "900 × 7",
           "Tool Holder Type": "BT 40",
+          "Tool Pocket Trays": "7",
+          "Tool Pockets per Tray": "10",
           "Tool Pockets": "70 nos",
-          "Load Capacity": "400 kg"
+          "Load Capacity": "400 kg",
+          "Platform Size (L × W)": "900 × 600 mm",
+          "Platform Height": "225 mm",
+          "Vertical Frame Height": "900 mm",
+          "Overall Size (L × W × H)": "1200 × 600 × 1200 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Colour": "Blue"
         },
         {
           "Trolley Size": "900 × 7",
           "Tool Holder Type": "BT 50",
+          "Tool Pocket Trays": "7",
+          "Tool Pockets per Tray": "6",
           "Tool Pockets": "42 nos",
-          "Load Capacity": "400 kg"
+          "Load Capacity": "400 kg",
+          "Platform Size (L × W)": "900 × 600 mm",
+          "Platform Height": "225 mm",
+          "Vertical Frame Height": "900 mm",
+          "Overall Size (L × W × H)": "1200 × 600 × 1200 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Colour": "Blue"
         }
       ],
       "wheels": [
@@ -2005,8 +2125,8 @@
         "pupp",
         "ci"
       ],
-      "brake": null,
-      "brake_text": null,
+      "brake": "standard",
+      "brake_text": "1 swivel castor is fitted with a parking brake for safety.",
       "notes": [],
       "table_always": [
         "Load Capacity"
@@ -2028,7 +2148,9 @@
       "summary": "Industrial work table fabricated from thick M.S. tubes with an M.S. sheet top, with top shelf, bottom shelf and 1 cupboard.",
       "features": [
         "Fabricated from thick M.S. square and rectangular tubes, with an M.S. sheet top.",
-        "Fitted with a top shelf, a bottom shelf and 1 cupboard."
+        "Four legs are fitted with polyurethane height-adjusting levelling pads as standard.",
+        "Heavy-duty, fully welded steel work table — a one-stop work station for assembly lines, inspection and similar applications.",
+        "Fitted with a top shelf, a bottom shelf and one lockable cupboard (L 400 × W 350 × H 400 mm)."
       ],
       "variant_key": [
         "Table Size",
@@ -2037,15 +2159,21 @@
       "variants": [
         {
           "Table Size": "1200 × 600 mm",
-          "Load Capacity": "400 kg"
+          "Load Capacity": "400 kg",
+          "Table Height": "850 mm",
+          "Colour": "White"
         },
         {
           "Table Size": "1500 × 750 mm",
-          "Load Capacity": "600 kg"
+          "Load Capacity": "600 kg",
+          "Table Height": "850 mm",
+          "Colour": "White"
         },
         {
           "Table Size": "1800 × 900 mm",
-          "Load Capacity": "800 kg"
+          "Load Capacity": "800 kg",
+          "Table Height": "850 mm",
+          "Colour": "White"
         }
       ],
       "wheels": [],
@@ -2083,8 +2211,12 @@
       "group": "work-table",
       "summary": "Industrial work table with top shelf, bottom shelf and 1 cupboard, plus a vertical frame with pin board and tube light fitting with 1 socket.",
       "features": [
-        "Fitted with a top shelf, a bottom shelf and 1 cupboard.",
-        "Vertical frame with pin board and tube light fitting with 1 socket."
+        "Fabricated from thick M.S. square and rectangular tubes, with an M.S. sheet top.",
+        "Four legs are fitted with polyurethane height-adjusting levelling pads as standard.",
+        "Heavy-duty, fully welded steel work table — a one-stop work station for assembly lines, inspection and similar applications.",
+        "Fitted with a top shelf, a bottom shelf and one lockable cupboard (L 400 × W 350 × H 400 mm).",
+        "Vertical frame (full table length × 900 mm height) with pin board (L 450 × W 300 mm).",
+        "Tube light fitting at 2400 mm height, with 1 socket."
       ],
       "variant_key": [
         "Table Size",
@@ -2093,15 +2225,21 @@
       "variants": [
         {
           "Table Size": "1200 × 600 mm",
-          "Load Capacity": "400 kg"
+          "Load Capacity": "400 kg",
+          "Table Height": "850 mm",
+          "Colour": "White"
         },
         {
           "Table Size": "1500 × 750 mm",
-          "Load Capacity": "600 kg"
+          "Load Capacity": "600 kg",
+          "Table Height": "850 mm",
+          "Colour": "White"
         },
         {
           "Table Size": "1800 × 900 mm",
-          "Load Capacity": "800 kg"
+          "Load Capacity": "800 kg",
+          "Table Height": "850 mm",
+          "Colour": "White"
         }
       ],
       "wheels": [],
@@ -2139,9 +2277,12 @@
       "group": "bin",
       "summary": "Single-sided bin trolley holding 24, 20 or 16 bins depending on bin size; load capacity 300 kg.",
       "features": [
-        "Single-sided construction.",
-        "Holds 24, 20 or 16 bins per trolley, depending on the bin size.",
-        "Load capacity 300 kg."
+        "Single-sided bin storage trolley for systematic storage and movement of material in bins, with instant identification of the stored material.",
+        "Vertical tubes with holes at 50 mm pitch let the bin trays be re-positioned to suit your requirement.",
+        "Bin trays are made from a single piece of M.S. sheet, ribbed at the sides and back for strength; available in 3 bin sizes.",
+        "Push–pull handle made from heavy M.S. round pipe, welded on top of the trolley.",
+        "Used on shop floors as mini stores, on assembly lines and for storing components.",
+        "All castor wheels with ball bearings; 1 swivel castor has a parking brake for safety."
       ],
       "variant_key": [
         "Bin Size",
@@ -2150,18 +2291,33 @@
       "variants": [
         {
           "Bin Size": "200 × 125 × 100 mm",
+          "Bins per Shelf": "6",
+          "Shelves per Trolley": "4",
           "Bins per Trolley": "24 bins",
-          "Load Capacity": "300 kg"
+          "Load Capacity": "300 kg",
+          "Overall Trolley Size (L × W × H)": "900 × 600 × 1250 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Colour": "Blue"
         },
         {
           "Bin Size": "230 × 150 × 125 mm",
+          "Bins per Shelf": "5",
+          "Shelves per Trolley": "4",
           "Bins per Trolley": "20 bins",
-          "Load Capacity": "300 kg"
+          "Load Capacity": "300 kg",
+          "Overall Trolley Size (L × W × H)": "900 × 600 × 1250 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Colour": "Blue"
         },
         {
           "Bin Size": "300 × 210 × 160 mm",
+          "Bins per Shelf": "4",
+          "Shelves per Trolley": "4",
           "Bins per Trolley": "16 bins",
-          "Load Capacity": "300 kg"
+          "Load Capacity": "300 kg",
+          "Overall Trolley Size (L × W × H)": "900 × 600 × 1250 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Colour": "Blue"
         }
       ],
       "wheels": [
@@ -2169,8 +2325,8 @@
         "pupp",
         "ci"
       ],
-      "brake": null,
-      "brake_text": null,
+      "brake": "standard",
+      "brake_text": "1 swivel castor is fitted with a parking brake for safety.",
       "notes": [],
       "table_always": [
         "Load Capacity"
@@ -2191,9 +2347,12 @@
       "group": "bin",
       "summary": "Double-sided bin trolley holding 48, 40 or 32 bins depending on bin size; load capacity 500 kg.",
       "features": [
-        "Double-sided construction.",
-        "Holds 48, 40 or 32 bins per trolley, depending on the bin size.",
-        "Load capacity 500 kg."
+        "Double-sided bin storage trolley for systematic storage and movement of material in bins, with instant identification of the stored material.",
+        "Vertical tubes with holes at 50 mm pitch let the bin trays be re-positioned to suit your requirement.",
+        "Bin trays are made from a single piece of M.S. sheet, ribbed at the sides and back for strength; available in 3 bin sizes.",
+        "Push–pull handle made from heavy M.S. round pipe, welded on top of the trolley.",
+        "Used on shop floors as mini stores, on assembly lines and for storing components.",
+        "All castor wheels with ball bearings; 1 swivel castor has a parking brake for safety."
       ],
       "variant_key": [
         "Bin Size",
@@ -2202,18 +2361,33 @@
       "variants": [
         {
           "Bin Size": "200 × 125 × 100 mm",
+          "Bins per Shelf": "6",
+          "Shelves per Trolley": "8",
           "Bins per Trolley": "48 bins",
-          "Load Capacity": "500 kg"
+          "Load Capacity": "500 kg",
+          "Overall Trolley Size (L × W × H)": "900 × 600 × 1250 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Colour": "Blue"
         },
         {
           "Bin Size": "230 × 150 × 125 mm",
+          "Bins per Shelf": "5",
+          "Shelves per Trolley": "8",
           "Bins per Trolley": "40 bins",
-          "Load Capacity": "500 kg"
+          "Load Capacity": "500 kg",
+          "Overall Trolley Size (L × W × H)": "900 × 600 × 1250 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Colour": "Blue"
         },
         {
           "Bin Size": "300 × 210 × 160 mm",
+          "Bins per Shelf": "4",
+          "Shelves per Trolley": "8",
           "Bins per Trolley": "32 bins",
-          "Load Capacity": "500 kg"
+          "Load Capacity": "500 kg",
+          "Overall Trolley Size (L × W × H)": "900 × 600 × 1250 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Colour": "Blue"
         }
       ],
       "wheels": [
@@ -2221,8 +2395,8 @@
         "pupp",
         "ci"
       ],
-      "brake": null,
-      "brake_text": null,
+      "brake": "standard",
+      "brake_text": "1 swivel castor is fitted with a parking brake for safety.",
       "notes": [],
       "table_always": [
         "Load Capacity"
@@ -2241,33 +2415,63 @@
       "slug": "mobile-access-steps",
       "name": "Mobile Access Steps",
       "group": "access-steps",
-      "summary": "Welded steel mobile access steps for reaching difficult places, in 1000, 2000, 3000 and 4000 mm heights; load capacity 300 kg.",
+      "summary": "Welded steel mobile access steps with 1000, 2000, 3000 or 4000 mm platform height and a 1000 mm safety railing; load capacity 300 kg.",
       "features": [
-        "The base is fabricated from M.S. rectangular tube and fitted with 2 fixed and 2 swivel castors; 1 swivel castor has brakes for safety.",
-        "Welded steel access steps designed to reach difficult places."
+        "The base is fabricated from M.S. rectangular tube and fitted with 2 fixed and 2 swivel castors; 1 swivel castor has a parking brake for safety.",
+        "The top structure is fabricated from M.S. round pipes, with a 1000 mm high safety railing around the top platform for operator safety.",
+        "Welded steel access steps designed to reach difficult places.",
+        "All castor wheels are fitted with ball bearings."
       ],
       "variant_key": [
-        "Height"
+        "Platform Height"
       ],
       "variants": [
         {
-          "Height": "1000 mm",
-          "Load Capacity": "300 kg"
+          "Platform Height": "1000 mm",
+          "Load Capacity": "300 kg",
+          "Number of Steps": "4",
+          "Base Frame (L × W)": "1200 × 600 mm",
+          "Safety Railing Height": "1000 mm",
+          "Overall Height": "2000 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Colour": "Blue"
         },
         {
-          "Height": "2000 mm",
-          "Load Capacity": "300 kg"
+          "Platform Height": "2000 mm",
+          "Load Capacity": "300 kg",
+          "Number of Steps": "8",
+          "Base Frame (L × W)": "1800 × 600 mm",
+          "Safety Railing Height": "1000 mm",
+          "Overall Height": "3000 mm",
+          "Castor Wheel (Dia × W)": "150 × 50 mm",
+          "Colour": "Blue"
         },
         {
-          "Height": "3000 mm",
-          "Load Capacity": "300 kg"
+          "Platform Height": "3000 mm",
+          "Load Capacity": "300 kg",
+          "Number of Steps": "12",
+          "Base Frame (L × W)": "2400 × 750 mm",
+          "Safety Railing Height": "1000 mm",
+          "Overall Height": "4000 mm",
+          "Castor Wheel (Dia × W)": "200 × 50 mm",
+          "Colour": "Blue"
         },
         {
-          "Height": "4000 mm",
-          "Load Capacity": "300 kg"
+          "Platform Height": "4000 mm",
+          "Load Capacity": "300 kg",
+          "Number of Steps": "16",
+          "Base Frame (L × W)": "3000 × 900 mm",
+          "Safety Railing Height": "1000 mm",
+          "Overall Height": "5000 mm",
+          "Castor Wheel (Dia × W)": "200 × 50 mm",
+          "Colour": "Blue"
         }
       ],
-      "wheels": [],
+      "wheels": [
+        "uhmw",
+        "pupp",
+        "ci"
+      ],
       "brake": "standard",
       "brake_text": "1 swivel castor is fitted with brakes for safety.",
       "notes": [
