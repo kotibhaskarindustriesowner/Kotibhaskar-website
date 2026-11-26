@@ -62,7 +62,8 @@
 .eq-card .p-card-img{border-bottom:1px solid #E2DBD1;}
 /* family pages: compact product cards; subtype groups sit side by side when they fit */
 .eq-groups{display:flex;flex-wrap:wrap;gap:18px;align-items:stretch;}
-.eq-group{flex:1 1 calc(var(--n,4) * 176px + (var(--n,4) - 1) * 12px + 34px);max-width:100%;margin:0;padding:14px 16px 16px;border:1px solid #D6CCBF;border-top:3px solid #1A2332;background:#FBF7F2;box-sizing:border-box;}
+.eq-group{--basis:calc(var(--n,4) * 176px + (var(--n,4) - 1) * 12px + 34px);flex:1 1 var(--basis);max-width:min(100%, calc(var(--basis) + 150px), calc(var(--basis) * 1.35));margin:0;padding:14px 16px 16px;border:1px solid #D6CCBF;border-top:3px solid #1A2332;background:#FBF7F2;box-sizing:border-box;}
+.eq-group:only-child{flex-grow:0;}  /* a family with a single section: block sized to its cards, no empty band */
 .eq-group:nth-child(4n+2){background:#F2F5F9;}
 .eq-group:nth-child(4n+3){background:#F3F6F0;}
 .eq-group:nth-child(4n+4){background:#F7F4EE;}
@@ -78,7 +79,7 @@
 .eq-cards .p-card-load{font-size:12.5px;padding-top:6px;}
 .eq-cards .p-card-load b{font-size:15px;}
 .eq-cards .p-card-cta{margin-top:8px;font-size:12px;}
-@media(max-width:860px){.eq-group{flex:1 1 100%;padding:12px;}.card-grid.eq-cards{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media(max-width:860px){.eq-group,.eq-group:only-child{flex:1 1 100%;max-width:100%;padding:12px;}.card-grid.eq-cards{grid-template-columns:repeat(3,minmax(0,1fr));}}
 @media(max-width:600px){.card-grid.eq-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}}
 /* product overview: [photo] [drawing] [product information], features below (all equipment pages) */
 .eq-top{display:grid;grid-template-columns:repeat(2,minmax(0,290px)) minmax(0,1fr);gap:22px;align-items:start;}

@@ -307,7 +307,7 @@ def build_family(h, data, fam):
     for s in subs:
         sp = sort_by_operation([p for p in prods if p['subtype'] == s])
         ops = ops_of(sp)
-        note = OP_NOTE.get(ops[0]) if len(ops) == 1 else ''
+        note = OP_NOTE.get(sp[0]['operation'], '') if all(q['operation'] == sp[0]['operation'] for q in sp) else ''  # only when every product shares it
         blocks.append(f'''<section class="group-block eq-group" id="{slug(s)}" aria-labelledby="h-{slug(s)}" style="--n:{min(len(sp), 4)}">
   <div class="group-head"><h2 id="h-{slug(s)}">{e(s)}</h2><p>{len(sp)} product{'s' if len(sp) != 1 else ''}{f' &middot; {e(note)}' if note else ''}</p></div>
   <div class="card-grid eq-cards">{''.join(product_card(p) for p in sp)}</div>
