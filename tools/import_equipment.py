@@ -504,7 +504,7 @@ add('electric-stacker', 'Electric Stacker', 'stackers', 'Fully Electric Stackers
 
 # ---------------- Order pickers
 for op, pg, f in (('AC', 1, '10'), ('DC', 3, '20')):
-    add(f'semi-electric-{op.lower()}-order-picker', f'{OPS[op]} Order Picker', 'order-pickers', 'Semi-Electric Order Pickers', op, [('30', f)],
+    add(f'semi-electric-{op.lower()}-order-picker', f'{OPS[op]} Order Picker', 'order-pickers', f'{OPS[op]} Order Pickers', op, [('30', f)],
         [grid_table('030', [(pg + 1, 0)], hdr='{lift} cage height')], text('030', [pg]),
         f'{OPS[op]} order picker with an 800 × 800 mm operator cage and controls in the cage; 300 kg capacity, 3100 mm and 4000 mm maximum cage heights.',
         wheels=UHMW_OPTS, lifts=['3.1 m', '4.0 m'])
@@ -567,7 +567,7 @@ add('electric-floor-crane', 'Electric Floor Crane', 'floor-cranes', 'Fully Elect
 
 # ---------------- Gantries
 for op, pg, f, nm in (('M', 0, '10', 'Manual Gantry'), ('EH', 1, '20', 'Electric Gantry – 440 V 3 Phase AC')):
-    add('manual-gantry' if op == 'M' else 'electric-gantry', nm, 'gantries', 'Gantries', 'M' if op == 'M' else 'E', [('80', f)],
+    add('manual-gantry' if op == 'M' else 'electric-gantry', nm, 'gantries', 'Manual Gantries' if op == 'M' else 'Electric Gantries', 'M' if op == 'M' else 'E', [('80', f)],
         [mlist_table('055', pg, ['Capacity', 'Lift', 'Length x Width', 'L1 x W1 x H1'],
                      rename={'Lift': 'Lift Height', 'Length x Width': 'Clear Span (Length × Width)', 'L1 x W1 x H1': 'Overall Size (L1 × W1 × H1, mm)'})],
         text('055', [pg]),

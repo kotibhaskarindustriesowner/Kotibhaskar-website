@@ -3096,7 +3096,7 @@
    "slug": "semi-electric-ac-order-picker",
    "name": "Semi-Electric AC Order Picker",
    "family": "order-pickers",
-   "subtype": "Semi-Electric Order Pickers",
+   "subtype": "Semi-Electric AC Order Pickers",
    "operation": "Semi-Electric AC",
    "tables": [
     {
@@ -3230,7 +3230,7 @@
    "slug": "semi-electric-dc-order-picker",
    "name": "Semi-Electric DC Order Picker",
    "family": "order-pickers",
-   "subtype": "Semi-Electric Order Pickers",
+   "subtype": "Semi-Electric DC Order Pickers",
    "operation": "Semi-Electric DC",
    "tables": [
     {
@@ -6220,7 +6220,7 @@
    "slug": "manual-gantry",
    "name": "Manual Gantry",
    "family": "gantries",
-   "subtype": "Gantries",
+   "subtype": "Manual Gantries",
    "operation": "Manual",
    "tables": [
     {
@@ -6307,7 +6307,7 @@
    "slug": "electric-gantry",
    "name": "Electric Gantry – 440 V 3 Phase AC",
    "family": "gantries",
-   "subtype": "Gantries",
+   "subtype": "Electric Gantries",
    "operation": "Electric (440 V, 3 Phase AC)",
    "tables": [
     {

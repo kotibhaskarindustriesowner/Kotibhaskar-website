@@ -20,6 +20,8 @@ OP_ORDER = ['Manual', 'Semi-Electric AC', 'Semi-Electric DC', 'Fully Electric', 
 OP_NOTE = {'Manual': 'Hand-pump hydraulic lifting', 'Semi-Electric AC': '440 V, 3 phase AC power pack',
            'Semi-Electric DC': '24 V DC battery power pack', 'Fully Electric': '24 V battery, AC drive',
            'Electro-Hydraulic': 'Push-button hydraulic power pack'}
+# families whose products are not hydraulic, so the generic operation notes above would be wrong
+NO_OP_NOTE = {'gantries'}  # manual gantry = chain pulley block, electric gantry = electric hoist
 # short, factual configuration highlights per family (all taken from the source price lists)
 HIGHLIGHTS = {
     'pallet-trucks': ['Up to 2500 kg', '550 / 685 mm widths', 'Roll lifting & high lift', 'SPM built to order'],
@@ -307,7 +309,7 @@ def build_family(h, data, fam):
     for s in subs:
         sp = sort_by_operation([p for p in prods if p['subtype'] == s])
         ops = ops_of(sp)
-        note = OP_NOTE.get(sp[0]['operation'], '') if all(q['operation'] == sp[0]['operation'] for q in sp) else ''  # only when every product shares it
+        note = OP_NOTE.get(sp[0]['operation'], '') if fam['id'] not in NO_OP_NOTE and all(q['operation'] == sp[0]['operation'] for q in sp) else ''  # only when every product shares it
         blocks.append(f'''<section class="group-block eq-group" id="{slug(s)}" aria-labelledby="h-{slug(s)}" style="--n:{min(len(sp), 4)}">
   <div class="group-head"><h2 id="h-{slug(s)}">{e(s)}</h2><p>{len(sp)} product{'s' if len(sp) != 1 else ''}{f' &middot; {e(note)}' if note else ''}</p></div>
   <div class="card-grid eq-cards">{''.join(product_card(p) for p in sp)}</div>
