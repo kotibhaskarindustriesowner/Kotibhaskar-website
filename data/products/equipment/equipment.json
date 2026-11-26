@@ -15,30 +15,6 @@
    "desc": "Manual, semi-electric AC, semi-electric DC and fully electric stackers in 1000 kg and 1500 kg capacities, with standard or adjustable forks, cage and jib-hook versions."
   },
   {
-   "id": "order-pickers",
-   "name": "Order Pickers",
-   "layout": "half",
-   "desc": "Semi-electric AC, semi-electric DC and fully electric order pickers with an operator cage for picking from stores and warehouse racks."
-  },
-  {
-   "id": "drum-lifters-tilters",
-   "name": "Drum Lifters & Tilters",
-   "layout": "half",
-   "desc": "Lift, move and rotate standard 220 litre metal drums through 360° — manual, semi-electric AC, semi-electric DC and fully electric."
-  },
-  {
-   "id": "material-lifters-tilters",
-   "name": "Material Lifters & Tilters",
-   "layout": "half",
-   "desc": "Lift and tilt a 600 × 600 × 600 mm pan to pour material into hoppers and vessels — manual, semi-electric AC and semi-electric DC."
-  },
-  {
-   "id": "drum-grippers",
-   "name": "Drum Lifters with Auto Gripper",
-   "layout": "half",
-   "desc": "Clamp and release drums automatically, without hand contact, for loading, stacking and weighing — manual, semi-electric AC and semi-electric DC."
-  },
-  {
    "id": "floor-cranes",
    "name": "Floor Cranes",
    "layout": "full",
@@ -51,22 +27,46 @@
    "desc": "Mobile single and double scissor lift tables, 2000 kg electro-hydraulic pit-mounted platforms and special-purpose scissor lifts."
   },
   {
-   "id": "gantries",
-   "name": "Gantries",
+   "id": "drum-lifters-tilters",
+   "name": "Drum Lifters & Tilters",
    "layout": "half",
-   "desc": "Mobile gantries on swivel castors in 500, 1000 and 2000 kg capacities, with manual chain pulley block or electric hoist."
+   "desc": "Lift, move and rotate standard 220 litre metal drums through 360° — manual, semi-electric AC, semi-electric DC and fully electric."
   },
   {
-   "id": "dock-levellers",
-   "name": "Dock Levellers",
+   "id": "drum-grippers",
+   "name": "Drum Lifters with Auto Gripper",
    "layout": "half",
-   "desc": "Electro-hydraulic dock levellers in 5000 kg and 9000 kg capacities, bridging the gap between the dispatch floor and the vehicle."
+   "desc": "Clamp and release drums automatically, without hand contact, for loading, stacking and weighing — manual, semi-electric AC and semi-electric DC."
   },
   {
    "id": "goods-lifts",
    "name": "Goods Lifts & Lifting Cages",
    "layout": "full",
    "desc": "Two-channel and four-channel hydraulic goods lifts and lifting cages for moving material between floors."
+  },
+  {
+   "id": "material-lifters-tilters",
+   "name": "Material Lifters & Tilters",
+   "layout": "half",
+   "desc": "Lift and tilt a 600 × 600 × 600 mm pan to pour material into hoppers and vessels — manual, semi-electric AC and semi-electric DC."
+  },
+  {
+   "id": "gantries",
+   "name": "Gantries",
+   "layout": "half",
+   "desc": "Mobile gantries on swivel castors in 500, 1000 and 2000 kg capacities, with manual chain pulley block or electric hoist."
+  },
+  {
+   "id": "order-pickers",
+   "name": "Order Pickers",
+   "layout": "half",
+   "desc": "Semi-electric AC, semi-electric DC and fully electric order pickers with an operator cage for picking from stores and warehouse racks."
+  },
+  {
+   "id": "dock-levellers",
+   "name": "Dock Levellers",
+   "layout": "half",
+   "desc": "Electro-hydraulic dock levellers in 5000 kg and 9000 kg capacities, bridging the gap between the dispatch floor and the vehicle."
   },
   {
    "id": "industrial-shelving",
@@ -6075,53 +6075,43 @@
      "title": null,
      "head": [
       "Specification",
-      "1000 kg",
       "1500 kg"
      ],
      "rows": [
       [
        "Load Capacity",
-       "1000 kg",
        "1500 kg"
       ],
       [
        "Maximum Hook Height at A (Boom Inside)",
-       "2500 mm",
        "2500 mm"
       ],
       [
        "Maximum Hook Height at E (Boom Outside)",
-       "3100 mm",
        "3100 mm"
       ],
       [
        "Minimum Hook Height at A (Boom Inside)",
-       "500 mm",
        "500 mm"
       ],
       [
        "Minimum Hook Height at E (Boom Outside)",
-       "100 mm",
        "100 mm"
       ],
       [
        "Time for Full Lift",
-       "40 sec",
        "40 sec"
       ],
       [
        "Minimum Turning Radius",
-       "1900 mm",
        "1900 mm"
       ],
       [
        "Minimum Overall Height H3",
-       "2200 mm",
        "2200 mm"
       ],
       [
        "Maximum Overall Height H4",
-       "3500 mm",
        "3500 mm"
       ]
      ]
@@ -6140,7 +6130,7 @@
     {
      "head": "Load Capacity - Uniformly distributed load over maximum 1 x 1 mtr area.",
      "lines": [
-      "Load capacity of Floor Crane gradually reduces by 30 % as height increases i.e. maximum safe load capacity of 1000 kg Floor Crane is approx. 700 kg at maximum height, maximum safe load capacity of 1500 kg Floor Crane is approx. 1050 kg at maximum height."
+      "Load capacity of Floor Crane gradually reduces by 30 % as height increases i.e. maximum safe load capacity of 1500 kg Floor Crane is approx. 1050 kg at maximum height."
      ]
     },
     {
@@ -6203,14 +6193,14 @@
      ]
     }
    ],
-   "summary": "Fully electric floor crane with AC drive and 24 V battery; 1500 kg standard capacity (1000 kg also available) with 3100 mm maximum hook height.",
+   "summary": "Fully electric floor crane with AC drive and 24 V battery; 1500 kg capacity with 3100 mm maximum hook height.",
    "capacities": [
-    "1500 kg (standard)",
-    "1000 kg"
+    "1500 kg"
    ],
    "lifts": [
     "3.1 m"
    ],
+   "media_side": true,
    "source": {
     "photo": "product-sources/10 Equiptments/70 Hydraulic  Floor  Crane/40 Fully Electric/190 Electric  Floor  Crane - 1500 kg/165.png",
     "drawing": "product-sources/10 Equiptments/70 Hydraulic  Floor  Crane/40 Fully Electric/190 Electric  Floor  Crane - 1500 kg/166.png",

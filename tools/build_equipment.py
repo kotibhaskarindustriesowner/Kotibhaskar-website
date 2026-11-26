@@ -103,52 +103,51 @@ def showcase_picks(fam, prods, n):
     return picks
 
 
-# large families: show visibly different machines (not near-identical photos of the same frame)
+# compact family cards (owner design, 26 Nov 2026). Rows follow the owner's order:
+# Pallet Trucks, Stackers, Floor Cranes, Scissor Lifts; Drum Lifters & Tilters beside Drum Lifters with
+# Auto Gripper; Goods Lifts; Material Lifters & Tilters beside Gantries; then the remaining families.
+SHOWCASE_ROWS = [['pallet-trucks', 'stackers', 'floor-cranes'],
+                 ['scissor-lifts', 'drum-lifters-tilters', 'drum-grippers'],
+                 ['goods-lifts', 'material-lifters-tilters', 'gantries'],
+                 ['order-pickers', 'dock-levellers', 'industrial-shelving', 'conveyors']]
+# two visibly different machines per family (one for the single-product dock leveller)
 SHOWCASE = {
-    'pallet-trucks': ['hydraulic-pallet-truck-550', 'roll-lifting-pallet-truck', 'high-lift-scissor-pallet-truck', 'electric-pallet-truck'],
-    'stackers': ['manual-stacker-550', 'semi-electric-ac-stacker-with-cage', 'semi-electric-dc-stacker-with-jib-hook', 'electric-stacker'],
-    'floor-cranes': ['manual-hydraulic-floor-crane', 'semi-electric-ac-counterbalance-floor-crane-fixed-boom',
-                     'semi-electric-dc-counterbalance-floor-crane-swivelling-boom', 'electric-floor-crane'],
-    'scissor-lifts': ['manual-hydraulic-scissor-lift-single', 'semi-electric-ac-hydraulic-scissor-lift-double',
-                      'electro-hydraulic-scissor-lift-2000x2000', 'electro-hydraulic-double-scissor-lift-spm'],
-    'goods-lifts': ['two-channel-goods-lift', 'four-channel-goods-lift', 'two-channel-lifting-cage', 'four-channel-lifting-cage'],
+    'pallet-trucks': ['hydraulic-pallet-truck-550', 'electric-pallet-truck'],
+    'stackers': ['manual-stacker-550', 'electric-stacker'],
+    'floor-cranes': ['manual-hydraulic-floor-crane', 'semi-electric-ac-counterbalance-floor-crane-fixed-boom'],
+    'scissor-lifts': ['manual-hydraulic-scissor-lift-single', 'electro-hydraulic-scissor-lift-2000x2000'],
+    'drum-lifters-tilters': ['manual-drum-lifter-tilter', 'electric-drum-lifter-tilter'],
+    'drum-grippers': ['manual-drum-lifter-auto-gripper', 'semi-electric-ac-drum-lifter-auto-gripper'],
+    'goods-lifts': ['two-channel-goods-lift', 'four-channel-lifting-cage'],
+    'material-lifters-tilters': ['manual-material-lifter-tilter', 'semi-electric-ac-material-lifter-tilter'],
+    'gantries': ['manual-gantry', 'electric-gantry'],
+    'order-pickers': ['semi-electric-ac-order-picker', 'electric-order-picker'],
+    'dock-levellers': ['electro-hydraulic-dock-leveller'],
+    'industrial-shelving': ['industrial-shelving-heavy-duty', 'industrial-shelving-medium-duty'],
+    'conveyors': ['gravity-roller-conveyor', 'rubber-belt-conveyor'],
 }
 
 
-def family_card(fam, prods):
-    full = fam['layout'] == 'full'
+def family_card(fam, prods, per_row):
     chosen = SHOWCASE.get(fam['id'])
-    picks = [next(p for p in prods if p['slug'] == s) for s in chosen] if chosen else showcase_picks(fam, prods, 4 if full else 3)
-    chips = ''.join(f'<li class="op">{e(o)}</li>' for o in ops_of(prods)) + ''.join(f'<li>{e(h)}</li>' for h in HIGHLIGHTS.get(fam['id'], []))
-    tiles = ''.join(f'<figure class="eqf-tile">{thumb(p)}<figcaption>{e(p["name"])}</figcaption></figure>' for p in picks)
+    picks = [next(p for p in prods if p['slug'] == s) for s in chosen] if chosen else showcase_picks(fam, prods, 2)
     n = len(prods)
-    return f'''<a class="eqf {'eqf-full' if full else 'eqf-half'}" href="{family_url(fam)}" aria-label="{e(fam['name'])} — explore {n} product{'s' if n != 1 else ''}">
-  <div class="eqf-text">
-    <div class="eqf-count">{n} product{'s' if n != 1 else ''}</div>
-    <h3 class="eqf-name">{e(fam['name'])}</h3>
-    <p class="eqf-desc">{e(fam['desc'])}</p>
-    <ul class="eqf-chips">{chips}</ul>
-    <span class="eqf-cta">Explore Products <span aria-hidden="true">&rarr;</span></span>
-  </div>
-  <div class="eqf-photos eqf-n{len(picks)}">{tiles}</div>
+    imgs = ''.join(thumb(p) for p in picks)
+    return f'''<a class="eqc eqc-{per_row}" href="{family_url(fam)}" aria-label="{e(fam['name'])} — {n} product{'s' if n != 1 else ''}">
+  <div class="eqc-photos eqc-n{len(picks)}">{imgs}</div>
+  <div class="eqc-foot"><div><h3 class="eqc-name">{e(fam['name'])}</h3><span class="eqc-count">{n} product{'s' if n != 1 else ''}</span></div><span class="eqc-arrow" aria-hidden="true">&rarr;</span></div>
 </a>'''
 
 
 def showcase(data):
-    rows, pending = [], []
-    for fam in data['families']:
-        prods = [p for p in data['products'] if p['family'] == fam['id']]
-        card = family_card(fam, prods)
-        if fam['layout'] == 'full':
-            assert not pending, f'half-width family left unpaired before {fam["id"]}'
-            rows.append(f'<div class="eqf-row">{card}</div>')
-        else:
-            pending.append(card)
-            if len(pending) == 2:
-                rows.append(f'<div class="eqf-row eqf-pair">{"".join(pending)}</div>')
-                pending = []
-    assert not pending, 'a half-width family has no partner — rows must stay complete'
-    return '<div class="eqf-wrap">' + '\n'.join(rows) + '</div>'
+    fams = {f['id']: f for f in data['families']}
+    placed = [fid for row in SHOWCASE_ROWS for fid in row]
+    assert sorted(placed) == sorted(fams), 'every equipment family must appear exactly once in SHOWCASE_ROWS'
+    cards = []
+    for row in SHOWCASE_ROWS:
+        for fid in row:
+            cards.append(family_card(fams[fid], [p for p in data['products'] if p['family'] == fid], len(row)))
+    return '<div class="eqc-grid">' + '\n'.join(cards) + '</div>'
 
 
 # ---------------------------------------------------------------- tables & text
@@ -244,8 +243,16 @@ def product_card(p, show_sub=False):
 </a>'''
 
 
+def sort_by_operation(prods):
+    """Manual, Semi-Electric AC, Semi-Electric DC, Fully Electric (stable within each operation)."""
+    rank = {o: i for i, o in enumerate(OP_ORDER)}
+    return sorted(prods, key=lambda p: rank.get(p['operation'], len(OP_ORDER)))
+
+
 def build_family(h, data, fam):
     prods = [p for p in data['products'] if p['family'] == fam['id']]
+    # subtype order: as listed, but any fully electric subtype comes last
+    prods = sorted(prods, key=lambda p: 1 if p['subtype'].startswith('Fully Electric') else 0)
     url = family_url(fam)
     crumb_html, crumb_ld = h.crumbs([('Home', '/'), ('Material Handling Equipment', ROOT_URL), (e(fam['name']), None)])
     subs = list(dict.fromkeys(p['subtype'] for p in prods))
@@ -255,13 +262,14 @@ def build_family(h, data, fam):
             f'<a href="#{slug(s)}">{e(s)} <span>{sum(1 for p in prods if p["subtype"] == s)}</span></a>' for s in subs) + '</nav>'
     blocks = []
     for s in subs:
-        sp = [p for p in prods if p['subtype'] == s]
+        sp = sort_by_operation([p for p in prods if p['subtype'] == s])
         ops = ops_of(sp)
         note = OP_NOTE.get(ops[0]) if len(ops) == 1 else ''
-        blocks.append(f'''<section class="group-block" id="{slug(s)}" aria-labelledby="h-{slug(s)}">
+        blocks.append(f'''<section class="group-block eq-group" id="{slug(s)}" aria-labelledby="h-{slug(s)}" style="--n:{min(len(sp), 4)}">
   <div class="group-head"><h2 id="h-{slug(s)}">{e(s)}</h2><p>{len(sp)} product{'s' if len(sp) != 1 else ''}{f' &middot; {e(note)}' if note else ''}</p></div>
-  <div class="card-grid">{''.join(product_card(p) for p in sp)}</div>
+  <div class="card-grid eq-cards">{''.join(product_card(p) for p in sp)}</div>
 </section>''')
+    blocks = ['<div class="eq-groups">'] + blocks + ['</div>']
     chips = ''.join(f'<li class="op">{e(o)}</li>' for o in ops_of(prods)) + ''.join(f'<li>{e(x)}</li>' for x in HIGHLIGHTS.get(fam['id'], []))
     others = ''.join(f'<a class="sib" href="{family_url(f)}">{e(f["name"])}<small>{sum(1 for p in data["products"] if p["family"] == f["id"])} products</small></a>'
                      for f in data['families'] if f['id'] != fam['id'])
@@ -342,7 +350,7 @@ def build_product(h, data, fam, p):
 </header>
 
 <div class="wrap t-main">
-  <div class="t-layout eq-layout">
+  <div class="t-layout eq-layout{' eq-side' if p.get('media_side') and p['images'].get('drawing') else ''}">
     <div class="eq-media">
       <figure class="t-photo">
         <a href="{p['images']['photo']}" data-lightbox><img src="{p['images']['photo']}" alt="{e(p['name'])} — product photograph" width="900" height="1273"></a>

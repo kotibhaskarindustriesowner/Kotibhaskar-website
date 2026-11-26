@@ -164,8 +164,17 @@ WA_ICON = ('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewB
 EQ_CSS_URL = '/assets/css/equipment.css?v=' + asset_version('assets/css/equipment.css')
 
 
+# Datasheet header strip: the navy fill is drawn as an inline SVG (foreground content), not only as a
+# CSS background, so it still prints when the browser's "Background graphics" option is off and the
+# white header text always stays readable.
+BAND_BG = ('<svg class="ps-band-bg" aria-hidden="true" focusable="false" viewBox="0 0 10 10" preserveAspectRatio="none">'
+           '<rect width="10" height="10" fill="#1A2332"/></svg>')
+
+
 def page(*, title, description, canonical, body, og_image=None, jsonld=None, wa_text=None, sheet='', extra_css=None):
     og_image = og_image or f'{SITE}/assets/brand/og-image.png'
+    if sheet:
+        sheet = sheet.replace('<div class="ps-band">', '<div class="ps-band">' + BAND_BG)
     wa_text = wa_text or 'Hello, I visited kotibhaskarindustries.com and would like to enquire about your products.'
     ld = ''
     if jsonld:

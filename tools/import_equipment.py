@@ -412,6 +412,11 @@ FAMILIES = [
     {'id': 'conveyors', 'name': 'Conveyors', 'layout': 'half',
      'desc': 'Mobile gravity roller, rubber belt and PVC belt conveyors in straight and inclined versions.'},
 ]
+# display order set by the owner (26 Nov 2026); the homepage grid rows are defined in tools/build_equipment.py
+FAMILY_ORDER = ['pallet-trucks', 'stackers', 'floor-cranes', 'scissor-lifts', 'drum-lifters-tilters', 'drum-grippers',
+                'goods-lifts', 'material-lifters-tilters', 'gantries', 'order-pickers', 'dock-levellers',
+                'industrial-shelving', 'conveyors']
+FAMILIES.sort(key=lambda f: FAMILY_ORDER.index(f['id']))
 
 OPS = {'M': 'Manual', 'AC': 'Semi-Electric AC', 'DC': 'Semi-Electric DC', 'E': 'Fully Electric', 'EH': 'Electro-Hydraulic'}
 P = []
@@ -554,9 +559,11 @@ for (boom, op), (pg, intro, f5, f10) in CB.items():
         f'{OPS[op]} counterbalanced floor crane with {bt.lower()}; 500 kg and 1000 kg capacities with 2500 mm lift.',
         wheels=UHMW_OPTS, capacities=['500 kg', '1000 kg'], lifts=['2.5 m'])
 add('electric-floor-crane', 'Electric Floor Crane', 'floor-cranes', 'Fully Electric Floor Cranes', 'E', [('70', '40', '190')],
-    [grid_table('340', [(0, 0)], hdr='{cap}', lift_rx=r'^Maximum Hook Height at E')], text('340', [0, 1]),
-    'Fully electric floor crane with AC drive and 24 V battery; 1500 kg standard capacity (1000 kg also available) with 3100 mm maximum hook height.',
-    capacities=['1500 kg (standard)', '1000 kg'], lifts=['3.1 m'])
+    # owner decision (26 Nov 2026): this product is offered in 1500 kg ONLY — the workbook's 1000 kg column is not shown
+    [grid_table('340', [(0, 0)], hdr='{cap}', lift_rx=r'^Maximum Hook Height at E', keep_cols=[1])],
+    text('340', [0, 1], drop_line=(r'(?<![0-9])1000 kg',)),
+    'Fully electric floor crane with AC drive and 24 V battery; 1500 kg capacity with 3100 mm maximum hook height.',
+    capacities=['1500 kg'], lifts=['3.1 m'], media_side=True)
 
 # ---------------- Gantries
 for op, pg, f, nm in (('M', 0, '10', 'Manual Gantry'), ('EH', 1, '20', 'Electric Gantry – 440 V 3 Phase AC')):
