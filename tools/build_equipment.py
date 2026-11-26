@@ -209,7 +209,7 @@ def table_html(t, cls='data-table eq-table', sticky=True):
     if cols is not None or rows is not None:
         cls += ' eq-grouped'
     title = f'<h3 class="eq-table-title">{e(t["title"])}</h3>' if t.get('title') else ''
-    return f'{title}<div class="tbl-wrap"><table class="{cls}{" eq-spec" if spec else ""}"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
+    return f'{title}<div class="tbl-wrap{" eq-tbl-wrap" if "eq-table" in cls else ""}"><table class="{cls}{" eq-spec" if spec else ""}"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
 
 
 def feats_html(items, cls='feat-list eq-feats'):

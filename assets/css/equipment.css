@@ -127,15 +127,25 @@
 .eq-table td br+*{display:block;}
 .eq-table tbody tr td:only-of-type{white-space:normal;text-align:left;}
 /* configuration groups (e.g. all 1000 kg columns vs all 1500 kg columns), like the wheel size & load tables */
-.eq-table.eq-grouped td{border:1px solid #E2DACF;}
+/* complete grid on every equipment specification table (owner, 26 Nov 2026): every header and value cell
+   has right + bottom borders and the table carries the top + left edges, so the outer frame is continuous.
+   border-collapse:separate keeps the borders of the sticky first column when the table scrolls on phones. */
+.tbl-wrap.eq-tbl-wrap{border:none;background:none;}
+.data-table.eq-table{border-collapse:separate;border-spacing:0;border-top:1px solid #9E9383;}
+.data-table.eq-table th,.data-table.eq-table td,.data-table.eq-table tbody tr:last-child td,.data-table.eq-table tbody tr:last-child th{border:0;border-right:1px solid #B3A898;border-bottom:1px solid #B3A898;}
+.data-table.eq-table tr>:first-child,.data-table.eq-table tbody tr:last-child>:first-child{border-left:1px solid #9E9383;}
+.eq-table.eq-spec thead th:first-child{position:sticky;left:0;z-index:2;}
+.data-table.eq-table thead th{border-right:1px solid #56647B;border-bottom:1px solid #9E9383;}
+.data-table.eq-table thead th:last-child,.data-table.eq-table td:last-child{border-right-color:#9E9383;}
+.data-table.eq-table tbody tr:last-child td,.data-table.eq-table tbody tr:last-child th{border-bottom-color:#9E9383;}
+.eq-table.eq-grouped td.gs{box-shadow:inset 2px 0 0 #8C8172;}
+.eq-table.eq-grouped tr.rgs td{box-shadow:inset 0 2px 0 #8C8172;}
 .eq-table.eq-grouped td.g0,.eq-table.eq-grouped tr.rg0 td{background:#FFF6EC;}
 .eq-table.eq-grouped td.g1,.eq-table.eq-grouped tr.rg1 td{background:#EEF3F9;}
 .eq-table.eq-grouped td.g2,.eq-table.eq-grouped tr.rg2 td{background:#F0F5EB;}
 .eq-table.eq-grouped thead th.g0{box-shadow:inset 0 -4px 0 #E3A365;}
 .eq-table.eq-grouped thead th.g1{box-shadow:inset 0 -4px 0 #7FA3CC;}
 .eq-table.eq-grouped thead th.g2{box-shadow:inset 0 -4px 0 #93B783;}
-.eq-table.eq-grouped .gs{border-left:2px solid #A89C8D;}
-.eq-table.eq-grouped tr.rgs td{border-top:2px solid #A89C8D;}
 .eq-table.eq-grouped tbody tr:hover td{background:#FFE9D6;}
 .eq-spec-note{font-size:12.5px;color:#777;font-style:italic;margin-top:10px;}
 .t-sizes .tbl-wrap+.eq-table-title{margin-top:26px;}
