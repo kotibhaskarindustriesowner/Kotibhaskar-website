@@ -173,10 +173,74 @@ section{padding:84px 5%;}
 #finder{background:#F2F0EB;border-bottom:1px solid #DDD8D0;padding:64px 5%;}
 .finder-inner{max-width:760px;margin:0 auto;text-align:center;}
 .finder-inner h2{font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:800;text-transform:uppercase;margin-bottom:8px;color:#1A2332;}
-.finder-inner p{color:#777;margin-bottom:24px;font-size:15px;}
-.finder-chips{margin-top:14px;display:flex;flex-wrap:wrap;gap:7px;justify-content:center;}
-.finder-chip{background:#fff;border:1px solid #BFBAB2;padding:6px 12px;font-size:12px;cursor:pointer;color:#444;transition:all .2s;font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;}
-.finder-chip:hover{background:#FFF0E6;border-color:#C85A00;color:#C85A00;}
+.finder-inner p{color:#777;margin-bottom:22px;font-size:15px;}
+.sf-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+.sf-form{display:flex;max-width:680px;margin:0 auto;text-align:left;border:2px solid #BFBAB2;background:#fff;transition:border-color .2s;}
+.sf-form:focus-within{border-color:#C85A00;}
+.sf-form textarea{flex:1;min-width:0;border:0;outline:none;resize:vertical;min-height:58px;max-height:180px;padding:12px 16px;font-family:'Barlow',sans-serif;font-size:15px;line-height:1.45;color:#1A1A1A;background:#fff;}
+.sf-btn{flex:0 0 auto;background:#C85A00;color:#fff;border:0;padding:0 22px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;transition:background .2s;}
+.sf-btn:hover,.sf-btn:focus-visible{background:#A84A00;}
+.sf-results{max-width:760px;margin:18px auto 0;text-align:left;background:#fff;border:1px solid #DDD8D0;border-top:3px solid #1A2332;padding:18px 20px;}
+.sf-results[hidden]{display:none;}
+.finder-inner .sf-results p{margin:0;color:#444;font-size:14px;}
+.finder-inner .sf-loading{color:#777;}
+.finder-inner .sf-for{font-size:13px;color:#666;margin-bottom:12px;}
+.sf-for q{color:#1A2332;font-weight:600;}
+.sf-for span{color:#888;}
+.sf-h{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#1A2332;margin:0 0 10px;}
+.sf-cards{display:grid;gap:10px;}
+.sf-card{display:flex;gap:14px;align-items:flex-start;border:1px solid #E6E0D7;border-left:3px solid #C85A00;padding:10px 12px;background:#FCFBF9;}
+.sf-card img,.sf-noimg{flex:0 0 84px;width:84px;height:84px;object-fit:contain;background:#fff;border:1px solid #EEE8E0;}
+.sf-card-body{min-width:0;flex:1;}
+.sf-card h3{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;color:#1A2332;margin:0 0 3px;line-height:1.2;}
+.finder-inner .sf-spec{font-size:13px;color:#1A2332;font-weight:600;margin-bottom:4px;}
+.finder-inner .sf-why{font-size:13px;color:#555;line-height:1.5;}
+.sf-acts{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:8px;align-items:center;}
+.sf-view{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#C85A00;text-decoration:none;}
+.sf-view:hover{text-decoration:underline;}
+.sf-enq-btn{background:#1A2332;color:#fff;border:0;padding:6px 12px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;}
+.sf-enq-btn:hover{background:#C85A00;}
+.finder-inner .sf-disclaimer{font-size:12px;color:#777;margin-top:10px;line-height:1.5;}
+.sf-ask{margin-top:14px;background:#FFF6EC;border:1px solid #F0D6BC;padding:12px 14px;}
+.finder-inner .sf-ask-q{font-weight:600;color:#1A2332;margin-bottom:8px;}
+.finder-inner .sf-ask-skip{font-size:12px;color:#888;margin-top:8px;}
+.sf-chips{display:flex;flex-wrap:wrap;gap:6px;}
+.sf-chips button{background:#fff;border:1px solid #C9BFB2;padding:6px 12px;font-size:13px;color:#1A2332;cursor:pointer;}
+.sf-chips button:hover{border-color:#C85A00;color:#C85A00;}
+.sf-clar{display:flex;max-width:420px;}
+.sf-clar input{flex:1;min-width:0;border:1px solid #C9BFB2;border-right:0;padding:8px 10px;font-size:14px;font-family:'Barlow',sans-serif;}
+.sf-clar button{background:#1A2332;color:#fff;border:0;padding:0 14px;font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;}
+.sf-none{background:#F7F4EF;border-left:3px solid #1A2332;padding:12px 14px;}
+.sf-contact{margin-top:14px;padding-top:12px;border-top:1px solid #EEE8E0;}
+.finder-inner .sf-contact p{font-size:13px;color:#666;margin-bottom:8px;}
+.sf-contact-btns,.sf-enq-row{display:flex;flex-wrap:wrap;gap:8px;}
+.sf-send,.sf-submit{background:#C85A00;color:#fff;border:0;padding:10px 18px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;}
+.sf-send:hover,.sf-submit:hover{background:#A84A00;}
+.sf-submit:disabled{opacity:.7;cursor:wait;}
+.sf-wa{display:inline-flex;align-items:center;justify-content:center;background:#25D366;color:#fff;padding:10px 18px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;text-decoration:none;}
+.sf-wa:hover{background:#1EB257;}
+.sf-enq{margin-top:16px;border-top:2px solid #1A2332;padding-top:14px;}
+.finder-inner .sf-enq-sum{font-size:13px;background:#F7F4EF;padding:8px 10px;margin-bottom:10px;line-height:1.55;word-break:break-word;}
+.sf-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;margin-bottom:12px;}
+.sf-f{display:flex;flex-direction:column;gap:3px;font-size:12px;color:#555;}
+.sf-f i{color:#C85A00;font-style:normal;}
+.sf-f input{border:1px solid #C9BFB2;padding:9px 10px;font-size:14px;font-family:'Barlow',sans-serif;}
+.sf-f input:focus{outline:none;border-color:#C85A00;}
+.sf-f input.invalid{border-color:#C0392B;background:#FDF0EE;}
+.sf-hp{position:absolute;left:-9999px;}
+.finder-inner .sf-status{display:none;margin-top:10px;font-size:13px;}
+.finder-inner .sf-status.show{display:block;}
+.finder-inner .sf-status.error{color:#A93226;background:#FDF0EE;padding:8px 10px;}
+.sf-done{margin-top:14px;background:#EAF6EE;border-left:3px solid #2E8B57;padding:12px 14px;font-size:14px;color:#1A2332;}
+.finder-inner .sf-noscript{margin-top:12px;}
+@media(max-width:600px){
+  .sf-form{flex-direction:column;}
+  .sf-btn{padding:12px;}
+  .sf-results{padding:14px 12px;}
+  .sf-card img,.sf-noimg{flex-basis:64px;width:64px;height:64px;}
+  .sf-grid{grid-template-columns:1fr;}
+  .sf-send,.sf-wa,.sf-submit{flex:1 1 100%;text-align:center;}
+}
 .search-item:hover{background:#FFF0E6!important;}
 
 /* PRODUCTS */
@@ -462,39 +526,18 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
 
 </section>
 
-<!-- SMART FINDER -->
+<!-- SOLUTION FINDER (assets/js/finder.js + assets/data/finder.json, built by tools/build_finder.py) -->
 <section id="finder">
   <div class="finder-inner">
-    <h2>Find the Right Product</h2>
-    <p>Type a product name or describe your requirement</p>
-    <div style="position:relative;max-width:600px;margin:0 auto 16px;">
-      <input type="text" id="finder-input" placeholder="e.g. heavy load warehouse, drum tilter, PU wheel..."
-        autocomplete="off"
-        style="width:100%;background:#fff;border:2px solid #BFBAB2;color:#1A1A1A;padding:14px 56px 14px 18px;font-family:'Barlow',sans-serif;font-size:15px;outline:none;"
-        oninput="liveSearch(this.value)" onkeydown="handleSearchKey(event)">
-      <button onclick="doFind()" style="position:absolute;right:0;top:0;height:100%;padding:0 20px;background:#C85A00;color:#fff;border:none;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;">GO</button>
-      <div id="search-dropdown" style="display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid #DDD8D0;border-top:none;z-index:500;max-height:300px;overflow-y:auto;box-shadow:0 8px 24px rgba(0,0,0,.1);"></div>
-    </div>
-    <div class="finder-chips">
-      <div class="finder-chip" onclick="setQ('pallet truck')">Pallet Truck</div>
-      <div class="finder-chip" onclick="setQ('platform trolley')">Platform Trolley</div>
-      <div class="finder-chip" onclick="setQ('shelf trolley')">Shelf Trolley</div>
-      <div class="finder-chip" onclick="setQ('drum tilter')">Drum Tilter</div>
-      <div class="finder-chip" onclick="setQ('uhmw wheel')">UHMW Wheel</div>
-      <div class="finder-chip" onclick="setQ('stacker')">Stacker</div>
-      <div class="finder-chip" onclick="setQ('floor crane')">Floor Crane</div>
-      <div class="finder-chip" onclick="setQ('pu wheel')">PU Wheel</div>
-      <div class="finder-chip" onclick="setQ('cast iron wheel')">CI Wheel</div>
-      <div class="finder-chip" onclick="setQ('dock leveller')">Dock Leveller</div>
-    </div>
-    <div id="finder-result" style="display:none;margin-top:16px;text-align:left;background:#fff;border:1px solid #DDD8D0;border-left:3px solid #C85A00;padding:18px 22px;">
-      <div id="finder-name" style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-transform:uppercase;color:#C85A00;margin-bottom:5px;"></div>
-      <div id="finder-reason" style="font-size:14px;color:#444;line-height:1.7;"></div>
-      <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
-        <button id="finder-view-btn" class="btn-primary" style="display:none;padding:10px 24px;font-size:12px;">View Specs &rarr;</button>
-        <a href="#contact" class="btn-outline" style="padding:10px 24px;font-size:12px;">Request Quote</a>
-      </div>
-    </div>
+    <h2>Tell Us What You Need to Lift or Move</h2>
+    <p>Describe your material handling requirement, and we'll help you find a suitable product from our range.</p>
+    <form id="sf-form" class="sf-form" novalidate>
+      <label for="sf-input" class="sf-sr">Describe your requirement</label>
+      <textarea id="sf-input" rows="2" maxlength="600" placeholder="I need to lift 1000 kg pallets to a height of 2.5 metres in my warehouse..."></textarea>
+      <button type="submit" class="sf-btn">Find Suitable Products</button>
+    </form>
+    <noscript><p class="sf-noscript">Please <a href="#contact">send us your requirement</a> or call +91 98224 13252.</p></noscript>
+    <div id="sf-results" class="sf-results" aria-live="polite" hidden></div>
   </div>
 </section>
 
@@ -1946,5 +1989,6 @@ window.addEventListener('scroll',function(){
 @media(max-width:600px){#wa-btn .wa-label{display:none;}#wa-btn{padding:11px 14px;}}
 </style>
 
+<!-- FINDER-SCRIPT:START --><script src="/assets/js/finder.js?v=f6a391661e" data-finder-data="/assets/data/finder.json?v=8b38fdcff4" defer></script><!-- FINDER-SCRIPT:END -->
 </body>
 </html>

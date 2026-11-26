@@ -1555,6 +1555,10 @@ def main():
     urls += eq_urls
     check_videos_used()
 
+    # ---- Homepage Solution Finder data (verified capacities / heights only) + its script tag
+    import build_finder
+    build_finder.build(sys.modules[__name__])
+
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u in urls:
         pr = '1.0' if u == '/' else ('0.8' if u.count('/') <= 3 else '0.6')
