@@ -634,7 +634,7 @@ def js(s):
 
 
 def write_homepage_search(s, data, nl):
-    """Point the old equipment popups, product finder and search at the new pages (accurate text from the data)."""
+    """Point the old homepage equipment popups at the new pages."""
     fams = {f['id']: f for f in data['families']}
     prods = {p['slug']: p for p in data['products']}
 
@@ -648,17 +648,9 @@ def write_homepage_search(s, data, nl):
     routes = {old: target(key)[0] for old, (_, key) in OLD_IDS.items()}
     routes.update({'eq_' + p['slug'].replace('-', '_'): product_url(p) for p in data['products']})
     routes.update({'eqf_' + f['id'].replace('-', '_'): family_url(f) for f in data['families']})
-    sc_fix = {kw: dict(zip(('u', 'p', 'r'), target(key))) for _, (kw, key) in OLD_IDS.items() if kw}
-    si = [{'n': f['name'], 'id': 'eqf_' + f['id'].replace('-', '_'), 't': f"{f['name']} {f['desc']}".lower()} for f in data['families']]
-    si += [{'n': p['name'], 'id': 'eq_' + p['slug'].replace('-', '_'),
-            't': f"{p['name']} {fams[p['family']]['name']} {p['subtype']} {p['operation']}".lower()} for p in data['products']]
+    # the homepage finder / search was removed (owner, 26 Nov 2026): only the page routes for the old popups remain
     lines = [ROUTES_START,
              'Object.assign(PAGES,{' + ','.join(f"{k}:'{js(v)}'" for k, v in routes.items()) + '});',
-             'var EQ_SC={' + ','.join(f"'{js(k)}':{{p:'{js(v['p'])}',r:'{js(v['r'])}'}}" for k, v in sc_fix.items()) + '};',
-             "SC.forEach(function(s){var f=EQ_SC[s.k[0]];if(f){s.p=f.p;s.r=f.r;}});",
-             'var EQ_OLD={' + ','.join(f'{k}:1' for k in OLD_IDS) + '};',
-             'SI=SI.filter(function(s){return !EQ_OLD[s.id];}).concat([' + ','.join(
-                 f"{{n:'{js(x['n'])}',id:'{x['id']}',t:'{js(x['t'])}'}}" for x in si) + ']);',
              ROUTES_END]
     block = nl.join(lines)
     if ROUTES_START in s:

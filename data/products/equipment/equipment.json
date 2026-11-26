@@ -1509,6 +1509,13 @@
       "For 1500 kg - Dia 200 x 50 mm - 02 Nos & Dia 82 x 70 mm - 04 Nos.",
       "Foot operated parking brake to 1 steering wheel is standard feature."
      ]
+    },
+    {
+     "head": "Leg spread",
+     "lines": [
+      "Min distance between legs – 400 mm",
+      "Max distance over legs – 640 mm"
+     ]
     }
    ],
    "summary": "Manual hydraulic stacker with adjustable forks, 350 to 685 mm width over forks; 1000 kg and 1500 kg capacities with 1.6, 2.5 and 3.1 m lift heights.",
@@ -1693,6 +1700,13 @@
      "head": "Flame Proof Semi Electric Stacker, 440 V, 3 Phase AC Supply",
      "lines": [
       "All above stackers are available in Flame Proof Semi Electric AC stacker 440 V."
+     ]
+    },
+    {
+     "head": "Leg spread",
+     "lines": [
+      "Min distance between legs – 400 mm",
+      "Max distance over legs – 640 mm"
      ]
     }
    ],
@@ -1882,6 +1896,13 @@
       "For 1000 kg - Dia 200 x 50 mm - 02 Nos & Dia 82 x 70 mm - 04 Nos.",
       "For 1500 kg - Dia 200 x 50 mm - 02 Nos & Dia 82 x 70 mm - 04 Nos.",
       "Foot operated parking brake to 1 steering wheel is standard feature."
+     ]
+    },
+    {
+     "head": "Leg spread",
+     "lines": [
+      "Min distance between legs – 400 mm",
+      "Max distance over legs – 640 mm"
      ]
     }
    ],
@@ -3064,6 +3085,12 @@
      "lines": [
       "Provided with folding stand on platform so that operator stands on platform and drives the equipment. This reduces fatigue and increase safety of operator."
      ]
+    },
+    {
+     "head": "Load Capacity - Uniformly distributed load over forks on maximum 1 x 1 mtr pallet",
+     "lines": [
+      "Load capacity of stacker gradually reduces by 30 % as height increases i.e. maximum safe load capacity of 1000 kg stacker is approx. 700 kg at maximum height; maximum safe load capacity of 1500 kg stacker is approx. 1050 kg at maximum height."
+     ]
     }
    ],
    "summary": "Fully electric stacker with AC drive and folding stand-on platform, 24 V battery operated; 1000 kg and 1500 kg capacities, 1.6, 2.5 and 3.1 m lift heights, with standard or adjustable forks.",
@@ -3199,6 +3226,12 @@
      "head": "Flame Proof Semi Electric AC Order Picker, 440 V, 3 Phase AC Supply",
      "lines": [
       "Order Pickers are available in Flame Proof Semi Electric AC Order Picker 440 V."
+     ]
+    },
+    {
+     "head": "Order Picker - Pushing & Pulling Movement",
+     "lines": [
+      "Order Picker pushing & pulling movement is manual with sprocket & chain operated handle with turn table assembly. This reduces pushing & pulling efforts by approx. 30 %."
      ]
     }
    ],
@@ -3336,6 +3369,12 @@
      "head": "Wheels - UHMW Wheels with sealed ball bearings, White, UHMW",
      "lines": [
       "Dia 200 x 50 mm - 02 Nos & Dia 150 x 50 mm - 02 Nos."
+     ]
+    },
+    {
+     "head": "Order Picker - Pushing & Pulling Movement",
+     "lines": [
+      "Order Picker pushing & pulling movement is manual with sprocket & chain operated handle with turn table assembly. This reduces pushing & pulling efforts by approx. 30 %."
      ]
     }
    ],
@@ -6255,6 +6294,10 @@
    ],
    "text": [
     {
+     "head": "Heavy Duty Swivel Castors with brakes with UHMW Hard Polymer White Wheels with Ball Bearings",
+     "lines": []
+    },
+    {
      "head": "Manual Type - Operated with manual chain pulley block for lifting & lowering",
      "lines": [
       "Lifting & Lowering - Manual chain pulley block",
@@ -6341,6 +6384,10 @@
     }
    ],
    "text": [
+    {
+     "head": "Heavy Duty Swivel Castors with brakes with UHMW Hard Polymer White Wheels with Ball Bearings",
+     "lines": []
+    },
     {
      "head": "Electric AC Type - Operated with electric hoist for lifting & lowering",
      "lines": [

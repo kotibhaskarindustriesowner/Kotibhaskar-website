@@ -437,6 +437,39 @@ def add(slug, name, family, subtype, op, folders, tables, txt, summary, **kw):
 NO500 = (r'\b500 kg\b',)
 UHMW_OPTS = ['uhmw', 'puci', 'ci']
 
+
+# ---- source lines the page-by-page text reader does not reach (specification audit, 26 Nov 2026)
+def src_row(code, page_i, rx):
+    """The first row on a workbook page whose text matches rx, cells joined, spelling fixed."""
+    for _, cells in workbook(code)[page_i]['rows']:
+        line = ' '.join(v for _, v in cells_sorted(cells))
+        if re.search(rx, line) and not bad(line):
+            return fix(line)
+    raise AssertionError(f'{code} page {page_i}: no row matching {rx}')
+
+
+def electric_stacker_load():
+    """Load-capacity note of the electric stacker: printed on its 1000 kg and 1500 kg pages (0 and 1)."""
+    udl = src_row('315', 0, r'^Load Capacity - Uniformly distributed load').rstrip('.')
+    der = lambda pg: next(t['head'] for t in text('315', [pg], notes=True) if 'gradually reduces' in t['head']).rstrip(' ,')
+    d1000, d1500 = der(0), der(1).split('i.e. ', 1)[1]
+    return [{'head': udl, 'lines': [f'{d1000}; {d1500}.']}]
+
+
+def adjustable_leg_spread():
+    """Leg spread of the 685 mm adjustable-fork stacker, from the 'Non Standard Stackers' page of workbook 025."""
+    pg = next(p for p in workbook('025') if p['title'] == 'Non Standard Stackers')
+    rows = [[v for _, v in cells_sorted(c)] for _, c in pg['rows']]
+    i = next(k for k, r in enumerate(rows) if any('Stacker with Adjustable Forks - 685 mm' in v for v in r))
+    lines = []
+    for r in rows[i + 1:]:
+        if re.fullmatch(r'\d', r[0]):
+            break                                          # next non-standard item
+        if re.search(r'(?i)legs', r[0]) and not bad(' '.join(r)):
+            lines.append(f'{fix(r[0])} – {r[-1]}')
+    assert len(lines) == 2, lines
+    return [{'head': 'Leg spread', 'lines': lines}]
+
 # ---------------- Pallet trucks
 add('hydraulic-pallet-truck-550', 'Hydraulic Pallet Truck – 550 mm', 'pallet-trucks', 'Hydraulic Pallet Trucks', 'M', [('10', '10')],
     [kv_table('010', 1)], text('010', [0]),
@@ -478,7 +511,7 @@ for op, intro in (('M', 0), ('AC', 3), ('DC', 6)):
     pre = {'M': 'manual', 'AC': 'semi-electric-ac', 'DC': 'semi-electric-dc'}[op]
     add(f'{pre}-stacker-685-adjustable-forks', f'{"Manual Hydraulic" if op == "M" else opn + " Hydraulic"} Stacker – 685 mm Adjustable Forks',
         'stackers', f'{opn} Stackers', op, [('20',) + fa, ('20',) + fb],
-        [grid_table('026', [(intro + 1, 0), (intro + 2, 0)])], text('026', [intro]),
+        [grid_table('026', [(intro + 1, 0), (intro + 2, 0)])], text('026', [intro]) + adjustable_leg_spread(),
         f'{opn} hydraulic stacker with adjustable forks, 350 to 685 mm width over forks; 1000 kg and 1500 kg capacities with 1.6, 2.5 and 3.1 m lift heights.',
         wheels=UHMW_OPTS, capacities=['1000 kg', '1500 kg'], lifts=ST_LIFT)
 for kind, code, desc in (('cage', '027', 'a 1200 × 1000 mm wiremesh cage welded on the forks'), ('jib-hook', '028', 'a 1000 mm jib hook')):
@@ -498,14 +531,14 @@ for kind, code, desc in (('cage', '027', 'a 1200 × 1000 mm wiremesh cage welded
             )
 add('electric-stacker', 'Electric Stacker', 'stackers', 'Fully Electric Stackers', 'E', [('20', '40', '250'), ('20', '40', '260')],
     [electric_stacker_table()],
-    text('315', [2], drop_line=NO500),
+    text('315', [2], drop_line=NO500) + electric_stacker_load(),
     'Fully electric stacker with AC drive and folding stand-on platform, 24 V battery operated; 1000 kg and 1500 kg capacities, 1.6, 2.5 and 3.1 m lift heights, with standard or adjustable forks.',
     capacities=['1000 kg', '1500 kg'], lifts=ST_LIFT)
 
 # ---------------- Order pickers
 for op, pg, f in (('AC', 1, '10'), ('DC', 3, '20')):
     add(f'semi-electric-{op.lower()}-order-picker', f'{OPS[op]} Order Picker', 'order-pickers', f'{OPS[op]} Order Pickers', op, [('30', f)],
-        [grid_table('030', [(pg + 1, 0)], hdr='{lift} cage height')], text('030', [pg]),
+        [grid_table('030', [(pg + 1, 0)], hdr='{lift} cage height')], text('030', [pg]) + text('030', [0], keep=r'Pushing & Pulling Movement'),
         f'{OPS[op]} order picker with an 800 × 800 mm operator cage and controls in the cage; 300 kg capacity, 3100 mm and 4000 mm maximum cage heights.',
         wheels=UHMW_OPTS, lifts=['3.1 m', '4.0 m'])
 add('electric-order-picker', 'Electric Order Picker', 'order-pickers', 'Fully Electric Order Pickers', 'E', [('30', '30')],
@@ -570,7 +603,7 @@ for op, pg, f, nm in (('M', 0, '10', 'Manual Gantry'), ('EH', 1, '20', 'Electric
     add('manual-gantry' if op == 'M' else 'electric-gantry', nm, 'gantries', 'Manual Gantries' if op == 'M' else 'Electric Gantries', 'M' if op == 'M' else 'E', [('80', f)],
         [mlist_table('055', pg, ['Capacity', 'Lift', 'Length x Width', 'L1 x W1 x H1'],
                      rename={'Lift': 'Lift Height', 'Length x Width': 'Clear Span (Length × Width)', 'L1 x W1 x H1': 'Overall Size (L1 × W1 × H1, mm)'})],
-        text('055', [pg]),
+        text('055', [pg], notes=True),
         ('Mobile gantry with manual chain pulley block and geared trolley' if op == 'M' else 'Mobile gantry with push-button electric hoist, 440 V 3 phase AC')
         + '; 500, 1000 and 2000 kg capacities with 3000 mm lift, on swivel castors with brakes.',
         capacities=['500 kg', '1000 kg', '2000 kg'], lifts=['3.0 m'])

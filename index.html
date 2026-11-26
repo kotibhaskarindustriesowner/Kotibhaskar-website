@@ -93,11 +93,6 @@
       "description": "Material Handling Equipment Manufacturer in Satara, Maharashtra",
       "publisher": {
         "@id": "https://kotibhaskarindustries.com/#organization"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://kotibhaskarindustries.com/#finder",
-        "query-input": "required name=search_term_string"
       }
     }
   ]
@@ -170,77 +165,6 @@ section{padding:84px 5%;}
 .section-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(32px,4vw,52px);font-weight:800;text-transform:uppercase;line-height:1;margin-bottom:48px;letter-spacing:-0.5px;color:#1A2332;}
 
 /* FINDER */
-#finder{background:#F2F0EB;border-bottom:1px solid #DDD8D0;padding:64px 5%;}
-.finder-inner{max-width:760px;margin:0 auto;text-align:center;}
-.finder-inner h2{font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:800;text-transform:uppercase;margin-bottom:8px;color:#1A2332;}
-.finder-inner p{color:#777;margin-bottom:22px;font-size:15px;}
-.sf-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-.sf-form{display:flex;max-width:680px;margin:0 auto;text-align:left;border:2px solid #BFBAB2;background:#fff;transition:border-color .2s;}
-.sf-form:focus-within{border-color:#C85A00;}
-.sf-form textarea{flex:1;min-width:0;border:0;outline:none;resize:vertical;min-height:58px;max-height:180px;padding:12px 16px;font-family:'Barlow',sans-serif;font-size:15px;line-height:1.45;color:#1A1A1A;background:#fff;}
-.sf-btn{flex:0 0 auto;background:#C85A00;color:#fff;border:0;padding:0 22px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;transition:background .2s;}
-.sf-btn:hover,.sf-btn:focus-visible{background:#A84A00;}
-.sf-results{max-width:760px;margin:18px auto 0;text-align:left;background:#fff;border:1px solid #DDD8D0;border-top:3px solid #1A2332;padding:18px 20px;}
-.sf-results[hidden]{display:none;}
-.finder-inner .sf-results p{margin:0;color:#444;font-size:14px;}
-.finder-inner .sf-loading{color:#777;}
-.finder-inner .sf-for{font-size:13px;color:#666;margin-bottom:12px;}
-.sf-for q{color:#1A2332;font-weight:600;}
-.sf-for span{color:#888;}
-.sf-h{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#1A2332;margin:0 0 10px;}
-.sf-cards{display:grid;gap:10px;}
-.sf-card{display:flex;gap:14px;align-items:flex-start;border:1px solid #E6E0D7;border-left:3px solid #C85A00;padding:10px 12px;background:#FCFBF9;}
-.sf-card img,.sf-noimg{flex:0 0 84px;width:84px;height:84px;object-fit:contain;background:#fff;border:1px solid #EEE8E0;}
-.sf-card-body{min-width:0;flex:1;}
-.sf-card h3{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;color:#1A2332;margin:0 0 3px;line-height:1.2;}
-.finder-inner .sf-spec{font-size:13px;color:#1A2332;font-weight:600;margin-bottom:4px;}
-.finder-inner .sf-why{font-size:13px;color:#555;line-height:1.5;}
-.sf-acts{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:8px;align-items:center;}
-.sf-view{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#C85A00;text-decoration:none;}
-.sf-view:hover{text-decoration:underline;}
-.sf-enq-btn{background:#1A2332;color:#fff;border:0;padding:6px 12px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;}
-.sf-enq-btn:hover{background:#C85A00;}
-.finder-inner .sf-disclaimer{font-size:12px;color:#777;margin-top:10px;line-height:1.5;}
-.sf-ask{margin-top:14px;background:#FFF6EC;border:1px solid #F0D6BC;padding:12px 14px;}
-.finder-inner .sf-ask-q{font-weight:600;color:#1A2332;margin-bottom:8px;}
-.finder-inner .sf-ask-skip{font-size:12px;color:#888;margin-top:8px;}
-.sf-chips{display:flex;flex-wrap:wrap;gap:6px;}
-.sf-chips button{background:#fff;border:1px solid #C9BFB2;padding:6px 12px;font-size:13px;color:#1A2332;cursor:pointer;}
-.sf-chips button:hover{border-color:#C85A00;color:#C85A00;}
-.sf-clar{display:flex;max-width:420px;}
-.sf-clar input{flex:1;min-width:0;border:1px solid #C9BFB2;border-right:0;padding:8px 10px;font-size:14px;font-family:'Barlow',sans-serif;}
-.sf-clar button{background:#1A2332;color:#fff;border:0;padding:0 14px;font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;}
-.sf-none{background:#F7F4EF;border-left:3px solid #1A2332;padding:12px 14px;}
-.sf-contact{margin-top:14px;padding-top:12px;border-top:1px solid #EEE8E0;}
-.finder-inner .sf-contact p{font-size:13px;color:#666;margin-bottom:8px;}
-.sf-contact-btns,.sf-enq-row{display:flex;flex-wrap:wrap;gap:8px;}
-.sf-send,.sf-submit{background:#C85A00;color:#fff;border:0;padding:10px 18px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;}
-.sf-send:hover,.sf-submit:hover{background:#A84A00;}
-.sf-submit:disabled{opacity:.7;cursor:wait;}
-.sf-wa{display:inline-flex;align-items:center;justify-content:center;background:#25D366;color:#fff;padding:10px 18px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;text-decoration:none;}
-.sf-wa:hover{background:#1EB257;}
-.sf-enq{margin-top:16px;border-top:2px solid #1A2332;padding-top:14px;}
-.finder-inner .sf-enq-sum{font-size:13px;background:#F7F4EF;padding:8px 10px;margin-bottom:10px;line-height:1.55;word-break:break-word;}
-.sf-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;margin-bottom:12px;}
-.sf-f{display:flex;flex-direction:column;gap:3px;font-size:12px;color:#555;}
-.sf-f i{color:#C85A00;font-style:normal;}
-.sf-f input{border:1px solid #C9BFB2;padding:9px 10px;font-size:14px;font-family:'Barlow',sans-serif;}
-.sf-f input:focus{outline:none;border-color:#C85A00;}
-.sf-f input.invalid{border-color:#C0392B;background:#FDF0EE;}
-.sf-hp{position:absolute;left:-9999px;}
-.finder-inner .sf-status{display:none;margin-top:10px;font-size:13px;}
-.finder-inner .sf-status.show{display:block;}
-.finder-inner .sf-status.error{color:#A93226;background:#FDF0EE;padding:8px 10px;}
-.sf-done{margin-top:14px;background:#EAF6EE;border-left:3px solid #2E8B57;padding:12px 14px;font-size:14px;color:#1A2332;}
-.finder-inner .sf-noscript{margin-top:12px;}
-@media(max-width:600px){
-  .sf-form{flex-direction:column;}
-  .sf-btn{padding:12px;}
-  .sf-results{padding:14px 12px;}
-  .sf-card img,.sf-noimg{flex-basis:64px;width:64px;height:64px;}
-  .sf-grid{grid-template-columns:1fr;}
-  .sf-send,.sf-wa,.sf-submit{flex:1 1 100%;text-align:center;}
-}
 .search-item:hover{background:#FFF0E6!important;}
 
 /* PRODUCTS */
@@ -526,20 +450,6 @@ footer{background:#1A2332;padding:52px 5% 26px;border-top:3px solid #C85A00;}
 
 </section>
 
-<!-- SOLUTION FINDER (assets/js/finder.js + assets/data/finder.json, built by tools/build_finder.py) -->
-<section id="finder">
-  <div class="finder-inner">
-    <h2>Tell Us What You Need to Lift or Move</h2>
-    <p>Describe your material handling requirement, and we'll help you find a suitable product from our range.</p>
-    <form id="sf-form" class="sf-form" novalidate>
-      <label for="sf-input" class="sf-sr">Describe your requirement</label>
-      <textarea id="sf-input" rows="2" maxlength="600" placeholder="I need to lift 1000 kg pallets to a height of 2.5 metres in my warehouse..."></textarea>
-      <button type="submit" class="sf-btn">Find Suitable Products</button>
-    </form>
-    <noscript><p class="sf-noscript">Please <a href="#contact">send us your requirement</a> or call +91 98224 13252.</p></noscript>
-    <div id="sf-results" class="sf-results" aria-live="polite" hidden></div>
-  </div>
-</section>
 
 <!-- PRODUCTS -->
 <section id="products">
@@ -1362,154 +1272,6 @@ th:['No.','Castor Size Wheel D x W mm','Height H mm','Offset O mm','Plate A x B 
 tr:[['1','FX-HD TWIN-100x50','165','0','160x200','120x60','14','500','500','700','700'],['2','SW-HD TWIN-100x50','165','50','160x120','120x60','14','500','500','700','700'],['3','FX-HD TWIN-125x50','190','0','160x200','120x60','14','600','600','800','800'],['4','SW-HD TWIN-125x50','190','50','160x120','120x60','14','600','600','800','800'],['5','FX-HD TWIN-150x50','215','0','160x200','120x60','14','800','800','900','900'],['6','SW-HD TWIN-150x50','215','60','160x120','120x60','14','800','800','900','900'],['7','FX-HD TWIN-200x50','265','0','160x200','120x60','14','900','900','1100','1100'],['8','SW-HD TWIN-200x50','265','60','160x120','120x60','14','900','900','1100','1100'],['9','FX-HD TWIN-250x50','315','0','160x200','120x60','14','1100','1100','1300','1300'],['10','SW-HD TWIN-250x50','315','70','160x120','120x60','14','1100','1100','1300','1300'],['11','FX-HD TWIN-300x50','365','0','160x200','120x60','14','1300','1300','1500','1500'],['12','SW-HD TWIN-300x50','365','70','160x120','120x60','14','1300','1300','1500','1500']]}
 };
 
-/* ============================================================
-   PRODUCT FINDER SCENARIOS
-============================================================ */
-var SC=[
-{k:['pallet','pallet truck','hand pallet','manual pallet'],id:'hpt',p:'Hydraulic Pallet Truck',r:'Moves loaded pallets up to 2500 kg horizontally. Best for warehouses and loading bays. Choose manual if usage is occasional; electric if continuous.'},
-{k:['electric pallet','battery pallet','powered pallet'],id:'ept',p:'Electric Pallet Truck',r:'24V AC drive with stand-on platform — eliminates manual effort for continuous heavy warehouse operations.'},
-{k:['stack','stacker','lift high','height storage','racking','3 metre','mezzanine load'],id:'ms',p:'Manual Stacker',r:'Hydraulic stacker lifts 500-1000 kg to heights up to 3000 mm. 8 models. Choose manual for occasional use, electric for continuous.'},
-{k:['electric stacker','battery stacker','auto stacker'],id:'es',p:'Electric Stacker',r:'Electric stacker — effortless lifting. 1000-1500 kg, up to 3100 mm. Fixed and telescopic mast options.'},
-{k:['floor crane','mobile crane','die','mould lift','engine lift','machine install'],id:'hfc',p:'Hydraulic Floor Crane',r:'Mobile crane with 5 boom positions, lifts up to 1000 kg at 2500 mm. Used for die handling, machine installation, maintenance.'},
-{k:['electric crane','battery crane','electric floor crane'],id:'efc',p:'Electric Floor Crane',r:'Fully electric floor crane — 1500 kg, 3100 mm lift, 24V battery. Curtis AC drive controller.'},
-{k:['drum tilt','tilt drum','pour drum','pour oil','chemical drum','pour liquid','rotate drum'],id:'hdt',p:'Hydraulic Drum Tilter',r:'Lifts, transports and tilts 200L drums by one person. 360° rotation, self-locking. Used in chemical, paint, plastic industries.'},
-{k:['electric drum tilt','button drum','battery tilter'],id:'edt',p:'Electric Drum Tilter',r:'Push-button drum tilter — 24V DC, lifts up to 3100 mm. Zero manual effort.'},
-{k:['drum grip','auto grip','drum lift','store drum','rack drum'],id:'mdg',p:'Hydraulic Drum Gripper',r:'Auto-gripper clamps drum without human touch. Safe for hazardous chemicals. Stores drums in racks and on pallets.'},
-{k:['jib','swing crane','pillar crane','wall crane','workshop crane'],id:'jib',p:'Jib Crane',r:'Premier jib cranes — 220° or 360° rotation, 500-3000 kg. For fabrication shops, machine shops, assembly areas.'},
-{k:['gantry','portable gantry','mobile gantry'],id:'gantry',p:'Gantry Crane',r:'Portable gantry in 500-2000 kg. Fixed and mobile versions. For machine installation, die changing, maintenance.'},
-{k:['scissor','lift table','dock loading','container load','truck level'],id:'sl',p:'Hydraulic Scissor Lift',r:'Pit mounted scissor lift for loading from shop floor to truck or container. 500-9000 kg custom manufactured.'},
-{k:['dock leveller','dock leveler','loading ramp','loading bay','truck dock'],id:'dl',p:'Hydraulic Dock Leveller',r:'Bridges gap between loading bay and truck. DOCK 50 (5000 kg) and DOCK 90 (9000 kg). Fully automatic electro-hydraulic.'},
-{k:['goods lift','freight lift','material lift','upstairs','between floors','mezzanine lift'],id:'gl',p:'Hydraulic Goods Lift',r:'4-channel goods lift for shifting materials between floors. 1000-2000 kg up to 9 metres. Self-standing.'},
-{k:['conveyor','roller conveyor','gravity roller','dispatch conveyor'],id:'grc',p:'Gravity Roller Conveyor',r:'No-power conveyor, 50-600 kg per metre. Height adjustable. Low cost, maintenance free.'},
-{k:['belt conveyor','motor conveyor','powered conveyor','incline conveyor'],id:'bc',p:'Belt Conveyor',r:'Motor powered belt conveyor — 50-200 kg per metre. Variable speed, forward/reverse.'},
-{k:['shelf','rack','storage rack','pallet rack','heavy shelf','industrial shelf'],id:'ish',p:'Industrial Shelving',r:'Adjustable pallet storage system — 2000-3000 kg per shelf, up to 5 metre height.'},
-{k:['platform trolley','flat trolley','factory trolley','move boxes','carry crates'],id:'tr_platform_trolley',p:'Platform Trolley',r:'Platform Trolley — load capacity 200–1000 kg, 6 sizes. M.S. sheet platform trolley with 2 fixed and 2 swivel castors for moving corrugated boxes, gunny bags, crates and heavy materials.'},
-{k:['workshop trolley','closed trolley','side sheet trolley','loose components'],id:'tr_workshop_trolley_sheet',p:'Workshop Trolley – M.S. Sheet Sides',r:'Workshop Trolley – M.S. Sheet Sides — load capacity 200–1000 kg, 6 sizes. Workshop trolley with all 4 sides closed by 1.2 mm M.S. sheet up to 450 mm height, for moving loose components and materials safely.'},
-{k:['wiremesh trolley','wire mesh trolley','mesh trolley'],id:'tr_workshop_trolley_wiremesh',p:'Workshop Trolley – Wiremesh Sides',r:'Workshop Trolley – Wiremesh Sides — load capacity 200–1000 kg, 6 sizes. Workshop trolley with all 4 sides closed by 1″ × 1″ wiremesh up to 450 mm height, for moving loose components and materials safely.'},
-{k:['drum trolley','barrel trolley','210 litre drum','oil drum'],id:'tr_drum_trolley',p:'Drum Trolley',r:'Drum Trolley — load capacity 300 kg, 1 size. Drum trolley built from thick square M.S. tube for easy movement of 210-litre drums.'},
-{k:['turntable trolley','turntable platform','steering trolley'],id:'tr_turntable_platform_trolley',p:'Turntable Platform Trolley',r:'Turntable Platform Trolley — load capacity 800–1000 kg, 2 sizes. Heavy-duty platform trolley with a turntable front assembly for easy steering of heavy loads.'},
-{k:['turntable workshop trolley'],id:'tr_turntable_workshop_trolley_sheet',p:'Turntable Workshop Trolley – M.S. Sheet Sides',r:'Turntable Workshop Trolley – M.S. Sheet Sides — load capacity 800–1000 kg, 2 sizes. Turntable workshop trolley with 4 sides closed by 1.2 mm M.S. sheet up to 450 mm height, for heavy loose loads.'},
-{k:['turntable wiremesh trolley','turntable mesh trolley'],id:'tr_turntable_workshop_trolley_wiremesh',p:'Turntable Workshop Trolley – Wiremesh Sides',r:'Turntable Workshop Trolley – Wiremesh Sides — load capacity 800–1000 kg, 2 sizes. Turntable workshop trolley with 4 sides closed by 1″ × 1″ wiremesh up to 450 mm height, for heavy loose loads.'},
-{k:['sack trolley','bag trolley','gunny bag','hand truck','sugar bag'],id:'tr_sack_trolley',p:'Sack Trolley',r:'Sack Trolley — load capacity 100–150 kg, 2 sizes. Sack trolley built from thick round M.S. pipe with a curved back support shaped for gunny bags.'},
-{k:['platform truck','towing trolley','forklift towing','heavy trolley','2000 kg trolley'],id:'tr_turntable_platform_truck',p:'Turntable Platform Truck',r:'Turntable Platform Truck — load capacity 1000–2000 kg, 3 sizes. Heavy-duty turntable platform truck on a rectangular-tube base frame, for manual pulling or forklift towing.'},
-{k:['workshop truck','hinged door trolley'],id:'tr_turntable_workshop_truck_sheet',p:'Turntable Workshop Truck – M.S. Sheet Sides',r:'Turntable Workshop Truck – M.S. Sheet Sides — load capacity 1000–2000 kg, 3 sizes. Heavy-duty turntable workshop truck with 3 sides closed by 2 mm M.S. sheet and a hinged door on the 4th side.'},
-{k:['wiremesh truck','mesh truck'],id:'tr_turntable_workshop_truck_wiremesh',p:'Turntable Workshop Truck – Wiremesh Sides',r:'Turntable Workshop Truck – Wiremesh Sides — load capacity 1000–2000 kg, 3 sizes. Heavy-duty turntable workshop truck with 3 sides closed by 1″ × 1″ wiremesh and a hinged door on the 4th side.'},
-{k:['wheel barrow','wheelbarrow','barrow','garbage trolley','gardening'],id:'tr_double_wheel_barrow',p:'Double Wheel Barrow',r:'Double Wheel Barrow — load capacity 150–200 kg, 2 sizes. M.S. sheet pan barrow with two front wheels for better balance, for light materials, chips, garbage and gardening.'},
-{k:['two shelf trolley','shelf trolley','trolley with shelves'],id:'tr_two_shelf_trolley',p:'Two Shelf Trolley',r:'Two Shelf Trolley — load capacity 200–800 kg, 5 sizes. Two-shelf M.S. trolley for shop-floor mini stores, assembly lines and work tables.'},
-{k:['three shelf trolley','3 shelf trolley','three shelf'],id:'tr_three_shelf_trolley',p:'Three Shelf Trolley',r:'Three Shelf Trolley — load capacity 210–750 kg, 5 sizes. Three-shelf M.S. trolley for shop-floor mini stores, assembly lines and work tables.'},
-{k:['five shelf trolley','5 shelf trolley','five shelf'],id:'tr_five_shelf_trolley',p:'Five Shelf Trolley',r:'Five Shelf Trolley — load capacity 300–800 kg, 4 sizes. Five-shelf M.S. trolley with three adjustable middle shelves, for shop-floor storage and assembly lines.'},
-{k:['multi utility trolley','utility trolley','carton trolley'],id:'tr_multi_utility_trolley',p:'Multi Utility Trolley',r:'Multi Utility Trolley — load capacity 200 kg, 1 size. Round-pipe hand trolley with a long front nose and a folding platform for corrugated boxes of different sizes.'},
-{k:['gas cylinder','oxygen cylinder','co2 cylinder','nitrogen cylinder','argon cylinder','cylinder trolley'],id:'tr_gas_cylinder_trolley_single',p:'Gas Cylinder Trolley – Single Cylinder',r:'Gas Cylinder Trolley – Single Cylinder — load capacity 100 kg, 1 size. Single-cylinder trolley for CO2, O2, nitrogen and argon cylinders (240 mm dia × 1400 mm long).'},
-{k:['lpg cylinder','lpg trolley'],id:'tr_gas_cylinder_trolley_lpg',p:'Gas Cylinder Trolley – LPG Cylinder',r:'Gas Cylinder Trolley – LPG Cylinder — load capacity 100 kg, 1 size. Single-cylinder trolley for LPG cylinders (340 mm dia × 600 mm long).'},
-{k:['two cylinder','double cylinder','welding trolley','o2 and lpg','gas welding'],id:'tr_gas_cylinder_trolley_double',p:'Gas Cylinder Trolley – Two Cylinders',r:'Gas Cylinder Trolley – Two Cylinders — load capacity 200 kg, 1 size. Two-cylinder trolley carrying one O2 cylinder and one LPG cylinder together.'},
-{k:['chip trolley','swarf','cnc waste','machining chips','chips'],id:'tr_chip_trolley',p:'Chip Trolley',r:'Chip Trolley — load capacity 100–200 kg, 2 sizes. Tilting chip trolley with a leak-proof M.S. tank, foot-operated tipping and a drain valve for coolant.'},
-{k:['steel pallet','ms pallet','industrial pallet','steel'],id:'tr_industrial_steel_pallet_plain',p:'Industrial Steel Pallet – Plain Top',r:'Industrial Steel Pallet – Plain Top — load capacity 1000–1500 kg, 4 sizes. Plain-top M.S. steel pallet with 120 mm ground clearance, for shop-floor movement and pallet racking.'},
-{k:['pallet with sides','box pallet','closed pallet'],id:'tr_industrial_steel_pallet_sheet',p:'Industrial Steel Pallet – M.S. Sheet Sides',r:'Industrial Steel Pallet – M.S. Sheet Sides — load capacity 1000–1500 kg, 4 sizes. M.S. steel pallet with 4 sides closed by 1.2 mm M.S. sheet up to 450 mm height.'},
-{k:['wiremesh pallet','mesh pallet','cage pallet'],id:'tr_industrial_steel_pallet_wiremesh',p:'Industrial Steel Pallet – Wiremesh Sides',r:'Industrial Steel Pallet – Wiremesh Sides — load capacity 1000–1500 kg, 4 sizes. M.S. steel pallet with 4 sides closed by 1″ × 1″ wiremesh up to 450 mm height.'},
-{k:['coolant trolley','coolant','cutting fluid','coolant tank'],id:'tr_coolant_feeding_trolley',p:'Coolant Feeding Trolley',r:'Coolant Feeding Trolley — load capacity 300–600 kg, 2 sizes. Mobile coolant tank with electric pump, rotary hand pump and level indicator for feeding machine tools.'},
-{k:['cnc tool trolley','tool trolley','cnc trolley','bt 30','bt 40','bt 50','tool holder'],id:'tr_cnc_tool_trolley_600x5',p:'CNC Tool Trolley – 600 × 5',r:'CNC Tool Trolley – 600 × 5 — load capacity 200 kg, 3 sizes / configurations. CNC tool trolley 600 × 5 with tool pockets for BT 30, BT 40 or BT 50 tool holders; load capacity 200 kg.'},
-{k:['600 x 7','600x7'],id:'tr_cnc_tool_trolley_600x7',p:'CNC Tool Trolley – 600 × 7',r:'CNC Tool Trolley – 600 × 7 — load capacity 200 kg, 3 sizes / configurations. CNC tool trolley 600 × 7 with tool pockets for BT 30, BT 40 or BT 50 tool holders; load capacity 200 kg.'},
-{k:['900 x 5','900x5'],id:'tr_cnc_tool_trolley_900x5',p:'CNC Tool Trolley – 900 × 5',r:'CNC Tool Trolley – 900 × 5 — load capacity 400 kg, 3 sizes / configurations. CNC tool trolley 900 × 5 with tool pockets for BT 30, BT 40 or BT 50 tool holders; load capacity 400 kg.'},
-{k:['900 x 7','900x7'],id:'tr_cnc_tool_trolley_900x7',p:'CNC Tool Trolley – 900 × 7',r:'CNC Tool Trolley – 900 × 7 — load capacity 400 kg, 3 sizes / configurations. CNC tool trolley 900 × 7 with tool pockets for BT 30, BT 40 or BT 50 tool holders; load capacity 400 kg.'},
-{k:['work table','workbench','work bench','industrial table'],id:'tr_industrial_work_table_a',p:'Industrial Work Table – Type A',r:'Industrial Work Table – Type A — load capacity 400–800 kg, 3 sizes / configurations. Industrial work table fabricated from thick M.S. tubes with an M.S. sheet top, with top shelf, bottom shelf and 1 cupboard.'},
-{k:['pin board','work table with light','table with pin board'],id:'tr_industrial_work_table_b',p:'Industrial Work Table – Type B',r:'Industrial Work Table – Type B — load capacity 400–800 kg, 3 sizes / configurations. Industrial work table with top shelf, bottom shelf and 1 cupboard, plus a vertical frame with pin board and tube light fitting with 1 socket.'},
-{k:['bin trolley','bins trolley','storage bin trolley'],id:'tr_bin_trolley_single_sided',p:'Bin Trolley – Single Sided',r:'Bin Trolley – Single Sided — load capacity 300 kg, 3 sizes / configurations. Single-sided bin trolley holding 24, 20 or 16 bins depending on bin size; load capacity 300 kg.'},
-{k:['double sided bin','double sided trolley'],id:'tr_bin_trolley_double_sided',p:'Bin Trolley – Double Sided',r:'Bin Trolley – Double Sided — load capacity 500 kg, 3 sizes / configurations. Double-sided bin trolley holding 48, 40 or 32 bins depending on bin size; load capacity 500 kg.'},
-{k:['access steps','mobile steps','step ladder','ladder','mobile access'],id:'tr_mobile_access_steps',p:'Mobile Access Steps',r:'Mobile Access Steps — load capacity 300 kg, 4 sizes / configurations. Welded steel mobile access steps for reaching difficult places, in 1000, 2000, 3000 and 4000 mm heights; load capacity 300 kg.'},
-{k:['uhmw','polyethylene wheel','pe wheel','white wheel','floor safe','clean room wheel','hospital wheel'],id:'uhmw',p:'UHMW-PE Wheels',r:'UHMW-PE wheels — 30 sizes, 60-1300 kg load per caster. 50% less effort with ball bearings. Does not crack or damage floors.'},
-{k:['pu wheel','polyurethane wheel','pu ci','rubber wheel','quiet wheel','floor friendly'],id:'puci',p:'PU-CI Wheels',r:'PU-CI wheels — 30 sizes, 60-1300 kg load per caster. Polyurethane over cast iron. High load, floor-friendly.'},
-{k:['cast iron wheel','ci wheel','high temp wheel','foundry wheel','oven wheel','furnace wheel'],id:'ciw',p:'Cast Iron Wheels',r:'Cast iron wheels — 30 sizes, 60-1500 kg load per caster. Suitable for high temperature applications such as furnaces and foundries.'},
-{k:['pallet truck wheel','pallet truck roller','truck wheel','truck roller','load roller','pallet roller','hand pallet wheel'],id:'ptw',p:'Pallet Truck Wheels & Rollers',r:'Replacement rollers and wheels for hand pallet trucks in UHMW, PU-CI and cast iron — 18 sizes, ball bearing, 20 mm bore, 500-1000 kg load capacity.'},
-{k:['uhmw roller','uhmw pallet truck','white roller','nylon roller'],id:'ptw_uhmw',p:'UHMW Pallet Truck Wheels & Rollers',r:'UHMW rollers 80 mm dia (70-100 mm wide) and a 180 x 50 mm wheel — ball bearing, 20 mm bore, 500-600 kg.'},
-{k:['pu roller','puci roller','pu-ci roller','polyurethane roller','pu pallet truck'],id:'ptw_puci',p:'PU-CI Pallet Truck Wheels & Rollers',r:'PU-CI rollers 80 mm dia (70-100 mm wide) and a 180 x 50 mm wheel — ball bearing, 20 mm bore, 500-600 kg.'},
-{k:['ci roller','cast iron roller','iron roller','ci pallet truck'],id:'ptw_ci',p:'CI Pallet Truck Wheels & Rollers',r:'Cast iron rollers 80 mm dia (70-100 mm wide) and a 180 x 50 mm wheel — ball bearing, 20 mm bore, 800-1000 kg.'},
-{k:['track wheel','ms wheel','mild steel wheel','rail wheel','groove wheel','steel track wheel'],id:'msw',p:'MS Solid Track Wheels',r:'Mild steel track wheels in V-groove, square-groove, round-groove and flange-type profiles, plain bore or ball bearing, 50-300 mm, 100-2000 kg per wheel. Max working temperature 250 °C.'},
-{k:['v groove','v-groove','vee groove'],id:'ms_vg',p:'MS V-Groove Track Wheels',r:'Mild steel V-groove track wheels, 50-300 mm diameter, plain bore or ball bearing, 100-2000 kg per wheel.'},
-{k:['square groove','square-groove'],id:'ms_sq',p:'MS Square-Groove Track Wheels',r:'Mild steel square-groove track wheels, 50-300 mm diameter, plain bore or ball bearing, 100-2000 kg per wheel.'},
-{k:['round groove','round-groove'],id:'ms_ro',p:'MS Round-Groove Track Wheels',r:'Mild steel round-groove track wheels, 50-300 mm diameter, plain bore or ball bearing, 100-2000 kg per wheel.'},
-{k:['flange wheel','flange type','flanged wheel'],id:'ms_fl',p:'MS Flange-Type Track Wheels',r:'Mild steel flange-type track wheels, 50-300 mm diameter, plain bore or ball bearing, 100-2000 kg per wheel.'},
-{k:['medium castor','md castor','small castor','light castor'],id:'mdc',p:'MD Steel Castors',r:'Medium duty pressed steel castors — fixed and swivel. 60-500 kg. UHMW, PU-CI, CI or MS-TR wheel options.'},
-{k:['mhd castor','medium heavy castor'],id:'mhdc',p:'MHD Castors',r:'Medium heavy duty castors — 300-1000 kg. Forged bracket, ball race swivel. Fixed and swivel with brake.'},
-{k:['heavy castor','hd castor','heavy duty castor','high load castor'],id:'hdc',p:'Heavy Duty Castors',r:'Heavy duty castors — 300-1200 kg per castor. Machined ball race. Maintenance free. UHMW/PU-CI/CI/MS-TR options.'},
-{k:['twin castor','hd twin','double wheel castor','twin wheel castor'],id:'hdtc',p:'HD Twin Castors',r:'HD twin castors — 500-1500 kg. Twin wheels increase load capacity and reduce wheel wear by 30%.'},
-{k:['warehouse','godown','logistics','move heavy load','material movement','heavy load'],id:'hpt',p:'Hydraulic Pallet Truck',r:'For warehouse heavy load movement, recommend Hydraulic Pallet Truck for pallets (2500 kg), or Platform Trolley for general loads (up to 1000 kg). Use Electric Pallet Truck for continuous operations.'},
-{k:['castor','caster','swivel wheel','rolling wheel'],id:'mdc',p:'MD Steel Castors',r:'Castors available in 3 series by load: MD (60-500 kg), MHD (300-1000 kg), HD (300-1200 kg), HD Twin (500-1500 kg). Wheel material: UHMW, PU-CI, CI or MS-TR.'}
-];
-
-/* ============================================================
-   SEARCH INDEX
-============================================================ */
-var SI=[
-  {n:'Hydraulic Pallet Truck',id:'hpt',t:'pallet truck hydraulic hand forklift pallet'},
-  {n:'Electric Pallet Truck',id:'ept',t:'electric pallet truck battery 24v'},
-  {n:'Manual Stacker',id:'ms',t:'manual stacker hydraulic lift height store rack'},
-  {n:'Electric Stacker',id:'es',t:'electric stacker battery lift height'},
-  {n:'Hydraulic Floor Crane',id:'hfc',t:'floor crane hydraulic mobile portable crane'},
-  {n:'Electric Floor Crane',id:'efc',t:'electric floor crane battery 24v'},
-  {n:'Hydraulic Drum Tilter',id:'hdt',t:'drum tilter hydraulic barrel chemical oil pour'},
-  {n:'Electric Drum Tilter',id:'edt',t:'electric drum tilter battery button'},
-  {n:'Manual Drum Gripper',id:'mdg',t:'drum gripper manual hydraulic auto clamp'},
-  {n:'Electric Drum Gripper',id:'edg',t:'electric drum gripper battery material tilter'},
-  {n:'Jib Crane',id:'jib',t:'jib crane pillar wall swing workshop crane'},
-  {n:'Gantry',id:'gantry',t:'gantry portable crane mobile a-frame'},
-  {n:'Scissor Lift',id:'sl',t:'scissor lift hydraulic table loading dock container'},
-  {n:'Hydraulic Dock Leveller',id:'dl',t:'dock leveller ramp loading bay truck'},
-  {n:'Goods Lift',id:'gl',t:'goods lift freight elevator mezzanine floor upstairs'},
-  {n:'Gravity Roller Conveyor',id:'grc',t:'gravity roller conveyor no power dispatch'},
-  {n:'Belt Conveyor',id:'bc',t:'belt conveyor motor powered incline'},
-  {n:'Industrial Shelving',id:'ish',t:'industrial shelf pallet rack storage heavy duty'},
-  {n:'Platform Trolley',id:'tr_platform_trolley',t:'boxes carry crates factory flat move platform trolley'},
-  {n:'Workshop Trolley – M.S. Sheet Sides',id:'tr_workshop_trolley_sheet',t:'closed components loose m s sheet side sides trolley workshop'},
-  {n:'Workshop Trolley – Wiremesh Sides',id:'tr_workshop_trolley_wiremesh',t:'cage mesh sides trolley wire wiremesh workshop'},
-  {n:'Drum Trolley',id:'tr_drum_trolley',t:'210 barrel drum litre oil trolley'},
-  {n:'Turntable Platform Trolley',id:'tr_turntable_platform_trolley',t:'platform steering trolley turntable'},
-  {n:'Turntable Workshop Trolley – M.S. Sheet Sides',id:'tr_turntable_workshop_trolley_sheet',t:'m s sheet sides trolley turntable workshop'},
-  {n:'Turntable Workshop Trolley – Wiremesh Sides',id:'tr_turntable_workshop_trolley_wiremesh',t:'mesh sides trolley turntable wiremesh workshop'},
-  {n:'Sack Trolley',id:'tr_sack_trolley',t:'bag gunny hand sack sugar trolley truck'},
-  {n:'Turntable Platform Truck',id:'tr_turntable_platform_truck',t:'2000 forklift heavy kg platform towing trolley truck turntable'},
-  {n:'Turntable Workshop Truck – M.S. Sheet Sides',id:'tr_turntable_workshop_truck_sheet',t:'door hinged m s sheet sides trolley truck turntable workshop'},
-  {n:'Turntable Workshop Truck – Wiremesh Sides',id:'tr_turntable_workshop_truck_wiremesh',t:'mesh sides trolley truck turntable wiremesh workshop'},
-  {n:'Double Wheel Barrow',id:'tr_double_wheel_barrow',t:'barrow double garbage gardening trolley wheel wheelbarrow'},
-  {n:'Two Shelf Trolley',id:'tr_two_shelf_trolley',t:'2 shelf trolley two'},
-  {n:'Three Shelf Trolley',id:'tr_three_shelf_trolley',t:'3 shelf three trolley'},
-  {n:'Five Shelf Trolley',id:'tr_five_shelf_trolley',t:'5 adjustable five shelf trolley'},
-  {n:'Multi Utility Trolley',id:'tr_multi_utility_trolley',t:'box carton multi trolley utility'},
-  {n:'Gas Cylinder Trolley – Single Cylinder',id:'tr_gas_cylinder_trolley_single',t:'argon co2 cylinder gas nitrogen oxygen single trolley'},
-  {n:'Gas Cylinder Trolley – LPG Cylinder',id:'tr_gas_cylinder_trolley_lpg',t:'cylinder gas lpg trolley'},
-  {n:'Gas Cylinder Trolley – Two Cylinders',id:'tr_gas_cylinder_trolley_double',t:'and cylinder cylinders double gas lpg o2 trolley two welding'},
-  {n:'Chip Trolley',id:'tr_chip_trolley',t:'chip chips cnc machining swarf trolley waste'},
-  {n:'Industrial Steel Pallet – Plain Top',id:'tr_industrial_steel_pallet_plain',t:'industrial metal ms pallet plain steel top trolley'},
-  {n:'Industrial Steel Pallet – M.S. Sheet Sides',id:'tr_industrial_steel_pallet_sheet',t:'box closed industrial m pallet s sheet sides steel trolley with'},
-  {n:'Industrial Steel Pallet – Wiremesh Sides',id:'tr_industrial_steel_pallet_wiremesh',t:'cage industrial mesh pallet sides steel trolley wiremesh'},
-  {n:'Coolant Feeding Trolley',id:'tr_coolant_feeding_trolley',t:'coolant cutting feeding fluid tank trolley'},
-  {n:'CNC Tool Trolley – 600 × 5',id:'tr_cnc_tool_trolley_600x5',t:'30 40 5 50 600 bt cnc holder tool trolley'},
-  {n:'CNC Tool Trolley – 600 × 7',id:'tr_cnc_tool_trolley_600x7',t:'600 600x7 7 cnc tool trolley x'},
-  {n:'CNC Tool Trolley – 900 × 5',id:'tr_cnc_tool_trolley_900x5',t:'5 900 900x5 cnc tool trolley x'},
-  {n:'CNC Tool Trolley – 900 × 7',id:'tr_cnc_tool_trolley_900x7',t:'7 900 900x7 cnc tool trolley x'},
-  {n:'Industrial Work Table – Type A',id:'tr_industrial_work_table_a',t:'a bench industrial table trolley type work workbench'},
-  {n:'Industrial Work Table – Type B',id:'tr_industrial_work_table_b',t:'b board industrial light pin table trolley type with work'},
-  {n:'Bin Trolley – Single Sided',id:'tr_bin_trolley_single_sided',t:'bin bins sided single storage trolley'},
-  {n:'Bin Trolley – Double Sided',id:'tr_bin_trolley_double_sided',t:'bin double sided trolley'},
-  {n:'Mobile Access Steps',id:'tr_mobile_access_steps',t:'access ladder mobile step steps trolley'},
-  {n:'UHMW-PE Wheels',id:'uhmw',t:'uhmw pe wheel polyethylene white floor safe hospital clean room 50 75 100 125 150 200 250 300mm'},
-  {n:'PU-CI Wheels',id:'puci',t:'pu ci wheel polyurethane cast iron quiet floor friendly 50 75 100 125 150 200 250 300mm'},
-  {n:'Cast Iron Wheels',id:'ciw',t:'cast iron wheel ci furnace high temp 250 foundry oven 50 75 100 125 150 200 250 300mm'},
-  {n:'Pallet Truck Wheels & Rollers',id:'ptw',t:'pallet truck wheel roller load roller hand pallet replacement uhmw pu ci cast iron 80 180 20 bore'},
-  {n:'UHMW Pallet Truck Rollers & Wheels',id:'ptw_uhmw',t:'uhmw pallet truck roller wheel white 80 x 70 85 90 96 100 180 x 50'},
-  {n:'PU-CI Pallet Truck Rollers & Wheels',id:'ptw_puci',t:'pu ci puci polyurethane pallet truck roller wheel red 80 x 70 85 90 96 100 180 x 50'},
-  {n:'CI Pallet Truck Rollers & Wheels',id:'ptw_ci',t:'ci cast iron pallet truck roller wheel 80 x 70 85 90 96 100 180 x 50'},
-  {n:'MS Solid Track Wheels',id:'msw',t:'ms mild steel solid track wheel rail groove flange v square round plain bore ball bearing'},
-  {n:'MS V-Groove Track Wheels',id:'ms_vg',t:'ms v groove vee track wheel mild steel'},
-  {n:'MS Square-Groove Track Wheels',id:'ms_sq',t:'ms square groove track wheel mild steel'},
-  {n:'MS Round-Groove Track Wheels',id:'ms_ro',t:'ms round groove track wheel mild steel'},
-  {n:'MS Flange-Type Track Wheels',id:'ms_fl',t:'ms flange type flanged track wheel mild steel'},
-  {n:'MD Steel Castors',id:'mdc',t:'md medium duty castor swivel fixed pressed steel light'},
-  {n:'MHD Castors',id:'mhdc',t:'mhd medium heavy duty castor swivel fixed'},
-  {n:'Heavy Duty Castors',id:'hdc',t:'hd heavy duty castor swivel fixed maintenance free'},
-  {n:'HD Twin Castors',id:'hdtc',t:'hd twin castor double wheel heavy duty low height'}
-];
-
-var selIdx=-1;
 
 /* ============================================================
    FUNCTIONS
@@ -1526,26 +1288,18 @@ function toggleMenu(){
 }
 
 /* Products that now have their own dedicated pages (generated by tools/build_site.py).
-   The card, product finder and search all open these pages instead of the popup. */
+   The cards open these pages instead of the popup. */
 var PAGES={uhmw:'/wheels-castors/uhmw/',puci:'/wheels-castors/puci/',ciw:'/wheels-castors/ci/',
   tr_cnc_tool_trolley_600x5:'/material-handling-trolleys/cnc-tool-trolley-600x5/',tr_cnc_tool_trolley_600x7:'/material-handling-trolleys/cnc-tool-trolley-600x7/',tr_cnc_tool_trolley_900x5:'/material-handling-trolleys/cnc-tool-trolley-900x5/',tr_cnc_tool_trolley_900x7:'/material-handling-trolleys/cnc-tool-trolley-900x7/',tr_industrial_work_table_a:'/material-handling-trolleys/industrial-work-table-a/',tr_industrial_work_table_b:'/material-handling-trolleys/industrial-work-table-b/',tr_bin_trolley_single_sided:'/material-handling-trolleys/bin-trolley-single-sided/',tr_bin_trolley_double_sided:'/material-handling-trolleys/bin-trolley-double-sided/',tr_mobile_access_steps:'/material-handling-trolleys/mobile-access-steps/',
   ptw:'/wheels-castors/pallet-truck/',msw:'/wheels-castors/ms-track/',ms_vg:'/wheels-castors/ms-track/v-groove/',ms_sq:'/wheels-castors/ms-track/square-groove/',ms_ro:'/wheels-castors/ms-track/round-groove/',ms_fl:'/wheels-castors/ms-track/flange-type/',ptw_uhmw:'/wheels-castors/pallet-truck/uhmw/',ptw_puci:'/wheels-castors/pallet-truck/puci/',ptw_ci:'/wheels-castors/pallet-truck/ci/',
   tr_platform_trolley:'/material-handling-trolleys/platform-trolley/',tr_workshop_trolley_sheet:'/material-handling-trolleys/workshop-trolley-sheet/',tr_workshop_trolley_wiremesh:'/material-handling-trolleys/workshop-trolley-wiremesh/',tr_drum_trolley:'/material-handling-trolleys/drum-trolley/',tr_turntable_platform_trolley:'/material-handling-trolleys/turntable-platform-trolley/',tr_turntable_workshop_trolley_sheet:'/material-handling-trolleys/turntable-workshop-trolley-sheet/',tr_turntable_workshop_trolley_wiremesh:'/material-handling-trolleys/turntable-workshop-trolley-wiremesh/',tr_sack_trolley:'/material-handling-trolleys/sack-trolley/',tr_turntable_platform_truck:'/material-handling-trolleys/turntable-platform-truck/',tr_turntable_workshop_truck_sheet:'/material-handling-trolleys/turntable-workshop-truck-sheet/',tr_turntable_workshop_truck_wiremesh:'/material-handling-trolleys/turntable-workshop-truck-wiremesh/',tr_double_wheel_barrow:'/material-handling-trolleys/double-wheel-barrow/',tr_two_shelf_trolley:'/material-handling-trolleys/two-shelf-trolley/',tr_three_shelf_trolley:'/material-handling-trolleys/three-shelf-trolley/',tr_five_shelf_trolley:'/material-handling-trolleys/five-shelf-trolley/',tr_multi_utility_trolley:'/material-handling-trolleys/multi-utility-trolley/',tr_gas_cylinder_trolley_single:'/material-handling-trolleys/gas-cylinder-trolley-single/',tr_gas_cylinder_trolley_lpg:'/material-handling-trolleys/gas-cylinder-trolley-lpg/',tr_gas_cylinder_trolley_double:'/material-handling-trolleys/gas-cylinder-trolley-double/',tr_chip_trolley:'/material-handling-trolleys/chip-trolley/',tr_industrial_steel_pallet_plain:'/material-handling-trolleys/industrial-steel-pallet-plain/',tr_industrial_steel_pallet_sheet:'/material-handling-trolleys/industrial-steel-pallet-sheet/',tr_industrial_steel_pallet_wiremesh:'/material-handling-trolleys/industrial-steel-pallet-wiremesh/',tr_coolant_feeding_trolley:'/material-handling-trolleys/coolant-feeding-trolley/'};
 
-/* Categories not yet published (data kept for later). They are removed from the
-   product finder and search suggestions, and their popups cannot be opened.
+/* Categories not yet published (data kept for later). Their popups cannot be opened.
    To publish one later: build its pages, add it to PAGES and delete it here. */
 /* EQUIPMENT-ROUTES:START (generated by tools/build_equipment.py) */
 Object.assign(PAGES,{hpt:'/material-handling-equipment/pallet-trucks/',ept:'/material-handling-equipment/pallet-trucks/electric-pallet-truck/',ms:'/material-handling-equipment/stackers/',es:'/material-handling-equipment/stackers/electric-stacker/',hfc:'/material-handling-equipment/floor-cranes/',efc:'/material-handling-equipment/floor-cranes/electric-floor-crane/',hdt:'/material-handling-equipment/drum-lifters-tilters/',edt:'/material-handling-equipment/drum-lifters-tilters/electric-drum-lifter-tilter/',mdg:'/material-handling-equipment/drum-grippers/',edg:'/material-handling-equipment/drum-grippers/',gantry:'/material-handling-equipment/gantries/',sl:'/material-handling-equipment/scissor-lifts/',dl:'/material-handling-equipment/dock-levellers/electro-hydraulic-dock-leveller/',gl:'/material-handling-equipment/goods-lifts/',grc:'/material-handling-equipment/conveyors/gravity-roller-conveyor/',bc:'/material-handling-equipment/conveyors/',ish:'/material-handling-equipment/industrial-shelving/',eq_hydraulic_pallet_truck_550:'/material-handling-equipment/pallet-trucks/hydraulic-pallet-truck-550/',eq_hydraulic_pallet_truck_685:'/material-handling-equipment/pallet-trucks/hydraulic-pallet-truck-685/',eq_roll_lifting_pallet_truck:'/material-handling-equipment/pallet-trucks/roll-lifting-pallet-truck/',eq_high_lift_scissor_pallet_truck:'/material-handling-equipment/pallet-trucks/high-lift-scissor-pallet-truck/',eq_electric_pallet_truck:'/material-handling-equipment/pallet-trucks/electric-pallet-truck/',eq_hydraulic_pallet_truck_spm:'/material-handling-equipment/pallet-trucks/hydraulic-pallet-truck-spm/',eq_manual_stacker_550:'/material-handling-equipment/stackers/manual-stacker-550/',eq_semi_electric_ac_stacker_550:'/material-handling-equipment/stackers/semi-electric-ac-stacker-550/',eq_semi_electric_dc_stacker_550:'/material-handling-equipment/stackers/semi-electric-dc-stacker-550/',eq_manual_stacker_685_adjustable_forks:'/material-handling-equipment/stackers/manual-stacker-685-adjustable-forks/',eq_semi_electric_ac_stacker_685_adjustable_forks:'/material-handling-equipment/stackers/semi-electric-ac-stacker-685-adjustable-forks/',eq_semi_electric_dc_stacker_685_adjustable_forks:'/material-handling-equipment/stackers/semi-electric-dc-stacker-685-adjustable-forks/',eq_manual_stacker_with_cage:'/material-handling-equipment/stackers/manual-stacker-with-cage/',eq_semi_electric_ac_stacker_with_cage:'/material-handling-equipment/stackers/semi-electric-ac-stacker-with-cage/',eq_semi_electric_dc_stacker_with_cage:'/material-handling-equipment/stackers/semi-electric-dc-stacker-with-cage/',eq_manual_stacker_with_jib_hook:'/material-handling-equipment/stackers/manual-stacker-with-jib-hook/',eq_semi_electric_ac_stacker_with_jib_hook:'/material-handling-equipment/stackers/semi-electric-ac-stacker-with-jib-hook/',eq_semi_electric_dc_stacker_with_jib_hook:'/material-handling-equipment/stackers/semi-electric-dc-stacker-with-jib-hook/',eq_electric_stacker:'/material-handling-equipment/stackers/electric-stacker/',eq_semi_electric_ac_order_picker:'/material-handling-equipment/order-pickers/semi-electric-ac-order-picker/',eq_semi_electric_dc_order_picker:'/material-handling-equipment/order-pickers/semi-electric-dc-order-picker/',eq_electric_order_picker:'/material-handling-equipment/order-pickers/electric-order-picker/',eq_manual_drum_lifter_tilter:'/material-handling-equipment/drum-lifters-tilters/manual-drum-lifter-tilter/',eq_semi_electric_ac_drum_lifter_tilter:'/material-handling-equipment/drum-lifters-tilters/semi-electric-ac-drum-lifter-tilter/',eq_semi_electric_dc_drum_lifter_tilter:'/material-handling-equipment/drum-lifters-tilters/semi-electric-dc-drum-lifter-tilter/',eq_manual_material_lifter_tilter:'/material-handling-equipment/material-lifters-tilters/manual-material-lifter-tilter/',eq_semi_electric_ac_material_lifter_tilter:'/material-handling-equipment/material-lifters-tilters/semi-electric-ac-material-lifter-tilter/',eq_semi_electric_dc_material_lifter_tilter:'/material-handling-equipment/material-lifters-tilters/semi-electric-dc-material-lifter-tilter/',eq_manual_drum_lifter_auto_gripper:'/material-handling-equipment/drum-grippers/manual-drum-lifter-auto-gripper/',eq_semi_electric_ac_drum_lifter_auto_gripper:'/material-handling-equipment/drum-grippers/semi-electric-ac-drum-lifter-auto-gripper/',eq_semi_electric_dc_drum_lifter_auto_gripper:'/material-handling-equipment/drum-grippers/semi-electric-dc-drum-lifter-auto-gripper/',eq_electric_drum_lifter_tilter:'/material-handling-equipment/drum-lifters-tilters/electric-drum-lifter-tilter/',eq_manual_hydraulic_floor_crane:'/material-handling-equipment/floor-cranes/manual-hydraulic-floor-crane/',eq_semi_electric_ac_hydraulic_floor_crane:'/material-handling-equipment/floor-cranes/semi-electric-ac-hydraulic-floor-crane/',eq_semi_electric_dc_hydraulic_floor_crane:'/material-handling-equipment/floor-cranes/semi-electric-dc-hydraulic-floor-crane/',eq_manual_counterbalance_floor_crane_fixed_boom:'/material-handling-equipment/floor-cranes/manual-counterbalance-floor-crane-fixed-boom/',eq_semi_electric_ac_counterbalance_floor_crane_fixed_boom:'/material-handling-equipment/floor-cranes/semi-electric-ac-counterbalance-floor-crane-fixed-boom/',eq_semi_electric_dc_counterbalance_floor_crane_fixed_boom:'/material-handling-equipment/floor-cranes/semi-electric-dc-counterbalance-floor-crane-fixed-boom/',eq_manual_counterbalance_floor_crane_swivelling_boom:'/material-handling-equipment/floor-cranes/manual-counterbalance-floor-crane-swivelling-boom/',eq_semi_electric_ac_counterbalance_floor_crane_swivelling_boom:'/material-handling-equipment/floor-cranes/semi-electric-ac-counterbalance-floor-crane-swivelling-boom/',eq_semi_electric_dc_counterbalance_floor_crane_swivelling_boom:'/material-handling-equipment/floor-cranes/semi-electric-dc-counterbalance-floor-crane-swivelling-boom/',eq_electric_floor_crane:'/material-handling-equipment/floor-cranes/electric-floor-crane/',eq_manual_gantry:'/material-handling-equipment/gantries/manual-gantry/',eq_electric_gantry:'/material-handling-equipment/gantries/electric-gantry/',eq_manual_hydraulic_scissor_lift_single:'/material-handling-equipment/scissor-lifts/manual-hydraulic-scissor-lift-single/',eq_manual_hydraulic_scissor_lift_double:'/material-handling-equipment/scissor-lifts/manual-hydraulic-scissor-lift-double/',eq_semi_electric_ac_hydraulic_scissor_lift_single:'/material-handling-equipment/scissor-lifts/semi-electric-ac-hydraulic-scissor-lift-single/',eq_semi_electric_ac_hydraulic_scissor_lift_double:'/material-handling-equipment/scissor-lifts/semi-electric-ac-hydraulic-scissor-lift-double/',eq_semi_electric_dc_hydraulic_scissor_lift_single:'/material-handling-equipment/scissor-lifts/semi-electric-dc-hydraulic-scissor-lift-single/',eq_semi_electric_dc_hydraulic_scissor_lift_double:'/material-handling-equipment/scissor-lifts/semi-electric-dc-hydraulic-scissor-lift-double/',eq_electro_hydraulic_scissor_lift_2000x2000:'/material-handling-equipment/scissor-lifts/electro-hydraulic-scissor-lift-2000x2000/',eq_electro_hydraulic_scissor_lift_2500x2000:'/material-handling-equipment/scissor-lifts/electro-hydraulic-scissor-lift-2500x2000/',eq_electro_hydraulic_scissor_lift_3000x2000:'/material-handling-equipment/scissor-lifts/electro-hydraulic-scissor-lift-3000x2000/',eq_electro_hydraulic_scissor_lift_spm:'/material-handling-equipment/scissor-lifts/electro-hydraulic-scissor-lift-spm/',eq_electro_hydraulic_double_scissor_lift_spm:'/material-handling-equipment/scissor-lifts/electro-hydraulic-double-scissor-lift-spm/',eq_electro_hydraulic_dock_leveller:'/material-handling-equipment/dock-levellers/electro-hydraulic-dock-leveller/',eq_two_channel_goods_lift:'/material-handling-equipment/goods-lifts/two-channel-goods-lift/',eq_four_channel_goods_lift:'/material-handling-equipment/goods-lifts/four-channel-goods-lift/',eq_two_channel_lifting_cage:'/material-handling-equipment/goods-lifts/two-channel-lifting-cage/',eq_four_channel_lifting_cage:'/material-handling-equipment/goods-lifts/four-channel-lifting-cage/',eq_industrial_shelving_heavy_duty:'/material-handling-equipment/industrial-shelving/industrial-shelving-heavy-duty/',eq_industrial_shelving_medium_duty:'/material-handling-equipment/industrial-shelving/industrial-shelving-medium-duty/',eq_gravity_roller_conveyor:'/material-handling-equipment/conveyors/gravity-roller-conveyor/',eq_rubber_belt_conveyor:'/material-handling-equipment/conveyors/rubber-belt-conveyor/',eq_pvc_belt_conveyor:'/material-handling-equipment/conveyors/pvc-belt-conveyor/',eqf_pallet_trucks:'/material-handling-equipment/pallet-trucks/',eqf_stackers:'/material-handling-equipment/stackers/',eqf_floor_cranes:'/material-handling-equipment/floor-cranes/',eqf_scissor_lifts:'/material-handling-equipment/scissor-lifts/',eqf_drum_lifters_tilters:'/material-handling-equipment/drum-lifters-tilters/',eqf_drum_grippers:'/material-handling-equipment/drum-grippers/',eqf_goods_lifts:'/material-handling-equipment/goods-lifts/',eqf_material_lifters_tilters:'/material-handling-equipment/material-lifters-tilters/',eqf_gantries:'/material-handling-equipment/gantries/',eqf_order_pickers:'/material-handling-equipment/order-pickers/',eqf_dock_levellers:'/material-handling-equipment/dock-levellers/',eqf_industrial_shelving:'/material-handling-equipment/industrial-shelving/',eqf_conveyors:'/material-handling-equipment/conveyors/'});
-var EQ_SC={'pallet':{p:'Pallet Trucks',r:'Hand hydraulic, roll lifting, high lift scissor, fully electric and special-purpose pallet trucks for moving loaded pallets on the shop floor and in warehouses. 6 models.'},'electric pallet':{p:'Electric Pallet Truck',r:'Fully electric pallet truck with AC drive and folding stand-on platform, 24 V battery operated; 2500 kg capacity with 550 mm or 685 mm width over forks.'},'stack':{p:'Stackers',r:'Manual, semi-electric AC, semi-electric DC and fully electric stackers in 1000 kg and 1500 kg capacities, with standard or adjustable forks, cage and jib-hook versions. 13 models.'},'electric stacker':{p:'Electric Stacker',r:'Fully electric stacker with AC drive and folding stand-on platform, 24 V battery operated; 1000 kg and 1500 kg capacities, 1.6, 2.5 and 3.1 m lift heights, with standard or adjustable forks.'},'floor crane':{p:'Floor Cranes',r:'Hydraulic floor cranes and counterbalanced floor cranes with fixed or swivelling boom — manual, semi-electric AC, semi-electric DC and fully electric. 10 models.'},'electric crane':{p:'Electric Floor Crane',r:'Fully electric floor crane with AC drive and 24 V battery; 1500 kg capacity with 3100 mm maximum hook height.'},'drum tilt':{p:'Drum Lifters & Tilters',r:'Lift, move and rotate standard 220 litre metal drums through 360° — manual, semi-electric AC, semi-electric DC and fully electric. 4 models.'},'electric drum tilt':{p:'Electric Drum Lifter & Tilter',r:'Fully electric drum lifter and tilter with AC drive and 24 V battery, for standard metal drums (600 mm diameter × 900 mm height); 300 kg capacity with 1600, 2500 and 3100 mm lift heights.'},'drum grip':{p:'Drum Lifters with Auto Gripper',r:'Clamp and release drums automatically, without hand contact, for loading, stacking and weighing — manual, semi-electric AC and semi-electric DC. 3 models.'},'gantry':{p:'Gantries',r:'Mobile gantries on swivel castors in 500, 1000 and 2000 kg capacities, with manual chain pulley block or electric hoist. 2 models.'},'scissor':{p:'Scissor Lifts',r:'Mobile single and double scissor lift tables, 2000 kg electro-hydraulic pit-mounted platforms and special-purpose scissor lifts. 11 models.'},'dock leveller':{p:'Electro-Hydraulic Dock Leveller',r:'Electro-hydraulic dock leveller operated by a 415 V, 3 phase AC power pack; 5000 kg and 9000 kg capacities, for forklift truck loading and unloading.'},'goods lift':{p:'Goods Lifts & Lifting Cages',r:'Two-channel and four-channel hydraulic goods lifts and lifting cages for moving material between floors. 4 models.'},'conveyor':{p:'Gravity Roller Conveyor',r:'Mobile gravity roller conveyor, 6000 mm long with 600 mm rollers; 100 kg per metre, straight or hydraulically inclined.'},'belt conveyor':{p:'Conveyors',r:'Mobile gravity roller, rubber belt and PVC belt conveyors in straight and inclined versions. 3 models.'},'shelf':{p:'Industrial Shelving',r:'Heavy duty pallet shelving and medium duty adjustable shelving for stores and industrial storage. 2 models.'}};
-SC.forEach(function(s){var f=EQ_SC[s.k[0]];if(f){s.p=f.p;s.r=f.r;}});
-var EQ_OLD={hpt:1,ept:1,ms:1,es:1,hfc:1,efc:1,hdt:1,edt:1,mdg:1,edg:1,gantry:1,sl:1,dl:1,gl:1,grc:1,bc:1,ish:1};
-SI=SI.filter(function(s){return !EQ_OLD[s.id];}).concat([{n:'Pallet Trucks',id:'eqf_pallet_trucks',t:'pallet trucks hand hydraulic, roll lifting, high lift scissor, fully electric and special-purpose pallet trucks for moving loaded pallets on the shop floor and in warehouses.'},{n:'Stackers',id:'eqf_stackers',t:'stackers manual, semi-electric ac, semi-electric dc and fully electric stackers in 1000 kg and 1500 kg capacities, with standard or adjustable forks, cage and jib-hook versions.'},{n:'Floor Cranes',id:'eqf_floor_cranes',t:'floor cranes hydraulic floor cranes and counterbalanced floor cranes with fixed or swivelling boom — manual, semi-electric ac, semi-electric dc and fully electric.'},{n:'Scissor Lifts',id:'eqf_scissor_lifts',t:'scissor lifts mobile single and double scissor lift tables, 2000 kg electro-hydraulic pit-mounted platforms and special-purpose scissor lifts.'},{n:'Drum Lifters & Tilters',id:'eqf_drum_lifters_tilters',t:'drum lifters & tilters lift, move and rotate standard 220 litre metal drums through 360° — manual, semi-electric ac, semi-electric dc and fully electric.'},{n:'Drum Lifters with Auto Gripper',id:'eqf_drum_grippers',t:'drum lifters with auto gripper clamp and release drums automatically, without hand contact, for loading, stacking and weighing — manual, semi-electric ac and semi-electric dc.'},{n:'Goods Lifts & Lifting Cages',id:'eqf_goods_lifts',t:'goods lifts & lifting cages two-channel and four-channel hydraulic goods lifts and lifting cages for moving material between floors.'},{n:'Material Lifters & Tilters',id:'eqf_material_lifters_tilters',t:'material lifters & tilters lift and tilt a 600 × 600 × 600 mm pan to pour material into hoppers and vessels — manual, semi-electric ac and semi-electric dc.'},{n:'Gantries',id:'eqf_gantries',t:'gantries mobile gantries on swivel castors in 500, 1000 and 2000 kg capacities, with manual chain pulley block or electric hoist.'},{n:'Order Pickers',id:'eqf_order_pickers',t:'order pickers semi-electric ac, semi-electric dc and fully electric order pickers with an operator cage for picking from stores and warehouse racks.'},{n:'Dock Levellers',id:'eqf_dock_levellers',t:'dock levellers electro-hydraulic dock levellers in 5000 kg and 9000 kg capacities, bridging the gap between the dispatch floor and the vehicle.'},{n:'Industrial Shelving',id:'eqf_industrial_shelving',t:'industrial shelving heavy duty pallet shelving and medium duty adjustable shelving for stores and industrial storage.'},{n:'Conveyors',id:'eqf_conveyors',t:'conveyors mobile gravity roller, rubber belt and pvc belt conveyors in straight and inclined versions.'},{n:'Hydraulic Pallet Truck – 550 mm',id:'eq_hydraulic_pallet_truck_550',t:'hydraulic pallet truck – 550 mm pallet trucks hydraulic pallet trucks manual'},{n:'Hydraulic Pallet Truck – 685 mm',id:'eq_hydraulic_pallet_truck_685',t:'hydraulic pallet truck – 685 mm pallet trucks hydraulic pallet trucks manual'},{n:'Roll Lifting Hydraulic Pallet Truck',id:'eq_roll_lifting_pallet_truck',t:'roll lifting hydraulic pallet truck pallet trucks hydraulic pallet trucks manual'},{n:'High Lift Scissor Pallet Truck',id:'eq_high_lift_scissor_pallet_truck',t:'high lift scissor pallet truck pallet trucks hydraulic pallet trucks manual'},{n:'Electric Pallet Truck',id:'eq_electric_pallet_truck',t:'electric pallet truck pallet trucks electric pallet trucks fully electric'},{n:'Hydraulic Pallet Truck – SPM',id:'eq_hydraulic_pallet_truck_spm',t:'hydraulic pallet truck – spm pallet trucks special purpose pallet trucks (spm) manual'},{n:'Manual Hydraulic Stacker – 550 mm Fixed Forks',id:'eq_manual_stacker_550',t:'manual hydraulic stacker – 550 mm fixed forks stackers manual stackers manual'},{n:'Semi-Electric AC Hydraulic Stacker – 550 mm Fixed Forks',id:'eq_semi_electric_ac_stacker_550',t:'semi-electric ac hydraulic stacker – 550 mm fixed forks stackers semi-electric ac stackers semi-electric ac'},{n:'Semi-Electric DC Hydraulic Stacker – 550 mm Fixed Forks',id:'eq_semi_electric_dc_stacker_550',t:'semi-electric dc hydraulic stacker – 550 mm fixed forks stackers semi-electric dc stackers semi-electric dc'},{n:'Manual Hydraulic Stacker – 685 mm Adjustable Forks',id:'eq_manual_stacker_685_adjustable_forks',t:'manual hydraulic stacker – 685 mm adjustable forks stackers manual stackers manual'},{n:'Semi-Electric AC Hydraulic Stacker – 685 mm Adjustable Forks',id:'eq_semi_electric_ac_stacker_685_adjustable_forks',t:'semi-electric ac hydraulic stacker – 685 mm adjustable forks stackers semi-electric ac stackers semi-electric ac'},{n:'Semi-Electric DC Hydraulic Stacker – 685 mm Adjustable Forks',id:'eq_semi_electric_dc_stacker_685_adjustable_forks',t:'semi-electric dc hydraulic stacker – 685 mm adjustable forks stackers semi-electric dc stackers semi-electric dc'},{n:'Manual Hydraulic Stacker with Cage',id:'eq_manual_stacker_with_cage',t:'manual hydraulic stacker with cage stackers manual stackers manual'},{n:'Semi-Electric AC Hydraulic Stacker with Cage',id:'eq_semi_electric_ac_stacker_with_cage',t:'semi-electric ac hydraulic stacker with cage stackers semi-electric ac stackers semi-electric ac'},{n:'Semi-Electric DC Hydraulic Stacker with Cage',id:'eq_semi_electric_dc_stacker_with_cage',t:'semi-electric dc hydraulic stacker with cage stackers semi-electric dc stackers semi-electric dc'},{n:'Manual Hydraulic Stacker with Jib Hook',id:'eq_manual_stacker_with_jib_hook',t:'manual hydraulic stacker with jib hook stackers manual stackers manual'},{n:'Semi-Electric AC Hydraulic Stacker with Jib Hook',id:'eq_semi_electric_ac_stacker_with_jib_hook',t:'semi-electric ac hydraulic stacker with jib hook stackers semi-electric ac stackers semi-electric ac'},{n:'Semi-Electric DC Hydraulic Stacker with Jib Hook',id:'eq_semi_electric_dc_stacker_with_jib_hook',t:'semi-electric dc hydraulic stacker with jib hook stackers semi-electric dc stackers semi-electric dc'},{n:'Electric Stacker',id:'eq_electric_stacker',t:'electric stacker stackers fully electric stackers fully electric'},{n:'Semi-Electric AC Order Picker',id:'eq_semi_electric_ac_order_picker',t:'semi-electric ac order picker order pickers semi-electric ac order pickers semi-electric ac'},{n:'Semi-Electric DC Order Picker',id:'eq_semi_electric_dc_order_picker',t:'semi-electric dc order picker order pickers semi-electric dc order pickers semi-electric dc'},{n:'Electric Order Picker',id:'eq_electric_order_picker',t:'electric order picker order pickers fully electric order pickers fully electric'},{n:'Manual Hydraulic Drum Lifter & Tilter',id:'eq_manual_drum_lifter_tilter',t:'manual hydraulic drum lifter & tilter drum lifters & tilters manual manual'},{n:'Semi-Electric AC Hydraulic Drum Lifter & Tilter',id:'eq_semi_electric_ac_drum_lifter_tilter',t:'semi-electric ac hydraulic drum lifter & tilter drum lifters & tilters semi-electric ac semi-electric ac'},{n:'Semi-Electric DC Hydraulic Drum Lifter & Tilter',id:'eq_semi_electric_dc_drum_lifter_tilter',t:'semi-electric dc hydraulic drum lifter & tilter drum lifters & tilters semi-electric dc semi-electric dc'},{n:'Manual Hydraulic Material Lifter & Tilter',id:'eq_manual_material_lifter_tilter',t:'manual hydraulic material lifter & tilter material lifters & tilters manual manual'},{n:'Semi-Electric AC Hydraulic Material Lifter & Tilter',id:'eq_semi_electric_ac_material_lifter_tilter',t:'semi-electric ac hydraulic material lifter & tilter material lifters & tilters semi-electric ac semi-electric ac'},{n:'Semi-Electric DC Hydraulic Material Lifter & Tilter',id:'eq_semi_electric_dc_material_lifter_tilter',t:'semi-electric dc hydraulic material lifter & tilter material lifters & tilters semi-electric dc semi-electric dc'},{n:'Manual Hydraulic Drum Lifter with Auto Gripper',id:'eq_manual_drum_lifter_auto_gripper',t:'manual hydraulic drum lifter with auto gripper drum lifters with auto gripper manual manual'},{n:'Semi-Electric AC Hydraulic Drum Lifter with Auto Gripper',id:'eq_semi_electric_ac_drum_lifter_auto_gripper',t:'semi-electric ac hydraulic drum lifter with auto gripper drum lifters with auto gripper semi-electric ac semi-electric ac'},{n:'Semi-Electric DC Hydraulic Drum Lifter with Auto Gripper',id:'eq_semi_electric_dc_drum_lifter_auto_gripper',t:'semi-electric dc hydraulic drum lifter with auto gripper drum lifters with auto gripper semi-electric dc semi-electric dc'},{n:'Electric Drum Lifter & Tilter',id:'eq_electric_drum_lifter_tilter',t:'electric drum lifter & tilter drum lifters & tilters fully electric fully electric'},{n:'Manual Hydraulic Floor Crane',id:'eq_manual_hydraulic_floor_crane',t:'manual hydraulic floor crane floor cranes manual floor cranes manual'},{n:'Semi-Electric AC Hydraulic Floor Crane',id:'eq_semi_electric_ac_hydraulic_floor_crane',t:'semi-electric ac hydraulic floor crane floor cranes semi-electric ac floor cranes semi-electric ac'},{n:'Semi-Electric DC Hydraulic Floor Crane',id:'eq_semi_electric_dc_hydraulic_floor_crane',t:'semi-electric dc hydraulic floor crane floor cranes semi-electric dc floor cranes semi-electric dc'},{n:'Manual Counterbalance Floor Crane – Fixed Boom',id:'eq_manual_counterbalance_floor_crane_fixed_boom',t:'manual counterbalance floor crane – fixed boom floor cranes manual floor cranes manual'},{n:'Semi-Electric AC Counterbalance Floor Crane – Fixed Boom',id:'eq_semi_electric_ac_counterbalance_floor_crane_fixed_boom',t:'semi-electric ac counterbalance floor crane – fixed boom floor cranes semi-electric ac floor cranes semi-electric ac'},{n:'Semi-Electric DC Counterbalance Floor Crane – Fixed Boom',id:'eq_semi_electric_dc_counterbalance_floor_crane_fixed_boom',t:'semi-electric dc counterbalance floor crane – fixed boom floor cranes semi-electric dc floor cranes semi-electric dc'},{n:'Manual Counterbalance Floor Crane – Swivelling Boom',id:'eq_manual_counterbalance_floor_crane_swivelling_boom',t:'manual counterbalance floor crane – swivelling boom floor cranes manual floor cranes manual'},{n:'Semi-Electric AC Counterbalance Floor Crane – Swivelling Boom',id:'eq_semi_electric_ac_counterbalance_floor_crane_swivelling_boom',t:'semi-electric ac counterbalance floor crane – swivelling boom floor cranes semi-electric ac floor cranes semi-electric ac'},{n:'Semi-Electric DC Counterbalance Floor Crane – Swivelling Boom',id:'eq_semi_electric_dc_counterbalance_floor_crane_swivelling_boom',t:'semi-electric dc counterbalance floor crane – swivelling boom floor cranes semi-electric dc floor cranes semi-electric dc'},{n:'Electric Floor Crane',id:'eq_electric_floor_crane',t:'electric floor crane floor cranes fully electric floor cranes fully electric'},{n:'Manual Gantry',id:'eq_manual_gantry',t:'manual gantry gantries manual gantries manual'},{n:'Electric Gantry – 440 V 3 Phase AC',id:'eq_electric_gantry',t:'electric gantry – 440 v 3 phase ac gantries electric gantries electric (440 v, 3 phase ac)'},{n:'Manual Hydraulic Scissor Lift – Single Scissor',id:'eq_manual_hydraulic_scissor_lift_single',t:'manual hydraulic scissor lift – single scissor scissor lifts manual scissor lifts manual'},{n:'Manual Hydraulic Scissor Lift – Double Scissor',id:'eq_manual_hydraulic_scissor_lift_double',t:'manual hydraulic scissor lift – double scissor scissor lifts manual scissor lifts manual'},{n:'Semi-Electric AC Hydraulic Scissor Lift – Single Scissor',id:'eq_semi_electric_ac_hydraulic_scissor_lift_single',t:'semi-electric ac hydraulic scissor lift – single scissor scissor lifts semi-electric ac scissor lifts semi-electric ac'},{n:'Semi-Electric AC Hydraulic Scissor Lift – Double Scissor',id:'eq_semi_electric_ac_hydraulic_scissor_lift_double',t:'semi-electric ac hydraulic scissor lift – double scissor scissor lifts semi-electric ac scissor lifts semi-electric ac'},{n:'Semi-Electric DC Hydraulic Scissor Lift – Single Scissor',id:'eq_semi_electric_dc_hydraulic_scissor_lift_single',t:'semi-electric dc hydraulic scissor lift – single scissor scissor lifts semi-electric dc scissor lifts semi-electric dc'},{n:'Semi-Electric DC Hydraulic Scissor Lift – Double Scissor',id:'eq_semi_electric_dc_hydraulic_scissor_lift_double',t:'semi-electric dc hydraulic scissor lift – double scissor scissor lifts semi-electric dc scissor lifts semi-electric dc'},{n:'Electro-Hydraulic Scissor Lift – 2000 × 2000 mm Platform',id:'eq_electro_hydraulic_scissor_lift_2000x2000',t:'electro-hydraulic scissor lift – 2000 × 2000 mm platform scissor lifts electro-hydraulic platform scissor lifts electro-hydraulic'},{n:'Electro-Hydraulic Scissor Lift – 2500 × 2000 mm Platform',id:'eq_electro_hydraulic_scissor_lift_2500x2000',t:'electro-hydraulic scissor lift – 2500 × 2000 mm platform scissor lifts electro-hydraulic platform scissor lifts electro-hydraulic'},{n:'Electro-Hydraulic Scissor Lift – 3000 × 2000 mm Platform',id:'eq_electro_hydraulic_scissor_lift_3000x2000',t:'electro-hydraulic scissor lift – 3000 × 2000 mm platform scissor lifts electro-hydraulic platform scissor lifts electro-hydraulic'},{n:'Electro-Hydraulic Scissor Lift – SPM',id:'eq_electro_hydraulic_scissor_lift_spm',t:'electro-hydraulic scissor lift – spm scissor lifts special purpose scissor lifts (spm) electro-hydraulic'},{n:'Electro-Hydraulic Double Scissor Lift – SPM',id:'eq_electro_hydraulic_double_scissor_lift_spm',t:'electro-hydraulic double scissor lift – spm scissor lifts special purpose scissor lifts (spm) electro-hydraulic'},{n:'Electro-Hydraulic Dock Leveller',id:'eq_electro_hydraulic_dock_leveller',t:'electro-hydraulic dock leveller dock levellers dock levellers electro-hydraulic'},{n:'Two Channel Goods Lift',id:'eq_two_channel_goods_lift',t:'two channel goods lift goods lifts & lifting cages goods lifts electro-hydraulic'},{n:'Four Channel Goods Lift',id:'eq_four_channel_goods_lift',t:'four channel goods lift goods lifts & lifting cages goods lifts electro-hydraulic'},{n:'Two Channel Lifting Cage',id:'eq_two_channel_lifting_cage',t:'two channel lifting cage goods lifts & lifting cages lifting cages electro-hydraulic'},{n:'Four Channel Lifting Cage',id:'eq_four_channel_lifting_cage',t:'four channel lifting cage goods lifts & lifting cages lifting cages electro-hydraulic'},{n:'Industrial Shelving – Heavy Duty',id:'eq_industrial_shelving_heavy_duty',t:'industrial shelving – heavy duty industrial shelving industrial shelving static storage'},{n:'Industrial Shelving – Medium Duty',id:'eq_industrial_shelving_medium_duty',t:'industrial shelving – medium duty industrial shelving industrial shelving static storage'},{n:'Gravity Roller Conveyor',id:'eq_gravity_roller_conveyor',t:'gravity roller conveyor conveyors conveyors gravity'},{n:'Rubber Belt Conveyor',id:'eq_rubber_belt_conveyor',t:'rubber belt conveyor conveyors conveyors motorised'},{n:'PVC Belt Conveyor',id:'eq_pvc_belt_conveyor',t:'pvc belt conveyor conveyors conveyors motorised'}]);
 /* EQUIPMENT-ROUTES:END */
 var HIDDEN={mdc:1,mhdc:1,hdc:1,hdtc:1};
-var SC_HIDDEN=SC.filter(function(s){return HIDDEN[s.id];});
-SC=SC.filter(function(s){return !HIDDEN[s.id];});
-SI=SI.filter(function(s){return !HIDDEN[s.id];});
 
 function openModal(id){
   if(HIDDEN[id]) return;
@@ -1845,90 +1599,6 @@ function handleSubmit(ev){
     .then(function(){ clearTimeout(timer); _enquiryState.sending=false; btn.disabled=false; btn.innerHTML=label; });
 }
 
-function doFind(){
-  var q=document.getElementById('finder-input').value.toLowerCase().trim();
-  if(!q)return;
-  document.getElementById('search-dropdown').style.display='none';
-  var best=null,bestScore=0;
-  SC.forEach(function(s){
-    var score=0;
-    s.k.forEach(function(k){if(q.includes(k)||k.includes(q))score++;});
-    if(score>bestScore){bestScore=score;best=s;}
-  });
-  // Pallet truck wheels & rollers: 'roller' (not conveyor) or 'pallet truck' + 'wheel' means the spare-part range,
-  // not the pallet truck itself; pick the material sub-range when one is named.
-  if((/roller/.test(q)&&!/conveyor|gravity/.test(q))||(/pallet\s*truck/.test(q)&&/wheel/.test(q))){
-    var ptId=/uhmw|polyethylene/.test(q)?'ptw_uhmw':(/\bpu\b|pu-?ci|puci|polyurethane/.test(q)?'ptw_puci':(/\bci\b|cast\s*iron/.test(q)?'ptw_ci':'ptw'));
-    SC.forEach(function(s){if(s.id===ptId){best=s;bestScore=Math.max(bestScore,1);}});
-  }
-  // A query that fits an unpublished range better gets the neutral "contact us" reply
-  // instead of an unrelated product (e.g. "track wheel" contains "rack").
-  var hiddenScore=0;
-  SC_HIDDEN.forEach(function(s){
-    var score=0;
-    s.k.forEach(function(k){if(q.includes(k)||k.includes(q))score++;});
-    if(score>hiddenScore)hiddenScore=score;
-  });
-  if(hiddenScore>=bestScore&&hiddenScore>0) best=null;
-  if(!best){
-    document.getElementById('finder-name').textContent='Contact Us Directly';
-    document.getElementById('finder-reason').textContent='Please contact our team at +91 98224 13252 or amodsales@gmail.com and we will recommend the right product for your requirement.';
-    document.getElementById('finder-view-btn').style.display='none';
-  } else {
-    document.getElementById('finder-name').textContent='Recommended: '+best.p;
-    document.getElementById('finder-reason').textContent=best.r;
-    var btn=document.getElementById('finder-view-btn');
-    btn.style.display='inline-flex';
-    btn.onclick=function(){openModal(best.id);};
-  }
-  document.getElementById('finder-result').style.display='block';
-}
-
-function setQ(q){
-  document.getElementById('finder-input').value=q;
-  doFind();
-}
-
-function liveSearch(q){
-  var dd=document.getElementById('search-dropdown');
-  selIdx=-1;
-  if(!q||q.length<2){dd.style.display='none';return;}
-  var ql=q.toLowerCase();
-  var matches=SI.filter(function(p){
-    return p.n.toLowerCase().includes(ql)||p.t.toLowerCase().includes(ql);
-  }).slice(0,8);
-  if(!matches.length){dd.style.display='none';return;}
-  dd.innerHTML=matches.map(function(p,i){
-    return '<div class="search-item" data-id="'+p.id+'" data-idx="'+i+'" onclick="pickProduct(\''+p.id+'\')" style="padding:11px 16px;cursor:pointer;font-size:14px;color:#1A1A1A;border-bottom:1px solid #F2F0EB;transition:background .15s;"><span style="color:#C85A00;font-weight:700;">'+p.n+'</span></div>';
-  }).join('');
-  dd.style.display='block';
-}
-
-function handleSearchKey(e){
-  var items=document.querySelectorAll('.search-item');
-  if(e.key==='ArrowDown'){e.preventDefault();selIdx=Math.min(selIdx+1,items.length-1);items.forEach(function(el,i){el.style.background=i===selIdx?'#FFF0E6':'';});}
-  else if(e.key==='ArrowUp'){e.preventDefault();selIdx=Math.max(selIdx-1,0);items.forEach(function(el,i){el.style.background=i===selIdx?'#FFF0E6':'';});}
-  else if(e.key==='Enter'){
-    if(selIdx>=0&&items[selIdx]){pickProduct(items[selIdx].dataset.id);}
-    else{doFind();}
-  }
-  else if(e.key==='Escape'){document.getElementById('search-dropdown').style.display='none';}
-}
-
-function pickProduct(id){
-  document.getElementById('search-dropdown').style.display='none';
-  document.getElementById('finder-input').value='';
-  document.getElementById('products').scrollIntoView({behavior:'smooth'});
-  setTimeout(function(){openModal(id);},300);
-}
-
-document.addEventListener('click',function(e){
-  if(!e.target.closest('#finder-input')&&!e.target.closest('#search-dropdown')){
-    var dd=document.getElementById('search-dropdown');
-    if(dd)dd.style.display='none';
-  }
-});
-
 // Scroll animations
 var obs=new IntersectionObserver(function(entries){
   entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});
@@ -1989,6 +1659,5 @@ window.addEventListener('scroll',function(){
 @media(max-width:600px){#wa-btn .wa-label{display:none;}#wa-btn{padding:11px 14px;}}
 </style>
 
-<!-- FINDER-SCRIPT:START --><script src="/assets/js/finder.js?v=f6a391661e" data-finder-data="/assets/data/finder.json?v=8b38fdcff4" defer></script><!-- FINDER-SCRIPT:END -->
 </body>
 </html>
