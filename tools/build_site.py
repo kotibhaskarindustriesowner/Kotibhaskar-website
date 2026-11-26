@@ -40,6 +40,27 @@ def asset_version(rel):
 
 CSS_URL = '/assets/css/site.css?v=' + asset_version('assets/css/site.css')
 JS_URL = '/assets/js/site.js?v=' + asset_version('assets/js/site.js')
+# browser / bookmark / home-screen icons (tools/make_favicon.ps1); the content hash makes browsers fetch a new icon
+ICON_V = asset_version('favicon.ico')
+ICON_LINKS = '\n'.join([
+    f'<link rel="icon" href="/favicon.ico?v={ICON_V}" sizes="16x16 32x32 48x48">',
+    f'<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v={ICON_V}">',
+    f'<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v={ICON_V}">',
+    f'<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png?v={ICON_V}">',
+    f'<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v={ICON_V}">',
+    f'<link rel="manifest" href="/site.webmanifest?v={ICON_V}">'])
+
+
+def write_homepage_icons():
+    """The hand-written homepage carries the same icon links as the generated pages."""
+    idx = os.path.join(REPO, 'index.html')
+    s = open(idx, encoding='utf-8', newline='').read()
+    nl = '\r\n' if '\r\n' in s else '\n'
+    rx = r'<link rel="(?:shortcut )?icon"[^\n]*\n(?:<link rel="(?:(?:shortcut )?icon|apple-touch-icon|manifest)"[^\n]*\n)*'
+    new, k = re.subn(rx, lambda m: ICON_LINKS.replace('\n', nl) + nl, s, count=1)
+    assert k == 1, 'homepage icon links not found'
+    assert k == 1, 'homepage icon links not found'
+    open(idx, 'w', encoding='utf-8', newline='').write(new)
 NAV_CATS = []   # all built categories, used for footer links (filled in main)
 
 e = lambda s: html.escape(str(s), quote=True)
@@ -237,10 +258,7 @@ def page(*, title, description, canonical, body, og_image=None, jsonld=None, wa_
 <meta name="description" content="{e(description)}">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{e(SITE + canonical)}">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+{ICON_LINKS}
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kotibhaskar Industries">
 <meta property="og:title" content="{e(title)}">
@@ -1554,6 +1572,7 @@ def main():
     eq_urls, eqcount = build_equipment.build(sys.modules[__name__])
     urls += eq_urls
     check_videos_used()
+    write_homepage_icons()
 
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u in urls:
