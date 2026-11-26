@@ -106,13 +106,13 @@ def showcase_picks(fam, prods, n):
 # compact family cards (owner design, 26 Nov 2026). Rows follow the owner's order:
 # Pallet Trucks, Stackers, Floor Cranes, Scissor Lifts; Drum Lifters & Tilters beside Drum Lifters with
 # Auto Gripper; Goods Lifts; Material Lifters & Tilters beside Gantries; then the remaining families.
-SHOWCASE_ROWS = [['pallet-trucks', 'stackers'],
-                 ['floor-cranes', 'scissor-lifts'],
-                 ['drum-lifters-tilters', 'drum-grippers'],
+SHOWCASE_ROWS = [['pallet-trucks', 'stackers', 'floor-cranes'],
+                 ['scissor-lifts', 'drum-lifters-tilters', 'drum-grippers'],
                  ['goods-lifts', 'material-lifters-tilters', 'gantries'],
                  ['order-pickers', 'dock-levellers', 'industrial-shelving', 'conveyors']]
-# framed thumbnails per card: as many as fit the card width (2 cards per row -> 4, 3 -> 3, 4 -> 2)
-MAX_THUMBS = {2: 4, 3: 3, 4: 2}
+# framed thumbnails per card (owner, 26 Nov 2026): compact three-column cards hold up to 4 frames,
+# the four-card last row up to 3; never repeat a photo just to fill space
+MAX_THUMBS = {3: 4, 4: 3}
 # visibly different machines, in display order (the first MAX_THUMBS are used)
 SHOWCASE = {
     'pallet-trucks': ['hydraulic-pallet-truck-550', 'roll-lifting-pallet-truck', 'high-lift-scissor-pallet-truck', 'electric-pallet-truck'],
@@ -124,13 +124,13 @@ SHOWCASE = {
     'drum-lifters-tilters': ['manual-drum-lifter-tilter', 'semi-electric-ac-drum-lifter-tilter', 'semi-electric-dc-drum-lifter-tilter',
                              'electric-drum-lifter-tilter'],
     'drum-grippers': ['manual-drum-lifter-auto-gripper', 'semi-electric-ac-drum-lifter-auto-gripper', 'semi-electric-dc-drum-lifter-auto-gripper'],
-    'goods-lifts': ['two-channel-goods-lift', 'four-channel-goods-lift', 'four-channel-lifting-cage'],
+    'goods-lifts': ['two-channel-goods-lift', 'four-channel-goods-lift', 'two-channel-lifting-cage', 'four-channel-lifting-cage'],
     'material-lifters-tilters': ['manual-material-lifter-tilter', 'semi-electric-ac-material-lifter-tilter', 'semi-electric-dc-material-lifter-tilter'],
     'gantries': ['manual-gantry', 'electric-gantry'],
-    'order-pickers': ['semi-electric-ac-order-picker', 'electric-order-picker'],
+    'order-pickers': ['semi-electric-ac-order-picker', 'semi-electric-dc-order-picker', 'electric-order-picker'],
     'dock-levellers': ['electro-hydraulic-dock-leveller'],
     'industrial-shelving': ['industrial-shelving-heavy-duty', 'industrial-shelving-medium-duty'],
-    'conveyors': ['gravity-roller-conveyor', 'rubber-belt-conveyor'],
+    'conveyors': ['gravity-roller-conveyor', 'rubber-belt-conveyor', 'pvc-belt-conveyor'],
 }
 
 
@@ -158,20 +158,56 @@ def showcase(data):
 
 
 # ---------------------------------------------------------------- tables & text
-def table_html(t, cls='data-table eq-table', sticky=True):
-    head = ''.join(f'<th scope="col">{e(h)}</th>' for h in t['head'])
-    body = ''
+def column_groups(t):
+    """Configuration groups for colour tinting (like the wheel size & load tables).
+    Column tables: columns sharing the text before ' · ' (e.g. '1000 kg') form one group; otherwise each
+    configuration column is its own group. Row tables: rows grouped by their Capacity value.
+    Single-value tables get no grouping. Returns (col_groups, row_groups) as lists of group numbers or None."""
     spec = t['head'] and t['head'][0] == 'Specification'
-    for r in t['rows']:
+    if spec:
+        heads = t['head'][1:]
+        if len(heads) < 2:
+            return None, None
+        keys = [h.split(' · ')[0] for h in heads]
+        order = list(dict.fromkeys(keys))
+        return [order.index(k) for k in keys], None
+    cap = next((i for i, h in enumerate(t['head']) if re.search(r'(?i)capacity', h)), None)
+    if cap is None or len(t['rows']) < 2:
+        return None, None
+    keys = [r[cap] for r in t['rows']]
+    order = list(dict.fromkeys(keys))
+    return None, [order.index(k) for k in keys]
+
+
+def table_html(t, cls='data-table eq-table', sticky=True):
+    spec = t['head'] and t['head'][0] == 'Specification'
+    cols, rows = column_groups(t)
+
+    def gcls(i):          # i = value-column index (0-based) in a column-grouped table
+        if cols is None:
+            return ''
+        start = i == 0 or cols[i] != cols[i - 1]
+        return f' class="g{cols[i] % 3}{" gs" if start and i else ""}"'
+    head = ''.join(f'<th scope="col"{gcls(i - 1) if spec and i else ""}>{e(h)}</th>' for i, h in enumerate(t['head']))
+    body = ''
+    for ri, r in enumerate(t['rows']):
         cells = ''
         for i, v in enumerate(r):
             v = '<br>'.join(e(x) for x in v.split('\n'))
             if i == 0 and spec:
                 cells += f'<th scope="row">{v}</th>'
             else:
-                cells += f'<td>{v}</td>'
-        key = ' class="key"' if re.search(r'(?i)^(load )?(carrying )?capacity', r[0]) else ''
-        body += f'<tr{key}>{cells}</tr>'
+                cells += f'<td{gcls(i - 1) if spec else ""}>{v}</td>'
+        classes = []
+        if re.search(r'(?i)^(load )?(carrying )?capacity', r[0]):
+            classes.append('key')
+        if rows is not None:
+            classes.append(f'rg{rows[ri] % 3}')
+            if ri and rows[ri] != rows[ri - 1]:
+                classes.append('rgs')
+        body += f'<tr{f" class={chr(34)}{" ".join(classes)}{chr(34)}" if classes else ""}>{cells}</tr>'
+    if cols is not None or rows is not None:
+        cls += ' eq-grouped'
     title = f'<h3 class="eq-table-title">{e(t["title"])}</h3>' if t.get('title') else ''
     return f'{title}<div class="tbl-wrap"><table class="{cls}{" eq-spec" if spec else ""}"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
 

@@ -584,14 +584,14 @@ for op, (ps, pd), intro, (fs, fd) in (('M', (1, 2), 0, ('10', '20')), ('AC', (4,
     pre = {'M': 'manual', 'AC': 'semi-electric-ac', 'DC': 'semi-electric-dc'}[op]
     for kind, pg, f in (('single', ps, fs), ('double', pd, fd)):
         add(f'{pre}-hydraulic-scissor-lift-{kind}', f'{("Manual" if op == "M" else OPS[op])} Hydraulic Scissor Lift – {kind.title()} Scissor',
-            'scissor-lifts', f'Mobile Scissor Lifts – {kind.title()} Scissor', op, [('90', f)],
+            'scissor-lifts', f'{OPS[op]} Scissor Lifts', op, [('90', f)],
             [mlist_table('060', pg, SC_COLS, rename=SC_REN)], text('060', [0, intro] if op != 'M' else [0, pg]),
             f'{OPS[op]} mobile hydraulic {kind} scissor lift table; 500 kg and 1000 kg capacities with 1000 × 500, 1250 × 600 and 1500 × 700 mm tables.',
             wheels=UHMW_OPTS, capacities=['500 kg', '1000 kg'])
 for code, size, f in (('065', '2000 × 2000', '70'), ('066', '2500 × 2000', '80'), ('067', '3000 × 2000', '90')):
     s = size.replace(' × ', 'x')
     add(f'electro-hydraulic-scissor-lift-{s}', f'Electro-Hydraulic Scissor Lift – {size} mm Platform', 'scissor-lifts',
-        'Electro-Hydraulic Platform Scissor Lifts – 2000 kg', 'EH', [('90', f)], [nkv_table(code, [0, 1])], text(code, [1, 2]),
+        'Electro-Hydraulic Platform Scissor Lifts', 'EH', [('90', f)], [nkv_table(code, [0, 1])], text(code, [1, 2]),
         f'Pit-mounted electro-hydraulic single scissor lift with {size} mm platform; 2000 kg capacity, 440 V 3 phase AC.',
         capacities=['2000 kg'])
 add('electro-hydraulic-scissor-lift-spm', 'Electro-Hydraulic Scissor Lift – SPM', 'scissor-lifts', 'Special Purpose Scissor Lifts (SPM)', 'EH',

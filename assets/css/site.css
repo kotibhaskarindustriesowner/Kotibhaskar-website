@@ -236,6 +236,8 @@ img{max-width:100%;}
 .pst-table td{padding:1.3mm 1.8mm;border:.25mm solid #DDD8D0;color:#222;white-space:nowrap;}
 .pst-table tr:nth-child(even) td{background:#F7F4EF;}
 .pst-table td.key{color:#C85A00;font-weight:700;}
+/* every datasheet table cell gets the same visible border (also when printed without background graphics) */
+.print-sheet .pst-table th,.print-sheet .pst-table td,.print-sheet .ps-specs th,.print-sheet .ps-specs td{border:.3mm solid #8E867A;}
 .pst-common{font-size:8pt;color:#444;margin-top:1.5mm;}
 .pst-common b{color:#1A2332;}
 

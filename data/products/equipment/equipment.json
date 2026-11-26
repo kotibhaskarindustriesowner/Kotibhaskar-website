@@ -6394,7 +6394,7 @@
    "slug": "manual-hydraulic-scissor-lift-single",
    "name": "Manual Hydraulic Scissor Lift – Single Scissor",
    "family": "scissor-lifts",
-   "subtype": "Mobile Scissor Lifts – Single Scissor",
+   "subtype": "Manual Scissor Lifts",
    "operation": "Manual",
    "tables": [
     {
@@ -6510,7 +6510,7 @@
    "slug": "manual-hydraulic-scissor-lift-double",
    "name": "Manual Hydraulic Scissor Lift – Double Scissor",
    "family": "scissor-lifts",
-   "subtype": "Mobile Scissor Lifts – Double Scissor",
+   "subtype": "Manual Scissor Lifts",
    "operation": "Manual",
    "tables": [
     {
@@ -6626,7 +6626,7 @@
    "slug": "semi-electric-ac-hydraulic-scissor-lift-single",
    "name": "Semi-Electric AC Hydraulic Scissor Lift – Single Scissor",
    "family": "scissor-lifts",
-   "subtype": "Mobile Scissor Lifts – Single Scissor",
+   "subtype": "Semi-Electric AC Scissor Lifts",
    "operation": "Semi-Electric AC",
    "tables": [
     {
@@ -6761,7 +6761,7 @@
    "slug": "semi-electric-ac-hydraulic-scissor-lift-double",
    "name": "Semi-Electric AC Hydraulic Scissor Lift – Double Scissor",
    "family": "scissor-lifts",
-   "subtype": "Mobile Scissor Lifts – Double Scissor",
+   "subtype": "Semi-Electric AC Scissor Lifts",
    "operation": "Semi-Electric AC",
    "tables": [
     {
@@ -6896,7 +6896,7 @@
    "slug": "semi-electric-dc-hydraulic-scissor-lift-single",
    "name": "Semi-Electric DC Hydraulic Scissor Lift – Single Scissor",
    "family": "scissor-lifts",
-   "subtype": "Mobile Scissor Lifts – Single Scissor",
+   "subtype": "Semi-Electric DC Scissor Lifts",
    "operation": "Semi-Electric DC",
    "tables": [
     {
@@ -7035,7 +7035,7 @@
    "slug": "semi-electric-dc-hydraulic-scissor-lift-double",
    "name": "Semi-Electric DC Hydraulic Scissor Lift – Double Scissor",
    "family": "scissor-lifts",
-   "subtype": "Mobile Scissor Lifts – Double Scissor",
+   "subtype": "Semi-Electric DC Scissor Lifts",
    "operation": "Semi-Electric DC",
    "tables": [
     {
@@ -7174,7 +7174,7 @@
    "slug": "electro-hydraulic-scissor-lift-2000x2000",
    "name": "Electro-Hydraulic Scissor Lift – 2000 × 2000 mm Platform",
    "family": "scissor-lifts",
-   "subtype": "Electro-Hydraulic Platform Scissor Lifts – 2000 kg",
+   "subtype": "Electro-Hydraulic Platform Scissor Lifts",
    "operation": "Electro-Hydraulic",
    "tables": [
     {
@@ -7340,7 +7340,7 @@
    "slug": "electro-hydraulic-scissor-lift-2500x2000",
    "name": "Electro-Hydraulic Scissor Lift – 2500 × 2000 mm Platform",
    "family": "scissor-lifts",
-   "subtype": "Electro-Hydraulic Platform Scissor Lifts – 2000 kg",
+   "subtype": "Electro-Hydraulic Platform Scissor Lifts",
    "operation": "Electro-Hydraulic",
    "tables": [
     {
@@ -7506,7 +7506,7 @@
    "slug": "electro-hydraulic-scissor-lift-3000x2000",
    "name": "Electro-Hydraulic Scissor Lift – 3000 × 2000 mm Platform",
    "family": "scissor-lifts",
-   "subtype": "Electro-Hydraulic Platform Scissor Lifts – 2000 kg",
+   "subtype": "Electro-Hydraulic Platform Scissor Lifts",
    "operation": "Electro-Hydraulic",
    "tables": [
     {
