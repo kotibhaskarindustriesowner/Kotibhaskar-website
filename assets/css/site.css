@@ -495,3 +495,16 @@ html.print-preview .print-sheet{display:flex;margin:0 auto;box-shadow:0 10px 40p
 @media screen and (max-width:900px){.t-media{max-width:400px;width:100%;margin:0 auto;}}
 @media(max-width:420px){.vid-thumb{flex-basis:120px;}.vid-text b{font-size:13.5px;}}
 @media print{.vid-box,.vid-modal{display:none!important;}}
+
+/* product-page navigation: same wheel size in other materials; the whole trolley range */
+.alt-mat-label{margin:26px 0 12px;}
+.all-trolleys-wrap{padding-top:36px;padding-bottom:40px;}
+.all-trolleys{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px 28px;}
+.all-trolleys-group h3{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 6px;}
+.all-trolleys-group h3 a{color:#1A2332;text-decoration:none;}
+.all-trolleys-group h3 a:hover{color:#C85A00;}
+.all-trolleys-group ul{list-style:none;margin:0;padding:0;}
+.all-trolleys-group li{font-size:14px;padding:3px 0;color:#888;}
+.all-trolleys-group li a{color:#444;text-decoration:none;}
+.all-trolleys-group li a:hover{color:#C85A00;text-decoration:underline;}
+@media print{.all-trolleys-wrap{display:none!important;}}

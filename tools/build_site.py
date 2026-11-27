@@ -51,6 +51,39 @@ ICON_LINKS = '\n'.join([
     f'<link rel="manifest" href="/site.webmanifest?v={ICON_V}">'])
 
 
+# ---- sitemap <lastmod>: the date a page's own content last changed (not the build date)
+LASTMOD_FILE = os.path.join(REPO, 'data', 'sitemap-lastmod.json')
+
+
+def page_file(url):
+    return os.path.join(REPO, *[x for x in url.split('/') if x], 'index.html')
+
+
+def page_fingerprint(text):
+    """Content hash of a built page. <link> tags (stylesheets, icons, manifest), external <script> tags and
+    ?v= cache-busting stamps are ignored, so a stylesheet, script or icon update does not count as a change
+    to every page; title, description, structured data and the whole visible page do count."""
+    text = text.replace('\r\n', '\n')
+    text = re.sub(r'<link [^>]*>\n?|<script [^>]*src="[^"]*"[^>]*></script>\n?', '', text)
+    text = re.sub(r'\?v=[0-9a-f]{6,}', '', text)
+    return hashlib.sha256(text.encode('utf-8')).hexdigest()[:16]
+
+
+def page_lastmods(urls):
+    store = json.load(open(LASTMOD_FILE, encoding='utf-8')) if os.path.exists(LASTMOD_FILE) else {}
+    out = {}
+    for u in urls:
+        with open(page_file(u), encoding='utf-8') as f:
+            h = page_fingerprint(f.read())
+        old = store.get(u)
+        date = old['date'] if old and old['hash'] == h else TODAY
+        out[u] = {'hash': h, 'date': date}
+    with open(LASTMOD_FILE, 'w', encoding='utf-8', newline='\n') as f:
+        json.dump(out, f, indent=1, sort_keys=True)
+        f.write('\n')
+    return {u: v['date'] for u, v in out.items()}
+
+
 def write_homepage_icons():
     """The hand-written homepage carries the same icon links as the generated pages."""
     idx = os.path.join(REPO, 'index.html')
@@ -493,6 +526,13 @@ def build_product(cat, p, idx):
         f'<a class="sib{" current" if q["slug"] == p["slug"] else ""}" href="{cat["url"]}{q["slug"]}/"'
         f'{" aria-current=\"page\"" if q["slug"] == p["slug"] else ""}>{n(q["diameter_mm"])} &times; {n(q["width_mm"])} mm'
         f'<small>{n(q["inch"])} Inch Wheel &middot; {n(q["load_per_caster_kg"])} kg</small></a>' for q in same)
+    # the same wheel size in the other wheel materials (each a separate product with its own documented load rating)
+    alt = [(c, q) for c in NAV_CATS if c.get('products') and c['url'] != cat['url'] for q in c['products'] if q['slug'] == p['slug']]
+    alt_html = ''
+    if alt:
+        alt_html = ('<h3 class="sec-label alt-mat-label">Same size in other wheel materials</h3><div class="siblings">' + ''.join(
+            f'<a class="sib" href="{c["url"]}{q["slug"]}/">{e(c["name"])} &mdash; {n(q["diameter_mm"])} &times; {n(q["width_mm"])} mm'
+            f'<small>{n(q["load_per_caster_kg"])} kg per caster</small></a>' for c, q in alt) + '</div>')
     pn = ''
     if prev_p:
         pn += f'<a class="btn-outline" href="{cat["url"]}{prev_p["slug"]}/">&larr; {e(short_name(prev_p, groups[prev_p["group"]]))}</a>'
@@ -548,6 +588,7 @@ def build_product(cat, p, idx):
 <div class="wrap alt siblings-wrap">
   <h2 class="h2">Other {e(cat['name'])} &mdash; {e(g['name'])} sizes</h2>
   <div class="siblings">{sibs}</div>
+  {alt_html}
   <div class="prev-next">{pn}</div>
   <p style="margin-top:22px;"><a class="btn-outline" href="{cat['url']}">View all {len(prods)} {e(cat['name'])}</a></p>
 </div>'''
@@ -1264,6 +1305,16 @@ def build_trolley_product(cat, p, idx):
     if same:
         sibs = '<div class="wrap alt siblings-wrap"><h2 class="h2">Other ' + e(g['name']) + '</h2><div class="siblings">' + ''.join(
             f'<a class="sib" href="{cat["url"]}{q["slug"]}/">{e(q["name"])}<small>{capacity_range(q)}</small></a>' for q in same) + '</div></div>'
+    # every trolley page links to the whole trolley range, grouped as on the trolley catalogue page
+    def range_item(q):
+        if q['slug'] == p['slug']:
+            return f'<li aria-current="page">{e(q["name"])}</li>'
+        return f'<li><a href="{cat["url"]}{q["slug"]}/">{e(q["name"])}</a></li>'
+    allt = ''.join(
+        f'<div class="all-trolleys-group"><h3><a href="{cat["url"]}#{gg["id"]}">{e(gg["name"])}</a></h3><ul>'
+        + ''.join(range_item(q) for q in cat['products'] if q['group'] == gg['id']) + '</ul></div>'
+        for gg in cat['groups'] if any(q['group'] == gg['id'] for q in cat['products']))
+    sibs += f'<div class="wrap all-trolleys-wrap"><h2 class="h2">All {e(cat["name"])}</h2><div class="all-trolleys">{allt}</div></div>'
 
     body = f'''<header class="page-head t-head">
   {crumb_html}
@@ -1313,11 +1364,18 @@ def build_trolley_product(cat, p, idx):
         crumb_ld,
         {'@type': 'Product', 'name': p['name'], 'url': SITE + url, 'image': [SITE + p['images']['photo']],
          'description': p['summary'], 'brand': {'@type': 'Brand', 'name': 'Kotibhaskar'},
-         'manufacturer': {'@id': f'{SITE}/#organization'}, 'category': path},
+         'manufacturer': {'@id': f'{SITE}/#organization'}, 'category': path,
+         # documented specifications only: the load-capacity range, the number of sizes and the values common to all sizes
+         'additionalProperty': [{'@type': 'PropertyValue', 'name': 'Load Capacity', 'value': crange},
+                                {'@type': 'PropertyValue', 'name': 'Sizes Available', 'value': str(nsizes)}]
+                               + [{'@type': 'PropertyValue', 'name': c, 'value': p['variants'][0][c]} for c in common_cols
+                                  if c != 'Load Capacity']},
     ]}
     sheet = trolley_sheet(cat, g, p, url, table_cols, common_cols, crange)
     title = f"{p['name']} – {crange} Load Capacity, {nsizes} {'Size' if nsizes == 1 else 'Sizes'} | Kotibhaskar"
-    desc = f"{p['name']} by Kotibhaskar Industries, Satara: {p['summary']} Load capacity {crange}."
+    # the summary often states the capacity already; only add it when it does not
+    cap_note = '' if re.search(r'(?i)load capacity', p['summary']) else f' Load capacity {crange}.'
+    desc = f"{p['name']} by Kotibhaskar Industries, Satara: {p['summary']}{cap_note}"
     return page(title=title, description=desc, canonical=url, body=body, jsonld=jsonld,
                 og_image=SITE + p['images']['photo'],
                 wa_text=f'Hello, I would like a quotation for: {p["name"]} ({SITE}{url})', sheet=sheet)
@@ -1574,10 +1632,11 @@ def main():
     check_videos_used()
     write_homepage_icons()
 
+    lastmod = page_lastmods(urls)
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u in urls:
         pr = '1.0' if u == '/' else ('0.8' if u.count('/') <= 3 else '0.6')
-        sm.append(f'  <url>\n    <loc>{SITE}{u}</loc>\n    <lastmod>{TODAY}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>{pr}</priority>\n  </url>')
+        sm.append(f'  <url>\n    <loc>{SITE}{u}</loc>\n    <lastmod>{lastmod[u]}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>{pr}</priority>\n  </url>')
     sm.append('</urlset>')
     write(os.path.join(REPO, 'sitemap.xml'), '\n'.join(sm) + '\n')
     print(f'Built hub + {len(cats)} category page(s) + {count} product pages; '
